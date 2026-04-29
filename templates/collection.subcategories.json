@@ -1,0 +1,154 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "subcategories": {
+      "type": "collection-subcategories",
+      "blocks": {
+        "category_DjhY7X": {
+          "type": "category",
+          "settings": {
+            "title": "אטבים",
+            "collection": "אטבים"
+          }
+        },
+        "category_dpnBLH": {
+          "type": "category",
+          "settings": {
+            "title": "בדי לבד",
+            "collection": "בדי-לבד"
+          }
+        },
+        "category_RJyEwP": {
+          "type": "category",
+          "settings": {
+            "title": "חול ובצק למשחק",
+            "collection": "חול-ובצק-למשחק"
+          }
+        },
+        "category_zTJWnc": {
+          "type": "category",
+          "settings": {
+            "title": "חומרים ליצירת פרחים",
+            "collection": "חומרים-ליצירת-פרחים"
+          }
+        },
+        "category_xKCHFB": {
+          "type": "category",
+          "settings": {
+            "title": "חלקים לבובות",
+            "collection": "חלקים-לבובות"
+          }
+        },
+        "category_8VHVXF": {
+          "type": "category",
+          "settings": {
+            "title": "כל מיני ליצירה",
+            "collection": "כל-מיני-ליצירה"
+          }
+        },
+        "category_BpyPjW": {
+          "type": "category",
+          "settings": {
+            "title": "כפתורים",
+            "collection": "כפתורים"
+          }
+        },
+        "category_G7yKcg": {
+          "type": "category",
+          "settings": {
+            "title": "מגנטים",
+            "collection": "מגנטים"
+          }
+        },
+        "category_WfcM7i": {
+          "type": "category",
+          "settings": {
+            "title": "קלקרים ומוקצפים",
+            "collection": "קלקרים-ומוקצפים"
+          }
+        },
+        "category_FtCnym": {
+          "type": "category",
+          "settings": {
+            "title": "מתכת ליצירה",
+            "collection": "מתכת-ליצירה"
+          }
+        },
+        "category_dpqxqw": {
+          "type": "category",
+          "settings": {
+            "title": "מקלות וקוביות מעץ",
+            "collection": "מקלות-וקוביות-מעץ"
+          }
+        },
+        "category_zzMNE7": {
+          "type": "category",
+          "settings": {
+            "title": "נוצות",
+            "collection": "נוצות"
+          }
+        },
+        "category_6QRxWD": {
+          "type": "category",
+          "settings": {
+            "title": "עיניים",
+            "collection": "עיניים"
+          }
+        },
+        "category_VWjKKy": {
+          "type": "category",
+          "settings": {
+            "title": "פומפונים",
+            "collection": "פומפונים"
+          }
+        },
+        "category_6V8CWz": {
+          "type": "category",
+          "settings": {
+            "title": "פייטים ונצנצים",
+            "collection": "פייטים-ונצנצים"
+          }
+        },
+        "category_47nQKK": {
+          "type": "category",
+          "settings": {
+            "title": "פעמונים",
+            "collection": "פעמונים"
+          }
+        }
+      },
+      "block_order": [
+        "category_DjhY7X",
+        "category_dpnBLH",
+        "category_RJyEwP",
+        "category_zTJWnc",
+        "category_xKCHFB",
+        "category_8VHVXF",
+        "category_BpyPjW",
+        "category_G7yKcg",
+        "category_WfcM7i",
+        "category_FtCnym",
+        "category_dpqxqw",
+        "category_zzMNE7",
+        "category_6QRxWD",
+        "category_VWjKKy",
+        "category_6V8CWz",
+        "category_47nQKK"
+      ],
+      "settings": {
+        "heading": "קטגוריות"
+      }
+    }
+  },
+  "order": [
+    "subcategories"
+  ]
+}

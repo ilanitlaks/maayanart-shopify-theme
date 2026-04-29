@@ -37,10 +37,151 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_subcategories_L4Bt9w": {
+      "type": "collection-subcategories",
+      "blocks": {
+        "category_HUXnjz": {
+          "type": "category",
+          "settings": {
+            "title": "חומרים ליצירת פרחים",
+            "collection": ""
+          }
+        },
+        "category_F64fMG": {
+          "type": "category",
+          "settings": {
+            "title": "חלקים לבובות",
+            "collection": ""
+          }
+        },
+        "category_V9hQdy": {
+          "type": "category",
+          "settings": {
+            "title": "עיניים",
+            "collection": ""
+          }
+        },
+        "category_4rrpr9": {
+          "type": "category",
+          "settings": {
+            "title": "בדי לבד",
+            "collection": ""
+          }
+        },
+        "category_NAAind": {
+          "type": "category",
+          "settings": {
+            "title": "פעמונים",
+            "collection": ""
+          }
+        },
+        "category_BrmFAA": {
+          "type": "category",
+          "settings": {
+            "title": "מתכת ליצירה",
+            "collection": ""
+          }
+        },
+        "category_K3G34q": {
+          "type": "category",
+          "settings": {
+            "title": "נוצות",
+            "collection": ""
+          }
+        },
+        "category_7LRDYY": {
+          "type": "category",
+          "settings": {
+            "title": "פייטים ונצנצים",
+            "collection": ""
+          }
+        },
+        "category_8UWqzT": {
+          "type": "category",
+          "settings": {
+            "title": "כל מיני ליצירה",
+            "collection": ""
+          }
+        },
+        "category_ntj4DQ": {
+          "type": "category",
+          "settings": {
+            "title": "כפתורים",
+            "collection": ""
+          }
+        },
+        "category_aXnCd9": {
+          "type": "category",
+          "settings": {
+            "title": "אטבים",
+            "collection": ""
+          }
+        },
+        "category_cfrFpe": {
+          "type": "category",
+          "settings": {
+            "title": "פומפונים",
+            "collection": ""
+          }
+        },
+        "category_ejF8mF": {
+          "type": "category",
+          "settings": {
+            "title": "מגנטים",
+            "collection": ""
+          }
+        },
+        "category_7TbwHb": {
+          "type": "category",
+          "settings": {
+            "title": "קלקרים ומוקצפים",
+            "collection": ""
+          }
+        },
+        "category_JW3QTf": {
+          "type": "category",
+          "settings": {
+            "title": "חול ובצק למשחק",
+            "collection": ""
+          }
+        },
+        "category_UgdJE3": {
+          "type": "category",
+          "settings": {
+            "title": "מקלות וקוביות מעץ",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_HUXnjz",
+        "category_F64fMG",
+        "category_V9hQdy",
+        "category_4rrpr9",
+        "category_NAAind",
+        "category_BrmFAA",
+        "category_K3G34q",
+        "category_7LRDYY",
+        "category_8UWqzT",
+        "category_ntj4DQ",
+        "category_aXnCd9",
+        "category_cfrFpe",
+        "category_ejF8mF",
+        "category_7TbwHb",
+        "category_JW3QTf",
+        "category_UgdJE3"
+      ],
+      "disabled": true,
+      "name": "תתי קטגוריות",
+      "settings": {
+        "heading": "קטגוריות"
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "collection_subcategories_L4Bt9w"
   ]
 }
