@@ -3706,7 +3706,15 @@ details-disclosure > details {
   100% {
     transform: translateX(100%) scaleX(0);
   }
-} /* עיצוב אזור קנייה בדף מוצר */
+}
+/* עיצוב אזור קנייה בדף מוצר */
+.product__info-container {
+  --product-buy-text: #5a2b2b;
+  --product-buy-outline: rgba(178, 109, 60, 0.43);
+  --product-add-bg: #f4eeee;
+  --product-buy-now-bg: #cdeff6;
+}
+
 .product__info-container .product-form__quantity {
   display: flex;
   flex-direction: column;
@@ -3714,48 +3722,77 @@ details-disclosure > details {
   gap: 1rem;
 }
 
-.product__info-container .quantity:before,
-.product__info-container .quantity:after {
-  content: none;
+.product__info-container .quantity::before,
+.product__info-container .quantity::after,
+.product__info-container .product-form__submit::before,
+.product__info-container .product-form__submit::after,
+.product__info-container .shopify-payment-button__button::before,
+.product__info-container .shopify-payment-button__button::after {
+  content: none !important;
 }
 
-.product__info-container .product-form__submit {
+.product__info-container .product-form__submit,
+.product__info-container .shopify-payment-button__button {
   width: 100%;
   min-width: 150px;
   min-height: 5rem;
-  border-radius: 999px;
-  background: #f4eeee;
-  color: #5a2b2b;
   border: none;
-  outline: 2px dashed rgba(178, 109, 60, 0.43);
-  outline-offset: -6px;
+  border-radius: 999px;
+  color: var(--product-buy-text) !important;
   font-size: 1.4rem;
+  outline: 2px dashed var(--product-buy-outline);
+  outline-offset: -6px;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
 }
 
-.product__info-container .product-form__submit:before,
-.product__info-container .product-form__submit:after {
-  content: none;
+.product__info-container .product-form__submit {
+  background: var(--product-add-bg);
 }
 
-/* .product__info-container .shopify-payment-button {
-  display: none;
-} */
+.product__info-container .shopify-payment-button__button {
+  background: var(--product-buy-now-bg) !important;
+}
+
+.product__info-container .product-form__submit:hover,
+.product__info-container .shopify-payment-button__button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.product__info-container .product-form__submit:active,
+.product__info-container .shopify-payment-button__button:active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.product__info-container .product-form__submit:focus,
+.product__info-container .shopify-payment-button__button:focus {
+  outline: none;
+}
+
+.product__info-container .product-form__submit:focus-visible,
+.product__info-container .shopify-payment-button__button:focus-visible {
+  outline: 3px solid rgba(90, 43, 43, 0.6);
+  outline-offset: 2px;
+}
+
+/* מסגרת עדינה לאזור הכמות / מחיר ליחידה */
 .product-form__input.price-per-item,
 .product-form__input .price-per-item__container {
   position: relative;
+  width: fit-content;
   border-radius: 999px;
   background: #fff;
-  width: fit-content;
 }
 
-/* המסגרת */
 .product-form__input.price-per-item::before,
 .product-form__input .price-per-item__container::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 999px;
-
   border: 0.5px solid currentColor;
+  border-radius: 999px;
   pointer-events: none;
 }
