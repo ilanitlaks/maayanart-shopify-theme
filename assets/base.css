@@ -2037,6 +2037,7 @@ input[type="checkbox"] {
 
 .quantity__input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .quantity__rules {
@@ -3705,4 +3706,37 @@ details-disclosure > details {
   100% {
     transform: translateX(100%) scaleX(0);
   }
+} /* עיצוב אזור קנייה בדף מוצר */
+.product__info-container .product-form__quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
+
+.product__info-container .quantity:before,
+.product__info-container .quantity:after {
+  content: none;
+}
+
+.product__info-container .product-form__submit {
+  width: 100%;
+  min-width: 150px;
+  min-height: 5rem;
+  border-radius: 999px;
+  background: #f4eeee;
+  color: #5a2b2b;
+  border: none;
+  outline: 2px dashed rgba(178, 109, 60, 0.43);
+  outline-offset: -6px;
+  font-size: 1.4rem;
+}
+
+.product__info-container .product-form__submit:before,
+.product__info-container .product-form__submit:after {
+  content: none;
+}
+
+/* .product__info-container .shopify-payment-button {
+  display: none;
+} */

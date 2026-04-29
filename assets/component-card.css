@@ -1,4 +1,7 @@
 .card-wrapper {
+  display: grid;
+  gap: 1rem;
+  /* background-color: aqua; */
   color: inherit;
   height: 100%;
   position: relative;
@@ -138,8 +141,13 @@
 }
 
 .card__information {
+  display: grid;
   grid-row-start: 2;
   padding: 1.3rem 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  gap: 1rem;
 }
 
 .card:not(.ratio) > .card__content {
@@ -627,11 +635,12 @@
 }
 .card-qty {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
   gap: 12px;
   width: fit-content;
-  margin: 1rem auto 0;
+  margin: 0.5rem;
   padding: 0.4rem 1.2rem;
   border-radius: 999px;
   background: #cdeff6;
