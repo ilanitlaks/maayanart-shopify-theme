@@ -1,0 +1,262 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+<section class="home-products-tabs page-width">
+  <div class="home-products-tabs__nav">
+    <button class="home-products-tabs__btn active" type="button" data-tab="new"><span class="tab-heart">❤</span> חדש</button>
+    <button class="home-products-tabs__btn" type="button" data-tab="loved"><span class="tab-heart">❤</span> אהבנו</button>
+    <button class="home-products-tabs__btn" type="button" data-tab="deal"><span class="tab-heart">❤</span> דיל</button>
+  </div>
+
+  {% assign tabs = 'new,loved,deal' | split: ',' %}
+
+  {% for tab in tabs %}
+    {% assign collection_setting = 'collection_' | append: tab %}
+    {% assign current_collection = section.settings[collection_setting] %}
+
+    <div class="home-products-tabs__panel {% if forloop.first %}active{% endif %}" data-panel="{{ tab }}">
+      <div class="home-products-tabs__slider-wrap">
+        
+        <button class="home-products-tabs__arrow home-products-tabs__arrow--prev" type="button" aria-label="קודם">
+          <img src="{{ 'arrow-right.png' | asset_url }}" alt="">
+        </button>
+
+        <ul class="home-products-tabs__slider" role="list">
+          {% for product in current_collection.products %}
+            <li class="home-products-tabs__slide">
+              {% render 'card-product',
+                card_product: product,
+                media_aspect_ratio: 'adapt',
+                image_shape: 'default',
+                show_secondary_image: true,
+                show_vendor: false,
+                show_rating: false,
+                lazy_load: true,
+                quick_add: 'standard',
+                section_id: section.id
+              %}
+            </li>
+          {% endfor %}
+        </ul>
+
+        <button class="home-products-tabs__arrow home-products-tabs__arrow--next" type="button" aria-label="הבא">
+          <img src="{{ 'arrow-left.png' | asset_url }}" alt="">
+        </button>
+
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+<style>
+  .home-products-tabs {
+    position: relative;
+    padding-block: 40px;
+  }
+
+  .home-products-tabs::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 3rem);
+    border-bottom: 2px dashed #bd8055;
+  }
+
+  .home-products-tabs__nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    margin-bottom: 30px;
+    direction: rtl;
+    border-bottom: 2px dashed #bd8055;
+    padding-bottom: 6px;
+  }
+
+  .home-products-tabs__btn {
+    min-width: 140px;
+    padding: 14px 28px;
+    border: 0;
+    border-radius: 14px 14px 0 0;
+    background: #f4eeee;
+    color: #5a2b2b;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .tab-heart {
+    opacity: 0;
+    transform: scale(0.7);
+    display: inline-block;
+    color: #ff2f55;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .home-products-tabs__btn:hover .tab-heart,
+  .home-products-tabs__btn.active .tab-heart {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .home-products-tabs__btn.active {
+    color: #ff2f55;
+  }
+
+  .home-products-tabs__panel {
+    display: none;
+  }
+
+  .home-products-tabs__panel.active {
+    display: block;
+  }
+
+  .home-products-tabs__slider-wrap {
+    position: relative;
+  }
+
+.home-products-tabs__slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.home-products-tabs__slider {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-products-tabs__slide {
+  flex: 0 0 260px;
+  min-width: 260px;
+  scroll-snap-align: start;
+}
+  .home-products-tabs__slider::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+  .home-products-tabs__arrow {
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .home-products-tabs__arrow img {
+    width: 42px;
+    height: auto;
+    display: block;
+  }
+
+  .home-products-tabs__arrow--prev {
+    right: -10px;
+  }
+
+  .home-products-tabs__arrow--next {
+    left: -10px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .home-products-tabs__btn {
+      min-width: auto;
+      flex: 1;
+      font-size: 1.5rem;
+      padding: 12px 10px;
+    }
+
+     .home-products-tabs__slide {
+    flex: 0 0 70%;
+    min-width: 70%;
+  }
+
+    .home-products-tabs__arrow img {
+      width: 34px;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.home-products-tabs').forEach(section => {
+    const buttons = section.querySelectorAll('.home-products-tabs__btn');
+    const panels = section.querySelectorAll('.home-products-tabs__panel');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        panels.forEach(panel => panel.classList.remove('active'));
+
+        button.classList.add('active');
+        section.querySelector(`[data-panel="${tab}"]`).classList.add('active');
+      });
+    });
+
+    section.querySelectorAll('.home-products-tabs__panel').forEach(panel => {
+      const slider = panel.querySelector('.home-products-tabs__slider');
+      const prev = panel.querySelector('.home-products-tabs__arrow--prev');
+      const next = panel.querySelector('.home-products-tabs__arrow--next');
+
+      if (!slider || !prev || !next) return;
+
+      next.addEventListener('click', () => {
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+
+      prev.addEventListener('click', () => {
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "מוצרים בטאבים",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection_new",
+      "label": "קולקציית חדש"
+    },
+    {
+      "type": "collection",
+      "id": "collection_loved",
+      "label": "קולקציית אהבנו"
+    },
+    {
+      "type": "collection",
+      "id": "collection_deal",
+      "label": "קולקציית דיל"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "כמה מוצרים להציג"
+    }
+  ],
+  "presets": [
+    {
+      "name": "מוצרים בטאבים"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "category_boxes_GApb9K": {
+      "type": "category-boxes",
+      "blocks": {
+        "box_nUtNxR": {
+          "type": "box",
+          "settings": {
+            "title": "כל המוצרים",
+            "link": "shopify://collections/all",
+            "hover_image": "shopify://shop_images/All_products.png"
+          }
+        },
+        "box_6P8pTz": {
+          "type": "box",
+          "settings": {
+            "title": "מוצרי עץ",
+            "link": "shopify://collections/מוצרי-עץ",
+            "hover_image": "shopify://shop_images/wood-products.png"
+          }
+        },
+        "box_9fMXRJ": {
+          "type": "box",
+          "settings": {
+            "title": "GIOTTO",
+            "link": "shopify://collections/giotto",
+            "hover_image": "shopify://shop_images/GIOTTO.png"
+          }
+        },
+        "box_wi8Bqm": {
+          "type": "box",
+          "settings": {
+            "title": "רעיונות",
+            "link": "https://blog.maayanart.com/",
+            "hover_image": "shopify://shop_images/ideas-blog-maayanart.png"
+          }
+        },
+        "box_LXJBLn": {
+          "type": "box",
+          "settings": {
+            "title": "דבקים",
+            "link": "shopify://collections/דבקים",
+            "hover_image": "shopify://shop_images/Types-of-glue.png"
+          }
+        },
+        "box_7mertX": {
+          "type": "box",
+          "settings": {
+            "title": "מדבקות",
+            "link": "shopify://collections/מדבקות",
+            "hover_image": "shopify://shop_images/stickers-maayanart.png"
+          }
+        },
+        "box_9BNmEW": {
+          "type": "box",
+          "settings": {
+            "title": "ערכות ומשחקים",
+            "link": "shopify://collections/ערכות-יצירה-ומשחקים",
+            "hover_image": "shopify://shop_images/Craft-kits-and-games.png"
+          }
+        },
+        "box_Db8A4E": {
+          "type": "box",
+          "settings": {
+            "title": "קרמיקל",
+            "link": "",
+            "hover_image": "shopify://shop_images/58c8106864d3e26e6a86ecb17f28ff19.png"
+          }
+        },
+        "box_YgJUFi": {
+          "type": "box",
+          "settings": {
+            "title": "חומרי יצירה",
+            "link": "shopify://collections/חומרי-יצירה",
+            "hover_image": "shopify://shop_images/Creative-materials.png"
+          }
+        },
+        "box_wCBf8M": {
+          "type": "box",
+          "settings": {
+            "title": "חגים ומועדים",
+            "link": "shopify://collections/מוצרים-יחודיים-לחגים",
+            "hover_image": "shopify://shop_images/Products-for-Israel-holidays.png"
+          }
+        },
+        "box_erkKg8": {
+          "type": "box",
+          "settings": {
+            "title": "ציוד משרדי",
+            "link": "shopify://collections/ציוד-משרדי",
+            "hover_image": "shopify://shop_images/office-equipment-maayanart.png"
+          }
+        },
+        "box_qc6hCL": {
+          "type": "box",
+          "settings": {
+            "title": "חדש",
+            "link": "shopify://collections/חדש",
+            "hover_image": "shopify://shop_images/new-products.png"
+          }
+        }
+      },
+      "block_order": [
+        "box_nUtNxR",
+        "box_6P8pTz",
+        "box_9fMXRJ",
+        "box_wi8Bqm",
+        "box_LXJBLn",
+        "box_7mertX",
+        "box_9BNmEW",
+        "box_Db8A4E",
+        "box_YgJUFi",
+        "box_wCBf8M",
+        "box_erkKg8",
+        "box_qc6hCL"
+      ],
+      "name": "קוביות קישורים",
+      "settings": {}
+    },
+    "1777308389614420d9": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "featured_collections_tabs_w4nziU": {
+      "type": "featured-collections-tabs",
+      "name": "מוצרים בטאבים",
+      "settings": {
+        "collection_new": "חדש",
+        "collection_loved": "",
+        "collection_deal": "",
+        "products_to_show": 8
+      }
+    }
+  },
+  "order": [
+    "category_boxes_GApb9K",
+    "1777308389614420d9",
+    "featured_collections_tabs_w4nziU"
+  ]
+}

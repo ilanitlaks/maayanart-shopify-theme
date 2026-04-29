@@ -1,0 +1,76 @@
+{{ 'category-boxes.css' | asset_url | stylesheet_tag }}
+
+<section class="category-boxes page-width">
+  <div class="category-boxes__grid">
+    {% for block in section.blocks %}
+   <a href="{{ block.settings.link }}" 
+   class="category-boxes__item {% if block.settings.hover_image != blank %}has-hover{% endif %}" 
+   {{ block.shopify_attributes }}>
+
+        {% if block.settings.image != blank %}
+          <img
+            src="{{ block.settings.image | image_url: width: 500 }}"
+            alt="{{ block.settings.title | escape }}"
+            class="category-boxes__image category-boxes__image--main"
+            loading="lazy"
+          >
+        {% endif %}
+
+        {% if block.settings.hover_image != blank %}
+          <img
+            src="{{ block.settings.hover_image | image_url: width: 500 }}"
+            alt="{{ block.settings.title | escape }}"
+            class="category-boxes__image category-boxes__image--hover"
+            loading="lazy"
+          >
+        {% endif %}
+
+        <span class="category-boxes__title">
+          {{ block.settings.title }}
+        </span>
+
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "קוביות קישורים",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "box",
+      "name": "קובייה",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "כותרת",
+          "default": "שם הקטגוריה"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "קישור"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "תמונה רגילה"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "תמונה במעבר עכבר"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "קוביות קישורים"
+    }
+  ]
+}
+{% endschema %}

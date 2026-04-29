@@ -1,0 +1,77 @@
+.category-boxes {
+  margin: 2rem auto;
+}
+
+.category-boxes__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.category-boxes__item {
+  position: relative;
+  overflow: hidden;
+  background: #cbeef6;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #6b4a4a;
+}
+
+.category-boxes__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.category-boxes__image--main {
+  opacity: 1;
+}
+
+/* ברירת מחדל */
+.category-boxes__image--hover {
+  opacity: 0;
+}
+
+/* רק אם יש תמונת hover */
+.category-boxes__item.has-hover:hover {
+  background: transparent;
+}
+
+.category-boxes__item.has-hover:hover .category-boxes__image--main {
+  opacity: 0;
+}
+
+.category-boxes__item.has-hover:hover .category-boxes__image--hover {
+  opacity: 1;
+}
+
+.category-boxes__item.has-hover:hover .category-boxes__title {
+  opacity: 0;
+}
+.category-boxes__title {
+  position: relative;
+  z-index: 2;
+  padding: 0.5rem;
+  font-size: clamp(1.6rem, 3vw, 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 750px) {
+  .category-boxes__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .category-boxes__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
