@@ -3740,3 +3740,22 @@ details-disclosure > details {
 /* .product__info-container .shopify-payment-button {
   display: none;
 } */
+.product-form__input.price-per-item,
+.product-form__input .price-per-item__container {
+  position: relative;
+  border-radius: 999px;
+  background: #fff;
+  width: fit-content;
+}
+
+/* המסגרת */
+.product-form__input.price-per-item::before,
+.product-form__input .price-per-item__container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+
+  border: 0.5px solid currentColor;
+  pointer-events: none;
+}
