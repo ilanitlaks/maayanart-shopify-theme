@@ -24,22 +24,25 @@
     <div class="collection-subcategories__grid">
       {% for block in section.blocks %}
         {% assign sub_collection = block.settings.collection %}
+        {% assign parent_collection = block.settings.parent_collection %}
 
-        <a
-          href="{% if sub_collection != blank %}{{ sub_collection.url }}{% else %}#{% endif %}"
-          class="collection-subcategories__card"
-          {{ block.shopify_attributes }}
-        >
-          <h3 class="collection-subcategories__title">
-            {% if block.settings.title != blank %}
-              {{ block.settings.title }}
-            {% elsif sub_collection != blank %}
-              {{ sub_collection.title }}
-            {% else %}
-              קטגוריה
-            {% endif %}
-          </h3>
-        </a>
+        {% if parent_collection == collection %}
+          <a
+            href="{% if sub_collection != blank %}{{ sub_collection.url }}{% else %}#{% endif %}"
+            class="collection-subcategories__card"
+            {{ block.shopify_attributes }}
+          >
+            <h3 class="collection-subcategories__title">
+              {% if block.settings.title != blank %}
+                {{ block.settings.title }}
+              {% elsif sub_collection != blank %}
+                {{ sub_collection.title }}
+              {% else %}
+                קטגוריה
+              {% endif %}
+            </h3>
+          </a>
+        {% endif %}
       {% endfor %}
     </div>
 
@@ -71,6 +74,11 @@
           "type": "collection",
           "id": "collection",
           "label": "קישור לקולקציה"
+        },
+        {
+          "type": "collection",
+          "id": "parent_collection",
+          "label": "להציג תחת קולקציה"
         }
       ]
     }

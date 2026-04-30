@@ -1,0 +1,7 @@
+{
+  "name": "shopify-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "shopify theme dev --store=maayanart.myshopify.com"
+  }
+}
