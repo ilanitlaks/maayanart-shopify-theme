@@ -2802,8 +2802,27 @@ details[open] > .header__submenu {
   animation: animateMenuOpen var(--duration-default) ease;
   animation-fill-mode: forwards;
   z-index: 1;
-}
+  background-image: url("https://cdn.shopify.com/s/files/1/1066/2212/4371/files/Dropdown-bg.png?v=1777557668");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  min-width: 80svw;
+  padding: 3rem;
 
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (prefers-reduced-motion) {
   details[open] > .header__submenu {
     opacity: 1;
@@ -2856,17 +2875,23 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item span {
-  transition: text-decoration var(--duration-short) ease;
+  padding: 0.5rem 1rem;
+  transition:
+    text-decoration var(--duration-short) ease,
+    background-color var(--duration-short) ease;
 }
 
 .header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline; */
+  /* text-underline-offset: 0.3rem; */
+  background-color: #f1eaea;
+  border-radius: 1rem;
 }
 
-details[open] > .header__menu-item {
+/* details[open] > .header__menu-item {
   text-decoration: underline;
-}
+  text-underline-offset: 0.3rem;
+} */
 
 details[open]:hover > .header__menu-item {
   text-decoration-thickness: 0.2rem;
@@ -2879,8 +2904,10 @@ details[open] > .header__menu-item .icon-caret {
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  border-bottom: 4px solid #f1eaea;
   text-underline-offset: 0.3rem;
+  border-radius: 1rem;
 }
 
 .header__menu-item:hover .header__active-menu-item {
@@ -2925,7 +2952,8 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__submenu .header__menu-item:hover {
-  text-decoration-line: underline;
+  font-weight: bold;
+  /* text-decoration-line: underline; */
 }
 
 .header__menu-item .icon-caret {
