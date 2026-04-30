@@ -140,18 +140,18 @@
       },
       "nested_label": "{{ title }} ל־{{ parent_title }}",
       "quantity": {
-        "label": "Quantity",
-        "input_label": "Quantity for {{ product }}",
-        "increase": "Increase quantity for {{ product }}",
-        "decrease": "Decrease quantity for {{ product }}",
+        "label": "כמות",
+        "input_label": "כמות ל־{{ product }}",
+        "increase": "הגדל כמות עבור {{ product }}",
+        "decrease": "הקטן כמות עבור {{ product }}",
         "minimum_of": "Minimum of {{ quantity }}",
         "maximum_of": "Maximum of {{ quantity }}",
         "multiples_of": "Increments of {{ quantity }}",
         "min_of": "Min {{ quantity }}",
         "max_of": "Max {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
-        "in_cart_aria_label": "Quantity ({{ quantity }} in cart)",
-        "note": "View quantity rules"
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> פריטים בעגלה",
+        "in_cart_aria_label": "כמות ({{ quantity }} פריטים בעגלה)",
+        "note": "הצג כללי כמות"
       },
       "volume_pricing": {
         "title": "Volume Pricing",
@@ -170,10 +170,10 @@
         "refresh": "Refresh"
       },
       "price": {
-        "from_price_html": "From {{ price }}",
-        "regular_price": "Regular price",
-        "sale_price": "Sale price",
-        "unit_price": "Unit price"
+        "from_price_html": " {{ price }} החל מ",
+        "regular_price": "מחיר רגיל",
+        "sale_price": "מחיר מבצע",
+        "unit_price": "מחיר ליחידה"
       },
       "share": "שתפו עם חברים",
       "sold_out": "נמכר",
@@ -301,7 +301,7 @@
       "checkout": "Check out",
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
-      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
+      "cart_quantity_error_html": "אפשר להוסיף לעגלה עד {{ quantity }} יחידות מהמוצר הזה",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
       "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
@@ -314,7 +314,7 @@
         "product": "Product",
         "price": "Price",
         "total": "Total",
-        "quantity": "Quantity",
+        "quantity": "כמות",
         "image": "Product image"
       },
       "update": "Update",
@@ -339,7 +339,7 @@
       "view_all": "View all"
     },
     "collection_template": {
-      "empty": "No products found",
+      "empty": "לא נמצאו מוצרים",
       "title": "Collection",
       "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
     },
@@ -366,17 +366,17 @@
       "variant": "Variant",
       "variant_total": "Variant total",
       "items_added": {
-        "one": "{{ quantity }} item added",
-        "other": "{{ quantity }} items added"
+        "one": "נוסף פריט לעגלה",
+        "other": "נוספו {{ quantity }} פריטים לעגלה"
       },
       "items_removed": {
-        "one": "{{ quantity }} item removed",
-        "other": "{{ quantity }} items removed"
+        "one": "הוסר פריט מהעגלה",
+        "other": "הוסרו {{ quantity }} פריטים מהעגלה"
       },
       "product_variants": "Product variants",
       "total_items": "Total items",
       "remove_all_single_item_confirmation": "Remove 1 item from your cart?",
-      "remove_all_items_confirmation": "Remove all {{ quantity }} items from your cart?",
+      "remove_all_items_confirmation": "להסיר את כל {{ quantity }} הפריטים מהעגלה?",
       "remove_all": "Remove all",
       "cancel": "Cancel",
       "min_error": "This item has a minimum of {{ min }}",
@@ -462,7 +462,7 @@
       "product": "Product",
       "sku": "SKU",
       "price": "Price",
-      "quantity": "Quantity",
+      "quantity": "כמות",
       "total": "Total",
       "total_refunded": "Refunded",
       "fulfilled_at_html": "Fulfilled {{ date }}",
@@ -534,6 +534,35 @@
       "max_characters": "{{ max_chars }} characters max",
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "stock": {
+        "product_column_header": "כל המוצרים",
+        "quantity_column_header": "כמות"
+      },
+      "order_summary": {
+        "quantity_label": "כמות",
+        "product_image_quantity_label": "כמות"
+      },
+      "thank_you": {
+        "fulfillment": {
+          "quantity_label": "כמות"
+        }
+      }
+    },
+    "page_titles": {
+      "products": "כל המוצרים"
+    }
+  },
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "column_headers": {
+          "products_accessibility_label": "כל המוצרים"
+        }
+      }
     }
   }
 }

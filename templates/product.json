@@ -66,6 +66,7 @@
         "description",
         "share"
       ],
+      "custom_css": [],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -85,7 +86,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "אולי יעניין אותך גם . . .",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
