@@ -12,120 +12,693 @@
     "subcategories": {
       "type": "collection-subcategories",
       "blocks": {
+        "category_AnKXYY": {
+          "type": "category",
+          "settings": {
+            "title": "שבלונות לקעקועים",
+            "collection": "שבלונות-לקעקועים",
+            "parent_collection": "שבלונות-סטנסילים"
+          }
+        },
+        "category_hddw6G": {
+          "type": "category",
+          "settings": {
+            "title": "שבלונות דביקות",
+            "collection": "שבלונות-דביקות",
+            "parent_collection": "שבלונות-סטנסילים"
+          }
+        },
+        "category_3Q936f": {
+          "type": "category",
+          "settings": {
+            "title": "שבלונות",
+            "collection": "שבלונות-כלליות",
+            "parent_collection": "שבלונות-סטנסילים"
+          }
+        },
+        "category_NDdWLX": {
+          "type": "category",
+          "settings": {
+            "title": "שבלונות אותיות וספרות",
+            "collection": "שבלונות-אותיות-וספרות",
+            "parent_collection": "שבלונות-סטנסילים"
+          }
+        },
+        "category_Hyd6Ex": {
+          "type": "category",
+          "settings": {
+            "title": "כל מיני נייר",
+            "collection": "כל-מיני-נייר",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_erW36m": {
+          "type": "category",
+          "settings": {
+            "title": "ניירות קרפ",
+            "collection": "ניירות-קרפ",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_xPemYD": {
+          "type": "category",
+          "settings": {
+            "title": "ניירות ליצירה A4 / A5",
+            "collection": "ניירות-ליצירה-a4-a5",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_z9rfV9": {
+          "type": "category",
+          "settings": {
+            "title": "בלוק ציור וסקצ'בוק",
+            "collection": "בלוק-ציור-וסקצבוק",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_E3DUU4": {
+          "type": "category",
+          "settings": {
+            "title": "בריסטול A4 / A5",
+            "collection": "בריסטול-a4-a5",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_JYbm7L": {
+          "type": "category",
+          "settings": {
+            "title": "פסי קישוט",
+            "collection": "פסי-קישוט",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_EQEHCy": {
+          "type": "category",
+          "settings": {
+            "title": "קווילינג",
+            "collection": "קווילינג",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_qPtdw7": {
+          "type": "category",
+          "settings": {
+            "title": "אוריגמי",
+            "collection": "אוריגמי",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_XcMLbn": {
+          "type": "category",
+          "settings": {
+            "title": "חיתוכי קרטון",
+            "collection": "חיתוכי-קרטון",
+            "parent_collection": "מוצרי-נייר"
+          }
+        },
+        "category_emnaPW": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות מנצנצות",
+            "collection": "מדבקות-מנצנצות",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_gfdiHn": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות קיר",
+            "collection": "מדבקות-קיר",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_H7pMy8": {
+          "type": "category",
+          "settings": {
+            "title": "לבד דביק",
+            "collection": "לבד-דביק",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_cDtmgP": {
+          "type": "category",
+          "settings": {
+            "title": "סול דביק",
+            "collection": "סול-דביק",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_JatQiE": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות לימודיות",
+            "collection": "מדבקות-לימודיות",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_nKhgpW": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות אותיות ומספרים",
+            "collection": "מדבקות-אותיות-ומספרים",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_c7t3cC": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות תבליט",
+            "collection": "מדבקות-תבליט",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_zRbPrU": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות ליומן",
+            "collection": "מדבקות-ליומן",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_a8ibXy": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות אבני קריסטל",
+            "collection": "מדבקות-אבני-קריסטל",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_63rNAa": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות מותגים",
+            "collection": "מדבקות-מותגים",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_nqzanW": {
+          "type": "category",
+          "settings": {
+            "title": "מדבקות נייר",
+            "collection": "מדבקות-נייר",
+            "parent_collection": "מדבקות"
+          }
+        },
+        "category_4cCfcF": {
+          "type": "category",
+          "settings": {
+            "title": "ערכות יצירה - מעל המצופה",
+            "collection": "erkot-yetzira-meal-hametzupa",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_DqkDHN": {
+          "type": "category",
+          "settings": {
+            "title": "Foxmind",
+            "collection": "foxmind",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_jQxGgi": {
+          "type": "category",
+          "settings": {
+            "title": "שרינקי",
+            "collection": "שרינקי",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_mpwpa9": {
+          "type": "category",
+          "settings": {
+            "title": "משחקים",
+            "collection": "משחקים",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_JrBTka": {
+          "type": "category",
+          "settings": {
+            "title": "ערכות יצירה - אמוס",
+            "collection": "erkot-yetzira-amos",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_wbBjjx": {
+          "type": "category",
+          "settings": {
+            "title": "ערכות יצירה - רקמה",
+            "collection": "ערכות-יצירה-רקמה",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_FAJMBK": {
+          "type": "category",
+          "settings": {
+            "title": "פיקסל הובי",
+            "collection": "פיקסל-הובי",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_xd7yP3": {
+          "type": "category",
+          "settings": {
+            "title": "ערכות יצירה - SBS",
+            "collection": "erkot-yetzira-sbs",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_YKaAL8": {
+          "type": "category",
+          "settings": {
+            "title": "כל מיני ערכות יצירה",
+            "collection": "כל-מיני-ערכות-יצירה",
+            "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_n437xJ": {
+          "type": "category",
+          "settings": {
+            "title": "כל מיני מבד",
+            "collection": "כל-מיני-מבד",
+            "parent_collection": "מוצרי-בד"
+          }
+        },
+        "category_LrGd9d": {
+          "type": "category",
+          "settings": {
+            "title": "סדקית",
+            "collection": "סדקית",
+            "parent_collection": "מוצרי-בד"
+          }
+        },
+        "category_rzMAgL": {
+          "type": "category",
+          "settings": {
+            "title": "בדים",
+            "collection": "בדים",
+            "parent_collection": "מוצרי-בד"
+          }
+        },
+        "category_PenF7q": {
+          "type": "category",
+          "settings": {
+            "title": "מוצרי בד לקישוט",
+            "collection": "מוצרי-בד-לקישוט",
+            "parent_collection": "מוצרי-בד"
+          }
+        },
+        "category_RHtHYx": {
+          "type": "category",
+          "settings": {
+            "title": "כלי עבודה - נייר",
+            "collection": "כלי-עבודה-נייר",
+            "parent_collection": "כלי-עבודה"
+          }
+        },
+        "category_DJgepX": {
+          "type": "category",
+          "settings": {
+            "title": "כלי עבודה - תכשיטנות",
+            "collection": "כלי-עבודה-תכשיטנות",
+            "parent_collection": "כלי-עבודה"
+          }
+        },
+        "category_77B3gp": {
+          "type": "category",
+          "settings": {
+            "title": "כלי עבודה - כללי",
+            "collection": "כלי-עבודה-כללי",
+            "parent_collection": "כלי-עבודה"
+          }
+        },
+        "category_4RcXRM": {
+          "type": "category",
+          "settings": {
+            "title": "לולאות",
+            "collection": "לולאות",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_cP7kmF": {
+          "type": "category",
+          "settings": {
+            "title": "סוגרים",
+            "collection": "סוגרים",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_hatRFy": {
+          "type": "category",
+          "settings": {
+            "title": "תליונים",
+            "collection": "תליונים",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_iwxbbn": {
+          "type": "category",
+          "settings": {
+            "title": "שרשראות לפי מטר",
+            "collection": "שרשראות-לפי-מטר",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_RXwDtV": {
+          "type": "category",
+          "settings": {
+            "title": "סופיות",
+            "collection": "סופיות",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_PJc969": {
+          "type": "category",
+          "settings": {
+            "title": "קופסאות אחסון",
+            "collection": "קופסאות-אחסון",
+            "parent_collection": "אריזה-ואחסון"
+          }
+        },
+        "category_QeaYJc": {
+          "type": "category",
+          "settings": {
+            "title": "שקיות",
+            "collection": "שקיות",
+            "parent_collection": "אריזה-ואחסון"
+          }
+        },
+        "category_RUGhiF": {
+          "type": "category",
+          "settings": {
+            "title": "ניירות דקופאצ' - Decopatch",
+            "collection": "decopatch-papers",
+            "parent_collection": "decopatch"
+          }
+        },
+        "category_D3UdDG": {
+          "type": "category",
+          "settings": {
+            "title": "ערכות יצירה דקופאצ' Decopatch",
+            "collection": "decopatch-kits",
+            "parent_collection": "decopatch"
+          }
+        },
+        "category_wjPPAd": {
+          "type": "category",
+          "settings": {
+            "title": "מוצרים מעיסת נייר",
+            "collection": "",
+            "parent_collection": "decopatch"
+          }
+        },
+        "category_CGhQ6w": {
+          "type": "category",
+          "settings": {
+            "title": "קופסאות סגורות",
+            "collection": "קופסאות-סגורות",
+            "parent_collection": "מוצרי-עץ"
+          }
+        },
+        "category_gqLhih": {
+          "type": "category",
+          "settings": {
+            "title": "חיתוכי mdf להרכבה",
+            "collection": "mdf",
+            "parent_collection": "מוצרי-עץ"
+          }
+        },
+        "category_eWfjMq": {
+          "type": "category",
+          "settings": {
+            "title": "חיתוכי עץ",
+            "collection": "חיתוכי-עץ",
+            "parent_collection": "מוצרי-עץ"
+          }
+        },
+        "category_qNmYGf": {
+          "type": "category",
+          "settings": {
+            "title": "אותיות וספרות מעץ",
+            "collection": "אותיות-וספרות-מעץ",
+            "parent_collection": "מוצרי-עץ"
+          }
+        },
+        "category_LYUctJ": {
+          "type": "category",
+          "settings": {
+            "title": "כל מיני עץ",
+            "collection": "כל-מיני-עץ",
+            "parent_collection": "מוצרי-עץ"
+          }
+        },
+        "category_mycraa": {
+          "type": "category",
+          "settings": {
+            "title": "קופסאות פתוחות",
+            "collection": "קופסאות-פתוחות",
+            "parent_collection": "מוצרי-עץ"
+          }
+        },
+        "category_7xJxRA": {
+          "type": "category",
+          "settings": {
+            "title": "דבק לבדים",
+            "collection": "דבק-לבדים",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_h8rGVh": {
+          "type": "category",
+          "settings": {
+            "title": "דבק לאלבומים",
+            "collection": "דבק-לאלבומים",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_GBbqGE": {
+          "type": "category",
+          "settings": {
+            "title": "דבק טפטים",
+            "collection": "דבק-טפטים",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_JAhKTW": {
+          "type": "category",
+          "settings": {
+            "title": "דבק חם ואקדחי דבק חם",
+            "collection": "דבק-חם-ואקדחי-דבק-חם",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_brb7jC": {
+          "type": "category",
+          "settings": {
+            "title": "דבק פלסטי",
+            "collection": "דבק-פלסטי",
+            "parent_collection": "דבקים"
+          }
+        },
         "category_DjhY7X": {
           "type": "category",
           "settings": {
             "title": "אטבים",
-            "collection": "אטבים"
+            "collection": "אטבים",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_dpnBLH": {
           "type": "category",
           "settings": {
             "title": "בדי לבד",
-            "collection": "בדי-לבד"
+            "collection": "בדי-לבד",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_RJyEwP": {
           "type": "category",
           "settings": {
             "title": "חול ובצק למשחק",
-            "collection": "חול-ובצק-למשחק"
+            "collection": "חול-ובצק-למשחק",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_zTJWnc": {
           "type": "category",
           "settings": {
             "title": "חומרים ליצירת פרחים",
-            "collection": "חומרים-ליצירת-פרחים"
+            "collection": "חומרים-ליצירת-פרחים",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_xKCHFB": {
           "type": "category",
           "settings": {
             "title": "חלקים לבובות",
-            "collection": "חלקים-לבובות"
+            "collection": "חלקים-לבובות",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_8VHVXF": {
           "type": "category",
           "settings": {
             "title": "כל מיני ליצירה",
-            "collection": "כל-מיני-ליצירה"
+            "collection": "כל-מיני-ליצירה",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_BpyPjW": {
           "type": "category",
           "settings": {
             "title": "כפתורים",
-            "collection": "כפתורים"
+            "collection": "כפתורים",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_G7yKcg": {
           "type": "category",
           "settings": {
             "title": "מגנטים",
-            "collection": "מגנטים"
+            "collection": "מגנטים",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_WfcM7i": {
           "type": "category",
           "settings": {
             "title": "קלקרים ומוקצפים",
-            "collection": "קלקרים-ומוקצפים"
+            "collection": "קלקרים-ומוקצפים",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_FtCnym": {
           "type": "category",
           "settings": {
             "title": "מתכת ליצירה",
-            "collection": "מתכת-ליצירה"
+            "collection": "מתכת-ליצירה",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_dpqxqw": {
           "type": "category",
           "settings": {
             "title": "מקלות וקוביות מעץ",
-            "collection": "מקלות-וקוביות-מעץ"
+            "collection": "מקלות-וקוביות-מעץ",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_zzMNE7": {
           "type": "category",
           "settings": {
             "title": "נוצות",
-            "collection": "נוצות"
+            "collection": "נוצות",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_6QRxWD": {
           "type": "category",
           "settings": {
             "title": "עיניים",
-            "collection": "עיניים"
+            "collection": "עיניים",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_VWjKKy": {
           "type": "category",
           "settings": {
             "title": "פומפונים",
-            "collection": "פומפונים"
+            "collection": "פומפונים",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_6V8CWz": {
           "type": "category",
           "settings": {
             "title": "פייטים ונצנצים",
-            "collection": "פייטים-ונצנצים"
+            "collection": "פייטים-ונצנצים",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_47nQKK": {
           "type": "category",
           "settings": {
             "title": "פעמונים",
-            "collection": "פעמונים"
+            "collection": "פעמונים",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
+        "category_GFYTkg": {
+          "type": "category",
+          "settings": {
+            "title": "כלי עבודה - עץ",
+            "collection": "כלי-עבודה-עץ",
+            "parent_collection": "כלי-עבודה"
           }
         }
       },
       "block_order": [
+        "category_AnKXYY",
+        "category_hddw6G",
+        "category_3Q936f",
+        "category_NDdWLX",
+        "category_Hyd6Ex",
+        "category_erW36m",
+        "category_xPemYD",
+        "category_z9rfV9",
+        "category_E3DUU4",
+        "category_JYbm7L",
+        "category_EQEHCy",
+        "category_qPtdw7",
+        "category_XcMLbn",
+        "category_emnaPW",
+        "category_gfdiHn",
+        "category_H7pMy8",
+        "category_cDtmgP",
+        "category_JatQiE",
+        "category_nKhgpW",
+        "category_c7t3cC",
+        "category_zRbPrU",
+        "category_a8ibXy",
+        "category_63rNAa",
+        "category_nqzanW",
+        "category_4cCfcF",
+        "category_DqkDHN",
+        "category_jQxGgi",
+        "category_mpwpa9",
+        "category_JrBTka",
+        "category_wbBjjx",
+        "category_FAJMBK",
+        "category_xd7yP3",
+        "category_YKaAL8",
+        "category_n437xJ",
+        "category_LrGd9d",
+        "category_rzMAgL",
+        "category_PenF7q",
+        "category_RHtHYx",
+        "category_DJgepX",
+        "category_77B3gp",
+        "category_4RcXRM",
+        "category_cP7kmF",
+        "category_hatRFy",
+        "category_iwxbbn",
+        "category_RXwDtV",
+        "category_PJc969",
+        "category_QeaYJc",
+        "category_RUGhiF",
+        "category_D3UdDG",
+        "category_wjPPAd",
+        "category_CGhQ6w",
+        "category_gqLhih",
+        "category_eWfjMq",
+        "category_qNmYGf",
+        "category_LYUctJ",
+        "category_mycraa",
+        "category_7xJxRA",
+        "category_h8rGVh",
+        "category_GBbqGE",
+        "category_JAhKTW",
+        "category_brb7jC",
         "category_DjhY7X",
         "category_dpnBLH",
         "category_RJyEwP",
@@ -141,7 +714,8 @@
         "category_6QRxWD",
         "category_VWjKKy",
         "category_6V8CWz",
-        "category_47nQKK"
+        "category_47nQKK",
+        "category_GFYTkg"
       ],
       "settings": {
         "heading": "קטגוריות"

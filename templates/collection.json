@@ -41,120 +41,243 @@
     "collection_subcategories_L4Bt9w": {
       "type": "collection-subcategories",
       "blocks": {
+        "category_hwpL7J": {
+          "type": "category",
+          "settings": {
+            "title": "שבלונות",
+            "collection": "שבלונות-כלליות",
+            "parent_collection": "שבלונות-סטנסילים"
+          }
+        },
+        "category_nwpGkR": {
+          "type": "category",
+          "settings": {
+            "title": "כלי עבודה - עץ",
+            "collection": "כלי-עבודה-עץ",
+            "parent_collection": "כלי-עבודה"
+          }
+        },
+        "category_bAQ6P9": {
+          "type": "category",
+          "settings": {
+            "title": "כלי עבודה - כללי",
+            "collection": "כלי-עבודה-כללי",
+            "parent_collection": "כלי-עבודה"
+          }
+        },
+        "category_yxrnqh": {
+          "type": "category",
+          "settings": {
+            "title": "כלי עבודה - תכשיטנות",
+            "collection": "כלי-עבודה-תכשיטנות",
+            "parent_collection": "כלי-עבודה"
+          }
+        },
+        "category_rNXEHG": {
+          "type": "category",
+          "settings": {
+            "title": "כלי עבודה - נייר",
+            "collection": "כלי-עבודה-נייר",
+            "parent_collection": "כלי-עבודה"
+          }
+        },
+        "category_WyUTkq": {
+          "type": "category",
+          "settings": {
+            "title": "לולאות",
+            "collection": "לולאות",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_k3CTQc": {
+          "type": "category",
+          "settings": {
+            "title": "סוגרים",
+            "collection": "סוגרים",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_4U4bD4": {
+          "type": "category",
+          "settings": {
+            "title": "תליונים",
+            "collection": "תליונים",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_PyknmX": {
+          "type": "category",
+          "settings": {
+            "title": "שרשראות לפי מטר",
+            "collection": "שרשראות-לפי-מטר",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_3DaATR": {
+          "type": "category",
+          "settings": {
+            "title": "קופסאות אחסון",
+            "collection": "קופסאות-אחסון",
+            "parent_collection": ""
+          }
+        },
+        "category_8FLPw9": {
+          "type": "category",
+          "settings": {
+            "title": "שקיות",
+            "collection": "שקיות",
+            "parent_collection": "אריזה-ואחסון"
+          }
+        },
         "category_HUXnjz": {
           "type": "category",
           "settings": {
-            "title": "חומרים ליצירת פרחים",
-            "collection": ""
+            "title": "ניירות דקופאצ' - Decopatch",
+            "collection": "decopatch-papers",
+            "parent_collection": "decopatch"
           }
         },
         "category_F64fMG": {
           "type": "category",
           "settings": {
-            "title": "חלקים לבובות",
-            "collection": ""
+            "title": "ערכות יצירה דקופאצ' Decopatch",
+            "collection": "decopatch-kits",
+            "parent_collection": "decopatch"
           }
         },
         "category_V9hQdy": {
           "type": "category",
           "settings": {
-            "title": "עיניים",
-            "collection": ""
+            "title": "מוצרים מעיסת נייר",
+            "collection": "מוצרים-מעיסת-נייר",
+            "parent_collection": "decopatch"
           }
         },
         "category_4rrpr9": {
           "type": "category",
           "settings": {
             "title": "בדי לבד",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_NAAind": {
           "type": "category",
           "settings": {
             "title": "פעמונים",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_BrmFAA": {
           "type": "category",
           "settings": {
             "title": "מתכת ליצירה",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_K3G34q": {
           "type": "category",
           "settings": {
             "title": "נוצות",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_7LRDYY": {
           "type": "category",
           "settings": {
             "title": "פייטים ונצנצים",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_8UWqzT": {
           "type": "category",
           "settings": {
             "title": "כל מיני ליצירה",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_ntj4DQ": {
           "type": "category",
           "settings": {
             "title": "כפתורים",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_aXnCd9": {
           "type": "category",
           "settings": {
             "title": "אטבים",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_cfrFpe": {
           "type": "category",
           "settings": {
             "title": "פומפונים",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_ejF8mF": {
           "type": "category",
           "settings": {
             "title": "מגנטים",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_7TbwHb": {
           "type": "category",
           "settings": {
             "title": "קלקרים ומוקצפים",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_JW3QTf": {
           "type": "category",
           "settings": {
             "title": "חול ובצק למשחק",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
           }
         },
         "category_UgdJE3": {
           "type": "category",
           "settings": {
             "title": "מקלות וקוביות מעץ",
-            "collection": ""
+            "collection": "",
+            "parent_collection": ""
+          }
+        },
+        "category_ddrKh8": {
+          "type": "category",
+          "settings": {
+            "title": "סופיות",
+            "collection": "סופיות",
+            "parent_collection": "תכשיטנות"
           }
         }
       },
       "block_order": [
+        "category_hwpL7J",
+        "category_nwpGkR",
+        "category_bAQ6P9",
+        "category_yxrnqh",
+        "category_rNXEHG",
+        "category_WyUTkq",
+        "category_k3CTQc",
+        "category_4U4bD4",
+        "category_PyknmX",
+        "category_3DaATR",
+        "category_8FLPw9",
         "category_HUXnjz",
         "category_F64fMG",
         "category_V9hQdy",
@@ -170,7 +293,8 @@
         "category_ejF8mF",
         "category_7TbwHb",
         "category_JW3QTf",
-        "category_UgdJE3"
+        "category_UgdJE3",
+        "category_ddrKh8"
       ],
       "disabled": true,
       "name": "תתי קטגוריות",
