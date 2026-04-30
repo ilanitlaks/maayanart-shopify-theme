@@ -26,7 +26,7 @@
         {% assign sub_collection = block.settings.collection %}
         {% assign parent_collection = block.settings.parent_collection %}
 
-        {% if parent_collection == collection %}
+        {% if parent_collection == blank or parent_collection == collection %}
           <a
             href="{% if sub_collection != blank %}{{ sub_collection.url }}{% else %}#{% endif %}"
             class="collection-subcategories__card"
