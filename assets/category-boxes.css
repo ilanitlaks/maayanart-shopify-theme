@@ -5,7 +5,7 @@
 .category-boxes__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 1.5rem;
 }
 
 .category-boxes__item {
