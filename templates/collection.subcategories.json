@@ -12,6 +12,422 @@
     "subcategories": {
       "type": "collection-subcategories",
       "blocks": {
+        "category_pfrYCN": {
+          "type": "category",
+          "settings": {
+            "title": "סרטי תחרה",
+            "collection": "סרטי-תחרה",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_7PLJg8": {
+          "type": "category",
+          "settings": {
+            "title": "סרטי סאטן",
+            "collection": "סרטי-סאטן",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_jHEKMQ": {
+          "type": "category",
+          "settings": {
+            "title": "מסרגות",
+            "collection": "מסרגות",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_i4rgJq": {
+          "type": "category",
+          "settings": {
+            "title": "חוטים להשחלה ואריזה",
+            "collection": "חוטים-להשחלה-ואריזה",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_k7wMjg": {
+          "type": "category",
+          "settings": {
+            "title": "חוטי רקמה",
+            "collection": "חוטי-רקמה",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_rB9Vzj": {
+          "type": "category",
+          "settings": {
+            "title": "חוטי עור",
+            "collection": "חוטי-עור",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_trHwNw": {
+          "type": "category",
+          "settings": {
+            "title": "חוטי סריגה",
+            "collection": "חוטי-סריגה",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_WHAkne": {
+          "type": "category",
+          "settings": {
+            "title": "חוטי מקרמה",
+            "collection": "חוטי-מקרמה",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_DkF47a": {
+          "type": "category",
+          "settings": {
+            "title": "חוטי כותנה",
+            "collection": "חוטי-כותנה",
+            "parent_collection": "חוטים-סרטים-ומסרגות"
+          }
+        },
+        "category_79E9QK": {
+          "type": "category",
+          "settings": {
+            "title": "דיו צבעוני",
+            "collection": "דיו-צבעוני",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_thLccG": {
+          "type": "category",
+          "settings": {
+            "title": "טושים",
+            "collection": "טושים",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_V3tKTp": {
+          "type": "category",
+          "settings": {
+            "title": "טושים קבועים",
+            "collection": "טושים-קבועים",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_ibR7D3": {
+          "type": "category",
+          "settings": {
+            "title": "לכות",
+            "collection": "לכות",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_BcDmVG": {
+          "type": "category",
+          "settings": {
+            "title": "ספריי צבע",
+            "collection": "ספריי-צבע",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_mA3Bwj": {
+          "type": "category",
+          "settings": {
+            "title": "פחם, גירים ועפרונות",
+            "collection": "פחם-גירים-ועפרונות",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_cryghT": {
+          "type": "category",
+          "settings": {
+            "title": "צבע 3D",
+            "collection": "צבע-3d",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_cy4mWh": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי גואש",
+            "collection": "צבעי-גואש",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_tQfdK4": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי גוף / איפור",
+            "collection": "צבעי-גוף-איפור",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_EAybaT": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי זכוכית",
+            "collection": "צבעי-זכוכית",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_ttkLpD": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי ידיים",
+            "collection": "צבעי-ידיים",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_bNtHxA": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי בד",
+            "collection": "צבעי-בד",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_VNn6Mf": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי מים",
+            "collection": "צבעי-מים",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_zTtJ8f": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי עפרון",
+            "collection": "צבעי-עפרון",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_HLGQhP": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי פסטל על בסיס שמן",
+            "collection": "צבעי-פסטל-שמן",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_kNiNy7": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי פסטל על בסיס שעווה",
+            "collection": "צבעי-פסטל-שעווה",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_TgzQQh": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי שמן",
+            "collection": "צבעי-שמן",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_JyacDh": {
+          "type": "category",
+          "settings": {
+            "title": "צבעים אקריליים",
+            "collection": "צבעים-אקריליים",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_bAQPbX": {
+          "type": "category",
+          "settings": {
+            "title": "צבעי גוף / איפור",
+            "collection": "צבעי-גוף-איפור",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_HGymhf": {
+          "type": "category",
+          "settings": {
+            "title": "חרוזי מעיכה לתכשיטנות",
+            "collection": "charuzei-meikha-letachshitanut",
+            "parent_collection": "חרוזים"
+          }
+        },
+        "category_7Fjda9": {
+          "type": "category",
+          "settings": {
+            "title": "חרוזי עץ",
+            "collection": "charuzei-etz",
+            "parent_collection": "חרוזים"
+          }
+        },
+        "category_wV3gmE": {
+          "type": "category",
+          "settings": {
+            "title": "חרוזי גיהוץ - Perler beads",
+            "collection": "charuzei-gihuz-perler-beads",
+            "parent_collection": "חרוזים"
+          }
+        },
+        "category_LbKiWp": {
+          "type": "category",
+          "settings": {
+            "title": "חרוזי זכוכית",
+            "collection": "charuzei-zchuchit",
+            "parent_collection": "חרוזים"
+          }
+        },
+        "category_FGbyQU": {
+          "type": "category",
+          "settings": {
+            "title": "חרוזי פלסטיק",
+            "collection": "charuzei-plastik",
+            "parent_collection": "חרוזים"
+          }
+        },
+        "category_wkmeNz": {
+          "type": "category",
+          "settings": {
+            "title": " מברשות",
+            "collection": "mivrashot",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
+          }
+        },
+        "category_hGtjjg": {
+          "type": "category",
+          "settings": {
+            "title": " פלטות וכיורים",
+            "collection": "palotot-vekiyurim",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
+          }
+        },
+        "category_fXdLbf": {
+          "type": "category",
+          "settings": {
+            "title": " סכיני ציירים",
+            "collection": "sakinei-tzayarim",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
+          }
+        },
+        "category_PXdPxr": {
+          "type": "category",
+          "settings": {
+            "title": "מכחולי פרינסטון",
+            "collection": "michvolei-princeton",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
+          }
+        },
+        "category_bPDnfJ": {
+          "type": "category",
+          "settings": {
+            "title": " מכחולים ומברשות שיער ג'ינג'י",
+            "collection": "michvolim-umivrashot-shear-jinji",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
+          }
+        },
+        "category_yiyjHr": {
+          "type": "category",
+          "settings": {
+            "title": "מכחולים לילדים",
+            "collection": "michvolim-layeladim",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
+          }
+        },
+        "category_7xFMqU": {
+          "type": "category",
+          "settings": {
+            "title": " מכחולים פשוטים",
+            "collection": "michvolim-pshutim",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
+          }
+        },
+        "category_CLLLiP": {
+          "type": "category",
+          "settings": {
+            "title": "סט מכחולים",
+            "collection": "",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
+          }
+        },
+        "category_yHJHhM": {
+          "type": "category",
+          "settings": {
+            "title": "",
+            "collection": "shadkhanim-umaarzei-laminatsia",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_fcQPaj": {
+          "type": "category",
+          "settings": {
+            "title": "",
+            "collection": "kol-miney-tziyud-misradi",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_gCFPqc": {
+          "type": "category",
+          "settings": {
+            "title": "",
+            "collection": "misparayim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_AUh3k4": {
+          "type": "category",
+          "settings": {
+            "title": "",
+            "collection": "shadkhanim-umenakbim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_DtYNMV": {
+          "type": "category",
+          "settings": {
+            "title": "",
+            "collection": "kley-ktiva",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_zeA8Kw": {
+          "type": "category",
+          "settings": {
+            "title": "",
+            "collection": "mechadedim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_WbctxU": {
+          "type": "category",
+          "settings": {
+            "title": "",
+            "collection": "mechakim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_FffpgJ": {
+          "type": "category",
+          "settings": {
+            "title": "foto transfer פוטו טרנספר",
+            "collection": "foto-transfer-פוטו-טרנספר",
+            "parent_collection": "טכניקות"
+          }
+        },
+        "category_kfbhLq": {
+          "type": "category",
+          "settings": {
+            "title": " מדיומים שונים",
+            "collection": "mediumim-shonim",
+            "parent_collection": "טכניקות"
+          }
+        },
+        "category_ywFirL": {
+          "type": "category",
+          "settings": {
+            "title": "עלי זהב",
+            "collection": "alei-zahav",
+            "parent_collection": "טכניקות"
+          }
+        },
+        "category_TC4FTh": {
+          "type": "category",
+          "settings": {
+            "title": " משחות עיצוב",
+            "collection": "mishkhot-itzuv",
+            "parent_collection": "טכניקות"
+          }
+        },
         "category_AnKXYY": {
           "type": "category",
           "settings": {
@@ -638,6 +1054,58 @@
         }
       },
       "block_order": [
+        "category_pfrYCN",
+        "category_7PLJg8",
+        "category_jHEKMQ",
+        "category_i4rgJq",
+        "category_k7wMjg",
+        "category_rB9Vzj",
+        "category_trHwNw",
+        "category_WHAkne",
+        "category_DkF47a",
+        "category_79E9QK",
+        "category_thLccG",
+        "category_V3tKTp",
+        "category_ibR7D3",
+        "category_BcDmVG",
+        "category_mA3Bwj",
+        "category_cryghT",
+        "category_cy4mWh",
+        "category_tQfdK4",
+        "category_EAybaT",
+        "category_ttkLpD",
+        "category_bNtHxA",
+        "category_VNn6Mf",
+        "category_zTtJ8f",
+        "category_HLGQhP",
+        "category_kNiNy7",
+        "category_TgzQQh",
+        "category_JyacDh",
+        "category_bAQPbX",
+        "category_HGymhf",
+        "category_7Fjda9",
+        "category_wV3gmE",
+        "category_LbKiWp",
+        "category_FGbyQU",
+        "category_wkmeNz",
+        "category_hGtjjg",
+        "category_fXdLbf",
+        "category_PXdPxr",
+        "category_bPDnfJ",
+        "category_yiyjHr",
+        "category_7xFMqU",
+        "category_CLLLiP",
+        "category_yHJHhM",
+        "category_fcQPaj",
+        "category_gCFPqc",
+        "category_AUh3k4",
+        "category_DtYNMV",
+        "category_zeA8Kw",
+        "category_WbctxU",
+        "category_FffpgJ",
+        "category_kfbhLq",
+        "category_ywFirL",
+        "category_TC4FTh",
         "category_AnKXYY",
         "category_hddw6G",
         "category_3Q936f",
