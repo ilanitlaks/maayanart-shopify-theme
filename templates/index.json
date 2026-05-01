@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "shipping_banner_dHLtqM": {
+      "type": "shipping-banner",
+      "name": "Shipping banner",
+      "settings": {
+        "image": "shopify://shop_images/delivery-truck-free-shipping-maayanart_png.png",
+        "text": "משלוח חינם בקניה מעל ₪400",
+        "link": "shopify://pages/משלוחים-ואיסוף-עצמי",
+        "alt_text": "משלוחים מעיין היצירה"
+      }
+    },
     "category_boxes_GApb9K": {
       "type": "category-boxes",
       "blocks": {
@@ -142,6 +152,7 @@
     }
   },
   "order": [
+    "shipping_banner_dHLtqM",
     "category_boxes_GApb9K",
     "1777308389614420d9",
     "featured_collections_tabs_w4nziU"

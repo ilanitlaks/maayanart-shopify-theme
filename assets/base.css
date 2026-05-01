@@ -3257,7 +3257,7 @@ details-disclosure > details {
 .rte ul,
 .rte ol {
   list-style-position: inside;
-  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .rte li {

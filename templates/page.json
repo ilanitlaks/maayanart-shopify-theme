@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "shipping_banner_87TqmC": {
+      "type": "shipping-banner",
+      "name": "Shipping banner",
+      "settings": {
+        "image": "shopify://shop_images/delivery-truck-free-shipping-maayanart_png.png",
+        "text": "משלוח חינם בקניה מעל ₪400",
+        "link": "",
+        "alt_text": "משלוחים מעיין היצירה"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -18,6 +28,7 @@
     }
   },
   "order": [
+    "shipping_banner_87TqmC",
     "main"
   ]
 }
