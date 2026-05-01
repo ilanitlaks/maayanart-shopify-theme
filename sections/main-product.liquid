@@ -683,7 +683,38 @@
         </section>
       </div>
     </div>
+    {% assign group_tag = '' %}
 
+    {% for tag in product.tags %}
+      {% if tag contains 'group-' %}
+        {% assign group_tag = tag %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+{% if group_tag != '' %}
+  <div class="product-siblings page-width">
+    <h2 class="product-siblings__title">אפשרויות נוספות</h2>
+
+    <ul class="product-siblings__grid grid grid--2-col-tablet-down grid--4-col-desktop" role="list">
+      {% for p in collections.all.products %}
+        {% if p.tags contains group_tag and p.id != product.id and p.price > 0 %}
+          <li class="grid__item">
+            {% render 'card-product',
+              card_product: p,
+              media_aspect_ratio: 'square',
+              show_secondary_image: false,
+              show_vendor: false,
+              show_rating: false,
+              lazy_load: true,
+              section_id: section.id
+            %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}

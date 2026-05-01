@@ -528,6 +528,7 @@
   + *:not(.rating):not(.card__information-volume-pricing-note) {
   margin-top: 0.7rem;
   width: fit-content;
+  margin: 0.5rem auto;
 }
 
 .card-information .caption {
@@ -669,4 +670,19 @@
 .card-qty__number {
   position: relative;
   z-index: 6;
+}
+.card-options-btn {
+  text-decoration: none;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 999px;
+  background: #cdeff6;
+  color: #5a2b2b;
+  outline: 2px dashed rgba(178, 109, 60, 0.43);
+  outline-offset: -0.5rem;
+  display: block;
+}
+.card-options-btn:hover {
+  font-weight: bold;
+  text-decoration: none;
 }
