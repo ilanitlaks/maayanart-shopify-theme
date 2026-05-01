@@ -2806,7 +2806,7 @@ details[open] > .header__submenu {
   background-image: url("https://cdn.shopify.com/s/files/1/1066/2212/4371/files/Dropdown-bg.png?v=1777557668");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   min-width: 80svw;
