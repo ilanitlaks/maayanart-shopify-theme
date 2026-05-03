@@ -410,10 +410,10 @@
     transition: transform var(--duration-long) ease;
   }
 
-  .card:hover .media.media--hover-effect > img:first-child:only-child,
+  /* .card:hover .media.media--hover-effect > img:first-child:only-child,
   .card-wrapper:hover .media.media--hover-effect > img:first-child:only-child {
     transform: scale(1.03);
-  }
+  } */
 
   .card-wrapper:hover
     .media.media--hover-effect
@@ -426,10 +426,17 @@
     transition: transform var(--duration-long) ease;
     transform: scale(1.03);
   }
-
-  .underline-links-hover:hover a {
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
+  .underline-link {
+    border-radius: 0.3rem;
+  }
+  .underline-links-hover:hover,
+  .underline-links-hover :focus-visible {
+    /* text-decoration: underline;
+    text-underline-offset: 0.3rem; */
+    font-weight: bold;
+    border-radius: 0.3rem;
+    outline: 2px dashed rgba(178, 109, 60, 0.43);
+    outline-offset: 0.25px;
   }
 }
 

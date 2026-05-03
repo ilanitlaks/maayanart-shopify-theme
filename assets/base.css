@@ -8,6 +8,10 @@
   --focused-base-box-shadow:
     0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  --grid-mobile-vertical-spacing: 2rem;
+  --grid-desktop-vertical-spacing: 3rem;
+  --grid-mobile-horizontal-spacing: 1.5rem;
+  --grid-desktop-horizontal-spacing: 3rem;
 }
 
 .product-card-wrapper .card,
