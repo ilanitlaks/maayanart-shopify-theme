@@ -679,7 +679,7 @@
   z-index: 6;
 }
 .card-options-btn {
-  max-width: 50%;
+  max-width: max-content;
   margin-inline: auto;
   text-align: center;
   text-decoration: none;
