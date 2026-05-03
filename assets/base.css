@@ -2392,7 +2392,7 @@ input[type="checkbox"] {
 
 /* Main Header Layout */
 .header-wrapper {
-  display: grid;
+  display: block;
   position: relative;
   background-color: rgb(var(--color-background));
 }
