@@ -1,5 +1,7 @@
 .related-products {
   display: block;
+  border-bottom: 2px dashed #bd8055;
+  border-top: 2px dashed #bd8055;
 }
 
 .related-products__heading {
