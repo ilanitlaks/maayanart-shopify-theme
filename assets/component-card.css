@@ -655,6 +655,13 @@
   font-size: 1.4rem;
   line-height: 1;
   color: inherit;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+.card-qty:hover .card-qty__btn:last-child {
+  transform: scale(1.3);
+  color: black;
 }
 
 .card-qty__number {
@@ -672,14 +679,16 @@
   z-index: 6;
 }
 .card-options-btn {
+  max-width: 50%;
+  margin-inline: auto;
+  text-align: center;
   text-decoration: none;
-  margin: 0.5rem;
-  padding: 0.8rem;
+  padding: clamp(0.5rem, 0.6rem, 0.8rem);
   border-radius: 999px;
   background: #cdeff6;
   color: #5a2b2b;
   outline: 2px dashed rgba(178, 109, 60, 0.43);
-  outline-offset: -0.5rem;
+  outline-offset: -0.25rem;
   display: block;
 }
 .card-options-btn:hover {

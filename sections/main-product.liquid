@@ -228,6 +228,7 @@
                   </details>
                 </div>
               {%- when 'quantity_selector' -%}
+                {% unless group_tag != '' and product.price == 0 %}
                 <div
                   id="Quantity-Form-{{ section.id }}"
                   class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
@@ -452,8 +453,9 @@
                         {%- endif -%}
                       {%- endif -%}
                     </volume-pricing>
-                  {%- endif -%}
+                  {%- endif -%}                 
                 </div>
+               {% endunless %}
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
@@ -477,14 +479,20 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-              {%- when 'buy_buttons' -%}
-                {%- render 'buy-buttons',
-                  block: block,
-                  product: product,
-                  product_form_id: product_form_id,
-                  section_id: section.id,
-                  show_pickup_availability: true
-                -%}
+                {%- when 'buy_buttons' -%}
+                  {% if group_tag != '' and product.price == 0 %}
+                    <a href="#product-siblings" class="card-options-btn">
+                      לכל האפשרויות
+                    </a>
+                  {% else %}
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      show_pickup_availability: true
+                    -%}
+                  {% endif %}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -693,7 +701,7 @@
     {% endfor %}
 
 {% if group_tag != '' and product.price == 0 %}
-  <div class="product-siblings page-width">
+  <div id="product-siblings" class="product-siblings page-width">
     <h2 class="product-siblings__title">אפשרויות נוספות</h2>
 
     <ul class="product-siblings__grid grid grid--2-col-tablet-down grid--4-col-desktop" role="list">
