@@ -692,20 +692,29 @@
       </div>
     </div>
     {% assign group_tag = '' %}
+{% assign group_collection = nil %}
 
-    {% for tag in product.tags %}
-      {% if tag contains 'group-' %}
-        {% assign group_tag = tag %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
+{% for tag in product.tags %}
+  {% assign t = tag | downcase | strip %}
+  {% if t contains 'group:' or t contains 'group-' %}
+    {% assign group_tag = tag | strip %}
+    {% break %}
+  {% endif %}
+{% endfor %}
 
-{% if group_tag != '' and product.price == 0 %}
+{% for collection in product.collections %}
+  {% if collection.handle contains 'group' %}
+    {% assign group_collection = collection %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if group_tag != '' and group_collection != nil and product.price == 0 %}
   <div id="product-siblings" class="product-siblings page-width">
-  
     <h2 class="product-siblings__title">בחרי אפשרות</h2>
+
     <ul class="product-siblings__grid grid grid--2-col-tablet-down grid--4-col-desktop" role="list">
-      {% for p in collections[group_tag].products %}
+      {% for p in group_collection.products %}
         {% if p.tags contains group_tag and p.id != product.id and p.price > 0 %}
           <li class="grid__item">
             {% render 'card-product',
@@ -723,6 +732,7 @@
     </ul>
   </div>
 {% endif %}
+
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
