@@ -209,6 +209,9 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
+
+              {%- when 'product_trust_box' -%}
+                {% render 'product-trust-box', block: block, product: product %}
               {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -790,11 +793,65 @@
 </product-info>
 
 {% schema %}
-{
-  "name": "t:sections.main-product.name",
-  "tag": "section",
-  "class": "section",
-  "blocks": [
+    {
+      "name": "t:sections.main-product.name",
+      "tag": "section",
+      "class": "section",
+      "blocks": [
+        {
+      "type": "product_trust_box",
+      "name": "בלוק אמון + וואטסאפ",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_trust_box",
+          "label": "להציג את הבלוק",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "delivery_time",
+          "label": "זמן אספקה",
+          "default": "7 ימים"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "כותרת",
+          "default": "חומרי יצירה קונים במעיין היצירה:"
+        },
+        {
+          "type": "text",
+          "id": "benefit_1",
+          "label": "יתרון 1",
+          "default": "מוצרים מעולים ♥ מחירים הוגנים"
+        },
+        {
+          "type": "text",
+          "id": "benefit_2",
+          "label": "יתרון 2",
+          "default": "ליווי ויחס אישי בטלפון ובווטצאפ ♥ מוזמנים להתייעץ"
+        },
+        {
+          "type": "text",
+          "id": "benefit_3",
+          "label": "יתרון 3",
+          "default": "משלוח מהיר ובחינם בכל קנייה מעל 400 ש\"ח"
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_number",
+          "label": "מספר וואטסאפ (בלי +)",
+          "default": "97289950131"
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_text",
+          "label": "טקסט כפתור",
+          "default": "שאל אותנו על מוצר זה ב-WhatsApp"
+        }
+      ]
+    },
     {
       "type": "@app"
     },

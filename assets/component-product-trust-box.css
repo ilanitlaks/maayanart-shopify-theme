@@ -18,10 +18,12 @@
 }
 
 .product-trust-box ul {
-  list-style: disc;
+  list-style: none;
   padding-right: 1.5rem;
 }
-
+.product-trust-box li {
+  padding-right: 0.3rem;
+}
 .product-trust-box li::marker {
   content: "✔ ";
   color: #4caf50;
@@ -58,4 +60,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
+}
+.whatsapp-link,
+.whatsapp-link:hover {
+  color: inherit;
+  text-decoration: none !important;
 }
