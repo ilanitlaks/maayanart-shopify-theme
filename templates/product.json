@@ -90,11 +90,11 @@
         "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
         "media_position": "right",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "padding_top": 20,
+        "padding_bottom": 8
       }
     },
     "related-products": {
