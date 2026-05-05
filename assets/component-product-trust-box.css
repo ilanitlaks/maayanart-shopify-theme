@@ -1,0 +1,61 @@
+.product-trust-box {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  background: #f8f3ef;
+  font-size: 1rem;
+  line-height: 1.8;
+  outline: 2px dashed var(--product-buy-outline);
+  outline-offset: -6px;
+}
+
+.product-trust-box h3 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.product-trust-box ul {
+  list-style: disc;
+  padding-right: 1.5rem;
+}
+
+.product-trust-box li::marker {
+  content: "✔ ";
+  color: #4caf50;
+  font-size: 1.2em;
+}
+.delivery-time {
+  font-weight: 700;
+}
+
+.product-whatsapp-box {
+  margin-top: 1.4rem;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.whatsapp-icon {
+  margin-left: 0.5rem;
+  width: 20px;
+  height: 20px;
+  fill: #25d366;
+}
+.product-whatsapp-box a {
+  text-decoration: none;
+  color: inherit;
+}
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}

@@ -40,7 +40,7 @@ product-info {
   }
 
   .product--right .product__info-wrapper {
-    padding: 0 0 0 5rem;
+    padding: 0 5rem 0 0;
   }
 
   .product--right .product__info-wrapper--extra-padding {
@@ -177,7 +177,7 @@ product-info {
   flex: 0 0 100%;
   padding: 0;
   margin: 0 0 1.2rem 0;
-  max-width: 44rem;
+  /* max-width: 44rem; */
   min-width: fit-content;
   border: none;
 }
@@ -372,9 +372,9 @@ a.product__text {
   margin-bottom: 1.2rem;
 }
 
-.product-form__buttons {
+/* .product-form__buttons {
   max-width: 44rem;
-}
+} */
 
 .product--no-media .product__info-container > modal-opener {
   display: block;
