@@ -899,7 +899,7 @@ summary::-webkit-details-marker {
 /* component-grid */
 .grid {
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   flex-wrap: wrap;
   margin-bottom: 2rem;
   padding: 0;
