@@ -2406,6 +2406,8 @@ input[type="checkbox"] {
   grid-template-areas: "left-icons heading icons";
   grid-template-columns: 2fr 2fr 1fr;
   align-items: center;
+  border-bottom: 2px dashed #bd8055;
+  /* border-top: 2px dashed #bd8055; */
 }
 
 @media screen and (max-width: 749px) {
@@ -3828,4 +3830,46 @@ details-disclosure > details {
   border: 0.5px solid currentColor;
   border-radius: 999px;
   pointer-events: none;
+}
+/* breadcrumbs */
+.page-width {
+  width: 100%;
+}
+.breadcrumbs {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.4rem);
+  direction: rtl;
+  text-align: right;
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 0.3rem;
+
+  scrollbar-width: none;
+}
+
+.breadcrumbs::-webkit-scrollbar {
+  display: none;
+}
+.breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  text-decoration: underline;
+}
+
+.breadcrumbs span {
+  margin: 0 0.4rem;
+}
+.breadcrumbs span {
+  flex: 0 0 auto;
+}
+
+.breadcrumbs a {
+  flex: 0 0 auto;
 }

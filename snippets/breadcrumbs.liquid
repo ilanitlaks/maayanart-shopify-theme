@@ -1,0 +1,78 @@
+{% unless template.name == 'index' %}
+  {% assign current_collection = collection %}
+  {% assign parent_product = nil %}
+  {% assign group_tag = nil %}
+
+  {%- comment -%} מציאת תגית group של המוצר {%- endcomment -%}
+  {% if product %}
+    {% for tag in product.tags %}
+      {% if tag contains 'group-' %}
+        {% assign group_tag = tag %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {%- comment -%} מציאת מוצר האב מתוך קולקציית group לפי handle {%- endcomment -%}
+  {% if group_tag and product %}
+    {% assign group_collection = collections[group_tag] %}
+
+    {% if group_collection != blank %}
+      {% for p in group_collection.products %}
+        {% if p.price == 0 %}
+          {% assign parent_product = p %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+
+  {%- comment -%} ניקוי קולקציית group אם נכנסנו ממנה {%- endcomment -%}
+  {% if current_collection != blank %}
+    {% if current_collection.title contains 'group:' or current_collection.handle contains 'group-' %}
+      {% assign current_collection = blank %}
+    {% endif %}
+  {% endif %}
+
+  {%- comment -%} בחירת קולקציה רגילה אם אין קולקציה נוכחית {%- endcomment -%}
+  {% if current_collection == blank and product %}
+    {% for product_collection in product.collections %}
+      {% unless product_collection.title contains 'group:' or product_collection.handle contains 'group-' %}
+        {% assign current_collection = product_collection %}
+        {% break %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+
+  <div class="page-width">
+    <nav class="breadcrumbs" aria-label="פירורי לחם">
+      <a href="{{ routes.root_url }}">בית</a>
+
+      {% if current_collection %}
+        <span aria-hidden="true">/</span>
+        <a href="{{ current_collection.url }}">{{ current_collection.title }}</a>
+      {% endif %}
+
+      {% if parent_product and parent_product.id != product.id %}
+        <span aria-hidden="true">/</span>
+        <a href="{{ parent_product.url }}">{{ parent_product.title }}</a>
+      {% endif %}
+
+      {% if product %}
+        <span aria-hidden="true">/</span>
+        <span>{{ product.title }}</span>
+      {% elsif page %}
+        <span aria-hidden="true">/</span>
+        <span>{{ page.title }}</span>
+      {% elsif blog and article == blank %}
+        <span aria-hidden="true">/</span>
+        <span>{{ blog.title }}</span>
+      {% elsif article %}
+        <span aria-hidden="true">/</span>
+        <a href="{{ blog.url }}">{{ blog.title }}</a>
+        <span aria-hidden="true">/</span>
+        <span>{{ article.title }}</span>
+      {% endif %}
+    </nav>
+  </div>
+{% endunless %}
