@@ -56,7 +56,7 @@
           "type": "category",
           "settings": {
             "title": "iclay חימר קל",
-            "collection": "iclay-חימר-קל-1",
+            "collection": "i-clay-חימר-קל",
             "parent_collection": "כיור-ופיסול"
           }
         },
@@ -416,8 +416,8 @@
           "type": "category",
           "settings": {
             "title": "סט מכחולים",
-            "collection": "",
-            "parent_collection": "כיור-ופיסול"
+            "collection": "set-michvolim",
+            "parent_collection": "מכחולים-מברשות-וסכיני-ציירים"
           }
         },
         "category_yHJHhM": {
@@ -425,7 +425,7 @@
           "settings": {
             "title": "",
             "collection": "shadkhanim-umaarzei-laminatsia",
-            "parent_collection": "כיור-ופיסול"
+            "parent_collection": "ציוד-משרדי"
           }
         },
         "category_fcQPaj": {
@@ -433,7 +433,7 @@
           "settings": {
             "title": "",
             "collection": "kol-miney-tziyud-misradi",
-            "parent_collection": "כיור-ופיסול"
+            "parent_collection": "ציוד-משרדי"
           }
         },
         "category_gCFPqc": {
@@ -441,7 +441,7 @@
           "settings": {
             "title": "",
             "collection": "misparayim",
-            "parent_collection": "כיור-ופיסול"
+            "parent_collection": "ציוד-משרדי"
           }
         },
         "category_AUh3k4": {
@@ -449,7 +449,7 @@
           "settings": {
             "title": "",
             "collection": "shadkhanim-umenakbim",
-            "parent_collection": "כיור-ופיסול"
+            "parent_collection": "ציוד-משרדי"
           }
         },
         "category_DtYNMV": {
@@ -457,7 +457,7 @@
           "settings": {
             "title": "",
             "collection": "kley-ktiva",
-            "parent_collection": "כיור-ופיסול"
+            "parent_collection": "ציוד-משרדי"
           }
         },
         "category_zeA8Kw": {
@@ -465,7 +465,7 @@
           "settings": {
             "title": "",
             "collection": "mechadedim",
-            "parent_collection": "כיור-ופיסול"
+            "parent_collection": "ציוד-משרדי"
           }
         },
         "category_WbctxU": {
@@ -473,7 +473,7 @@
           "settings": {
             "title": "",
             "collection": "mechakim",
-            "parent_collection": "כיור-ופיסול"
+            "parent_collection": "ציוד-משרדי"
           }
         },
         "category_FffpgJ": {
@@ -905,7 +905,7 @@
           "settings": {
             "title": "מוצרים מעיסת נייר",
             "collection": "",
-            "parent_collection": "כיור-ופיסול"
+            "parent_collection": "decopatch"
           }
         },
         "category_CGhQ6w": {
