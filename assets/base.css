@@ -2413,6 +2413,7 @@ input[type="checkbox"] {
   align-items: center;
   border-bottom: 2px dashed #bd8055;
   /* border-top: 2px dashed #bd8055; */
+  background-color: white;
 }
 
 @media screen and (max-width: 749px) {
@@ -2513,11 +2514,10 @@ input[type="checkbox"] {
 
 .header__heading-logo {
   height: auto;
-  max-width: 100%;
-  left: 50%;
   position: absolute;
-  top: 0;
-  transform: translate(-50%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   max-width: 30svw;
 }
 
@@ -2981,7 +2981,8 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__menu-item .icon-caret {
-  right: 0.8rem;
+  left: 0.8rem;
+  right: auto;
 }
 
 .header__submenu .icon-caret {
