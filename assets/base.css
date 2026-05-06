@@ -12,6 +12,8 @@
   --grid-desktop-vertical-spacing: 3rem;
   --grid-mobile-horizontal-spacing: 1.5rem;
   --grid-desktop-horizontal-spacing: 3rem;
+  --font-body-family: "Open Sans Hebrew", Arial, sans-serif;
+  --font-heading-family: "Open Sans Hebrew", Arial, sans-serif;
 }
 
 .product-card-wrapper .card,
