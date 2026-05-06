@@ -79,14 +79,17 @@ product-info {
 
   .product--medium:not(.product--no-media) .product__media-wrapper,
   .product--small:not(.product--no-media) .product__info-wrapper {
-    max-width: 55%;
-    width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 60%;
+    width: calc(60% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--medium:not(.product--no-media) .product__info-wrapper,
   .product--small:not(.product--no-media) .product__media-wrapper {
-    max-width: 45%;
-    width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 40%;
+    width: calc(40% - var(--grid-desktop-horizontal-spacing) / 2);
+  }
+  .product.grid {
+    justify-content: space-between;
   }
 }
 
@@ -1551,4 +1554,21 @@ a.product__text {
   .recipient-form > input[type="checkbox"]:checked + label .icon-checkmark {
     border: none;
   }
+}
+
+/* Product page images - MaayanArt */
+.product__media.media {
+  background: transparent;
+}
+
+.product__media.media > img {
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+}
+
+.product-media-container {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }

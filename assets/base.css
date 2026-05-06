@@ -3875,3 +3875,12 @@ details-disclosure > details {
 .breadcrumbs a {
   flex: 0 0 auto;
 }
+@media screen and (max-width: 749px) {
+  .product__media-list--single.grid--peek.slider .grid__item:first-of-type {
+    margin-left: 0;
+  }
+  .product__media-list--single {
+    column-gap: 0;
+    justify-content: center;
+  }
+}
