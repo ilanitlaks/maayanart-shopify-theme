@@ -1,7 +1,7 @@
 .related-products {
   display: block;
-  border-bottom: 2px dashed #bd8055;
-  border-top: 2px dashed #bd8055;
+  border-bottom: 2px dashed var(--color-accent-soft);
+  border-top: 2px dashed var(--color-accent-soft);
 }
 
 .related-products__heading {

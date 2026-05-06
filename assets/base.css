@@ -14,6 +14,7 @@
   --grid-desktop-horizontal-spacing: 3rem;
   --font-body-family: "Open Sans Hebrew", Arial, sans-serif;
   --font-heading-family: "Open Sans Hebrew", Arial, sans-serif;
+  --color-accent-soft: #d2a98c;
 }
 
 .product-card-wrapper .card,
@@ -2411,8 +2412,8 @@ input[type="checkbox"] {
   grid-template-columns: auto auto 1fr auto;
   align-items: center;
   align-items: center;
-  border-bottom: 2px dashed #bd8055;
-  /* border-top: 2px dashed #bd8055; */
+  border-bottom: 2px dashed var(--color-accent-soft);
+  /* border-top: 2px dashed var(--color-accent-soft); */
   background-color: white;
 }
 
