@@ -2495,9 +2495,6 @@ input[type="checkbox"] {
   grid-template-columns: auto auto 1fr auto;
   align-items: center;
   align-items: center;
-  /* border-bottom: 2px dashed var(--color-accent-soft); */
-  /* border-top: 2px dashed var(--color-accent-soft); */
-  background-color: white;
 }
 
 @media screen and (max-width: 749px) {
