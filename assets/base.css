@@ -2490,7 +2490,7 @@ input[type="checkbox"] {
 } */
 
 .header {
-  margin: 0.5rem auto;
+  margin: 0 auto;
   display: grid;
   grid-template-areas: "left-icons search heading icons";
   grid-template-columns: auto auto 1fr auto;
@@ -2498,6 +2498,10 @@ input[type="checkbox"] {
   align-items: center;
 }
 /* תוספת */
+.section-header .gradient {
+  background: white;
+  background-color: white;
+}
 .header__submenu {
   border-radius: none;
   border-color: transparent;
