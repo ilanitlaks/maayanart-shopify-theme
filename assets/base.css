@@ -2498,6 +2498,11 @@ input[type="checkbox"] {
   align-items: center;
 }
 /* תוספת */
+.header__submenu {
+  border-radius: none;
+  border-color: transparent;
+  box-shadow: none;
+}
 .header__submenu .header__menu-item {
   position: relative;
   transition: padding-right 0.3s ease;
@@ -2965,6 +2970,8 @@ details[open] > .header__icon--menu .icon-hamburger {
 }
 
 details[open] > .header__submenu {
+  border: none;
+  box-shadow: none;
   animation: animateMenuOpen var(--duration-default) ease;
   animation-fill-mode: forwards;
   z-index: 1;
