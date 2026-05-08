@@ -18,9 +18,9 @@
   text-underline-offset: 0.3rem;
 }
 
-.list-menu__item--active:hover {
+/* .list-menu__item--active:hover {
   text-decoration-thickness: 0.2rem;
-}
+} */
 
 .list-menu--disclosure.localization-selector {
   max-height: 18rem;

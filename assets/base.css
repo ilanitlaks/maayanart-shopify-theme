@@ -637,7 +637,8 @@ details > * {
 .customer a:hover,
 .inline-richtext a:hover {
   color: rgb(var(--color-link));
-  text-decoration-thickness: 0.2rem;
+  /* text-decoration-thickness: 0.2rem; */
+  font-weight: bold;
 }
 
 .icon-arrow {
@@ -2496,6 +2497,66 @@ input[type="checkbox"] {
   align-items: center;
   align-items: center;
 }
+/* תוספת */
+.header__submenu .header__menu-item {
+  position: relative;
+  transition: padding-right 0.3s ease;
+}
+
+.header__submenu .header__menu-item:hover {
+  padding-right: 1.5rem;
+}
+
+.header__submenu .header__menu-item::before {
+  content: "♥";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #d2a95c;
+  font-size: 1.5rem;
+}
+
+.header__submenu .header__menu-item:hover::before {
+  opacity: 1;
+}
+.header__active-menu-item {
+  position: relative;
+  padding-left: 1.5rem;
+  color: rgb(var(--color-foreground));
+}
+
+.header__active-menu-item::before {
+  content: "♥";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c44b4b;
+  font-size: 1.5rem;
+}
+
+.header__submenu .list-menu__item--active {
+  position: relative;
+  text-decoration: none;
+  border-bottom: dashed 0.1rem #d2a98c;
+  width: max-content;
+}
+
+.header__submenu .list-menu__item--active::after {
+  content: " ♥ ";
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: -0.9rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  color: #d2a98c;
+  white-space: nowrap;
+}
+/* סןף */
 
 @media screen and (max-width: 749px) {
   .header--has-app {
@@ -2980,7 +3041,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item span {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   transition:
     text-decoration var(--duration-short) ease,
     background-color var(--duration-short) ease;
@@ -3006,17 +3067,9 @@ details[open] > .header__menu-item .icon-caret {
   transform: rotate(180deg);
 }
 
-.header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
-  /* text-decoration: underline; */
-  border-bottom: 4px solid #f1eaea;
-  text-underline-offset: 0.3rem;
-  border-radius: 1rem;
-}
-
 .header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
+  /* text-decoration-thickness: 0.2rem; */
+  font-weight: bold;
 }
 
 .header__submenu {
@@ -3057,7 +3110,7 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__submenu .header__menu-item:hover {
-  font-weight: bold;
+  font-weight: 500;
   /* text-decoration-line: underline; */
 }
 
