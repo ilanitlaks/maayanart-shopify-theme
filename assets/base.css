@@ -2481,6 +2481,7 @@ input[type="checkbox"] {
   display: block;
   position: relative;
   background-color: rgb(var(--color-background));
+  border-bottom: 2px dashed var(--color-accent-soft);
 }
 
 /* .header-wrapper--border-bottom {
@@ -2494,7 +2495,7 @@ input[type="checkbox"] {
   grid-template-columns: auto auto 1fr auto;
   align-items: center;
   align-items: center;
-  border-bottom: 2px dashed var(--color-accent-soft);
+  /* border-bottom: 2px dashed var(--color-accent-soft); */
   /* border-top: 2px dashed var(--color-accent-soft); */
   background-color: white;
 }
