@@ -15,6 +15,14 @@
   --font-body-family: "Open Sans Hebrew", Arial, sans-serif;
   --font-heading-family: "Open Sans Hebrew", Arial, sans-serif;
   --color-accent-soft: #d2a98c;
+
+  --color-primary: #d2a98c;
+  --color-primary-hover: #b98768;
+
+  --color-secondary: #90b2b5;
+  --color-secondary-hover: #6f979b;
+
+  --color-soft-bg: #f7eee8;
 }
 
 .product-card-wrapper .card,
@@ -104,10 +112,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   margin: 0 auto;
 }
 
-.utility-bar__grid.page-width {
+/* .utility-bar__grid.page-width {
   padding-left: 3rem;
   padding-right: 3rem;
-}
+} */
 
 @media screen and (min-width: 750px) {
   .page-width {
@@ -2247,7 +2255,53 @@ input[type="checkbox"] {
   outline-offset: -0.3rem;
   box-shadow: 0 0 0 -0.2rem rgb(var(--color-foreground));
 }
+/* תוספת - טיקר RTL */
+/* גלילה אופקית להודעה העליונה */
+.announcement-bar {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
 
+.announcement-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.announcement-bar__message {
+  white-space: nowrap;
+  width: max-content;
+  min-width: 100%;
+  padding-inline: 2rem;
+}
+/* רמז עדין לגלילה */
+.announcement-bar {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  animation: hintScroll 2.5s ease 1;
+}
+
+.announcement-bar__message {
+  white-space: nowrap;
+  width: max-content;
+  min-width: 100%;
+  padding-inline: 2rem;
+}
+
+@keyframes hintScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  35% {
+    transform: translateX(-30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+/* סוף */
 .localization-wrapper {
   grid-area: language-currency;
   align-self: center;
@@ -2364,7 +2418,39 @@ input[type="checkbox"] {
     transform: translateX(var(--announcement-translate-to));
   }
 }
+.utility-bar__grid {
+  overflow-x: auto;
+}
 
+.utility-bar__grid.page-width {
+  max-width: 100%;
+}
+
+.announcement-bar-slider {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.announcement-bar-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.announcement-bar__message {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* width: max-content; */
+  min-width: 100%;
+  /* padding-inline: 1.5rem; */
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.announcement-bar__message .icon-arrow {
+  margin-inline-start: 1rem;
+}
+.announcement-bar__message::-webkit-scrollbar {
+  display: none;
+}
 /* section-header */
 .section-header.shopify-section-group-header-group {
   z-index: 3;
@@ -3906,4 +3992,36 @@ details-disclosure > details {
   .header > details-modal.header__search {
     display: flex;
   }
+}
+
+/* עיצוב פסי גלילה */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-soft-bg);
+}
+
+/* Chrome / Edge / Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-soft-bg);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+
+  border-radius: 999px;
+  border: 2px solid var(--color-soft-bg);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-hover);
 }
