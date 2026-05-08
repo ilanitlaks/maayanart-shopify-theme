@@ -2490,7 +2490,7 @@ input[type="checkbox"] {
 } */
 
 .header {
-  margin: 0 auto;
+  margin: 0.5rem auto;
   display: grid;
   grid-template-areas: "left-icons search heading icons";
   grid-template-columns: auto auto 1fr auto;
@@ -2503,7 +2503,6 @@ input[type="checkbox"] {
   background-color: white;
 }
 .header__submenu {
-  border-radius: none;
   border-color: transparent;
   box-shadow: none;
 }
@@ -2979,6 +2978,7 @@ details[open] > .header__submenu {
   animation: animateMenuOpen var(--duration-default) ease;
   animation-fill-mode: forwards;
   z-index: 1;
+  background-color: transparent;
   background-image: url("https://cdn.shopify.com/s/files/1/1066/2212/4371/files/Dropdown-bg.png?v=1777557668");
   background-size: cover;
   background-repeat: no-repeat;
