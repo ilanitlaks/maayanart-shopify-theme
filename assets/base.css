@@ -2268,10 +2268,29 @@ input[type="checkbox"] {
 }
 
 .announcement-bar__message {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  min-height: 3.8rem;
   white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
   width: max-content;
   min-width: 100%;
-  padding-inline: 2rem;
+  margin: 0;
+  padding: 1rem 0;
+  padding-inline-start: 1rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 2px dashed var(--color-accent-soft);
+  background-color: var(--color-soft-bg);
+}
+
+@media screen and (min-width: 990px) {
+  .announcement-bar__message {
+    max-width: var(--page-width);
+    margin-inline: auto;
+    padding-inline: 5rem;
+  }
 }
 /* רמז עדין לגלילה */
 .announcement-bar {
@@ -2279,13 +2298,6 @@ input[type="checkbox"] {
   scroll-behavior: smooth;
 
   animation: hintScroll 2.5s ease 1;
-}
-
-.announcement-bar__message {
-  white-space: nowrap;
-  width: max-content;
-  min-width: 100%;
-  padding-inline: 2rem;
 }
 
 @keyframes hintScroll {
@@ -2301,6 +2313,7 @@ input[type="checkbox"] {
     transform: translateX(0);
   }
 }
+
 /* סוף */
 .localization-wrapper {
   grid-area: language-currency;
@@ -2352,14 +2365,6 @@ input[type="checkbox"] {
   margin-left: 0.8rem;
   vertical-align: middle;
   margin-bottom: 0.2rem;
-}
-
-.announcement-bar__message {
-  text-align: center;
-  padding: 1rem 0;
-  margin: 0;
-  letter-spacing: 0.1rem;
-  min-height: 3.8rem;
 }
 
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
@@ -2435,16 +2440,6 @@ input[type="checkbox"] {
   display: none;
 }
 
-.announcement-bar__message {
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  /* width: max-content; */
-  min-width: 100%;
-  /* padding-inline: 1.5rem; */
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
 .announcement-bar__message .icon-arrow {
   margin-inline-start: 1rem;
 }
