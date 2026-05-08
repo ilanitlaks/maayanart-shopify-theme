@@ -196,7 +196,8 @@
     margin: 0;
   }
 
-  .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
+  .footer-block__newsletter:not(:only-child)
+    .newsletter-form__message--success {
     left: auto;
   }
 
@@ -296,7 +297,8 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center) .footer__copyright {
+  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center)
+    .footer__copyright {
     text-align: right;
   }
 }
@@ -420,7 +422,9 @@
   text-align: center;
 }
 
-.footer-block:only-child > .footer-block__brand-info > .footer-block__image-wrapper {
+.footer-block:only-child
+  > .footer-block__brand-info
+  > .footer-block__image-wrapper {
   margin-left: auto;
   margin-right: auto;
 }
@@ -430,7 +434,9 @@
   height: auto;
 }
 
-.footer-block:only-child .footer-block__brand-info .footer__list-social.list-social {
+.footer-block:only-child
+  .footer-block__brand-info
+  .footer__list-social.list-social {
   justify-content: center;
 }
 
@@ -462,7 +468,7 @@
 }
 
 .policies li::before {
-  content: '\00B7';
+  content: "\00B7";
   padding: 0 0.8rem;
 }
 
@@ -505,4 +511,55 @@
       padding-left: 3rem;
     }
   }
+}
+/* ILC - footer minimal style */
+.footer__content-bottom {
+  text-align: center;
+}
+
+.footer__content-bottom-wrapper {
+  justify-content: center;
+}
+
+.footer__list-social.list-social {
+  justify-content: center;
+}
+
+.footer__list-social .list-social__link {
+  padding: 0.8rem 1.2rem;
+}
+
+.footer__list-social .svg-wrapper,
+.footer__list-social svg {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.footer__copyright {
+  display: grid;
+  justify-items: center;
+  gap: 1.4rem;
+  text-align: center;
+}
+
+/* .footer__credits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+} */
+
+.footer__policies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.footer__policies li::before {
+  display: none;
+}
+
+.footer__policies li a {
+  padding: 0;
 }
