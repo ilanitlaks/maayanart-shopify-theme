@@ -84,6 +84,24 @@
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
+          {% assign group_tag = '' %}
+          {% assign group_collection = nil %}
+
+          {% for tag in product.tags %}
+            {% assign t = tag | downcase | strip %}
+            {% if t contains 'group' %}
+              {% assign group_tag = tag | strip %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% for collection in product.collections %}
+            {% assign collection_handle = collection.handle | downcase %}
+            {% if collection_handle contains 'group' %}
+              {% assign group_collection = collection %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
 
           {%- for block in section.blocks -%}
             {%- case block.type -%}
@@ -696,23 +714,7 @@
         </section>
       </div>
     </div>
-    {% assign group_tag = '' %}
-{% assign group_collection = nil %}
 
-{% for tag in product.tags %}
-  {% assign t = tag | downcase | strip %}
-  {% if t contains 'group:' or t contains 'group-' %}
-    {% assign group_tag = tag | strip %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-
-{% for collection in product.collections %}
-  {% if collection.handle contains 'group' %}
-    {% assign group_collection = collection %}
-    {% break %}
-  {% endif %}
-{% endfor %}
 
 {% if group_tag != '' and group_collection != nil and product.price == 0 %}
   <div id="product-siblings" class="product-siblings page-width">
