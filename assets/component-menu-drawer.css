@@ -34,7 +34,9 @@ menu-drawer > details[open] > summary::before {
 .menu-drawer {
   position: absolute;
   transform: translateX(100%);
+  transform: translateX(2rem);
   visibility: hidden;
+  opacity: 0;
   z-index: 3;
   right: 0;
   left: auto;
@@ -57,19 +59,30 @@ menu-drawer > details[open] > summary::before {
   );
 }
 
-.js details[open] > .menu-drawer,
+/* .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
   transition:
     transform var(--duration-default) ease,
     visibility var(--duration-default) ease;
+} */
+.js details[open] > .menu-drawer,
+.js details[open] > .menu-drawer__submenu {
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease,
+    visibility 0.4s ease;
 }
-
+/* .js details[open].menu-opening > .menu-drawer,
+details[open].menu-opening > .menu-drawer__submenu {
+  transform: translateX(0);
+  visibility: visible;
+} */
 .js details[open].menu-opening > .menu-drawer,
 details[open].menu-opening > .menu-drawer__submenu {
   transform: translateX(0);
   visibility: visible;
+  opacity: 1;
 }
-
 .js .menu-drawer__navigation .submenu-open {
   visibility: hidden; /* hide menus from screen readers when hidden by submenu */
 }
@@ -97,7 +110,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__navigation {
-  padding: 3rem 0;
+  margin-top: 1.5rem;
 }
 
 .menu-drawer__inner-submenu {
@@ -115,7 +128,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   text-decoration: none;
   font-size: 1.5rem;
   gap: 1rem;
-  border-bottom: 1px solid var(--color-accent-soft);
+  border-bottom: 1px solid #d2e0e1;
 }
 
 /* .menu-drawer summary.menu-drawer__menu-item {
@@ -171,6 +184,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 1.2rem 2.6rem 1.2rem 3rem;
   text-decoration: none;
   display: flex;
+  gap: 1rem;
   align-items: center;
   font-size: 1.8rem;
   width: 100%;
@@ -178,6 +192,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   text-align: left;
+  border-bottom: 2px dashed var(--color-accent-soft);
 }
 
 .menu-drawer__close-button .svg-wrapper {
@@ -194,7 +209,11 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .header--has-social .menu-drawer__utility-links {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "menu-drawer-account" "menu-drawer-list-social";
   padding: 2rem 3rem;
+  border-top: 2px dashed var(--color-accent-soft);
 }
 
 @media screen and (max-width: 749px) {
@@ -225,7 +244,11 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__utility-links:has(.menu-drawer__localization)
   .menu-drawer__account {
+  grid-area: menu-drawer-account;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .menu-drawer__account account-icon > .svg-wrapper {
@@ -245,8 +268,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer .list-social {
-  justify-content: flex-start;
-  margin-left: -1.25rem;
+  grid-area: menu-drawer-list-social;
+  gap: 1rem;
 }
 
 .menu-drawer .list-social:empty {
@@ -262,5 +285,16 @@ details[open].menu-opening > .menu-drawer__submenu {
     transform: none !important;
     filter: none !important;
     transition: none !important;
+  }
+}
+/* Fix mobile menu overlay position */
+@media screen and (max-width: 989px) {
+  .header__icon--menu[aria-expanded="true"]::before {
+    display: none;
+  }
+
+  .js menu-drawer > details > summary::before,
+  .js menu-drawer > details[open] > summary::before {
+    display: none;
   }
 }
