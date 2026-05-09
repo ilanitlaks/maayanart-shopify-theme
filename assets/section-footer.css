@@ -41,7 +41,7 @@
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
+  /* border-top: solid 0.1rem rgba(var(--color-foreground), 0.08); */
   padding-top: 3rem;
 }
 
@@ -715,7 +715,7 @@
   gap: 3rem;
   direction: rtl;
   text-align: right;
-  padding-bottom: 3rem;
+  /* padding-bottom: 3rem; */
   /* border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08); */
 }
 
