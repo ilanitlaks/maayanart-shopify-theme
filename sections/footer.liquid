@@ -140,15 +140,33 @@
     {%- endif -%}
   </div>
 
-  <div class="footer__custom-columns">
+ <div class="footer__custom-columns">
+   
     <div class="footer__custom-col">
-      <h2>♥ דברים חשובים</h2>
+      <h2>♥ {{ section.settings.important_heading }}</h2>
+
       <ul>
-        <li><a href="/pages/אודות-מעיין-היצירה">אודות</a></li>
-        <li><a href="/pages/contact">צור קשר</a></li>
-        <li><a href="/pages/location">הגעה</a></li>
-        <li><a href="/account">הרשמת לקוחות</a></li>
-        <li><a href="/apps/parcelpanel">מעקב הזמנות</a></li>
+        {%- if section.settings.about_page != blank -%}
+          <li>
+            <a href="{{ section.settings.about_page.url }}">
+              {{ section.settings.about_page.title }}
+            </a>
+          </li>
+        {%- endif -%}
+
+        <li><a href="{{ routes.account_url }}">הרשמת לקוחות</a></li>
+
+        {%- if section.settings.tracking_link != blank -%}
+          <li><a href="{{ section.settings.tracking_link }}">מעקב הזמנות</a></li>
+        {%- endif -%}
+
+        {%- if section.settings.important_menu != blank -%}
+          {%- for link in section.settings.important_menu.links -%}
+            <li>
+              <a href="{{ link.url }}">{{ link.title | escape }}</a>
+            </li>
+          {%- endfor -%}
+        {%- endif -%}
 
         {%- for policy in shop.policies -%}
           {%- if policy != blank -%}
@@ -157,7 +175,6 @@
         {%- endfor -%}
       </ul>
     </div>
-
     <div class="footer__custom-col">
       <h2>♥ קטגוריות ראשיות</h2>
       <ul>
@@ -561,6 +578,31 @@
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label",
       "info": "t:sections.footer.settings.show_policy.info"
+    },
+    {
+      "type": "header",
+      "content": "פוטר - דברים חשובים"
+    },
+    {
+      "type": "text",
+      "id": "important_heading",
+      "label": "כותרת טור דברים חשובים",
+      "default": "דברים חשובים"
+    },
+    {
+      "type": "page",
+      "id": "about_page",
+      "label": "עמוד אודות"
+    },
+    {
+      "type": "url",
+      "id": "tracking_link",
+      "label": "קישור למעקב הזמנות"
+    },
+    {
+      "type": "link_list",
+      "id": "important_menu",
+      "label": "תפריט קישורים נוסף"
     },
     {
       "type": "header",
