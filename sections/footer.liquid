@@ -63,11 +63,40 @@
             {{ section.settings.newsletter_heading }}
           </h2>
         {%- endif -%}
+        <p class="footer__newsletter-subtext">
+          השראה, רעיונות והטבות לחובבי יצירה
+        </p>
+        {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form footer__community-form' -%}
+          <input type="hidden" name="contact[tags]" value="קהילת יוצרים, footer">
 
-        {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="footer__community-fields">
+            <div class="field">
+              <input
+                id="CommunityName--{{ section.id }}"
+                type="text"
+                name="contact[first_name]"
+                class="field__input"
+                placeholder="שם"
+              >
+              <label class="field__label" for="CommunityName--{{ section.id }}">
+                שם
+              </label>
+            </div>
 
-          <div class="newsletter-form__field-wrapper">
+            <div class="field">
+              <input
+                id="CommunityPhone--{{ section.id }}"
+                type="tel"
+                name="contact[phone]"
+                class="field__input"
+                placeholder="טלפון"
+                autocomplete="tel"
+              >
+              <label class="field__label" for="CommunityPhone--{{ section.id }}">
+                טלפון
+              </label>
+            </div>
+
             <div class="field">
               <input
                 id="NewsletterForm--{{ section.id }}"
@@ -79,42 +108,37 @@
                 autocorrect="off"
                 autocapitalize="off"
                 autocomplete="email"
-                {% if form.errors %}
-                  autofocus
-                  aria-invalid="true"
-                  aria-describedby="ContactFooter-error"
-                {% elsif form.posted_successfully? %}
-                  aria-describedby="ContactFooter-success"
-                {% endif %}
-                placeholder="{{ 'newsletter.label' | t }}"
+                placeholder="מייל"
                 required
               >
               <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                {{ 'newsletter.label' | t }}
+                מייל
               </label>
-              <button
-                type="submit"
-                class="newsletter-form__button field__button"
-                name="commit"
-                id="Subscribe"
-                aria-label="{{ 'newsletter.button_label' | t }}"
-              >
-                <span class="svg-wrapper">
-                  {{- 'icon-arrow.svg' | inline_asset_content -}}
-                </span>
-              </button>
             </div>
 
-            {%- if form.errors -%}
-              <small class="newsletter-form__message form__message" id="ContactFooter-error">
-                <span class="svg-wrapper">
-                  {{- 'icon-error.svg' | inline_asset_content -}}
-                </span>
-                {{- form.errors.translated_fields.email | capitalize }}
-                {{ form.errors.messages.email -}}
-              </small>
-            {%- endif -%}
+            <button
+              type="submit"
+              class="button footer__community-button"
+              name="commit"
+              id="Subscribe"
+            >
+              הרשמה
+            </button>
           </div>
+
+          <div class="footer__community-consent">
+            <label>
+              <input type="checkbox" required>
+              אני מאשר/ת קבלת עדכונים, הטבות ורעיונות ליצירה
+            </label>
+          </div>
+
+          {%- if form.errors -%}
+            <small class="newsletter-form__message form__message" id="ContactFooter-error">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </small>
+          {%- endif -%}
 
           {%- if form.posted_successfully? -%}
             <h3
@@ -123,10 +147,7 @@
               tabindex="-1"
               autofocus
             >
-              <span class="svg-wrapper">
-                {{- 'icon-success.svg' | inline_asset_content -}}
-              </span>
-              {{- 'newsletter.success' | t }}
+              תודה שנרשמת לקהילת היוצרים שלנו ♥
             </h3>
           {%- endif -%}
         {%- endform -%}

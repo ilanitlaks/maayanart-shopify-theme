@@ -128,9 +128,26 @@
 .footer-block--newsletter {
   display: flex;
   align-items: flex-end;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   margin-bottom: 3rem;
+  padding-top: 0;
   gap: 1rem;
+  position: relative;
+  background-color: rgb(247 239 239 / 92%);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.9) 2px, transparent 2px),
+    radial-gradient(rgba(255, 255, 255, 0.9) 2px, transparent 2px);
+
+  background-size: 24px 24px;
+  background-position:
+    0 0,
+    12px 12px;
+  padding: 4rem 2rem;
+  /* background-image: url("https://cdn.shopify.com/s/files/1/1066/2212/4371/files/backgrund-form.png?v=1778424943");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #f8f1ee; */
 }
 
 .footer-block--newsletter:only-child {
@@ -149,13 +166,26 @@
     justify-content: center;
   }
 }
-
-.footer-block__heading {
+.footer__newsletter-subtext {
+  margin: 0;
   margin-bottom: 2rem;
+}
+.footer-block__heading {
   margin-top: 0;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
+.footer-block__heading::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem auto 0;
 
+  background-image: url("https://cdn.shopify.com/s/files/1/1066/2212/4371/files/Butterfly.png?v=1778424249");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 @media screen and (min-width: 990px) {
   .footer-block__heading {
     font-size: calc(var(--font-heading-scale) * 1.8rem);
@@ -180,11 +210,17 @@
   text-align: center;
   flex-grow: 1;
   margin-bottom: 2rem;
+  /* background-image: url("https://cdn.shopify.com/s/files/1/1066/2212/4371/files/backgrund-form.png?v=1778424943");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #f8f1ee; */
+  padding: 2rem 0;
 }
 
-.newsletter-form__field-wrapper {
+/* .newsletter-form__field-wrapper {
   max-width: 36rem;
-}
+} */
 
 @media screen and (min-width: 750px) {
   /* Pushes other components to the right of the flexbox */
@@ -771,5 +807,77 @@
     gap: 4rem;
     justify-items: center;
     padding-bottom: 4rem;
+  }
+}
+.footer__community-form {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.footer__community-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.footer__community-fields .field::after,
+.footer__community-fields .field::before {
+  display: none;
+}
+.footer__community-fields .field {
+  direction: rtl;
+}
+
+.footer__community-fields .field__label {
+  right: 1.8rem;
+  left: auto;
+}
+.footer__community-fields .field__input {
+  direction: rtl;
+  text-align: right;
+  border: 1px solid rgba(var(--color-foreground), 0.25);
+  border-radius: 999px;
+  min-height: 4.6rem;
+  text-align: right;
+  background: rgb(var(--color-background));
+}
+
+.footer__community-fields .field__input::placeholder {
+  text-align: right;
+}
+.footer__community-button {
+  min-height: 4.6rem;
+  border-radius: 999px;
+  padding-inline: 4rem;
+  background: #93cedd;
+  color: white;
+  outline: 2px dashed #fff;
+  outline-offset: -0.4rem;
+}
+.footer__community-button::after {
+  box-shadow: none;
+}
+
+.footer__community-consent {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.footer__community-consent label {
+  display: inline-flex;
+  gap: 0.8rem;
+  align-items: center;
+  font-size: small;
+}
+
+@media screen and (max-width: 749px) {
+  .footer__community-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__community-button {
+    width: 100%;
   }
 }
