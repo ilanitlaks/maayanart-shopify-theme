@@ -105,3 +105,32 @@
     font-size: 18px;
   }
 }
+.collection-subcategories__main-title {
+  width: max-content;
+  margin: auto;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.collection-subcategories__main-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 2rem);
+  height: 3px;
+  border-radius: 999px;
+  background: var(--color-secondary);
+  opacity: 0.8;
+}
+
+.collection-subcategories__main-title::after {
+  content: "♥";
+  position: absolute;
+  bottom: -0.45rem;
+  left: 0;
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  line-height: 1;
+}

@@ -190,22 +190,31 @@
       </ul>
     </div>
 
+
     <div class="footer__custom-col footer__contact-info">
-      <h2>♥ אנחנו כאן בשבילך</h2>
-      <p>טלפון: 089950131</p>
-      <p>פקס: 089953155</p>
-      <p>כתובת: סדן 12, רובע אמנים ערד</p>
+      <h2>♥ {{ section.settings.contact_heading }}</h2>
 
-      <br>
+      {%- if section.settings.phone != blank -%}
+        <p>
+          <a href="tel:{{ section.settings.phone | remove: ' ' }}">טלפון:
+            {{ section.settings.phone }}
+          </a>
+        </p>
+      {%- endif -%}
 
-      <p><strong>שעות פעילות:</strong></p>
-      <p>א, ג, ד, ה — 10:00-17:00</p>
-      <p>ב — סגור</p>
-      <p>שישי — 10:00-13:00</p>
+      {%- if section.settings.fax != blank -%}
+        <p>פקס: {{ section.settings.fax }}</p>
+      {%- endif -%}
 
-      <br>
+      {%- if section.settings.address != blank -%}
+        <p>{{ section.settings.address }}</p>
+      {%- endif -%}
 
-      <p><strong>נופיה ומור</strong></p>
+      {%- if section.settings.contact_content != blank -%}
+        <div class="rte">
+          {{ section.settings.contact_content }}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 
@@ -603,6 +612,40 @@
       "type": "link_list",
       "id": "important_menu",
       "label": "תפריט קישורים נוסף"
+    },
+    {
+      "type": "header",
+      "content": "פוטר - יצירת קשר"
+    },
+    {
+      "type": "text",
+      "id": "contact_heading",
+      "label": "כותרת",
+      "default": "אנחנו כאן בשבילך"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "טלפון",
+      "default": "08-9950131"
+    },
+    {
+      "type": "text",
+      "id": "fax",
+      "label": "פקס",
+      "default": "08-9953155"
+    },
+    {
+      "type": "textarea",
+      "id": "address",
+      "label": "כתובת",
+      "default": "סדן 12, רובע האמנים, ערד"
+    },
+    {
+      "type": "richtext",
+      "id": "contact_content",
+      "label": "תוכן נוסף",
+      "default": "<p><strong>שעות פעילות:</strong></p><p>א, ג, ד, ה | 10:00-17:00</p><p>ב | סגור</p><p>שישי | 10:00-13:00</p><p><strong>נופיה ומור</strong></p>"
     },
     {
       "type": "header",

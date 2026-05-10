@@ -2523,7 +2523,7 @@ input[type="checkbox"] {
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  color: #d2a95c;
+  color: red;
   font-size: 1.5rem;
 }
 
@@ -2542,7 +2542,7 @@ input[type="checkbox"] {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  color: #c44b4b;
+  color: red;
   font-size: 1.5rem;
 }
 
@@ -2561,7 +2561,7 @@ input[type="checkbox"] {
   bottom: -0.9rem;
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
-  color: #d2a98c;
+  color: red;
   white-space: nowrap;
 }
 /* סןף */

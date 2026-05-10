@@ -6,18 +6,30 @@
   width: max-content;
   margin: auto;
   font-size: clamp(2.5rem, 5vw, 3rem);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.main-page-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 2rem);
+  height: 3px;
+  border-radius: 999px;
+  background: var(--color-secondary);
+  opacity: 0.8;
 }
 
 .main-page-title::after {
-  content: "";
-  display: block;
-  width: 95%;
-  height: 3px;
-  margin: 0.1rem auto 0;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  background: var(--color-secondary);
-  opacity: 0.8;
-  /* transform: rotate(-1deg); */
+  content: "♥";
+  position: absolute;
+  bottom: -0.45rem;
+  left: 0;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  line-height: 1;
 }
 @media screen and (min-width: 750px) {
   .main-page-title {
