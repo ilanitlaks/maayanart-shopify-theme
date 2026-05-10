@@ -2561,7 +2561,7 @@ input[type="checkbox"] {
   bottom: -0.9rem;
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
-  color: red;
+  color: #d2a98c;
   white-space: nowrap;
 }
 /* סןף */
@@ -3999,7 +3999,7 @@ details-disclosure > details {
   width: 100%;
 }
 .breadcrumbs {
-  margin: 0.5rem 0 0;
+  margin: 0.5rem 0 1.5rem 0;
   font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.4rem);
   direction: rtl;
   text-align: right;
