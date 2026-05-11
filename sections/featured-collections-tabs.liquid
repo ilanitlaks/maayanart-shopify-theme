@@ -49,6 +49,10 @@
 </section>
 
 <style>
+  .home-products-tabs__arrow.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
   .home-products-tabs {
     position: relative;
     padding-block: 40px;
@@ -188,6 +192,30 @@
     const buttons = section.querySelectorAll('.home-products-tabs__btn');
     const panels = section.querySelectorAll('.home-products-tabs__panel');
 
+    function updateArrows(panel) {
+      const slider = panel.querySelector('.home-products-tabs__slider');
+      const prev = panel.querySelector('.home-products-tabs__arrow--prev');
+      const next = panel.querySelector('.home-products-tabs__arrow--next');
+
+      if (!slider || !prev || !next) return;
+
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+      const current = Math.abs(slider.scrollLeft);
+      const tolerance = 5;
+
+      // RTL: בתחילת הרשימה הכל בצד ימין
+      prev.classList.toggle('is-hidden', current <= tolerance);
+
+      // בסוף הרשימה הכל בצד שמאל
+      next.classList.toggle('is-hidden', current >= maxScroll - tolerance);
+
+      // אם אין בכלל גלילה
+      if (maxScroll <= tolerance) {
+        prev.classList.add('is-hidden');
+        next.classList.add('is-hidden');
+      }
+    }
+
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         const tab = button.dataset.tab;
@@ -196,11 +224,15 @@
         panels.forEach(panel => panel.classList.remove('active'));
 
         button.classList.add('active');
-        section.querySelector(`[data-panel="${tab}"]`).classList.add('active');
+
+        const activePanel = section.querySelector(`[data-panel="${tab}"]`);
+        activePanel.classList.add('active');
+
+        setTimeout(() => updateArrows(activePanel), 50);
       });
     });
 
-    section.querySelectorAll('.home-products-tabs__panel').forEach(panel => {
+    panels.forEach(panel => {
       const slider = panel.querySelector('.home-products-tabs__slider');
       const prev = panel.querySelector('.home-products-tabs__arrow--prev');
       const next = panel.querySelector('.home-products-tabs__arrow--next');
@@ -214,6 +246,11 @@
       prev.addEventListener('click', () => {
         slider.scrollBy({ left: 300, behavior: 'smooth' });
       });
+
+      slider.addEventListener('scroll', () => updateArrows(panel));
+      window.addEventListener('resize', () => updateArrows(panel));
+
+      updateArrows(panel);
     });
   });
 </script>
