@@ -37,3 +37,75 @@
     grid-column-gap: 2rem;
   }
 }
+
+/* ILC - contact form like footer newsletter */
+
+.contact {
+  background-color: rgb(231 241 243);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.9) 2px, transparent 2px),
+    radial-gradient(rgba(255, 255, 255, 0.9) 2px, transparent 2px);
+  background-size: 24px 24px;
+  background-position:
+    0 0,
+    12px 12px;
+
+  padding: 4rem 2rem;
+  /* border-radius: 2rem; */
+}
+
+.contact .field::before,
+.contact .field::after {
+  display: none;
+}
+
+.contact .field {
+  direction: rtl;
+}
+
+.contact .field__label {
+  right: 1.8rem;
+  left: auto;
+}
+
+.contact .field__input,
+.contact .text-area {
+  direction: rtl;
+  text-align: right;
+  border: 1px solid rgba(var(--color-foreground), 0.25);
+  border-radius: 1rem;
+  background: rgb(var(--color-background));
+}
+
+.contact .field__input::placeholder,
+.contact .text-area::placeholder {
+  text-align: right;
+}
+
+.contact__button {
+  text-align: center;
+}
+
+.contact__button .button {
+  min-height: 4.6rem;
+  border-radius: 1rem;
+  padding-inline: 4rem;
+  background: #f1891d;
+  color: white;
+  outline: 2px dashed #fff;
+  outline-offset: -0.4rem;
+}
+
+.contact__button .button::after {
+  box-shadow: none;
+}
+@media screen and (max-width: 749px) {
+  .contact .field__label {
+    font-size: 1.2rem;
+  }
+
+  .contact .field__input::placeholder,
+  .contact .text-area::placeholder {
+    font-size: 1.2rem;
+  }
+}
