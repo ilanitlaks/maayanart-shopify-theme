@@ -45,7 +45,7 @@
       "previous": "Previous page"
     },
     "search": {
-      "search": "Search",
+      "search": "חפש",
       "reset": "Clear search term"
     },
     "cart": {
@@ -544,7 +544,12 @@
       },
       "order_summary": {
         "quantity_label": "כמות",
-        "product_image_quantity_label": "כמות"
+        "product_image_quantity_label": "כמות",
+        "more_items_modal": {
+          "search_item": "חיפוש",
+          "clear_search": "ניקוי חיפוש",
+          "empty_results": "לא נמצאו תוצאות עבור \"{{ searchText }}\". נסו לבדוק את האיות או לחפש מילה אחרת."
+        }
       },
       "thank_you": {
         "fulfillment": {
@@ -591,6 +596,9 @@
           "privacy_policy": "לאחר שליחת האימייל עודכנה מדיניות הפרטיות שלנו, ואיננו עוקבים עוד אחר פתיחת הודעות."
         }
       }
+    },
+    "search": {
+      "error": " הייתה בעיה בטעינת תוצאות החיפוש. אנא רעננו את הדף או נסו שוב מאוחר יותר."
     }
   },
   "customer_accounts": {
