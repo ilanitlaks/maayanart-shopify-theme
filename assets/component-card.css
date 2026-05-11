@@ -650,7 +650,7 @@
   width: fit-content;
   margin: 0.5rem;
   padding: 0.4rem 1.2rem;
-  border-radius: 999px;
+  border-radius: 100svw;
   background: #cdeff6;
   color: #5a2b2b;
 }
@@ -692,7 +692,7 @@
   text-align: center;
   text-decoration: none;
   padding: clamp(0.5rem, 0.6rem, 0.8rem);
-  border-radius: 999px;
+  border-radius: 100svw;
   background: #cdeff6;
   color: #5a2b2b;
   outline: 2px dashed rgba(178, 109, 60, 0.43);

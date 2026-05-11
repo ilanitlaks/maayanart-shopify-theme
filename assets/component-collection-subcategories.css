@@ -120,7 +120,7 @@
   right: 0;
   width: calc(100% - 2rem);
   height: 3px;
-  border-radius: 999px;
+  border-radius: 100svw;
   background: var(--color-secondary);
   opacity: 0.8;
 }

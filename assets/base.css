@@ -1776,7 +1776,7 @@ details[open] > .share-button__fallback {
 .field__input,
 .customer .field input {
   flex-grow: 1;
-  text-align: left;
+  text-align: right;
   padding: 1.5rem;
   margin: var(--inputs-border-width);
   transition: box-shadow var(--duration-short) ease;
@@ -1806,7 +1806,8 @@ details[open] > .share-button__fallback {
 .customer .field input:-webkit-autofill ~ label {
   font-size: 1rem;
   top: calc(var(--inputs-border-width) + 0.5rem);
-  left: calc(var(--inputs-border-width) + 2rem);
+  right: calc(var(--inputs-border-width) + 2rem);
+  left: auto;
   letter-spacing: 0.04rem;
 }
 
@@ -1816,9 +1817,15 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer .field input:not(:placeholder-shown),
 .customer .field input:-webkit-autofill {
-  padding: 2.2rem 1.5rem 0.8rem 2rem;
+  padding: 2.2rem 2rem 0.8rem 1.5rem;
   margin: var(--inputs-border-width);
+  border-radius: 100svw; /* ilc */
 }
+/* ilc */
+/* .field::before,
+.field::after {
+  border-radius: var(--border-radius);
+} */
 
 .field__input::-webkit-search-cancel-button,
 .customer .field input::-webkit-search-cancel-button {
@@ -1895,7 +1902,7 @@ input[type="checkbox"] {
 
 .customer .field .form__message {
   font-size: 1.4rem;
-  text-align: left;
+  text-align: right;
 }
 
 .form__message .icon,
@@ -3935,7 +3942,7 @@ details-disclosure > details {
   min-width: 150px;
   min-height: 5rem;
   border: none;
-  border-radius: 999px;
+  border-radius: 100svw;
   color: var(--product-buy-text) !important;
   font-size: 1.4rem;
   outline: 2px dashed var(--product-buy-outline);
@@ -3981,7 +3988,7 @@ details-disclosure > details {
 .product-form__input .price-per-item__container {
   position: relative;
   width: fit-content;
-  border-radius: 999px;
+  border-radius: 100svw;
   background: #fff;
 }
 
@@ -3991,7 +3998,7 @@ details-disclosure > details {
   position: absolute;
   inset: 0;
   border: 0.5px solid currentColor;
-  border-radius: 999px;
+  border-radius: 100svw;
   pointer-events: none;
 }
 /* breadcrumbs */
@@ -4065,7 +4072,7 @@ details-disclosure > details {
 
 *::-webkit-scrollbar-track {
   background: var(--color-soft-bg);
-  border-radius: 999px;
+  border-radius: 100svw;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -4075,7 +4082,7 @@ details-disclosure > details {
     var(--color-secondary)
   );
 
-  border-radius: 999px;
+  border-radius: 100svw;
   border: 2px solid var(--color-soft-bg);
 }
 
