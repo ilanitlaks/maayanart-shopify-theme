@@ -1,9 +1,10 @@
 .search__input.field__input {
-  padding-right: 9.8rem;
+  padding-left: 9.8rem;
 }
 
 .search__button {
-  right: var(--inputs-border-width);
+  left: var(--inputs-border-width);
+  right: auto;
   top: var(--inputs-border-width);
 }
 
@@ -75,12 +76,12 @@ input::-webkit-search-decoration {
 /* ilc */
 
 .search-modal .field {
-  border-radius: 100svw;
+  border-radius: 1rem;
   overflow: hidden;
   transition: 0.25s ease;
   box-shadow: none;
 }
 .search-modal .field::before,
 .search-modal .field::after {
-  border-radius: 100svw;
+  border-radius: 1rem;
 }

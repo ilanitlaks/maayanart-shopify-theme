@@ -837,7 +837,7 @@
   direction: rtl;
   text-align: right;
   border: 1px solid rgba(var(--color-foreground), 0.25);
-  border-radius: 100svw;
+  border-radius: 1rem;
   min-height: 4.6rem;
   text-align: right;
   background: rgb(var(--color-background));
@@ -848,7 +848,7 @@
 }
 .footer__community-button {
   min-height: 4.6rem;
-  border-radius: 100svw;
+  border-radius: 1rem;
   padding-inline: 4rem;
   background: #93cedd;
   color: white;

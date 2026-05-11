@@ -1817,15 +1817,15 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer .field input:not(:placeholder-shown),
 .customer .field input:-webkit-autofill {
-  padding: 2.2rem 2rem 0.8rem 1.5rem;
+  padding: 2.5rem 2rem 1rem 1.5rem;
   margin: var(--inputs-border-width);
-  border-radius: 100svw; /* ilc */
+  border-radius: 1rem; /* ilc */
 }
 /* ilc */
-/* .field::before,
+.field::before,
 .field::after {
-  border-radius: var(--border-radius);
-} */
+  border-radius: 1rem;
+}
 
 .field__input::-webkit-search-cancel-button,
 .customer .field input::-webkit-search-cancel-button {
@@ -3942,7 +3942,7 @@ details-disclosure > details {
   min-width: 150px;
   min-height: 5rem;
   border: none;
-  border-radius: 100svw;
+  border-radius: 1rem;
   color: var(--product-buy-text) !important;
   font-size: 1.4rem;
   outline: 2px dashed var(--product-buy-outline);
@@ -3988,7 +3988,7 @@ details-disclosure > details {
 .product-form__input .price-per-item__container {
   position: relative;
   width: fit-content;
-  border-radius: 100svw;
+  border-radius: 1rem;
   background: #fff;
 }
 
@@ -3998,7 +3998,7 @@ details-disclosure > details {
   position: absolute;
   inset: 0;
   border: 0.5px solid currentColor;
-  border-radius: 100svw;
+  border-radius: 1rem;
   pointer-events: none;
 }
 /* breadcrumbs */
@@ -4072,7 +4072,7 @@ details-disclosure > details {
 
 *::-webkit-scrollbar-track {
   background: var(--color-soft-bg);
-  border-radius: 100svw;
+  border-radius: 1rem;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -4082,7 +4082,7 @@ details-disclosure > details {
     var(--color-secondary)
   );
 
-  border-radius: 100svw;
+  border-radius: 1rem;
   border: 2px solid var(--color-soft-bg);
 }
 
