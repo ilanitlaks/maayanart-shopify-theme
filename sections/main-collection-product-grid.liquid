@@ -220,9 +220,15 @@
               {%- endfor -%}
             </ul>
 
-            {%- if paginate.pages > 1 -%}
+          {%- if paginate.pages > 1 -%}
+            <div class="infinite-scroll-pagination">
               {% render 'pagination', paginate: paginate, anchor: '' %}
-            {%- endif -%}
+            </div>
+
+            <div class="infinite-scroll-loader" aria-hidden="true">
+              טוען עוד מוצרים...
+            </div>
+          {%- endif -%}
           </div>
         {%- endif -%}
       </div>

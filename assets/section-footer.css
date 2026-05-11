@@ -169,10 +169,12 @@
 .footer__newsletter-subtext {
   margin: 0;
   margin-bottom: 2rem;
+  text-wrap: balance;
 }
 .footer-block__heading {
   margin-top: 0;
   font-size: calc(var(--font-heading-scale) * 1.6rem);
+  text-wrap: balance;
 }
 .footer-block__heading::after {
   content: "";

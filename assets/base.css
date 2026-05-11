@@ -1276,7 +1276,7 @@ button.shopify-payment-button__button--unbranded {
     var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
-.button:after,
+/* .button:after,
 .shopify-challenge__button:after,
 .customer button:after,
 .shopify-payment-button__button--unbranded:after {
@@ -1306,7 +1306,7 @@ button.shopify-payment-button__button--unbranded {
       rgba(var(--color-button-text), var(--border-opacity)),
     0 0 0 calc(var(--buttons-border-width) + 1px)
       rgba(var(--color-button), var(--alpha-button-background));
-}
+} */
 
 .button--secondary:after {
   --border-opacity: var(--buttons-border-opacity);
@@ -4089,3 +4089,54 @@ details-disclosure > details {
 *::-webkit-scrollbar-thumb:hover {
   background: var(--color-secondary-hover);
 }
+/* Infinite Scroll / Load More */
+.infinite-scroll-pagination {
+  opacity: 0;
+  height: 1px;
+  overflow: hidden;
+  pointer-events: none;
+  margin: 0;
+}
+
+.infinite-scroll-loader {
+  display: none;
+}
+
+.load-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto;
+  min-width: 18rem;
+  padding: 1.2rem 2.8rem;
+  border-radius: 999px;
+  border: 1px dashed #d2a98c;
+  background: #fffdfc;
+  color: rgba(var(--color-foreground), 0.85);
+  font-size: 1.6rem;
+  font-weight: 600;
+  box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.load-more-button:hover {
+  transform: translateY(-2px);
+  background: #fff7f2;
+  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.load-more-button::after {
+  content: " ♥";
+  position: absolute;
+  margin-inline-start: 0.5rem;
+  color: #d2a98c;
+  /* box-shadow: none; */
+  top: 30%;
+  left: 80%;
+}
+/* .load-more-button:hover::after {
+  box-shadow: none !important;
+} */
