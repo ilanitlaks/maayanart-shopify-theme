@@ -1275,6 +1275,9 @@
         "category_47nQKK",
         "category_GFYTkg"
       ],
+      "custom_css": [
+        "h2 {margin-top: 1px; font-size: small;}"
+      ],
       "settings": {
         "heading": "קטגוריות"
       }
