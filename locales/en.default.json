@@ -194,35 +194,35 @@
       "label": "Media gallery"
     },
     "facets": {
-      "filter_and_operator_subtitle": "Match all",
-      "apply": "Apply",
-      "clear": "Clear",
-      "clear_all": "Remove all",
-      "from": "From",
-      "filter_and_sort": "Filter and sort",
-      "filter_by_label": "Filter:",
-      "filter_button": "Filter",
+      "filter_and_operator_subtitle": "הצג הכל",
+      "apply": "החל",
+      "clear": "הסר",
+      "clear_all": "הסר הכל",
+      "from": "מ־",
+      "filter_and_sort": "סינון ומיון",
+      "filter_by_label": "סינון:",
+      "filter_button": "סנן",
       "filters_selected": {
-        "one": "{{ count }} selected",
-        "other": "{{ count }} selected"
+        "one": "נבחר {{ count }} ",
+        "other": "נבחרו {{ count }}"
       },
       "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
-      "show_more": "Show more",
-      "show_less": "Show less",
-      "max_price": "The highest price is {{ price }}",
+      "show_more": "הצג עוד",
+      "show_less": "הצג פחות",
+      "max_price": "המחיר היקר ביותר {{ price }}",
       "product_count": {
-        "one": "{{ product_count }} of {{ count }} product",
-        "other": "{{ product_count }} of {{ count }} products"
+        "one": "{{ product_count }}   מוצר אחד מתוך ",
+        "other": "{{ product_count }} מתוך {{ count }} מוצרים"
       },
       "product_count_simple": {
-        "one": "{{ count }} product",
-        "other": "{{ count }} products"
+        "one": "מוצר אחד",
+        "other": "{{ count }} מוצרים"
       },
-      "reset": "Reset",
-      "sort_button": "Sort",
-      "sort_by_label": "Sort by:",
-      "to": "To",
-      "clear_filter": "Remove filter"
+      "reset": "איפוס",
+      "sort_button": "מיון",
+      "sort_by_label": "מיין לפי:",
+      "to": "עד",
+      "clear_filter": "הסר סינון"
     }
   },
   "templates": {
@@ -540,7 +540,8 @@
     "checkout": {
       "stock": {
         "product_column_header": "כל המוצרים",
-        "quantity_column_header": "כמות"
+        "quantity_column_header": "כמות",
+        "price_column_header": "מחיר"
       },
       "order_summary": {
         "quantity_label": "כמות",
@@ -549,7 +550,9 @@
           "search_item": "חיפוש",
           "clear_search": "ניקוי חיפוש",
           "empty_results": "לא נמצאו תוצאות עבור \"{{ searchText }}\". נסו לבדוק את האיות או לחפש מילה אחרת."
-        }
+        },
+        "price_label": "מחיר",
+        "sale_price": "מחיר מבצע"
       },
       "thank_you": {
         "fulfillment": {
@@ -585,6 +588,9 @@
             "contact_info": " פרטי יצירת קשר"
           }
         }
+      },
+      "contextual_availability": {
+        "unavailable_label": "זמינות"
       }
     },
     "page_titles": {
@@ -599,6 +605,14 @@
     },
     "search": {
       "error": " הייתה בעיה בטעינת תוצאות החיפוש. אנא רעננו את הדף או נסו שוב מאוחר יותר."
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "במלאי",
+          "out_of_stock": "אזל המלאי"
+        }
+      }
     }
   },
   "customer_accounts": {
@@ -606,7 +620,8 @@
       "order_list": {
         "column_headers": {
           "products_accessibility_label": "כל המוצרים"
-        }
+        },
+        "filter_title": "סינון"
       }
     },
     "navigation_and_structure": {
