@@ -3,8 +3,9 @@
 }
 
 .main-page-title {
-  width: max-content;
-  margin: auto;
+  margin: 1rem auto 2rem;
+  width: fit-content;
+  text-wrap: pretty;
   font-size: clamp(2.5rem, 5vw, 3rem);
   position: relative;
   padding-bottom: 0.5rem;

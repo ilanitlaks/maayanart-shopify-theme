@@ -8,6 +8,10 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  p {
+    text-align: start;
+    margin: 1rem auto;
+  }
 }
 
 .collection-subcategories__main-title {
@@ -19,7 +23,6 @@
 .collection-subcategories__description {
   max-width: 760px;
   margin: 0 auto 40px;
-  text-align: center;
   line-height: 1.7;
   font-size: 18px;
 }
@@ -33,6 +36,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  margin-top: 3rem;
 }
 
 .collection-subcategories__card {
@@ -92,9 +96,9 @@
     font-size: 32px;
   }
 
-  .collection-subcategories__description {
+  /* .collection-subcategories__description {
     font-size: 16px;
-  }
+  } */
 
   .collection-subcategories__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -106,8 +110,9 @@
   }
 }
 .collection-subcategories__main-title {
-  width: max-content;
-  margin: auto;
+  margin: 1rem auto 2rem;
+  width: fit-content;
+  text-wrap: pretty;
   font-size: clamp(2.5rem, 5vw, 3rem);
   position: relative;
   padding-bottom: 0.5rem;

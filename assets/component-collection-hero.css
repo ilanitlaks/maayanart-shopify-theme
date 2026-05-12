@@ -22,6 +22,9 @@
 
 .collection-hero__text-wrapper {
   flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 750px) {
@@ -37,10 +40,10 @@
 }
 
 .collection-hero__title {
-  margin: 3rem 0;
+  margin: 1rem auto 2rem;
+  width: fit-content;
   text-align: center;
-  width: max-content;
-  margin: auto;
+  text-wrap: pretty;
   font-size: clamp(2.5rem, 5vw, 3rem);
   position: relative;
   padding-bottom: 0.5rem;
@@ -70,6 +73,7 @@
 .collection-hero__title + .collection-hero__description {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+
   font-size: 1.6rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
 }
