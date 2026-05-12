@@ -379,5 +379,21 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <!-- Announcement bar hint animation - show once per session -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const bar = document.querySelector('.announcement-bar');
+
+          if (!bar) return;
+
+          if (sessionStorage.getItem('announcementHintShown')) {
+            bar.style.animation = 'none';
+          } else {
+            sessionStorage.setItem('announcementHintShown', 'true');
+          }
+        });
+    </script>
+
+</body>
   </body>
 </html>
