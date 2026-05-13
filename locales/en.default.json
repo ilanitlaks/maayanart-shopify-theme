@@ -176,7 +176,7 @@
         "unit_price": "מחיר ליחידה"
       },
       "share": "שתפו עם חברים",
-      "sold_out": "נמכר",
+      "sold_out": "אזל המלאי",
       "unavailable": "המוצר לא זמין",
       "vendor": "יצרן",
       "value_unavailable": "{{ option_value }} - לא זמין",
