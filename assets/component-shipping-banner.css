@@ -1,6 +1,6 @@
 /* container */
 .shipping-banner {
-  padding: 12px 0;
+  padding: 1rem 0 0 0;
 }
 
 /* גריד 12 טורים */
@@ -28,10 +28,10 @@
 
 /* הטקסט – חופף לאור */
 .shipping-banner__text {
-  grid-column: 13 / 7;
+  grid-column: 13 / 6;
   grid-row: 1;
-  padding-top: 1rem;
-  padding-right: 3.5rem;
+  /* padding-top: 1rem; */
+  padding-right: 2.5rem;
 
   z-index: 2;
 
@@ -45,14 +45,15 @@
 }
 /* מובייל */
 @media (max-width: 749px) {
-  .shipping-banner__inner {
+  /* .shipping-banner__inner {
   }
 
   .shipping-banner__img {
-  }
+  } */
 
   .shipping-banner__text {
     padding-top: 0.5rem;
     padding-right: 0;
+    grid-column: 13 / 4;
   }
 }
