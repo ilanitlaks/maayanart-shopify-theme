@@ -210,7 +210,7 @@
                 לכל האפשרויות
               </a>
 
-            {%- elsif card_product.variants_count == 1 -%}
+            {%- elsif card_product.variants_count == 1 and card_product.available -%}
 
               {%- assign current_qty = 0 -%}
               {%- for item in cart.items -%}
