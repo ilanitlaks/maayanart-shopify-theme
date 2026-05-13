@@ -1626,6 +1626,7 @@ document.addEventListener("click", async function (event) {
     });
 
     number.textContent = currentQty + 1;
+    document.dispatchEvent(new CustomEvent("cart:action"));
     flyToCart(plus);
     updateCartCount();
   }
