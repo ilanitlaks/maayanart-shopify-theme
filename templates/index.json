@@ -216,6 +216,78 @@
         "collection_deal": "",
         "products_to_show": 8
       }
+    },
+    "collapsible_content_VrgAAf": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_aKLX3f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "אפשר לקבל עזרה בבחירת חומרים?",
+            "icon": "none",
+            "row_content": "<p>בשמחה 🙂<br/>אפשר ליצור קשר וננסה לעזור לבחור חומרים מתאימים לפרויקט שלכם.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xYnqyR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "איך מתבצע המשלוח?",
+            "icon": "none",
+            "row_content": "<p>אנחנו שולחות לכל הארץ באמצעות חברת משלוחים. זמן האספקה משתנה לפי אזור המגורים והעומס בחגים.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EEnX3C": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "תוך כמה זמן ההזמנה יוצאת?",
+            "icon": "none",
+            "row_content": "<p>רוב ההזמנות נארזות ונשלחות תוך 1–3 ימי עסקים.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_x6KLfd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "האם אפשר להגיע לאסוף הזמנה?",
+            "icon": "none",
+            "row_content": "<p>כן, ניתן לבחור איסוף עצמי בתיאום מראש.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_H9jtfV": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "האם המוצרים מתאימים לילדים?",
+            "icon": "none",
+            "row_content": "<p>חלק מהמוצרים מתאימים לילדים וחלקם מיועדים למבוגרים או לשימוש בהשגחת מבוגר. מומלץ לבדוק את תיאור המוצר.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_aKLX3f",
+        "collapsible_row_xYnqyR",
+        "collapsible_row_EEnX3C",
+        "collapsible_row_x6KLfd",
+        "collapsible_row_H9jtfV"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "שאלות נפוצות",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -223,6 +295,7 @@
     "category_boxes_GApb9K",
     "1777308389614420d9",
     "ideas_slider_96gJD4",
-    "featured_collections_tabs_w4nziU"
+    "featured_collections_tabs_w4nziU",
+    "collapsible_content_VrgAAf"
   ]
 }
