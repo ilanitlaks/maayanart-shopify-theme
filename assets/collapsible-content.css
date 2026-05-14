@@ -102,7 +102,7 @@
 }
 
 .collapsible-content summary:hover {
-  background: rgba(var(--color-foreground), 0.04);
+  color: black;
 }
 
 /* .collapsible-content summary:hover .accordion__title {
@@ -116,8 +116,8 @@
     .collapsible-content__grid:not(.collapsible-content__grid--reverse)
       .grid__item:last-child,
     .collapsible-content__grid--reverse .collapsible-content__grid-item {
-      padding-left: 5rem;
-      padding-right: 0;
+      padding-right: 5rem;
+      padding-left: 0;
     }
   }
 
@@ -125,7 +125,7 @@
     .collapsible-content__grid:not(.collapsible-content__grid--reverse)
       .grid__item:last-child,
     .collapsible-content__grid--reverse .collapsible-content__grid-item {
-      padding-left: 7rem;
+      padding-right: 7rem;
     }
   }
 }

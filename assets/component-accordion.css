@@ -29,7 +29,7 @@
 .accordion__title {
   padding-right: 4rem;
   display: inline-block;
-  max-width: calc(100% - 1rem);
+  max-width: calc(100% - 2rem);
   min-height: 1.6rem;
   margin: 0;
   word-break: break-word;
@@ -51,7 +51,12 @@
   margin-bottom: 1.5rem;
   word-break: break-word;
   overflow-x: auto;
-  padding: 0 0.6rem;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s linear;
+  background-color: var(--color-soft-bg);
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .accordion__content img {
@@ -60,25 +65,7 @@
 .accordion details {
   overflow: hidden;
 }
+
 .accordion summary .icon-caret {
-  transition: transform 0.3s ease;
-}
-.accordion__content {
-  margin-bottom: 1.5rem;
-  word-break: break-word;
-  padding: 0 0.6rem;
-
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s ease;
-  overflow: hidden;
-}
-
-.accordion details[open] .accordion__content {
-  grid-template-rows: 1fr;
-}
-
-.accordion .accordion__content > * {
-  overflow: hidden;
-  margin: 1rem 0;
+  transition: transform 0.3s linear;
 }
