@@ -1,0 +1,91 @@
+{{ 'section-ideas-slider.css' | asset_url | stylesheet_tag }}
+<section class="ideas-slider page-width">
+  {% if section.settings.heading != blank %}
+    <h2 class="ideas-slider__heading">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  <div class="ideas-slider__track">
+    {% for block in section.blocks %}
+      {% assign image_url = block.settings.image_url %}
+      {% assign uploaded_image = block.settings.image %}
+
+      {% if block.settings.link != blank %}
+        <a class="ideas-slider__item" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+      {% else %}
+        <div class="ideas-slider__item" {{ block.shopify_attributes }}>
+      {% endif %}
+
+        {% if image_url != blank %}
+          <img
+            src="{{ image_url }}"
+            alt="{{ block.settings.alt | escape }}"
+            loading="lazy"
+          >
+        {% elsif uploaded_image != blank %}
+          <img
+            src="{{ uploaded_image | image_url: width: 700 }}"
+            alt="{{ block.settings.alt | escape }}"
+            loading="lazy"
+            width="{{ uploaded_image.width }}"
+            height="{{ uploaded_image.height }}"
+          >
+        {% endif %}
+
+      {% if block.settings.link != blank %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "סליידר רעיונות",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "כותרת",
+      "default": "קצת השראה ליצירה"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "idea",
+      "name": "רעיון",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "תמונה מהחנות"
+        },
+        {
+          "type": "url",
+          "id": "image_url",
+          "label": "או קישור לתמונה מהבלוג"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "קישור לפוסט / מוצר / קולקציה"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "טקסט חלופי לתמונה",
+          "default": "רעיון ליצירה"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "סליידר רעיונות"
+    }
+  ]
+}
+{% endschema %}
