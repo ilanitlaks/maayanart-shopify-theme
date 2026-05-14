@@ -140,6 +140,53 @@
       "type": "_blocks",
       "settings": {}
     },
+    "ideas_slider_96gJD4": {
+      "type": "ideas-slider",
+      "blocks": {
+        "idea_MnzG94": {
+          "type": "idea",
+          "settings": {
+            "image_url": "https://blog.maayanart.com/assets/blog-image/%D7%93%D7%A8%D7%9B%D7%95%D7%9F-%D7%9C%D7%99%D7%A6%D7%99%D7%A8%D7%94/%D7%93%D7%A8%D7%9B%D7%95%D7%9F-%D7%9C%D7%99%D7%A6%D7%99%D7%A8%D7%94-6.webp",
+            "link": "https://blog.maayanart.com/posts/%D7%93%D7%A8%D7%9B%D7%95%D7%9F-%D7%9C%D7%99%D7%A6%D7%99%D7%A8%D7%94/",
+            "alt": "דרכון ליצירה"
+          }
+        },
+        "idea_LhXCqP": {
+          "type": "idea",
+          "settings": {
+            "image_url": "https://blog.maayanart.com/assets/blog-image/%D7%9E%D7%A2%D7%99%D7%99%D7%9F%D7%94%D7%99%D7%A6%D7%99%D7%A8%D7%94-%D7%97%D7%A8%D7%95%D7%96%D7%99-%D7%90%D7%95%D7%AA%D7%99%D7%95%D7%AA.jpg",
+            "link": "https://blog.maayanart.com/posts/%D7%97%D7%A8%D7%95%D7%96%D7%99-%D7%90%D7%95%D7%AA%D7%99%D7%95%D7%AA-%D7%91%D7%9E%D7%A1%D7%92%D7%A8%D7%AA-%D7%99%D7%A6%D7%99%D7%A8%D7%94-%D7%9E%D7%93%D7%9C%D7%99%D7%A7%D7%94/",
+            "alt": "חרוזי אותיות במסגרת - יצירה מדליקה"
+          }
+        },
+        "idea_b4BfhM": {
+          "type": "idea",
+          "settings": {
+            "image_url": "https://blog.maayanart.com/assets/blog-image/%D7%A1%D7%99%D7%9E%D7%A0%D7%99%D7%94/Book-bookmarks.png",
+            "link": "https://blog.maayanart.com/posts/%D7%A1%D7%99%D7%9E%D7%A0%D7%99%D7%94-%D7%9E%D7%91%D7%93-%D7%A1%D7%92%D7%A0%D7%95%D7%9F-pop-art-%D7%91%D7%90%D7%93%D7%99%D7%91%D7%95%D7%AA-ilc/",
+            "alt": "סימניה מבד סגנון pop art באדיבות ilc"
+          }
+        },
+        "idea_CHFn96": {
+          "type": "idea",
+          "settings": {
+            "image_url": "https://blog.maayanart.com/assets/blog-image/foto-transfer-3-1-.png",
+            "link": "https://blog.maayanart.com/posts/%D7%A4%D7%95%D7%98%D7%95-%D7%98%D7%A8%D7%A0%D7%A1%D7%A4%D7%A8-%D7%95%D7%A2%D7%95%D7%93-%D7%A0%D7%92%D7%99%D7%A2%D7%94-%D7%A7%D7%98%D7%A0%D7%94/",
+            "alt": "פוטו טרנספר ועוד נגיעה קטנה"
+          }
+        }
+      },
+      "block_order": [
+        "idea_MnzG94",
+        "idea_LhXCqP",
+        "idea_b4BfhM",
+        "idea_CHFn96"
+      ],
+      "name": "סליידר רעיונות",
+      "settings": {
+        "heading": "קצת השראה ליצירה"
+      }
+    },
     "featured_collections_tabs_w4nziU": {
       "type": "featured-collections-tabs",
       "name": "מוצרים בטאבים",
@@ -155,6 +202,7 @@
     "shipping_banner_dHLtqM",
     "category_boxes_GApb9K",
     "1777308389614420d9",
+    "ideas_slider_96gJD4",
     "featured_collections_tabs_w4nziU"
   ]
 }
