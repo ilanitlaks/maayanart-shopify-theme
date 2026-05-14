@@ -148,7 +148,9 @@
           "settings": {
             "image_url": "https://blog.maayanart.com/assets/blog-image/%D7%99%D7%A0%D7%A9%D7%95%D7%A4%D7%99%D7%9D-%D7%9E%D7%AA%D7%97%D7%91%D7%95%D7%A9%D7%95%D7%AA-%D7%92%D7%91%D7%A1/%D7%99%D7%A0%D7%A9%D7%95%D7%A4%D7%99%D7%9D.png",
             "link": "https://blog.maayanart.com/posts/%D7%99%D7%A0%D7%A9%D7%95%D7%A4%D7%99%D7%9D-%D7%9E%D7%AA%D7%97%D7%91%D7%95%D7%A9%D7%95%D7%AA-%D7%92%D7%91%D7%A1/",
-            "alt": "ינשופים מתחבושות גבס"
+            "alt": "ינשופים מתחבושות גבס",
+            "tags": "רעיונות ליצירה",
+            "show_idea": true
           }
         },
         "idea_MnzG94": {
@@ -156,7 +158,9 @@
           "settings": {
             "image_url": "https://blog.maayanart.com/assets/blog-image/%D7%93%D7%A8%D7%9B%D7%95%D7%9F-%D7%9C%D7%99%D7%A6%D7%99%D7%A8%D7%94/%D7%93%D7%A8%D7%9B%D7%95%D7%9F-%D7%9C%D7%99%D7%A6%D7%99%D7%A8%D7%94-6.webp",
             "link": "https://blog.maayanart.com/posts/%D7%93%D7%A8%D7%9B%D7%95%D7%9F-%D7%9C%D7%99%D7%A6%D7%99%D7%A8%D7%94/",
-            "alt": "דרכון ליצירה"
+            "alt": "דרכון ליצירה",
+            "tags": "יצירה עם ילדים לחופש הגדול",
+            "show_idea": true
           }
         },
         "idea_LhXCqP": {
@@ -164,7 +168,9 @@
           "settings": {
             "image_url": "https://blog.maayanart.com/assets/blog-image/%D7%9E%D7%A2%D7%99%D7%99%D7%9F%D7%94%D7%99%D7%A6%D7%99%D7%A8%D7%94-%D7%97%D7%A8%D7%95%D7%96%D7%99-%D7%90%D7%95%D7%AA%D7%99%D7%95%D7%AA.jpg",
             "link": "https://blog.maayanart.com/posts/%D7%97%D7%A8%D7%95%D7%96%D7%99-%D7%90%D7%95%D7%AA%D7%99%D7%95%D7%AA-%D7%91%D7%9E%D7%A1%D7%92%D7%A8%D7%AA-%D7%99%D7%A6%D7%99%D7%A8%D7%94-%D7%9E%D7%93%D7%9C%D7%99%D7%A7%D7%94/",
-            "alt": "חרוזי אותיות במסגרת - יצירה מדליקה"
+            "alt": "חרוזי אותיות במסגרת - יצירה מדליקה",
+            "tags": "רעיונות למתנות סוף שנה,  יום האהבה",
+            "show_idea": true
           }
         },
         "idea_b4BfhM": {
@@ -172,7 +178,9 @@
           "settings": {
             "image_url": "https://blog.maayanart.com/assets/blog-image/%D7%A1%D7%99%D7%9E%D7%A0%D7%99%D7%94/Book-bookmarks.png",
             "link": "https://blog.maayanart.com/posts/%D7%A1%D7%99%D7%9E%D7%A0%D7%99%D7%94-%D7%9E%D7%91%D7%93-%D7%A1%D7%92%D7%A0%D7%95%D7%9F-pop-art-%D7%91%D7%90%D7%93%D7%99%D7%91%D7%95%D7%AA-ilc/",
-            "alt": "סימניה מבד סגנון pop art באדיבות ilc"
+            "alt": "סימניה מבד סגנון pop art באדיבות ilc",
+            "tags": "רעיונות למתנות סוף שנה,",
+            "show_idea": true
           }
         },
         "idea_CHFn96": {
@@ -180,7 +188,9 @@
           "settings": {
             "image_url": "https://blog.maayanart.com/assets/blog-image/foto-transfer-3-1-.png",
             "link": "https://blog.maayanart.com/posts/%D7%A4%D7%95%D7%98%D7%95-%D7%98%D7%A8%D7%A0%D7%A1%D7%A4%D7%A8-%D7%95%D7%A2%D7%95%D7%93-%D7%A0%D7%92%D7%99%D7%A2%D7%94-%D7%A7%D7%98%D7%A0%D7%94/",
-            "alt": "פוטו טרנספר ועוד נגיעה קטנה"
+            "alt": "פוטו טרנספר ועוד נגיעה קטנה",
+            "tags": "רעיונות למתנות סוף שנה,  יום האהבה",
+            "show_idea": true
           }
         }
       },
@@ -193,7 +203,8 @@
       ],
       "name": "סליידר רעיונות",
       "settings": {
-        "heading": "מדריכי יצירה מתוך הבלוג"
+        "heading": "מדריכי יצירה מתוך הבלוג",
+        "active_tag": ""
       }
     },
     "featured_collections_tabs_w4nziU": {
