@@ -29,9 +29,9 @@
       {% assign uploaded_image = block.settings.image %}
 
       {% if block.settings.link != blank %}
-        <a class="ideas-slider__item" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+        <a class="ideas-slider__item media" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
       {% else %}
-        <div class="ideas-slider__item" {{ block.shopify_attributes }}>
+        <div class="ideas-slider__item media" {{ block.shopify_attributes }}>
       {% endif %}
 
         {% if image_url != blank %}
