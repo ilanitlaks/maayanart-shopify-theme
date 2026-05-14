@@ -2497,7 +2497,7 @@ input[type="checkbox"] {
 } */
 
 .header {
-  margin: 0.5rem auto;
+  margin: 0 auto;
   display: grid;
   grid-template-areas: "left-icons search heading icons";
   grid-template-columns: auto auto 1fr auto;
