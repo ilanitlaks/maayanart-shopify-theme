@@ -1,5 +1,5 @@
 .ideas-slider {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
 }
 
@@ -40,6 +40,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
+  justify-content: space-around;
 }
 
 .ideas-slider__item {
@@ -73,7 +74,6 @@
   .ideas-slider__track {
     padding-inline: 1rem;
     margin-inline: -1rem;
-    justify-content: space-around;
   }
 
   .ideas-slider__item {
