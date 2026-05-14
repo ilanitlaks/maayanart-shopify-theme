@@ -509,7 +509,7 @@ h6:empty {
   display: inline-block;
   border: none;
   box-shadow: none;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
@@ -4140,3 +4140,35 @@ details-disclosure > details {
 /* .load-more-button:hover::after {
   box-shadow: none !important;
 } */
+
+.title-section {
+  margin: 1rem auto 3rem;
+  width: fit-content;
+  text-align: center;
+  text-wrap: balance;
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  position: relative;
+  padding-bottom: 0.5rem;
+  padding-top: 2rem;
+}
+
+.title-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 2rem);
+  height: 3px;
+  border-radius: 100svw;
+  background: var(--color-secondary);
+  opacity: 0.8;
+}
+.title-section:after {
+  content: "\2665";
+  position: absolute;
+  bottom: -0.45rem;
+  left: 0;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  line-height: 1;
+}

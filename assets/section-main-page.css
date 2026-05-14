@@ -3,35 +3,9 @@
 }
 
 .main-page-title {
-  margin: 1rem auto 2rem;
   width: fit-content;
-  text-wrap: pretty;
-  font-size: clamp(2.5rem, 5vw, 3rem);
-  position: relative;
-  padding-bottom: 0.5rem;
 }
 
-.main-page-title::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: calc(100% - 2rem);
-  height: 3px;
-  border-radius: 100svw;
-  background: var(--color-secondary);
-  opacity: 0.8;
-}
-
-.main-page-title::after {
-  content: "♥";
-  position: absolute;
-  bottom: -0.45rem;
-  left: 0;
-  color: var(--color-secondary);
-  font-size: 1.5rem;
-  line-height: 1;
-}
 @media screen and (min-width: 750px) {
   .main-page-title {
     margin-bottom: 2rem;
