@@ -6,48 +6,57 @@
   {% endif %}
 
   <div class="ideas-slider__track">
-    {% assign active_tag = section.settings.active_tag | strip | downcase %}
+  {% assign active_tags = section.settings.active_tag | downcase | split: ',' %}
 
-    {% for block in section.blocks %}
-      {% assign block_tags = block.settings.tags | downcase %}
-      {% assign show_idea = block.settings.show_idea %}
+  {% for block in section.blocks %}
+    {% assign block_tags = block.settings.tags | downcase %}
+    {% assign show_idea = block.settings.show_idea %}
+    {% assign should_show = false %}
 
-      {% if show_idea %}
-        {% if active_tag == blank or block_tags contains active_tag %}
-          {% assign image_url = block.settings.image_url %}
-          {% assign uploaded_image = block.settings.image %}
-
-          {% if block.settings.link != blank %}
-            <a class="ideas-slider__item" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
-          {% else %}
-            <div class="ideas-slider__item" {{ block.shopify_attributes }}>
-          {% endif %}
-
-            {% if image_url != blank %}
-              <img
-                src="{{ image_url }}"
-                alt="{{ block.settings.alt | escape }}"
-                loading="lazy"
-              >
-            {% elsif uploaded_image != blank %}
-              <img
-                src="{{ uploaded_image | image_url: width: 700 }}"
-                alt="{{ block.settings.alt | escape }}"
-                loading="lazy"
-                width="{{ uploaded_image.width }}"
-                height="{{ uploaded_image.height }}"
-              >
-            {% endif %}
-
-          {% if block.settings.link != blank %}
-            </a>
-          {% else %}
-            </div>
-          {% endif %}
+    {% if section.settings.active_tag == blank %}
+      {% assign should_show = true %}
+    {% else %}
+      {% for tag in active_tags %}
+        {% assign clean_tag = tag | strip %}
+        {% if block_tags contains clean_tag %}
+          {% assign should_show = true %}
         {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if show_idea and should_show %}
+      {% assign image_url = block.settings.image_url %}
+      {% assign uploaded_image = block.settings.image %}
+
+      {% if block.settings.link != blank %}
+        <a class="ideas-slider__item" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+      {% else %}
+        <div class="ideas-slider__item" {{ block.shopify_attributes }}>
       {% endif %}
-    {% endfor %}
-  </div>
+
+        {% if image_url != blank %}
+          <img
+            src="{{ image_url }}"
+            alt="{{ block.settings.alt | escape }}"
+            loading="lazy"
+          >
+        {% elsif uploaded_image != blank %}
+          <img
+            src="{{ uploaded_image | image_url: width: 700 }}"
+            alt="{{ block.settings.alt | escape }}"
+            loading="lazy"
+            width="{{ uploaded_image.width }}"
+            height="{{ uploaded_image.height }}"
+          >
+        {% endif %}
+
+      {% if block.settings.link != blank %}
+        </a>
+      {% else %}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
 </section>
 
 {% schema %}

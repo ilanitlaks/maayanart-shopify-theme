@@ -54,18 +54,19 @@
 .ideas-slider__item {
   flex: 0 0 260px;
   scroll-snap-align: start;
-  border-radius: 22px;
-  overflow: hidden;
+  border-radius: 2rem;
+  /* overflow: hidden; */
   display: block;
   text-decoration: none;
-  background: #fff;
+  aspect-ratio: 1 / 1;
 }
 
 .ideas-slider__item img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  border: 2px solid var(--color-primary);
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid var(--color-accent-soft);
   border-radius: 2rem;
   display: block;
   transition:
@@ -74,7 +75,7 @@
 }
 
 .ideas-slider__item:hover img {
-  transform: scale(1.04);
+  transform: rotate(5deg);
   opacity: 0.96;
 }
 
