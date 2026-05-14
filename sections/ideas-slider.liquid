@@ -1,46 +1,54 @@
 {{ 'section-ideas-slider.css' | asset_url | stylesheet_tag }}
+
 <section class="ideas-slider page-width">
   {% if section.settings.heading != blank %}
     <h2 class="ideas-slider__heading">{{ section.settings.heading }}</h2>
   {% endif %}
 
   <div class="ideas-slider__track">
+    {% assign active_tag = section.settings.active_tag | strip | downcase %}
+
     {% for block in section.blocks %}
-      {% assign image_url = block.settings.image_url %}
-      {% assign uploaded_image = block.settings.image %}
+      {% assign block_tags = block.settings.tags | downcase %}
+      {% assign show_idea = block.settings.show_idea %}
 
-      {% if block.settings.link != blank %}
-        <a class="ideas-slider__item" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
-      {% else %}
-        <div class="ideas-slider__item" {{ block.shopify_attributes }}>
-      {% endif %}
+      {% if show_idea %}
+        {% if active_tag == blank or block_tags contains active_tag %}
+          {% assign image_url = block.settings.image_url %}
+          {% assign uploaded_image = block.settings.image %}
 
-        {% if image_url != blank %}
-          <img
-            src="{{ image_url }}"
-            alt="{{ block.settings.alt | escape }}"
-            loading="lazy"
-          >
-        {% elsif uploaded_image != blank %}
-          <img
-            src="{{ uploaded_image | image_url: width: 700 }}"
-            alt="{{ block.settings.alt | escape }}"
-            loading="lazy"
-            width="{{ uploaded_image.width }}"
-            height="{{ uploaded_image.height }}"
-          >
+          {% if block.settings.link != blank %}
+            <a class="ideas-slider__item" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+          {% else %}
+            <div class="ideas-slider__item" {{ block.shopify_attributes }}>
+          {% endif %}
+
+            {% if image_url != blank %}
+              <img
+                src="{{ image_url }}"
+                alt="{{ block.settings.alt | escape }}"
+                loading="lazy"
+              >
+            {% elsif uploaded_image != blank %}
+              <img
+                src="{{ uploaded_image | image_url: width: 700 }}"
+                alt="{{ block.settings.alt | escape }}"
+                loading="lazy"
+                width="{{ uploaded_image.width }}"
+                height="{{ uploaded_image.height }}"
+              >
+            {% endif %}
+
+          {% if block.settings.link != blank %}
+            </a>
+          {% else %}
+            </div>
+          {% endif %}
         {% endif %}
-
-      {% if block.settings.link != blank %}
-        </a>
-      {% else %}
-        </div>
       {% endif %}
     {% endfor %}
   </div>
 </section>
-
-
 
 {% schema %}
 {
@@ -51,6 +59,12 @@
       "id": "heading",
       "label": "כותרת",
       "default": "קצת השראה ליצירה"
+    },
+    {
+      "type": "text",
+      "id": "active_tag",
+      "label": "תג להצגה",
+      "info": "למשל: פסח. אם ריק — יוצגו כל הרעיונות המסומנים"
     }
   ],
   "blocks": [
@@ -78,6 +92,18 @@
           "id": "alt",
           "label": "טקסט חלופי לתמונה",
           "default": "רעיון ליצירה"
+        },
+        {
+          "type": "text",
+          "id": "tags",
+          "label": "תגיות",
+          "info": "למשל: פסח, אביב, ילדים"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_idea",
+          "label": "להציג את הרעיון",
+          "default": true
         }
       ]
     }
