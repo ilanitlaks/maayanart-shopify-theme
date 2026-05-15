@@ -1934,9 +1934,9 @@ input[type="checkbox"] {
   margin: 2rem 0 4rem;
 }
 
-.form-status-list li {
+/* .form-status-list li {
   list-style-position: inside;
-}
+} */
 
 .form-status-list .link::first-letter {
   text-transform: capitalize;
@@ -3432,7 +3432,7 @@ details-disclosure > details {
 
 .rte ul,
 .rte ol {
-  list-style-position: inside;
+  /* list-style-position: inside; */
   padding-right: 2rem;
 }
 
