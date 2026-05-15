@@ -4141,6 +4141,10 @@ details-disclosure > details {
   box-shadow: none !important;
 } */
 
+.shopify-policy__title h1 {
+  margin: 0;
+}
+.shopify-policy__title,
 .title-section {
   margin: 1rem auto 3rem;
   width: fit-content;
@@ -4151,7 +4155,7 @@ details-disclosure > details {
   padding-bottom: 0.5rem;
   padding-top: 2rem;
 }
-
+.shopify-policy__title::before,
 .title-section::before {
   content: "";
   position: absolute;
@@ -4163,7 +4167,7 @@ details-disclosure > details {
   background: var(--color-secondary);
   opacity: 0.8;
 }
-
+.shopify-policy__title::after,
 .title-section:after {
   content: "\2665";
   position: absolute;
