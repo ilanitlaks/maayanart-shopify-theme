@@ -189,11 +189,45 @@
           {%- endfor -%}
         {%- endif -%}
 
-        {%- for policy in shop.policies -%}
-          {%- if policy != blank -%}
-            <li><a href="{{ policy.url }}">{{ policy.title | escape }}</a></li>
-          {%- endif -%}
-        {%- endfor -%}
+        {%- if shop.shipping_policy.body != blank -%}
+          <li>
+            <a href="{{ shop.shipping_policy.url }}">
+              מדיניות משלוחים
+            </a>
+          </li>
+        {%- endif -%}
+
+        {%- if shop.refund_policy.body != blank -%}
+          <li>
+            <a href="{{ shop.refund_policy.url }}">
+              מדיניות החזרות
+            </a>
+          </li>
+        {%- endif -%}
+
+        {%- if shop.privacy_policy.body != blank -%}
+          <li>
+            <a href="{{ shop.privacy_policy.url }}">
+              מדיניות פרטיות
+            </a>
+          </li>
+        {%- endif -%}
+
+        {%- if shop.terms_of_service.body != blank -%}
+          <li>
+            <a href="{{ shop.terms_of_service.url }}">
+              תקנון האתר
+            </a>
+          </li>
+        {%- endif -%}
+
+        {%- if shop.contact_information.body != blank -%}
+          <li>
+            <a href="{{ shop.contact_information.url }}">
+              פרטי יצירת קשר
+            </a>
+          </li>
+        {%- endif -%}
       </ul>
     </div>
     <div class="footer__custom-col">
