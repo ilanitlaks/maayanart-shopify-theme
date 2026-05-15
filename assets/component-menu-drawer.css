@@ -171,7 +171,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   left: auto;
   background-color: rgb(var(--color-background));
   z-index: 1;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   visibility: hidden;
 }
 

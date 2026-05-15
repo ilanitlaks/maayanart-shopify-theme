@@ -25,7 +25,9 @@ quantity-popover volume-pricing li {
 
 .quantity-popover__info .button-close,
 .variant-remove-total quick-order-list-remove-all-button .button,
-.quick-order-list-total__confirmation quick-order-list-remove-all-button .button,
+.quick-order-list-total__confirmation
+  quick-order-list-remove-all-button
+  .button,
 quantity-popover .quick-order-list-remove-button .button {
   --shadow-opacity: 0;
   --border-opacity: 0;
@@ -145,7 +147,7 @@ quantity-popover .quantity__rules span:first-of-type {
   }
 
   .quantity-popover__info.global-settings-popup {
-    transform: translateX(-100%);
+    transform: translateX(100%);
     top: 0.5rem;
   }
 }
