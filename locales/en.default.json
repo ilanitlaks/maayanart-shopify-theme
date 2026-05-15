@@ -40,12 +40,12 @@
     "continue_shopping": "Continue shopping",
     "pagination": {
       "label": "Pagination",
-      "page": "עמוד {{ number }}",
+      "page": "Page {{ number }}",
       "next": "Next page",
       "previous": "Previous page"
     },
     "search": {
-      "search": "חפש",
+      "search": "Search",
       "reset": "Clear search term"
     },
     "cart": {
@@ -67,9 +67,9 @@
     }
   },
   "newsletter": {
-    "label": "אימייל",
-    "success": "תודה שנרשמת",
-    "button_label": "להרשמה"
+    "label": "Email",
+    "success": "Thanks for subscribing",
+    "button_label": "Subscribe"
   },
   "accessibility": {
     "skip_to_text": "Skip to content",
@@ -115,19 +115,19 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "הוסף לסל",
-      "choose_options": "בחר אפשרויות",
-      "choose_product_options": "בחר אפשרויות עבור {{ product_name }}",
-      "description": "תיאור",
-      "inventory_in_stock": "במלאי",
-      "inventory_in_stock_show_count": "{{ quantity }} במלאי",
-      "inventory_low_stock": "נשארו יחידות אחרונות",
-      "inventory_low_stock_show_count": "מלאי נמוך: נותרו {{ quantity }} יחידות",
-      "inventory_out_of_stock": "המוצר אזל",
-      "inventory_out_of_stock_continue_selling": "זמין במלאי",
-      "sku": "מק״ט",
+      "add_to_cart": "Add to cart",
+      "choose_options": "Choose options",
+      "choose_product_options": "Choose options for {{ product_name }}",
+      "description": "Description",
+      "inventory_in_stock": "In stock",
+      "inventory_in_stock_show_count": "{{ quantity }} in stock",
+      "inventory_low_stock": "Low stock",
+      "inventory_low_stock_show_count": "Low stock: {{ quantity }} left",
+      "inventory_out_of_stock": "Out of stock",
+      "inventory_out_of_stock_continue_selling": "Available for backorder",
+      "sku": "SKU",
       "on_sale": "Sale",
-      "product_variants": "אפשרויות מוצר",
+      "product_variants": "Product variants",
       "media": {
         "gallery_viewer": "Gallery Viewer",
         "load_image": "Load image {{ index }} in gallery view",
@@ -138,20 +138,20 @@
         "play_model": "Play 3D Viewer",
         "play_video": "Play video"
       },
-      "nested_label": "{{ title }} ל־{{ parent_title }}",
+      "nested_label": "{{ title }} for {{ parent_title }}",
       "quantity": {
-        "label": "כמות",
-        "input_label": "כמות ל־{{ product }}",
-        "increase": "הגדל כמות עבור {{ product }}",
-        "decrease": "הקטן כמות עבור {{ product }}",
+        "label": "Quantity",
+        "input_label": "Quantity for {{ product }}",
+        "increase": "Increase quantity for {{ product }}",
+        "decrease": "Decrease quantity for {{ product }}",
         "minimum_of": "Minimum of {{ quantity }}",
         "maximum_of": "Maximum of {{ quantity }}",
         "multiples_of": "Increments of {{ quantity }}",
         "min_of": "Min {{ quantity }}",
         "max_of": "Max {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> פריטים בעגלה",
-        "in_cart_aria_label": "כמות ({{ quantity }} פריטים בעגלה)",
-        "note": "הצג כללי כמות"
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
+        "in_cart_aria_label": "Quantity ({{ quantity }} in cart)",
+        "note": "Show quantity rules"
       },
       "volume_pricing": {
         "title": "Volume Pricing",
@@ -170,108 +170,108 @@
         "refresh": "Refresh"
       },
       "price": {
-        "from_price_html": " {{ price }} החל מ",
-        "regular_price": "מחיר רגיל",
-        "sale_price": "מחיר מבצע",
-        "unit_price": "מחיר ליחידה"
+        "from_price_html": "From {{ price }}",
+        "regular_price": "Regular price",
+        "sale_price": "Sale price",
+        "unit_price": "Unit price"
       },
-      "share": "שתפו עם חברים",
-      "sold_out": "אזל המלאי",
-      "unavailable": "המוצר לא זמין",
-      "vendor": "יצרן",
-      "value_unavailable": "{{ option_value }} - לא זמין",
-      "variant_sold_out_or_unavailable": "האפשרות אינה זמינה או אזלה מהמלאי",
-      "video_exit_message": "{{ title }} פותח את הווידאו במסך מלא באותו חלון",
-      "view_full_details": "צפה בפרטים מלאים",
-      "xr_button": "הצג בסביבה שלך",
-      "xr_button_label": "הצג בסביבה שלך – הפריט ייטען בחלון מציאות רבודה",
-      "taxes_included": "כולל מיסים",
-      "duties_included": "כולל מכס",
-      "duties_and_taxes_included": "כולל מכס ומיסים",
-      "shipping_policy_html": "<a href=\"{{ link }}\">עלות משלוח</a> מחושבת בקופה"
+      "share": "Share",
+      "sold_out": "Sold out",
+      "unavailable": "Product unavailable",
+      "vendor": "Vendor",
+      "value_unavailable": "{{ option_value }} - unavailable",
+      "variant_sold_out_or_unavailable": "Variant unavailable or sold out",
+      "video_exit_message": "{{ title }} now playing in full screen",
+      "view_full_details": "View full details",
+      "xr_button": "View in your space",
+      "xr_button_label": "View in your space, loads item in augmented reality window",
+      "taxes_included": "Taxes included",
+      "duties_included": "Duties included",
+      "duties_and_taxes_included": "Duties and taxes included",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout"
     },
     "modal": {
       "label": "Media gallery"
     },
     "facets": {
-      "filter_and_operator_subtitle": "הצג הכל",
-      "apply": "החל",
-      "clear": "הסר",
-      "clear_all": "הסר הכל",
-      "from": "מ־",
-      "filter_and_sort": "סינון ומיון",
-      "filter_by_label": "סינון:",
-      "filter_button": "סנן",
+      "filter_and_operator_subtitle": "Show all",
+      "apply": "Apply",
+      "clear": "Clear",
+      "clear_all": "Clear all",
+      "from": "From",
+      "filter_and_sort": "Filter and sort",
+      "filter_by_label": "Filter:",
+      "filter_button": "Filter",
       "filters_selected": {
-        "one": "נבחר {{ count }} ",
-        "other": "נבחרו {{ count }}"
+        "one": "{{ count }} selected",
+        "other": "{{ count }} selected"
       },
       "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
-      "show_more": "הצג עוד",
-      "show_less": "הצג פחות",
-      "max_price": "המחיר היקר ביותר {{ price }}",
+      "show_more": "Show more",
+      "show_less": "Show less",
+      "max_price": "The highest price is {{ price }}",
       "product_count": {
-        "one": "{{ product_count }}   מוצר אחד מתוך ",
-        "other": "{{ product_count }} מתוך {{ count }} מוצרים"
+        "one": "{{ product_count }} product",
+        "other": "{{ product_count }} of {{ count }} products"
       },
       "product_count_simple": {
-        "one": "מוצר אחד",
-        "other": "{{ count }} מוצרים"
+        "one": "1 product",
+        "other": "{{ count }} products"
       },
-      "reset": "איפוס",
-      "sort_button": "מיון",
-      "sort_by_label": "מיין לפי:",
-      "to": "עד",
-      "clear_filter": "הסר סינון"
+      "reset": "Reset",
+      "sort_button": "Sort",
+      "sort_by_label": "Sort by:",
+      "to": "To",
+      "clear_filter": "Clear filter"
     }
   },
   "templates": {
     "search": {
-      "no_results": "לא מצאנו תוצאות עבור “{{ terms }}”. נסו לחפש מילה או ביטוי אחר.",
-      "page": "עמוד",
-      "products": "מוצרים",
+      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "page": "Page",
+      "products": "Products",
       "results_pages_with_count": {
-        "one": "עמוד אחד",
-        "other": "{{ count }} עמודים"
+        "one": "1 page",
+        "other": "{{ count }} pages"
       },
       "results_suggestions_with_count": {
-        "one": "הצעה אחת",
-        "other": "{{ count }} הצעות"
+        "one": "1 suggestion",
+        "other": "{{ count }} suggestions"
       },
       "results_products_with_count": {
-        "one": "מוצר אחד",
-        "other": "{{ count }} מוצרים"
+        "one": "1 product",
+        "other": "{{ count }} products"
       },
       "results_with_count": {
-        "one": "תוצאה אחת",
-        "other": "{{ count }} תוצאות"
+        "one": "1 result",
+        "other": "{{ count }} results"
       },
       "results_with_count_and_term": {
-        "one": "נמצאה תוצאה אחת עבור “{{ terms }}”",
-        "other": "נמצאו {{ count }} תוצאות עבור “{{ terms }}”"
+        "one": "1 result found for “{{ terms }}”",
+        "other": "{{ count }} results found for “{{ terms }}”"
       },
-      "title": "תוצאות חיפוש",
-      "search_for": "חיפוש עבור “{{ terms }}",
-      "suggestions": "הצעות",
-      "pages": "עמודים"
+      "title": "Search results",
+      "search_for": "Search for “{{ terms }}”",
+      "suggestions": "Suggestions",
+      "pages": "Pages"
     },
     "cart": {
-      "cart": "עגלה"
+      "cart": "Cart"
     },
     "contact": {
       "form": {
-        "title": "טופס יצירת קשר",
-        "name": "השם המלא שלך",
-        "email": "האימייל שלך (נחזור אליך לכאן)",
-        "phone": "טלפון לחזרה (לא חובה)",
-        "comment": "איך נוכל לעזור לך? נשמח לשמוע ממך…",
-        "send": "שלח",
-        "post_success": "תודה שפנית אלינו! נחזור אליך בהקדם האפשרי.",
-        "error_heading": "נא לתקן את השדות הבאים:"
+        "title": "Contact form",
+        "name": "Your name",
+        "email": "Your email",
+        "phone": "Phone number",
+        "comment": "Comment",
+        "send": "Send",
+        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+        "error_heading": "Please adjust the following:"
       }
     },
     "404": {
-      "title": "אופס! הדף לא נמצא",
+      "title": "Page not found",
       "subtext": "404"
     }
   },
@@ -301,7 +301,7 @@
       "checkout": "Check out",
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
-      "cart_quantity_error_html": "אפשר להוסיף לעגלה עד {{ quantity }} יחידות מהמוצר הזה",
+      "cart_quantity_error_html": "You can add up to {{ quantity }} of this item to your cart",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
       "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
@@ -312,9 +312,9 @@
       "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, discounts and shipping calculated at checkout.",
       "headings": {
         "product": "Product",
-        "price": "מחיר",
-        "total": "סה\"כ",
-        "quantity": "כמות",
+        "price": "Price",
+        "total": "Total",
+        "quantity": "Quantity",
         "image": "Product image"
       },
       "update": "Update",
@@ -339,7 +339,7 @@
       "view_all": "View all"
     },
     "collection_template": {
-      "empty": "לא נמצאו מוצרים",
+      "empty": "No products found",
       "title": "Collection",
       "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
     },
@@ -366,17 +366,17 @@
       "variant": "Variant",
       "variant_total": "Variant total",
       "items_added": {
-        "one": "נוסף פריט לעגלה",
-        "other": "נוספו {{ quantity }} פריטים לעגלה"
+        "one": "Item added to cart",
+        "other": "{{ quantity }} items added to cart"
       },
       "items_removed": {
-        "one": "הוסר פריט מהעגלה",
-        "other": "הוסרו {{ quantity }} פריטים מהעגלה"
+        "one": "Item removed from cart",
+        "other": "{{ quantity }} items removed from cart"
       },
       "product_variants": "Product variants",
       "total_items": "Total items",
       "remove_all_single_item_confirmation": "Remove 1 item from your cart?",
-      "remove_all_items_confirmation": "להסיר את כל {{ quantity }} הפריטים מהעגלה?",
+      "remove_all_items_confirmation": "Remove all {{ quantity }} items from your cart?",
       "remove_all": "Remove all",
       "cancel": "Cancel",
       "min_error": "This item has a minimum of {{ min }}",
@@ -462,7 +462,7 @@
       "product": "Product",
       "sku": "SKU",
       "price": "Price",
-      "quantity": "כמות",
+      "quantity": "Quantity",
       "total": "Total",
       "total_refunded": "Refunded",
       "fulfilled_at_html": "Fulfilled {{ date }}",
@@ -539,78 +539,78 @@
   "shopify": {
     "checkout": {
       "stock": {
-        "product_column_header": "כל המוצרים",
-        "quantity_column_header": "כמות",
-        "price_column_header": "מחיר"
+        "product_column_header": "All products",
+        "quantity_column_header": "Quantity",
+        "price_column_header": "Price"
       },
       "order_summary": {
-        "quantity_label": "כמות",
-        "product_image_quantity_label": "כמות",
+        "quantity_label": "Quantity",
+        "product_image_quantity_label": "Quantity",
         "more_items_modal": {
-          "search_item": "חיפוש",
-          "clear_search": "ניקוי חיפוש",
-          "empty_results": "לא נמצאו תוצאות עבור \"{{ searchText }}\". נסו לבדוק את האיות או לחפש מילה אחרת."
+          "search_item": "Search",
+          "clear_search": "Clear search",
+          "empty_results": "No results found for \"{{ searchText }}\". Check the spelling or use a different word or phrase."
         },
-        "price_label": "מחיר",
-        "sale_price": "מחיר מבצע"
+        "price_label": "Price",
+        "sale_price": "Sale price"
       },
       "thank_you": {
         "fulfillment": {
-          "quantity_label": "כמות"
+          "quantity_label": "Quantity"
         },
-        "contact_information_title": "פרטי יצירת קשר"
+        "contact_information_title": "Contact information"
       },
       "marketing": {
         "disclaimer": {
-          "privacy_policy": "מדיניות פרטיות"
+          "privacy_policy": "Privacy policy"
         },
         "sms": {
           "disclaimer": {
-            "privacy_policy": "מדיניות פרטיות"
+            "privacy_policy": "Privacy policy"
           }
         }
       },
       "shop_policies": {
-        "privacy_policy": "מדיניות פרטיות",
-        "refund_policy": " מדיניות החזרות"
+        "privacy_policy": "Privacy policy",
+        "refund_policy": "Refund policy"
       },
       "mor_policies": {
-        "privacy_policy": "מדיניות הפרטיות שלנו"
+        "privacy_policy": "Our privacy policy"
       },
       "review": {
         "blocks": {
-          "change_contact_method_link_label": "שנה  פרטי יצירת קשר"
+          "change_contact_method_link_label": "Change contact information"
         }
       },
       "wallets": {
         "errors": {
           "missing": {
-            "contact_info": " פרטי יצירת קשר"
+            "contact_info": "Contact information"
           }
         }
       },
       "contextual_availability": {
-        "unavailable_label": "זמינות"
+        "unavailable_label": "Availability"
       }
     },
     "page_titles": {
-      "products": "כל המוצרים"
+      "products": "All products"
     },
     "email_marketing": {
       "open_tracking": {
         "no_longer_track": {
-          "privacy_policy": "לאחר שליחת האימייל עודכנה מדיניות הפרטיות שלנו, ואיננו עוקבים עוד אחר פתיחת הודעות."
+          "privacy_policy": "Since this email was sent, our privacy policy has been updated and we no longer track email opens."
         }
       }
     },
     "search": {
-      "error": " הייתה בעיה בטעינת תוצאות החיפוש. אנא רעננו את הדף או נסו שוב מאוחר יותר."
+      "error": "There was a problem loading search results. Please refresh the page or try again later."
     },
     "filters": {
       "availability": {
         "value": {
-          "in_stock": "במלאי",
-          "out_of_stock": "אזל המלאי"
+          "in_stock": "In stock",
+          "out_of_stock": "Out of stock"
         }
       }
     }
@@ -619,18 +619,18 @@
     "orders": {
       "order_list": {
         "column_headers": {
-          "products_accessibility_label": "כל המוצרים"
+          "products_accessibility_label": "All products"
         },
-        "filter_title": "סינון"
+        "filter_title": "Filter"
       }
     },
     "navigation_and_structure": {
-      "contact_link": " פרטי יצירת קשר"
+      "contact_link": "Contact information"
     },
     "order_details": {
-      "contact_information": " פרטי יצירת קשר",
+      "contact_information": "Contact information",
       "returns": {
-        "return_and_refund_modal_header": " מדיניות החזרות"
+        "return_and_refund_modal_header": "Return policy"
       }
     }
   }
