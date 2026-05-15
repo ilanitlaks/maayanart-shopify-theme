@@ -562,17 +562,30 @@
       },
       "marketing": {
         "disclaimer": {
-          "privacy_policy": "מדיניות פרטיות"
+          "privacy_policy": "מדיניות פרטיות",
+          "terms_of_service": "תקנון האתר"
         },
         "sms": {
           "disclaimer": {
-            "privacy_policy": "מדיניות פרטיות"
+            "privacy_policy": "מדיניות פרטיות",
+            "terms_of_service": "תקנון האתר"
           }
         }
       },
       "shop_policies": {
         "privacy_policy": "מדיניות פרטיות",
-        "refund_policy": "מדיניות החזרות"
+        "refund_policy": "מדיניות החזרות",
+        "policy_label": "מדיניות",
+        "shipping_policy": "מדיניות משלוחים",
+        "contact_information": "צור קשר",
+        "cookie_preferences": "עוגיות",
+        "terms_and_policies": "תקנון האתר ומדיניות",
+        "terms_of_service": "תקנון האתר",
+        "legal_notice": "מידע משפטי",
+        "terms_of_sale": "תנאי מכירה",
+        "purchase_options_cancellation_policy": "מדיניות ביטולים",
+        "subscription_policy": "מדיניות ביטולים",
+        "purchase_options_policy": "מדיניות רכישה"
       },
       "mor_policies": {
         "privacy_policy": "מדיניות הפרטיות שלנו"
@@ -632,6 +645,12 @@
       "returns": {
         "return_and_refund_modal_header": "מדיניות החזרות"
       }
+    },
+    "callback": {
+      "try_again": "נסה שוב"
+    },
+    "date": {
+      "range": "{{startDate}}–{{endDate}}"
     }
   }
 }
