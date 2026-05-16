@@ -72,6 +72,7 @@
 .facet-filters__field {
   align-items: center;
   display: flex;
+  gap: 1.5rem;
   flex-grow: 1;
   justify-content: flex-end;
 }
