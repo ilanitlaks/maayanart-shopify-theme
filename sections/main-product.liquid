@@ -96,8 +96,8 @@
           {% endfor %}
 
           {% for collection in product.collections %}
-            {% assign collection_handle = collection.handle | downcase %}
-            {% if collection_handle contains 'group' %}
+            {% assign collection_title = collection.title | downcase %}
+            {% if collection_title contains 'group:' %}
               {% assign group_collection = collection %}
               {% break %}
             {% endif %}
