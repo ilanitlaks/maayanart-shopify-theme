@@ -2,14 +2,31 @@ document.addEventListener("DOMContentLoaded", () => {
   let loading = false;
 
   const button = document.createElement("button");
-
   button.className = "load-more-button button";
   button.innerText = "לראות עוד";
+
+  function getNextLink(container = document) {
+    const currentPage =
+      Number(
+        container
+          .querySelector(".pagination__item--current")
+          ?.textContent.trim(),
+      ) || 1;
+
+    const links = [
+      ...container.querySelectorAll(".pagination a[href*='page=']"),
+    ];
+
+    return links.find((link) => {
+      const url = new URL(link.href);
+      return Number(url.searchParams.get("page")) === currentPage + 1;
+    });
+  }
 
   async function loadMoreProducts() {
     if (loading) return;
 
-    const nextLink = document.querySelector(".pagination__item--prev");
+    const nextLink = getNextLink(document);
 
     if (!nextLink) {
       button.remove();
@@ -17,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     loading = true;
-
     button.innerText = "טוען...";
 
     try {
@@ -41,8 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (newPagination && currentPagination) {
         currentPagination.innerHTML = newPagination.innerHTML;
-      } else if (currentPagination) {
-        currentPagination.remove();
+      }
+
+      if (!getNextLink(document)) {
         button.remove();
       }
     } catch (error) {
@@ -50,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     loading = false;
-
     button.innerText = "לראות עוד";
   }
 
@@ -58,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const collection = document.querySelector(".collection");
 
-  if (collection && document.querySelector(".pagination__item--prev")) {
+  if (collection && getNextLink(document)) {
     collection.appendChild(button);
   }
 });

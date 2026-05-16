@@ -19,7 +19,7 @@
     }
   }
 {%- endstyle -%}
-
+{% unless product.price == 0 %}
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <product-recommendations
     class="related-products page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -57,7 +57,7 @@
     {{ 'mask-arch.svg' | inline_asset_content }}
   {%- endif -%}
 </div>
-
+{% endunless %}
 {% schema %}
 {
   "name": "t:sections.related-products.name",
