@@ -285,7 +285,7 @@
   background-color: rgb(var(--color-background));
   position: absolute;
   top: calc(100% + 0.5rem);
-  left: -1.2rem;
+  /* left: -1.2rem; */
   width: 35rem;
   max-height: 55rem;
   overflow-y: auto;
@@ -462,6 +462,7 @@
   position: relative;
   font-size: 1.4rem;
   display: flex;
+  gap: 1rem;
   word-break: break-word;
 }
 
@@ -937,10 +938,11 @@ details.menu-opening .mobile-facets__close .svg-wrapper {
   font: inherit;
   letter-spacing: inherit;
   margin-top: 1.5rem;
-  padding: 1.2rem 2.6rem;
+  /* padding: 1.2rem 2.6rem; */
   text-decoration: none;
 
   display: grid;
+  gap: 1rem;
   grid-template-columns: min-content 1fr;
   text-align: start;
 }
@@ -1053,7 +1055,7 @@ input.mobile-facets__checkbox {
   transition: background-color 0.2s ease;
   word-break: break-word;
   display: flex;
-  transform: rotate(180deg);
+  gap: 1rem;
 }
 
 .mobile-facets__label > svg {
@@ -1062,6 +1064,7 @@ input.mobile-facets__checkbox {
   z-index: 2;
   margin-right: 1.2rem;
   flex-shrink: 0;
+  transform: rotate(180deg);
 }
 
 .mobile-facets__label .icon-checkmark {
@@ -1086,12 +1089,12 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  padding: 2rem;
+  padding: 2rem 0;
   bottom: 0;
   position: sticky;
   display: flex;
   z-index: 2;
-  margin-top: auto;
+  /* margin-top: auto; */
   background-color: rgb(var(--color-background));
   background: var(--gradient-background);
 }
@@ -1118,7 +1121,8 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__sort .select .icon-caret {
-  right: 0;
+  left: 0;
+  rotate: 180deg;
 }
 
 .mobile-facets__sort .select__select {
@@ -1290,4 +1294,26 @@ input.mobile-facets__checkbox {
   .facets-vertical .active-facets__button-remove {
     padding: 0 1rem 1rem;
   }
+}
+
+/*  */
+.facets__price {
+  direction: rtl;
+}
+
+.facets__price .field-currency {
+  margin-left: 0.5rem;
+  /* margin-right: 0; */
+}
+
+.facets__price .field {
+  direction: rtl;
+}
+
+.facets__price .field__input {
+  direction: ltr;
+  text-align: right;
+}
+.facets__price .field__input::placeholder {
+  text-align: right;
 }
