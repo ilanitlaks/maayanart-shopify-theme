@@ -950,7 +950,7 @@ details.menu-opening .mobile-facets__close .svg-wrapper {
 }
 
 .mobile-facets__close-button .icon-arrow {
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
   margin-right: 1rem;
 }
 
@@ -1053,6 +1053,7 @@ input.mobile-facets__checkbox {
   transition: background-color 0.2s ease;
   word-break: break-word;
   display: flex;
+  transform: rotate(180deg);
 }
 
 .mobile-facets__label > svg {
@@ -1078,8 +1079,9 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__arrow,
 .mobile-facets__summary .icon-caret {
-  margin-left: auto;
+  margin-right: auto;
   display: block;
+  transform: rotate(180deg);
 }
 
 .mobile-facets__footer {
