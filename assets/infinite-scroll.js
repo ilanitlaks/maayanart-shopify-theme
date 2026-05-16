@@ -1,20 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
+(() => {
   let loading = false;
 
-  const button = document.createElement("button");
-  button.className = "load-more-button button";
-  button.innerText = "לראות עוד";
-
-  function getNextLink(container = document) {
-    const currentPage =
+  function getCurrentPage() {
+    return (
       Number(
-        container
+        document
           .querySelector(".pagination__item--current")
           ?.textContent.trim(),
-      ) || 1;
+      ) || 1
+    );
+  }
+
+  function getNextLink() {
+    const currentPage = getCurrentPage();
 
     const links = [
-      ...container.querySelectorAll(".pagination a[href*='page=']"),
+      ...document.querySelectorAll(".pagination a[href*='page=']"),
     ];
 
     return links.find((link) => {
@@ -23,10 +24,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  async function loadMoreProducts() {
+  function addButton() {
+    const oldButton = document.querySelector(".load-more-button");
+    if (oldButton) oldButton.remove();
+
+    const nextLink = getNextLink();
+    if (!nextLink) return;
+
+    const gridContainer =
+      document.querySelector("#ProductGridContainer") ||
+      document.querySelector(".collection");
+
+    if (!gridContainer) return;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "load-more-button button";
+    button.textContent = "לראות עוד";
+
+    button.addEventListener("click", loadMore);
+
+    gridContainer.appendChild(button);
+  }
+
+  async function loadMore(event) {
     if (loading) return;
 
-    const nextLink = getNextLink(document);
+    const button = event.currentTarget;
+    const nextLink = getNextLink();
 
     if (!nextLink) {
       button.remove();
@@ -34,20 +59,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     loading = true;
-    button.innerText = "טוען...";
+    button.textContent = "טוען...";
 
     try {
       const response = await fetch(nextLink.href);
-      const text = await response.text();
+      const html = await response.text();
+      const doc = new DOMParser().parseFromString(html, "text/html");
 
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(text, "text/html");
-
+      const currentGrid = document.querySelector("#product-grid");
       const newProducts = doc.querySelectorAll("#product-grid .grid__item");
-      const productGrid = document.querySelector("#product-grid");
+
+      if (!currentGrid || !newProducts.length) {
+        button.remove();
+        return;
+      }
 
       newProducts.forEach((product) => {
-        productGrid.appendChild(product);
+        currentGrid.appendChild(product);
       });
 
       const newPagination = doc.querySelector(".infinite-scroll-pagination");
@@ -57,24 +85,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (newPagination && currentPagination) {
         currentPagination.innerHTML = newPagination.innerHTML;
+      } else if (currentPagination) {
+        currentPagination.remove();
       }
 
-      if (!getNextLink(document)) {
-        button.remove();
-      }
+      addButton();
     } catch (error) {
       console.error("Load more error:", error);
+      button.textContent = "שגיאה, נסי שוב";
     }
 
     loading = false;
-    button.innerText = "לראות עוד";
   }
 
-  button.addEventListener("click", loadMoreProducts);
+  document.addEventListener("DOMContentLoaded", addButton);
 
-  const collection = document.querySelector(".collection");
+  const observer = new MutationObserver(() => {
+    clearTimeout(window.loadMoreButtonTimer);
+    window.loadMoreButtonTimer = setTimeout(addButton, 400);
+  });
 
-  if (collection && getNextLink(document)) {
-    collection.appendChild(button);
-  }
-});
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+})();
