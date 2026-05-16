@@ -604,6 +604,23 @@
       },
       "contextual_availability": {
         "unavailable_label": "זמינות"
+      },
+      "address_management": {
+        "saved_with_store": "נשמר אצלנו"
+      },
+      "taxes": {
+        "vat_number": {
+          "accessibility": {
+            "status": {
+              "valid": "מספר המע״מ תקין",
+              "applied": "פטור ממע״מ הוחל",
+              "domestic": "פטור ממע״מ לא הוחל",
+              "invalid_number": "הפעלת הפטור ממע״מ נכשלה",
+              "service_unavailable": "לא ניתן לאמת את הפטור ממע״מ",
+              "service_error": "לא ניתן לאמת את הפטור ממע״מ"
+            }
+          }
+        }
       }
     },
     "page_titles": {
@@ -626,6 +643,65 @@
           "out_of_stock": "אזל המלאי"
         }
       }
+    },
+    "collections": {
+      "sorting": {
+        "manual": "מומלצים",
+        "best_selling": "הכי נמכרים",
+        "az": "מיון א-ת",
+        "za": "מיון ת-א",
+        "price_ascending": "מחיר , נמוך לגבוה",
+        "price_descending": "מחיר,  גבוה לנמוך",
+        "date_ascending": "תאריך, מישן לחדש",
+        "date_descending": "תאריך, מחדש לישן",
+        "most_relevant": "הרלוונטיים ביותר"
+      }
+    },
+    "addresses": {
+      "zip_code": "מיקוד",
+      "postal_code": "מיקוד",
+      "postcode": "מיקוד",
+      "pincode": "מיקוד",
+      "region": "אזור",
+      "prefecture": "מחוז",
+      "province": "פרובינציה",
+      "state": "מדינה",
+      "state_and_territory": "מדינה",
+      "county": "מחוז",
+      "emirate": "אמיריות",
+      "governorate": "נפה",
+      "confirm": "האם למחוק את הכתובת הזו?"
+    },
+    "errors": {
+      "blank": "לא יכול להיות ריק",
+      "blocked_address": "המיקום הזה אינו נתמך",
+      "credit_card_session_expired": "תוקף אישור כרטיס האשראי פג. יש להזין שוב את פרטי התשלום. הכרטיס לא חויב.",
+      "empty": "לא יכול להיות ריק",
+      "invalid_email": "יש להזין כתובת אימייל תקינה",
+      "discount_disabled": "הנחה הזו בוטלה",
+      "discount_expired": "ההנחה הזו כבר אינה בתוקף",
+      "discount_limit_reached": "ההנחה הזו הגיעה למגבלת השימוש שלה",
+      "discount_not_found": "לא נמצאה הנחה תקפה עבור הקוד שהוזן"
+    },
+    "attributes": {
+      "email": "אימייל",
+      "password": "סיסמה",
+      "password_confirmation": "אימות סיסמה",
+      "first_name": "שם פרטי",
+      "last_name": "שם משפחה",
+      "body": "תוכן",
+      "signature": "כתובת"
+    },
+    "feed": {
+      "more": "עוד"
+    },
+    "links": {
+      "powered_by_shopify": "מופעל על ידי Shopify",
+      "learn_more": "למידע נוסף"
+    },
+    "pagination": {
+      "previous": "הקודם",
+      "next": "הבא"
     }
   },
   "customer_accounts": {
