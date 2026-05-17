@@ -1573,3 +1573,8 @@ a.product__text {
   border: 0;
   box-shadow: none;
 }
+@media screen and (max-width: 749px) {
+  .section-template--29891355083091__main-padding {
+    padding-top: 0 !important;
+  }
+}
