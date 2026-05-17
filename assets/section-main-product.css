@@ -1598,23 +1598,16 @@ a.product__text {
   .product__media.media > img {
     padding: 0 3rem;
   }
+
   .product__media-wrapper .slider-buttons {
     position: absolute;
+    /* top: 30svh;
+    right: 0; */
     top: 50%;
     left: 0;
     width: 100%;
     transform: translateY(-50%);
-    display: flex !important;
-    justify-content: space-between;
-    pointer-events: none;
-    z-index: 3;
-    /* padding: 0 1rem; */
-  }
-  .product__media-wrapper .slider-buttons {
-    position: absolute;
-    top: 30svh;
-    right: 0;
-    left: 0;
+    width: 100%;
     display: flex !important;
     justify-content: space-between;
     z-index: 20;
