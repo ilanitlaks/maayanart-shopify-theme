@@ -40,7 +40,7 @@ product-info {
   }
 
   .product--right .product__info-wrapper {
-    padding: 0 5rem 0 0;
+    padding: 0 2rem 0 0;
   }
 
   .product--right .product__info-wrapper--extra-padding {
@@ -79,17 +79,18 @@ product-info {
 
   .product--medium:not(.product--no-media) .product__media-wrapper,
   .product--small:not(.product--no-media) .product__info-wrapper {
-    max-width: 60%;
-    width: calc(60% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 55%;
+    width: calc(55% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--medium:not(.product--no-media) .product__info-wrapper,
   .product--small:not(.product--no-media) .product__media-wrapper {
-    max-width: 40%;
-    width: calc(40% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 35%;
+    width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
   }
   .product.grid {
     justify-content: space-between;
+    /* flex-direction: row-reverse; */
   }
 }
 
@@ -1577,4 +1578,59 @@ a.product__text {
   .section-template--29891355083091__main-padding {
     padding-top: 0 !important;
   }
+}
+@media screen and (min-width: 750px) {
+  .product--thumbnail_slider .product__media-wrapper .slider-buttons {
+    display: flex !important;
+    justify-content: space-between;
+  }
+
+  .product--thumbnail_slider .product__media-wrapper .slider-button {
+    display: flex !important;
+  }
+  .product__media-wrapper .slider-counter {
+    display: none !important;
+  }
+
+  .product-media-container {
+    position: relative;
+  }
+  .product__media.media > img {
+    padding: 0 3rem;
+  }
+  .product__media-wrapper .slider-buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex !important;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 3;
+    /* padding: 0 1rem; */
+  }
+  .product__media-wrapper .slider-buttons {
+    position: absolute;
+    top: 30svh;
+    right: 0;
+    left: 0;
+    display: flex !important;
+    justify-content: space-between;
+    z-index: 20;
+    pointer-events: none;
+  }
+  .product__media-wrapper .slider-button {
+    pointer-events: auto;
+    border: none;
+  }
+  .slider-button .icon {
+    display: none;
+  }
+
+  /* 
+  .product__media-wrapper .slider-button img {
+    width: 5rem;
+    height: auto;
+  } */
 }
