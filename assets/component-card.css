@@ -691,7 +691,7 @@
   margin-inline: auto;
   text-align: center;
   text-decoration: none;
-  padding: clamp(0.5rem, 0.6rem, 0.8rem);
+  padding: 0.5rem 2rem;
   border-radius: 100svw;
   background: #cdeff6;
   color: #5a2b2b;
