@@ -2992,7 +2992,7 @@ details[open] > .header__submenu {
   background-position: center top;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  min-width: 80svw;
+  min-width: max-content;
   padding: 3rem;
 
   @media (max-width: 1200px) {
