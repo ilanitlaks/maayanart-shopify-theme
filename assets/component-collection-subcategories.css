@@ -59,8 +59,8 @@
 
 .collection-subcategories__title {
   margin: 0;
-  font-size: 22px;
-  font-weight: 700;
+  font-size: clamp(2rem, 2vw, 3rem);
+  padding: 1rem;
   color: #222;
   text-align: center;
   line-height: 1.3;
@@ -105,9 +105,9 @@
     gap: 14px;
   }
 
-  .collection-subcategories__title {
+  /* .collection-subcategories__title {
     font-size: 18px;
-  }
+  } */
 }
 .collection-subcategories__main-title {
   width: fit-content;

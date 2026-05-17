@@ -60,9 +60,8 @@
 .category-boxes__title {
   position: relative;
   z-index: 2;
-  padding: 0.5rem;
-  font-size: clamp(1.6rem, 3vw, 3rem);
-  /* font-weight: 600; */
+  padding: 1rem;
+  font-size: clamp(2rem, 2vw, 3rem);
   line-height: 1.2;
 }
 
