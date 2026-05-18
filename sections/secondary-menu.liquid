@@ -1,0 +1,139 @@
+{{ 'secondary-menu.css' | asset_url | stylesheet_tag }}
+
+{% assign menu = linklists['main-menu'] %}
+{% assign categories_link = blank %}
+{% assign showed_submenu = false %}
+
+{% for link in menu.links %}
+  {% if link.handle == 'כל-הקטגוריות' or link.title contains 'קטגוריות' %}
+    {% assign categories_link = link %}
+  {% endif %}
+{% endfor %}
+
+{% if categories_link != blank %}
+
+<div class="secondary-menu-wrapper">
+
+  <button class="secondary-menu__arrow secondary-menu__arrow--right" type="button">
+    <img
+      src="{{ 'arrow-right.png' | asset_url }}"
+      alt="הקודם"
+      width="24"
+      height="24"
+    >
+  </button>
+
+  <nav class="secondary-menu">
+
+    {% if request.page_type == 'collection' and collection != blank %}
+
+      {% for link in categories_link.links %}
+        {% if link.object.handle == collection.handle or link.url == collection.url %}
+
+          {% if link.links != blank %}
+            {% assign showed_submenu = true %}
+
+            {% for childlink in link.links %}
+              <a href="{{ childlink.url }}" class="secondary-menu__link">
+                {{ childlink.title }}
+              </a>
+            {% endfor %}
+
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    {% endif %}
+
+    {% unless showed_submenu %}
+      {% for link in categories_link.links %}
+        <a href="{{ link.url }}" class="secondary-menu__link">
+          {{ link.title }}
+        </a>
+      {% endfor %}
+    {% endunless %}
+    {% if section.settings.extra_link_url != blank %}
+      <a
+        href="{{ section.settings.extra_link_url }}"
+        class="secondary-menu__link secondary-menu__link--extra"
+      >
+        {{ section.settings.extra_link_text }}
+      </a>
+    {% endif %}
+  </nav>
+
+  <button class="secondary-menu__arrow secondary-menu__arrow--left" type="button">
+    <img
+      src="{{ 'arrow-left.png' | asset_url }}"
+      alt="הבא"
+      width="24"
+      height="24"
+    >
+  </button>
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.secondary-menu');
+    const nextBtn = document.querySelector('.secondary-menu__arrow--left');
+    const prevBtn = document.querySelector('.secondary-menu__arrow--right');
+
+    if (!menu || !nextBtn || !prevBtn) return;
+
+    function setIconVisible(button, visible) {
+      const img = button.querySelector('img');
+      if (!img) return;
+
+      img.style.opacity = visible ? '1' : '0';
+      button.style.pointerEvents = visible ? 'auto' : 'none';
+    }
+
+    function updateArrows() {
+      const maxScroll = menu.scrollWidth - menu.clientWidth;
+      const currentScroll = Math.abs(menu.scrollLeft);
+
+      setIconVisible(nextBtn, currentScroll < maxScroll - 5);
+      setIconVisible(prevBtn, currentScroll > 5);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      menu.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      menu.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+
+    menu.addEventListener('scroll', updateArrows);
+    window.addEventListener('resize', updateArrows);
+
+    updateArrows();
+  });
+</script>
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Secondary menu",
+  "settings": [
+    {
+      "type": "text",
+      "id": "extra_link_text",
+      "label": "Extra link text",
+      "default": "בלוג"
+    },
+    {
+      "type": "url",
+      "id": "extra_link_url",
+      "label": "Extra link URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Secondary menu"
+    }
+  ]
+}
+{% endschema %}
