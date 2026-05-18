@@ -140,6 +140,13 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "secondary-menu": {
+        "type": "secondary-menu",
+        "settings": {
+          "extra_link_text": "רעיונות",
+          "extra_link_url": "https://blog.maayanart.com/"
+        }
       }
     },
     "content_for_index": [],
