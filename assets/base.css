@@ -4179,3 +4179,28 @@ details-disclosure > details {
   font-size: 1.5rem;
   line-height: 1;
 }
+/* whatsapp */
+.floating-whatsapp {
+  position: fixed;
+  right: 2rem;
+  bottom: 10svh;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+}
+.floating-whatsapp img {
+  width: 5rem;
+  height: 5rem;
+}
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+}
+@media screen and (max-width: 749px) {
+  .floating-whatsapp {
+    right: 1rem;
+    bottom: 5svh;
+  }
+  .floating-whatsapp img {
+    width: 3rem;
+    height: 3rem;
+  }
+}

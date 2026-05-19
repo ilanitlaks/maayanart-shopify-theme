@@ -327,7 +327,22 @@
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
     </ul>
-
+    <a 
+      href="https://api.whatsapp.com/send/?phone={{ settings.whatsapp_number }}&text=שלום%20מעיין%20היצירה"
+      class="floating-whatsapp"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp"
+    >
+      <img
+        src="{{ 'whatsapp.svg' | asset_url }}"
+        alt="WhatsApp"
+        class="whatsapp-icon"
+        width="34"
+        height="34"
+        loading="lazy"
+      >
+    </a>
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
