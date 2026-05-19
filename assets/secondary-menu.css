@@ -4,6 +4,8 @@
   background: #fff;
   border-block-end: 3px solid var(--color-accent-soft, #d2a98c);
   position: relative;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .secondary-menu {

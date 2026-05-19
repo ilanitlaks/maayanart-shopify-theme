@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  max-width: 720px;
+  max-width: 1200px;
   /* margin: 0 auto; */
 }
 .shipping-banner__link {
@@ -28,7 +28,7 @@
 
 /* הטקסט – חופף לאור */
 .shipping-banner__text {
-  grid-column: 13 / 6;
+  grid-column: 13 / 9;
   grid-row: 1;
   padding-top: 0.5rem;
   /* padding-right: 2.5rem; */
