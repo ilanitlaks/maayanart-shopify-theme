@@ -67,14 +67,23 @@
   display: block;
 }
 .secondary-menu__link--extra {
-  background: #90b2b5;
-  color: #fff;
+  color: red;
   font-weight: 700;
 }
 
-.secondary-menu__link--extra:hover {
-  background: #7ea1a4;
-  color: #fff;
+.secondary-menu__link--extra::before {
+  content: "↗";
+  opacity: 0;
+  transform: translateX(7px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+  display: inline-block;
+}
+
+.secondary-menu__link--extra:hover::before {
+  opacity: 1;
+  transform: translateX(0);
 }
 @media screen and (max-width: 749px) {
   .secondary-menu__link {

@@ -2,35 +2,37 @@
 
 <section class="category-boxes page-width">
   <div class="category-boxes__grid">
-    {% for block in section.blocks %}
-   <a href="{{ block.settings.link }}" 
-   class="category-boxes__item {% if block.settings.hover_image != blank %}has-hover{% endif %}" 
-   {{ block.shopify_attributes }}>
+{% for block in section.blocks %}
+  {% if block.settings.show_box %}
+    <a href="{{ block.settings.link }}" 
+      class="category-boxes__item {% if block.settings.hover_image != blank %}has-hover{% endif %}" 
+      {{ block.shopify_attributes }}>
 
-        {% if block.settings.image != blank %}
-          <img
-            src="{{ block.settings.image | image_url: width: 500 }}"
-            alt="{{ block.settings.title | escape }}"
-            class="category-boxes__image category-boxes__image--main"
-            loading="lazy"
-          >
-        {% endif %}
+      {% if block.settings.image != blank %}
+        <img
+          src="{{ block.settings.image | image_url: width: 500 }}"
+          alt="{{ block.settings.title | escape }}"
+          class="category-boxes__image category-boxes__image--main"
+          loading="lazy"
+        >
+      {% endif %}
 
-        {% if block.settings.hover_image != blank %}
-          <img
-            src="{{ block.settings.hover_image | image_url: width: 500 }}"
-            alt="{{ block.settings.title | escape }}"
-            class="category-boxes__image category-boxes__image--hover"
-            loading="lazy"
-          >
-        {% endif %}
+      {% if block.settings.hover_image != blank %}
+        <img
+          src="{{ block.settings.hover_image | image_url: width: 500 }}"
+          alt="{{ block.settings.title | escape }}"
+          class="category-boxes__image category-boxes__image--hover"
+          loading="lazy"
+        >
+      {% endif %}
 
-        <span class="category-boxes__title">
-          {{ block.settings.title }}
-        </span>
+      <span class="category-boxes__title">
+        {{ block.settings.title }}
+      </span>
 
-      </a>
-    {% endfor %}
+    </a>
+  {% endif %}
+{% endfor %}
   </div>
 </section>
 
@@ -43,6 +45,12 @@
       "type": "box",
       "name": "קובייה",
       "settings": [
+       {
+          "type": "checkbox",
+          "id": "show_box",
+          "label": "להציג קובייה",
+          "default": true
+        },
         {
           "type": "text",
           "id": "title",
