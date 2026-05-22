@@ -87,3 +87,52 @@
     </nav>
   </div>
 {% endunless %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "בית",
+        "item": "{{ routes.root_url | prepend: request.origin }}"
+      }
+
+      {% assign breadcrumb_position = 2 %}
+
+      {% if current_collection %}
+        ,
+        {
+          "@type": "ListItem",
+          "position": {{ breadcrumb_position }},
+          "name": {{ current_collection.title | json }},
+          "item": "{{ request.origin }}{{ current_collection.url }}"
+        }
+        {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
+      {% endif %}
+
+      {% if parent_product and parent_product.id != product.id %}
+        ,
+        {
+          "@type": "ListItem",
+          "position": {{ breadcrumb_position }},
+          "name": {{ parent_product.title | json }},
+          "item": "{{ request.origin }}{{ parent_product.url }}"
+        }
+        {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
+      {% endif %}
+
+      {% if product %}
+        ,
+        {
+          "@type": "ListItem",
+          "position": {{ breadcrumb_position }},
+          "name": {{ product.title | json }},
+          "item": "{{ request.origin }}{{ product.url }}"
+        }
+      {% endif %}
+    ]
+  }
+</script>
+ 
