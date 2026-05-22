@@ -45,21 +45,30 @@
 -%}
 
 {%- unless target == null and placeholder == null -%}
-  {%- if is_parent_product -%}
-    <div class="parent-product-children">
-      {%- for child in product.metafields.custom.child_products.value -%}
+{%- if is_parent_product -%}
+  <div class="parent-product-children">
+    {%- assign child_products = product.metafields.custom.child_products.value -%}
+
+    {%- if child_products != blank -%}
+      {%- for child in child_products -%}
         <div class="child-product-card">
           <a href="{{ child.url }}">
             {%- if child.featured_image -%}
-              <img src="{{ child.featured_image | image_url: width: 300 }}" alt="{{ child.title }}">
+              <img
+                src="{{ child.featured_image | image_url: width: 300 }}"
+                alt="{{ child.title | escape }}"
+                width="300"
+                height="300"
+              >
             {%- endif -%}
             <p class="child-title">{{ child.title }}</p>
             <p class="child-price">{{ child.price | money }}</p>
           </a>
         </div>
       {%- endfor -%}
-    </div>
-  {%- else -%}
+    {%- endif -%}
+  </div>
+{%- else -%}
     <div
       class="
         price
