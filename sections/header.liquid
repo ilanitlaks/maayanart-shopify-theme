@@ -432,16 +432,17 @@
 
   customElements.define('sticky-header', StickyHeader);
 {% endjavascript %}
+{% assign social_links = '' %}
 
 <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": {{ shop.name | json }},
-    "description": "מעיין היצירה היא חנות ישראלית לחומרי יצירה, DIY, ערכות יצירה, אמנות ויצירה לילדים ולמבוגרים.",
-    "inLanguage": "he-IL",
-    "areaServed": "IL",
-    "knowsAbout": [
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ shop.name | json }},
+  "description": "מעיין היצירה היא חנות ישראלית לחומרי יצירה, DIY, ערכות יצירה, אמנות ויצירה לילדים ולמבוגרים.",
+  "inLanguage": "he-IL",
+  "areaServed": "IL",
+  "knowsAbout": [
     "DIY",
     "חומרי יצירה",
     "ערכות יצירה",
@@ -453,19 +454,20 @@
     "יצירה לבית ספר",
     "יצירה לגנים"
   ],
-    {% if settings.logo %}
-      "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
-    {% endif %}
-    "sameAs": [
-      {% if settings.social_facebook_link != blank %}{{ settings.social_facebook_link | json }}{% endif %}
-      {% if settings.social_pinterest_link != blank %},{{ settings.social_pinterest_link | json }}{% endif %}
-      {% if settings.social_instagram_link != blank %},{{ settings.social_instagram_link | json }}{% endif %}
-      {% if settings.social_youtube_link != blank %},{{ settings.social_youtube_link | json }}{% endif %}
-    ],
-    "url": {{ request.origin | json }}
-  }
+  {% if settings.logo %}
+  "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+  {% endif %}
+  "sameAs": [
+    {% assign links = settings.social_facebook_link | append: '|' | append: settings.social_pinterest_link | append: '|' | append: settings.social_instagram_link | append: '|' | append: settings.social_youtube_link | split: '|' %}
+    {% for link in links %}
+      {% if link != blank %}
+        {{ link | json }}{% unless forloop.last %},{% endunless %}
+      {% endif %}
+    {% endfor %}
+  ],
+  "url": {{ request.origin | json }}
+}
 </script>
-
 {%- if request.page_type == 'index' -%}
   {% assign potential_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' %}
   <script type="application/ld+json">
