@@ -4182,7 +4182,7 @@ details-disclosure > details {
 /* whatsapp */
 .floating-whatsapp {
   position: fixed;
-  right: 2rem;
+  right: 10rem;
   bottom: 10svh;
   z-index: 9999;
   transition: transform 0.2s ease;

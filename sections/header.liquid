@@ -438,21 +438,31 @@
     "@context": "http://schema.org",
     "@type": "Organization",
     "name": {{ shop.name | json }},
+    "description": "מעיין היצירה היא חנות ישראלית לחומרי יצירה, DIY, ערכות יצירה, אמנות ויצירה לילדים ולמבוגרים.",
+    "inLanguage": "he-IL",
+    "areaServed": "IL",
+    "knowsAbout": [
+    "DIY",
+    "חומרי יצירה",
+    "ערכות יצירה",
+    "יצירה לילדים",
+    "אמנות",
+    "מקרמה",
+    "ציור",
+    "פיסול",
+    "יצירה לבית ספר",
+    "יצירה לגנים"
+  ],
     {% if settings.logo %}
       "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif %}
     "sameAs": [
-      {{ settings.social_twitter_link | json }},
-      {{ settings.social_facebook_link | json }},
-      {{ settings.social_pinterest_link | json }},
-      {{ settings.social_instagram_link | json }},
-      {{ settings.social_tiktok_link | json }},
-      {{ settings.social_tumblr_link | json }},
-      {{ settings.social_snapchat_link | json }},
-      {{ settings.social_youtube_link | json }},
-      {{ settings.social_vimeo_link | json }}
+      {% if settings.social_facebook_link != blank %}{{ settings.social_facebook_link | json }}{% endif %}
+      {% if settings.social_pinterest_link != blank %},{{ settings.social_pinterest_link | json }}{% endif %}
+      {% if settings.social_instagram_link != blank %},{{ settings.social_instagram_link | json }}{% endif %}
+      {% if settings.social_youtube_link != blank %},{{ settings.social_youtube_link | json }}{% endif %}
     ],
-    "url": {{ request.origin | append: page.url | json }}
+    "url": {{ request.origin | json }}
   }
 </script>
 
