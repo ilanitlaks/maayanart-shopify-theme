@@ -59,7 +59,7 @@
 
 .collection-subcategories__title {
   margin: 0;
-  font-size: clamp(2rem, 2vw, 3rem);
+  font-size: clamp(1.8rem, 2vw, 3rem);
   padding: 1rem;
   color: #222;
   text-align: center;
