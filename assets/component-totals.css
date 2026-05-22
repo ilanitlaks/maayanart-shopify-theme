@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  gap: 1rem;
 }
 
 .totals > * {
@@ -22,7 +23,7 @@
 }
 
 .totals__total {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .totals__total-value {
