@@ -2742,13 +2742,15 @@ input[type="checkbox"] {
   overflow: hidden;
 }
 
-.header__icon:not(.header__icon--summary),
-.header__icon span {
+.header__icon:not(.header__icon--summary) {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+.header__icon span {
+  display: flex;
+  align-items: center;
+}
 .header__icon {
   color: rgb(var(--color-foreground));
 }
@@ -2912,6 +2914,7 @@ details[open] .modal-overlay::after {
 
 .search-modal__content-bottom {
   bottom: calc((var(--inputs-margin-offset) / 2));
+  bottom: -4vh;
 }
 
 .search-modal__content-top {
