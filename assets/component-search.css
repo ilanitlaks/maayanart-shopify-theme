@@ -1,7 +1,9 @@
 .search__input.field__input {
   padding-right: 9.8rem;
 }
-
+.search__input.field__input::placeholder {
+  text-align: right;
+}
 .search__button {
   left: var(--inputs-border-width);
   right: auto;
