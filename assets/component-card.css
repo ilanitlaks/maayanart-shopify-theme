@@ -686,8 +686,8 @@
   z-index: 6;
 }
 .card-options-btn {
-  min-width: max-content;
-  max-width: 20svw;
+  /* min-width: max-content;
+  max-width: 20svw; */
   margin-inline: auto;
   text-align: center;
   text-decoration: none;
