@@ -657,10 +657,10 @@
         "shipping_policy_link": "עלויות משלוח",
         "taxes_label": "מיסים",
         "tax_line": {
-          "gst": "מע\"מ",
-          "pst": "שעון החוף המערבי",
-          "rst": "מנוחה",
-          "qst": "שאלה"
+          "gst": "GST",
+          "pst": "PST",
+          "rst": "RST",
+          "qst": "QST"
         },
         "estimated_taxes_label": "מסים משוערים",
         "estimated_taxes_label_short": "משוער",
@@ -1033,13 +1033,13 @@
             "sunday": "יום ראשון"
           },
           "weekdays_abbreviation": {
-            "monday": "מו",
-            "tuesday": "אתה",
-            "wednesday": "אנו",
-            "thursday": "ה-",
-            "friday": "יום ו'",
-            "saturday": "סא",
-            "sunday": "סה\"כ"
+            "monday": "ב׳",
+            "tuesday": "ג׳",
+            "wednesday": "ד׳",
+            "thursday": "ה׳",
+            "friday": "ו׳",
+            "saturday": "ש׳",
+            "sunday": "א׳"
           },
           "months": {
             "january": "ינואר",
