@@ -7,9 +7,12 @@
       
       {% if section.settings.image != blank %}
         <img 
-          src="{{ section.settings.image | image_url: width: 400 }}" 
+          src="{{ section.settings.image | image_url: width: 1600 }}" 
           alt="{{ section.settings.alt_text }}"
           class="shipping-banner__img"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          loading="lazy"
         >
       {% endif %}
 

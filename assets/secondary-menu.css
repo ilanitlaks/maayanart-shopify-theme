@@ -64,7 +64,7 @@
 
 .secondary-menu__arrow img {
   width: 18px;
-  height: 18px;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -99,6 +99,6 @@
 
   .secondary-menu__arrow img {
     width: 16px;
-    height: 16px;
+    height: auto;
   }
 }
