@@ -863,9 +863,9 @@
 }
 
 .footer__community-consent {
-  margin-top: 1.4rem;
-  text-align: center;
-  font-size: 1.4rem;
+  margin-top: 2rem;
+  text-align: right;
+  /* font-size: 1.4rem; */
 }
 
 .footer__community-consent label {
@@ -873,6 +873,9 @@
   gap: 0.8rem;
   align-items: center;
   font-size: small;
+  text-align: right;
+  text-wrap-style: balance;
+  width: max-content;
 }
 
 @media screen and (max-width: 749px) {
