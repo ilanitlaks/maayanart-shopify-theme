@@ -1003,7 +1003,15 @@
             "local_pickup_delivery_line_detail_changed": "יש לשנות את אסטרטגיית איסוף עצמי הנוכחית על מנת להמשיך.",
             "selected_pickup_option_no_longer_available": "אפשרות האיסוף שנבחרה בעבר אינה זמינה עוד.",
             "local_pickup_no_delivery_strategy_available": "לא נמצאה אסטרטגיית משלוח של איסוף מקומי זמינה.",
-            "origin_location_id_required": "מזהה מיקום מוצא נדרש כאשר שיטת המשלוח RETAIL מתבקשת."
+            "origin_location_id_required": "מזהה מיקום מוצא נדרש כאשר שיטת המשלוח RETAIL מתבקשת.",
+            "invalid_origin_location_id": "מזהה מיקום המקור אינו תקין",
+            "origin_location_id_not_allowed": "מזהה מיקום המקור אינו מורשה",
+            "auto_fulfill_not_allowed": "מילוי אוטומטי אינו מורשה",
+            "auto_fulfill_required": "נדרש מילוי אוטומטי כאשר נבחרת שיטת משלוח RETAIL.",
+            "prefetch_shipping_rates_used": "נעשה שימוש בתעריפי משלוח שנטענו מראש",
+            "fulfillment_constraints_not_satisfied": "אחד או יותר מתנאי המילוי לא התקיימו.",
+            "must_fulfill_from_constraint_not_satisfied": "לא ניתן לעמוד בתנאי המילוי מכיוון שלא ניתן לספק את הפריטים מהמיקומים הנדרשים.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "לא ניתן לעמוד בתנאי המילוי מכיוון שלא ניתן לספק את הפריטים מאותו מיקום."
           }
         },
         "continue_to_payment_plans_button_label": "המשך לתוכניות תשלום",
@@ -1076,7 +1084,18 @@
           "add_file": "הוספת קובץ",
           "invalid_file_type": "סוג קובץ אינו נתמך",
           "dragged_over": "גרור קובץ להעלאה"
-        }
+        },
+        "full_price": "מחיר מלא:",
+        "title": "תשלום – {{shopName}}",
+        "full_title": "{{pageTitle}} – {{shopName}} – תשלום",
+        "loading": "טוען...",
+        "loading_title": "טוען את {{shopName}}",
+        "display_name": "{{firstName}} {{lastName}}",
+        "google_map_title": "מפת Google",
+        "confirm_order_button_label": "אישור ההזמנה",
+        "submit_order_button_label": "אישור ההזמנה",
+        "submit_for_review_button_label": "שליחת ההזמנה",
+        "submit_for_review_notice_label": "שליחה לבדיקה"
       },
       "embed": {
         "header": {
