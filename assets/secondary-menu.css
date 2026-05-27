@@ -42,7 +42,8 @@
   background: #fff;
 }
 
-.secondary-menu__link:hover {
+.secondary-menu__link:hover,
+.secondary-menu__link:focus-visible {
   background: #f7efec;
 }
 
