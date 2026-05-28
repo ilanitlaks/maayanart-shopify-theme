@@ -205,6 +205,38 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% assign show_deal_badge = false %}
+
+            {% assign has_group = false %}
+
+            {% for tag in card_product.tags %}
+              {% assign t = tag | downcase | strip %}
+              {% if t contains 'group' %}
+                {% assign has_group = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+
+            {% if has_group and card_product.price == 0 %}
+              {% assign show_deal_badge = true %}
+            {% elsif has_group == false %}
+              {% assign show_deal_badge = true %}
+            {% endif %}
+
+            {% if show_deal_badge %}
+              {% for collection in card_product.collections %}
+                {% if collection.title contains 'מחיר מיוחד' %}
+                  <div class="card-deal-badge">
+
+                    <svg class="icon icon-discount" viewBox="0 0 12 12" width="12" height="12">
+                      <path fill="currentColor" fill-rule="evenodd" d="M7 0h3a2 2 0 0 1 2 2v3a1 1 0 0 1-.3.7l-6 6a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4l6-6A1 1 0 0 1 7 0m2 2a1 1 0 1 0 2 0 1 1 0 0 0-2 0" clip-rule="evenodd"></path>
+                    </svg>
+
+                    {{ collection.title }}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
             {%- if card_product.price == 0 -%}
               <a href="{{ card_product.url }}" class="card-options-btn">
                 לכל האפשרויות

@@ -703,3 +703,26 @@
   font-weight: bold;
   text-decoration: none;
 }
+.card-deal-badge {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  top: -1rem;
+  left: 0.5rem;
+  background: #eef8ef;
+  color: #753c29;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  max-width: 50%;
+  text-align: center;
+  align-items: center;
+  outline: 2px dashed rgb(117 60 41);
+  outline-offset: -0.3rem;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
