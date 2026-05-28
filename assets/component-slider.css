@@ -394,7 +394,11 @@ slider-component.slider-component-full-width {
 }
 
 .slider-button .icon {
+  width: 0.6rem;
   height: 0.6rem;
+  min-width: 0.6rem;
+  min-height: 0.6rem;
+  flex-shrink: 0;
 }
 
 .slider-button[disabled] .icon {
