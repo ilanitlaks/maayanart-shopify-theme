@@ -283,6 +283,7 @@
 
   .footer-block__newsletter {
     flex-direction: column;
+    max-width: 100%;
   }
 }
 
@@ -875,7 +876,7 @@
   font-size: small;
   text-align: right;
   text-wrap-style: balance;
-  width: max-content;
+  width: 100%;
 }
 
 @media screen and (max-width: 749px) {
