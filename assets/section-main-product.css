@@ -1573,6 +1573,8 @@ a.product__text {
   background: transparent;
   border: 0;
   box-shadow: none;
+  padding: 0 3rem;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 749px) {
   .section-template--29891355083091__main-padding {
@@ -1594,9 +1596,15 @@ a.product__text {
 
   .product-media-container {
     position: relative;
+    height: 50vh;
+    max-height: 620px;
+    min-height: 420px;
+    align-items: center;
   }
   .product__media.media > img {
-    padding: 0 3rem;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .product__media-wrapper .slider-buttons {
