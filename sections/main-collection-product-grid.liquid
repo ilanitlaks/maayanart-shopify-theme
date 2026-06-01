@@ -193,7 +193,15 @@
             {% assign skip_card_product_styles = false %}
 
             {%- for product in collection.products -%}
-              {% if product.available %}
+            {% assign is_child_product = false %}
+
+              {% for tag in product.tags %}
+                {% assign clean_tag = tag | downcase | strip %}
+                {% if clean_tag contains 'group' and product.price > 0 %}
+                  {% assign is_child_product = true %}
+                {% endif %}
+              {% endfor %}
+              {% if product.available and is_child_product == false %}
 
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
