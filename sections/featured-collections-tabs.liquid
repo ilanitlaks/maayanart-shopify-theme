@@ -29,7 +29,7 @@
           </button>
 
         <ul class="home-products-tabs__slider" role="list">
-        {% for product in current_collection.products %}
+        {% for product in current_collection.products limit: section.settings.products_to_show %}
           {% assign is_child_product = false %}
 
         {% for tag in product.tags %}
