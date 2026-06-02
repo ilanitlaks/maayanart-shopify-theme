@@ -12,15 +12,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 0.8rem;
+  padding: 0;
+}
+
+[dir="rtl"] .pagination__list {
+  flex-direction: row-reverse;
 }
 
 .pagination__list > li {
-  flex: 1 0 4.4rem;
-  max-width: 4.4rem;
+  flex: 0 0 auto;
+  margin: 0;
 }
 
 .pagination__list > li:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0;
 }
 
 .pagination__item {
@@ -31,7 +37,7 @@
   position: relative;
   height: 4.4rem;
   width: 100%;
-  padding: 0;
+  padding: 0.5rem;
   text-decoration: none;
 }
 
@@ -49,7 +55,7 @@ a.pagination__item:hover::after {
 
 .pagination__item--current::after,
 .pagination__item:hover::after {
-  content: '';
+  content: "";
   display: block;
   width: 2rem;
   position: absolute;

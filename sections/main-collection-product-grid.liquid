@@ -270,15 +270,11 @@
             {%- endfor -%}
             </ul>
 
-          {%- if paginate.pages > 1 -%}
-            <div class="infinite-scroll-pagination">
-              {% render 'pagination', paginate: paginate, anchor: '' %}
-            </div>
-
-            <div class="infinite-scroll-loader" aria-hidden="true">
-              טוען עוד מוצרים...
-            </div>
-          {%- endif -%}
+            {%- if paginate.pages > 1 -%}
+              <div class="pagination-wrapper">
+                {% render 'pagination', paginate: paginate, anchor: '' %}
+              </div>
+            {%- endif -%}
           </div>
         {%- endif -%}
       </div>
