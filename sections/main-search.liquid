@@ -277,7 +277,7 @@
                         {% for tag in item.tags %}
                           {% assign clean_tag = tag | downcase | strip %}
 
-                          {% if clean_tag contains 'group:' and item.price > 0 %}
+                          {% if clean_tag contains 'group' and item.price > 0 %}
                             {% assign is_child_product = true %}
                             {% break %}
                           {% endif %}

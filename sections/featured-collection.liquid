@@ -106,6 +106,17 @@
           {% assign lazy_load = false %}
           {% paginate section.settings.collection.products by section.settings.products_to_show %}
             {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+            {% assign is_child_product = false %}
+
+              {% for tag in product.tags %}
+                {% assign clean_tag = tag | downcase | strip %}
+                {% if clean_tag contains 'group' and product.price > 0 %}
+                  {% assign is_child_product = true %}
+                {% endif %}
+                
+              {% endfor %}
+
+              {% if is_child_product == false %}
               {% if lazy_load == false and forloop.index > max_columns_to_show %}
                 {% assign lazy_load = true %}
               {% endif %}
@@ -131,6 +142,7 @@
                 %}
               </li>
               {%- assign skip_card_product_styles = true -%}
+              {% endif %}
             {%- endfor -%}
           {% endpaginate %}
         {%- else -%}

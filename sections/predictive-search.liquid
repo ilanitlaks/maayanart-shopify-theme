@@ -130,6 +130,16 @@
               aria-labelledby="predictive-search-products"
             >
               {%- for product in predictive_search.resources.products -%}
+              {% assign is_child_product = false %}
+
+              {% for tag in product.tags %}
+                {% assign clean_tag = tag | downcase | strip %}
+                {% if clean_tag contains 'group' and product.price > 0 %}
+                  {% assign is_child_product = true %}
+                {% endif %}
+              {% endfor %}
+
+              {% if is_child_product == false %}
                 <li
                   id="predictive-search-option-product-{{ forloop.index }}"
                   class="predictive-search__list-item"

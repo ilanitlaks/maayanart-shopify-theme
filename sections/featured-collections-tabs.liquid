@@ -29,8 +29,18 @@
           </button>
 
         <ul class="home-products-tabs__slider" role="list">
-          {% for product in current_collection.products %}
-            <li class="home-products-tabs__slide">
+        {% for product in current_collection.products %}
+          {% assign is_child_product = false %}
+
+        {% for tag in product.tags %}
+          {% assign clean_tag = tag | downcase | strip %}
+          {% if clean_tag contains 'group' and product.price > 0 %}
+            {% assign is_child_product = true %}
+          {% endif %}
+        {% endfor %}
+
+          {% if is_child_product == false %}
+           <li class="home-products-tabs__slide">
               {% render 'card-product',
                 card_product: product,
                 media_aspect_ratio: 'adapt',
@@ -43,7 +53,8 @@
                 section_id: section.id
               %}
             </li>
-          {% endfor %}
+          {% endif %}
+        {% endfor %}
         </ul>
 
         <button class="home-products-tabs__arrow home-products-tabs__arrow--next" type="button" aria-label="הבא">
