@@ -12,6 +12,22 @@
     "subcategories": {
       "type": "collection-subcategories",
       "blocks": {
+        "category_DjhY7X": {
+          "type": "category",
+          "settings": {
+            "title": "אטבים",
+            "collection": "אטבים",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
+        "category_dpnBLH": {
+          "type": "category",
+          "settings": {
+            "title": "בדי לבד",
+            "collection": "בדי-לבד",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
         "category_7LynqA": {
           "type": "category",
           "settings": {
@@ -26,6 +42,14 @@
             "title": "גבס",
             "collection": "גבס",
             "parent_collection": "כיור-ופיסול"
+          }
+        },
+        "category_mrMQWP": {
+          "type": "category",
+          "settings": {
+            "title": "מראות",
+            "collection": "מראות",
+            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_LcVKbR": {
@@ -996,22 +1020,6 @@
             "parent_collection": "דבקים"
           }
         },
-        "category_DjhY7X": {
-          "type": "category",
-          "settings": {
-            "title": "אטבים",
-            "collection": "אטבים",
-            "parent_collection": "חומרי-יצירה"
-          }
-        },
-        "category_dpnBLH": {
-          "type": "category",
-          "settings": {
-            "title": "בדי לבד",
-            "collection": "בדי-לבד",
-            "parent_collection": "חומרי-יצירה"
-          }
-        },
         "category_RJyEwP": {
           "type": "category",
           "settings": {
@@ -1134,8 +1142,11 @@
         }
       },
       "block_order": [
+        "category_DjhY7X",
+        "category_dpnBLH",
         "category_7LynqA",
         "category_y8XDrK",
+        "category_mrMQWP",
         "category_LcVKbR",
         "category_JQpkRb",
         "category_aVTxHz",
@@ -1257,8 +1268,6 @@
         "category_GBbqGE",
         "category_JAhKTW",
         "category_brb7jC",
-        "category_DjhY7X",
-        "category_dpnBLH",
         "category_RJyEwP",
         "category_zTJWnc",
         "category_xKCHFB",
