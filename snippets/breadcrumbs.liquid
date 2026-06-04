@@ -2,37 +2,35 @@
   {% assign current_collection = collection %}
   {% assign parent_product = nil %}
   {% assign group_tag = nil %}
+  {% assign main_category = nil %}
 
-{%- comment -%} מציאת תגית group של המוצר {%- endcomment -%}
-{% if product %}
-  {% for tag in product.tags %}
-    {% assign clean_tag = tag | downcase | strip %}
-    {% if clean_tag contains 'group' %}
-      {% assign group_tag = tag | strip %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
+  {% if product %}
+    {% for tag in product.tags %}
+      {% assign clean_tag = tag | downcase | strip %}
+      {% if clean_tag contains 'group' %}
+        {% assign group_tag = tag | strip %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 
-{%- comment -%} מציאת מוצר האב מתוך קולקציית group לפי מוצר במחיר 0 {%- endcomment -%}
-{% if group_tag and product %}
-  {% for product_collection in product.collections %}
-    {% assign clean_title = product_collection.title | downcase | strip %}
-    {% assign clean_handle = product_collection.handle | downcase | strip %}
+  {% if group_tag and product %}
+    {% for product_collection in product.collections %}
+      {% assign clean_title = product_collection.title | downcase | strip %}
+      {% assign clean_handle = product_collection.handle | downcase | strip %}
 
-    {% if clean_title contains 'group' or clean_handle contains 'group' %}
-      {% for p in product_collection.products %}
-        {% if p.price == 0 %}
-          {% assign parent_product = p %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
+      {% if clean_title contains 'group' or clean_handle contains 'group' %}
+        {% for p in product_collection.products %}
+          {% if p.price == 0 %}
+            {% assign parent_product = p %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 
-  {%- comment -%} ניקוי קולקציית group אם נכנסנו ממנה {%- endcomment -%}
   {% if current_collection != blank %}
     {% assign clean_collection_title = current_collection.title | downcase | strip %}
     {% assign clean_collection_handle = current_collection.handle | downcase | strip %}
@@ -42,22 +40,30 @@
     {% endif %}
   {% endif %}
 
-  {%- comment -%} בחירת קולקציה רגילה אם אין קולקציה נוכחית {%- endcomment -%}
   {% if current_collection == blank and product %}
     {% for product_collection in product.collections %}
-    {% assign clean_title = product_collection.title | downcase | strip %}
-    {% assign clean_handle = product_collection.handle | downcase | strip %}
+      {% assign clean_title = product_collection.title | downcase | strip %}
+      {% assign clean_handle = product_collection.handle | downcase | strip %}
 
-    {% unless clean_title contains 'group' or clean_handle contains 'group' %}
-      {% assign current_collection = product_collection %}
-      {% break %}
-    {% endunless %}
-  {% endfor %}
+      {% unless clean_title contains 'group' or clean_handle contains 'group' %}
+        {% assign current_collection = product_collection %}
+        {% break %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+
+  {% if current_collection %}
+    {% assign main_category = current_collection.metafields.custom.main_category.value %}
   {% endif %}
 
   <div class="page-width">
     <nav class="breadcrumbs" aria-label="פירורי לחם">
       <a href="{{ routes.root_url }}">בית</a>
+
+      {% if main_category %}
+        <span aria-hidden="true">/</span>
+        <a href="{{ main_category.url }}">{{ main_category.title }}</a>
+      {% endif %}
 
       {% if current_collection %}
         <span aria-hidden="true">/</span>
@@ -87,52 +93,63 @@
     </nav>
   </div>
 {% endunless %}
+
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "בית",
+      "item": "{{ routes.root_url | prepend: request.origin }}"
+    }
+
+    {% assign breadcrumb_position = 2 %}
+
+    {% if main_category %}
+      ,
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "בית",
-        "item": "{{ routes.root_url | prepend: request.origin }}"
+        "position": {{ breadcrumb_position }},
+        "name": {{ main_category.title | json }},
+        "item": "{{ request.origin }}{{ main_category.url }}"
       }
+      {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
+    {% endif %}
 
-      {% assign breadcrumb_position = 2 %}
+    {% if current_collection %}
+      ,
+      {
+        "@type": "ListItem",
+        "position": {{ breadcrumb_position }},
+        "name": {{ current_collection.title | json }},
+        "item": "{{ request.origin }}{{ current_collection.url }}"
+      }
+      {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
+    {% endif %}
 
-      {% if current_collection %}
-        ,
-        {
-          "@type": "ListItem",
-          "position": {{ breadcrumb_position }},
-          "name": {{ current_collection.title | json }},
-          "item": "{{ request.origin }}{{ current_collection.url }}"
-        }
-        {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
-      {% endif %}
+    {% if parent_product and parent_product.id != product.id %}
+      ,
+      {
+        "@type": "ListItem",
+        "position": {{ breadcrumb_position }},
+        "name": {{ parent_product.title | json }},
+        "item": "{{ request.origin }}{{ parent_product.url }}"
+      }
+      {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
+    {% endif %}
 
-      {% if parent_product and parent_product.id != product.id %}
-        ,
-        {
-          "@type": "ListItem",
-          "position": {{ breadcrumb_position }},
-          "name": {{ parent_product.title | json }},
-          "item": "{{ request.origin }}{{ parent_product.url }}"
-        }
-        {% assign breadcrumb_position = breadcrumb_position | plus: 1 %}
-      {% endif %}
-
-      {% if product %}
-        ,
-        {
-          "@type": "ListItem",
-          "position": {{ breadcrumb_position }},
-          "name": {{ product.title | json }},
-          "item": "{{ request.origin }}{{ product.url }}"
-        }
-      {% endif %}
-    ]
-  }
+    {% if product %}
+      ,
+      {
+        "@type": "ListItem",
+        "position": {{ breadcrumb_position }},
+        "name": {{ product.title | json }},
+        "item": "{{ request.origin }}{{ product.url }}"
+      }
+    {% endif %}
+  ]
+}
 </script>
- 
