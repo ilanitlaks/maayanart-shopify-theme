@@ -156,6 +156,22 @@
             "parent_collection": "חרוזים"
           }
         },
+        "category_aVTxHz": {
+          "type": "category",
+          "settings": {
+            "title": "חימר מוקצף i can B",
+            "collection": "חימר-מוקצף-i-can-b",
+            "parent_collection": "כיור-ופיסול"
+          }
+        },
+        "category_Vc7ckL": {
+          "type": "category",
+          "settings": {
+            "title": "iclay חימר קל",
+            "collection": "iclay-חימר-קל",
+            "parent_collection": "כיור-ופיסול"
+          }
+        },
         "category_7Fjda9": {
           "type": "category",
           "settings": {
@@ -193,14 +209,6 @@
           "settings": {
             "title": "חימר שמתייבש באוויר",
             "collection": "חימר-שמתייבש-באוויר",
-            "parent_collection": "כיור-ופיסול"
-          }
-        },
-        "category_aVTxHz": {
-          "type": "category",
-          "settings": {
-            "title": "חימר מוקצף i can B",
-            "collection": "חימר-מוקצף-i-can-b",
             "parent_collection": "כיור-ופיסול"
           }
         },
@@ -404,6 +412,14 @@
             "parent_collection": "ציוד-משרדי"
           }
         },
+        "category_BpyPjW": {
+          "type": "category",
+          "settings": {
+            "title": "כפתורים",
+            "collection": "כפתורים",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
         "category_mrMQWP": {
           "type": "category",
           "settings": {
@@ -562,14 +578,6 @@
             "title": "מוצרי בד לקישוט",
             "collection": "מוצרי-בד-לקישוט",
             "parent_collection": "מוצרי-בד"
-          }
-        },
-        "category_BpyPjW": {
-          "type": "category",
-          "settings": {
-            "title": "כפתורים",
-            "collection": "כפתורים",
-            "parent_collection": "חומרי-יצירה"
           }
         },
         "category_dpqxqw": {
@@ -1000,12 +1008,13 @@
         "category_brb7jC",
         "category_wV3gmE",
         "category_HGymhf",
+        "category_aVTxHz",
+        "category_Vc7ckL",
         "category_7Fjda9",
         "category_LbKiWp",
         "category_FGbyQU",
         "category_xKCHFB",
         "category_JQpkRb",
-        "category_aVTxHz",
         "category_ThQjBT",
         "category_i4rgJq",
         "category_k7wMjg",
@@ -1031,6 +1040,7 @@
         "category_n437xJ",
         "category_LYUctJ",
         "category_fcQPaj",
+        "category_BpyPjW",
         "category_mrMQWP",
         "category_emnaPW",
         "category_a8ibXy",
@@ -1051,7 +1061,6 @@
         "category_mpwpa9",
         "category_wjPPAd",
         "category_PenF7q",
-        "category_BpyPjW",
         "category_dpqxqw",
         "category_jYawPA",
         "category_mA3Bwj",
