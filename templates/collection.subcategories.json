@@ -1052,6 +1052,14 @@
             "parent_collection": "טכניקות"
           }
         },
+        "category_MEDIUMS001": {
+          "type": "category",
+          "settings": {
+            "title": "מדיומים שונים",
+            "collection": "mediumim-shonim",
+            "parent_collection": "טכניקות"
+          }
+        },
         "category_fXdLbf": {
           "type": "category",
           "settings": {
@@ -1278,7 +1286,8 @@
         "category_PENDANTS001",
         "category_HABERDASHERY001",
         "category_SOL001",
-        "category_SPRAY001"
+        "category_SPRAY001",
+        "category_MEDIUMS001"
       ],
       "custom_css": [
         "h2 {margin-top: 1px; font-size: small;}"
