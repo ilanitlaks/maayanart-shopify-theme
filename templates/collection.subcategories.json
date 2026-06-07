@@ -1028,6 +1028,14 @@
             "parent_collection": "תכשיטנות"
           }
         },
+        "category_PENDANTS001": {
+          "type": "category",
+          "settings": {
+            "title": "תליונים",
+            "collection": "תליונים",
+            "parent_collection": "תכשיטנות"
+          }
+        },
         "category_cDtmgP": {
           "type": "category",
           "settings": {
@@ -1260,6 +1268,7 @@
         "category_GBbqGE",
         "category_GLUE_CLEAR001",
         "category_FOAM001",
+        "category_PENDANTS001",
         "category_SOL001"
       ],
       "custom_css": [
