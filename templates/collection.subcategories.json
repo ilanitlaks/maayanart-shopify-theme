@@ -487,8 +487,56 @@
         "category_fcQPaj": {
           "type": "category",
           "settings": {
-            "title": "",
+            "title": "כל מיני ציוד משרדי",
             "collection": "kol-miney-tziyud-misradi",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_OFFICE_LAM001": {
+          "type": "category",
+          "settings": {
+            "title": "שמרדפים ומארזי למינציה",
+            "collection": "shadkhanim-umaarzei-laminatsia",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_SCISSORS001": {
+          "type": "category",
+          "settings": {
+            "title": "מספריים",
+            "collection": "misparayim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_STAPLER001": {
+          "type": "category",
+          "settings": {
+            "title": "שדכנים ומנקבים",
+            "collection": "shadkhanim-umenakbim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_WRITING001": {
+          "type": "category",
+          "settings": {
+            "title": "כלי כתיבה",
+            "collection": "kley-ktiva",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_SHARP001": {
+          "type": "category",
+          "settings": {
+            "title": "מחדדים",
+            "collection": "mechadedim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_ERASER001": {
+          "type": "category",
+          "settings": {
+            "title": "מחקים",
+            "collection": "mechakim",
             "parent_collection": "ציוד-משרדי"
           }
         },
@@ -1287,7 +1335,13 @@
         "category_HABERDASHERY001",
         "category_SOL001",
         "category_SPRAY001",
-        "category_MEDIUMS001"
+        "category_MEDIUMS001",
+        "category_OFFICE_LAM001",
+        "category_SCISSORS001",
+        "category_STAPLER001",
+        "category_WRITING001",
+        "category_SHARP001",
+        "category_ERASER001"
       ],
       "custom_css": [
         "h2 {margin-top: 1px; font-size: small;}"
