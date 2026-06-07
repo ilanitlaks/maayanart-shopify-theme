@@ -20,6 +20,22 @@
             "parent_collection": "חומרי-יצירה"
           }
         },
+        "category_FOAM001": {
+          "type": "category",
+          "settings": {
+            "title": "קלקרים ומוקצפים",
+            "collection": "קלקרים-ומוקצפים",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
+        "category_SOL001": {
+          "type": "category",
+          "settings": {
+            "title": "סול",
+            "collection": "סול",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
         "category_qPtdw7": {
           "type": "category",
           "settings": {
@@ -1242,7 +1258,9 @@
         "category_7xJxRA",
         "category_JAhKTW",
         "category_GBbqGE",
-        "category_GLUE_CLEAR001"
+        "category_GLUE_CLEAR001",
+        "category_FOAM001",
+        "category_SOL001"
       ],
       "custom_css": [
         "h2 {margin-top: 1px; font-size: small;}"
