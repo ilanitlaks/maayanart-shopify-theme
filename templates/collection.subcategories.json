@@ -140,6 +140,54 @@
             "parent_collection": "דבקים"
           }
         },
+      "category_GLUE_MULTI001": {
+        "type": "category",
+        "settings": {
+          "title": "דבק רב תכליתי",
+          "collection": "דבק-רב-תכליתי",
+          "parent_collection": "דבקים"
+        }
+      },
+      "category_GLUE_TAPE001": {
+        "type": "category",
+        "settings": {
+          "title": "סרטי הדבקה",
+          "collection": "סרטי-הדבקה",
+          "parent_collection": "דבקים"
+        }
+      },
+      "category_GLUE_DECO001": {
+        "type": "category",
+        "settings": {
+          "title": "דבק מפיות ודקופז'",
+          "collection": "דבק-מפיות-ודקופז",
+          "parent_collection": "דבקים"
+        }
+      },
+      "category_GLUE_STICK001": {
+        "type": "category",
+        "settings": {
+          "title": "דבק סטיק",
+          "collection": "דבק-סטיק",
+          "parent_collection": "דבקים"
+        }
+      },
+      "category_GLUE_GOLD001": {
+        "type": "category",
+        "settings": {
+          "title": "דבק לעלי זהב",
+          "collection": "דבק-לעלי-זהב",
+          "parent_collection": "דבקים"
+        }
+      },
+      "category_GLUE_CLEAR001": {
+        "type": "category",
+        "settings": {
+          "title": "דבק שקוף",
+          "collection": "דבק-שקוף",
+          "parent_collection": "דבקים"
+        }
+      },        
         "category_wV3gmE": {
           "type": "category",
           "settings": {
@@ -1174,7 +1222,18 @@
         "category_RIKMA001",
         "category_AMOS001",
         "category_FOXMIND001",
-        "category_MAAL001"
+        "category_MAAL001",
+        "category_GLUE_MULTI001",
+        "category_GLUE_TAPE001",
+        "category_GLUE_DECO001",
+        "category_brb7jC",
+        "category_GLUE_STICK001",
+        "category_GLUE_GOLD001",
+        "category_h8rGVh",
+        "category_7xJxRA",
+        "category_JAhKTW",
+        "category_GBbqGE",
+        "category_GLUE_CLEAR001"
       ],
       "custom_css": [
         "h2 {margin-top: 1px; font-size: small;}"
