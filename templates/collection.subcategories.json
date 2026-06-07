@@ -292,6 +292,22 @@
             "parent_collection": "מוצרי-נייר"
           }
         },
+        "category_kbGfLC": {
+          "type": "category",
+          "settings": {
+            "title": "חיתוכי עץ",
+            "collection": "חיתוכי-עץ",
+            "parent_collection": "מוצרי-עץ"
+          }
+        },
+        "category_jELc7w": {
+          "type": "category",
+          "settings": {
+            "title": "חיתוכי mdf להרכבה",
+            "collection": "mdf",
+            "parent_collection": "מוצרי-עץ"
+          }
+        },
         "category_H7pMy8": {
           "type": "category",
           "settings": {
@@ -1025,6 +1041,8 @@
         "category_zTJWnc",
         "category_RJyEwP",
         "category_XcMLbn",
+        "category_kbGfLC",
+        "category_jELc7w",
         "category_H7pMy8",
         "category_ibR7D3",
         "category_4RcXRM",
