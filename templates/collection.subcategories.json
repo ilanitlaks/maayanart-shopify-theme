@@ -660,6 +660,14 @@
             "parent_collection": "מוצרי-בד"
           }
         },
+        "category_HABERDASHERY001": {
+          "type": "category",
+          "settings": {
+            "title": "סדקית",
+            "collection": "סדקית",
+            "parent_collection": "מוצרי-בד"
+          }
+        },
         "category_dpqxqw": {
           "type": "category",
           "settings": {
@@ -1269,6 +1277,7 @@
         "category_GLUE_CLEAR001",
         "category_FOAM001",
         "category_PENDANTS001",
+        "category_HABERDASHERY001",
         "category_SOL001"
       ],
       "custom_css": [
