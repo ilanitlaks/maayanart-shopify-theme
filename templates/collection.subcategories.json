@@ -1003,7 +1003,47 @@
             "collection": "טושים-קבועים",
             "parent_collection": "צבעים"
           }
+        },
+        "category_SBS001": {
+        "type": "category",
+        "settings": {
+          "title": "ערכות יצירה - SBS",
+          "collection": "erkot-yetzira-sbs",
+          "parent_collection": "ערכות-יצירה-ומשחקים"
         }
+      },
+      "category_RIKMA001": {
+        "type": "category",
+        "settings": {
+          "title": "ערכות יצירה - רקמה",
+          "collection": "ערכות-יצירה-רקמה",
+          "parent_collection": "ערכות-יצירה-ומשחקים"
+        }
+      },
+      "category_AMOS001": {
+        "type": "category",
+        "settings": {
+          "title": "ערכות יצירה - אמוס",
+          "collection": "erkot-yetzira-amos",
+          "parent_collection": "ערכות-יצירה-ומשחקים"
+        }
+      },
+      "category_FOXMIND001": {
+        "type": "category",
+        "settings": {
+          "title": "Foxmind",
+          "collection": "foxmind",
+          "parent_collection": "ערכות-יצירה-ומשחקים"
+        }
+      },
+      "category_MAAL001": {
+        "type": "category",
+        "settings": {
+          "title": "ערכות יצירה - מעל המצופה",
+          "collection": "erkot-yetzira-meal-hametzupa",
+          "parent_collection": "ערכות-יצירה-ומשחקים"
+        }
+      }
       },
       "block_order": [
         "category_DjhY7X",
@@ -1129,7 +1169,12 @@
         "category_fXdLbf",
         "category_Dxq6jf",
         "category_thLccG",
-        "category_V3tKTp"
+        "category_V3tKTp",
+        "category_SBS001",
+        "category_RIKMA001",
+        "category_AMOS001",
+        "category_FOXMIND001",
+        "category_MAAL001"
       ],
       "custom_css": [
         "h2 {margin-top: 1px; font-size: small;}"
