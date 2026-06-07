@@ -852,14 +852,6 @@
             "parent_collection": "צבעים"
           }
         },
-        "category_bAQPbX": {
-          "type": "category",
-          "settings": {
-            "title": "צבעי גוף / איפור",
-            "collection": "צבעי-גוף-איפור",
-            "parent_collection": "צבעים"
-          }
-        },
         "category_bNtHxA": {
           "type": "category",
           "settings": {
@@ -1092,6 +1084,14 @@
             "parent_collection": "צבעים"
           }
         },
+        "category_SPRAY001": {
+          "type": "category",
+          "settings": {
+            "title": "ספריי צבע",
+            "collection": "ספריי-צבע",
+            "parent_collection": "צבעים"
+          }
+        },
         "category_SBS001": {
         "type": "category",
         "settings": {
@@ -1229,8 +1229,7 @@
         "category_DECOPATCH_KITS001",
         "category_wkmeNz",
         "category_hGtjjg",
-        "category_tQfdK4",
-        "category_bAQPbX",
+        "category_tQfdK4",   
         "category_bNtHxA",
         "category_ttkLpD",
         "category_EAybaT",
@@ -1278,7 +1277,8 @@
         "category_FOAM001",
         "category_PENDANTS001",
         "category_HABERDASHERY001",
-        "category_SOL001"
+        "category_SOL001",
+        "category_SPRAY001"
       ],
       "custom_css": [
         "h2 {margin-top: 1px; font-size: small;}"
