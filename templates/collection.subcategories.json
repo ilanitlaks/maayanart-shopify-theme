@@ -632,7 +632,7 @@
           "type": "category",
           "settings": {
             "title": "מוצרים מעיסת נייר",
-            "collection": "",
+            "collection": "מוצרים-מעיסת-נייר",
             "parent_collection": "decopatch"
           }
         },
@@ -793,6 +793,14 @@
           "settings": {
             "title": "ניירות דקופאצ' - Decopatch",
             "collection": "decopatch-papers",
+            "parent_collection": "decopatch"
+          }
+        },
+        "category_DECOPATCH_KITS001": {
+          "type": "category",
+          "settings": {
+            "title": "ערכות יצירה דקופאצ' Decopatch",
+            "collection": "decopatch-kits",
             "parent_collection": "decopatch"
           }
         },
@@ -1186,6 +1194,7 @@
         "category_erW36m",
         "category_xPemYD",
         "category_RUGhiF",
+        "category_DECOPATCH_KITS001",
         "category_wkmeNz",
         "category_hGtjjg",
         "category_tQfdK4",
