@@ -1445,6 +1445,11 @@
         "split_shipping_more_shipping_options": "אפשרויות שילוח נוספות",
         "split_shipping_shipment_number": "משלוח %{number}",
         "split_shipping_merchandise_quantity_label_inline_primary": "כמות: %{quantity}"
+      },
+      "throttle": {
+        "merchandise": {
+          "sold_out": "אזל"
+        }
       }
     },
     "page_titles": {
