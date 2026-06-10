@@ -264,19 +264,7 @@
     {%- assign lazy_load = true -%}
   {%- endif -%}
 
-  {% assign is_child_product = false %}
 
-  {% if item.object_type == 'product' %}
-    {% for tag in item.tags %}
-      {% assign clean_tag = tag | downcase | strip %}
-      {% if clean_tag contains 'group' and item.price > 0 %}
-        {% assign is_child_product = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-
-  {% unless is_child_product %}
     <li
       class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       {% if settings.animations_reveal_on_scroll %}
@@ -332,7 +320,7 @@
           </div>
       {%- endcase -%}
     </li>
-  {% endunless %}
+ 
 {%- endfor -%}
               </ul>
               {%- if paginate.pages > 1 -%}
