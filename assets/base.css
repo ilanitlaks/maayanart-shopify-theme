@@ -4160,3 +4160,12 @@ details-disclosure > details {
   width: 2.8rem;
   height: 2.8rem;
 }
+.shopify-section-header-sticky,
+.shopify-section-header-hidden,
+.section-header {
+  transition: transform 0.25s ease;
+}
+
+.shopify-section-header-hidden {
+  transform: translateY(-100%);
+}
