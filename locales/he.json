@@ -685,7 +685,7 @@
         "free_shipping_total_label": "חינם",
         "paid_label": "שולם",
         "payment_due_label": "תשלום במועד",
-        "vat_label_html": "כולל %{amount} במסים",
+        "vat_label_html": "כולל מע״מ בסך {{amount}}",
         "duties_included_label": "המחיר כולל מיסים ומכסים. אין חיובים נוספים בעת המסירה.",
         "discount_and_gift_card_savings_notice": "לאחר %{discount_amount} הנחות ו-%{gift_card_amount} כרטיסי מתנה",
         "discount_savings_notice": "לאחר %{discount_amount} הנחה",
@@ -825,7 +825,8 @@
       },
       "thank_you": {
         "fulfillment": {
-          "quantity_label": "כמות"
+          "quantity_label": "כמות",
+          "unfulfilled_table_title": "פריטים בהכנה למשלוח"
         },
         "contact_information_title": "פרטי יצירת קשר",
         "title": "תודה על הזמנתכם!",
@@ -838,7 +839,7 @@
         "confirmed_title": "ההזמנה התקבלה",
         "customer_information_title": "פרטי ההזמנה",
         "login_title": "התחברו לצפייה בכל פרטי ההזמנה",
-        "confirmed_items_count": "{{ confirmed_count }} פריטים אושרו מתוך {{ total_count }}",
+        "confirmed_items_count": "אושרו {{ confirmed_count }} מתוך {{ total_count }} פריטים",
         "confirmed": "ההזמנה אושרה",
         "thank_you_title_payment": "ההזמנה התקבלה",
         "thank_you_confirmed_order_with_email": "תקבלו בקרוב הודעת אישור במייל הכוללת את מספר ההזמנה.",
@@ -855,7 +856,12 @@
         "thank_you_confirmed_order_with_email_and_phone_pick_up": "תקבלו הודעת מייל והודעת טקסט כאשר ההזמנה תהיה מוכנה לאיסוף.",
         "thank_you_confirmed_order_with_missing": "צרו איתנו קשר במייל או בטלפון לקבלת אישור הזמנה.",
         "thank_you_payments_app_pending_payment_description_provider_action_required_default": "ההזמנה התקבלה. ניצור עמכם קשר טלפוני להשלמת התשלום לפני הכנת ההזמנה.",
-        "shipping_address_title": "כתובת למשלוח"
+        "shipping_address_title": "כתובת למשלוח",
+        "breadcrumbs_confirmed": "אושר",
+        "unfulfilled_items_title": "ההזמנה בהכנה למשלוח",
+        "unfulfilled_items_description": "אנו מכינים כעת את הפריטים למשלוח.",
+        "view_business_customer_account": "לחשבון שלי",
+        "billing_address_title": "כתובת חיוב"
       },
       "marketing": {
         "disclaimer": {
@@ -1274,7 +1280,8 @@
         "billing_address_title": "כתובת חיוב",
         "different_billing_address_label": "השתמש בכתובת חיוב שונה",
         "billing_address_associated_with_mandate_info": "אם ברצונך לשנות את כתובת החיוב, יש להסיר ולהזין מחדש את פרטי כרטיס האשראי.",
-        "billing_address_rollup_accessibility_label": "אפשרויות כתובת חיוב"
+        "billing_address_rollup_accessibility_label": "אפשרויות כתובת חיוב",
+        "fact_billing_address_label": "כתובת חיוב"
       },
       "field_errors": {
         "address_subdistrict_blank": "הזן נפה",
@@ -1526,7 +1533,10 @@
         "message": "תודה שבחרתם במעיין היצירה."
       },
       "notice_banner": {
-        "payment_method_not_available_with_review_requirement": "אמצעי התשלום שבחרתם אינו זמין עוד, מכיוון שהתשלום יתבצע לאחר אישור ההזמנה."
+        "payment_method_not_available_with_review_requirement": "אמצעי התשלום שבחרתם אינו זמין עוד, מכיוון שהתשלום יתבצע לאחר אישור ההזמנה.",
+        "individual_violations_title": {
+          "PaymentViolations": "כתובת חיוב"
+        }
       },
       "one": {
         "errors": {
@@ -1546,6 +1556,12 @@
       },
       "billing": {
         "same_as_shipping": "זהה לכתובת המשלוח"
+      },
+      "split_delivery": {
+        "items_for_shipping": "הפריטים נמצאים בהכנה למשלוח"
+      },
+      "payment_summary": {
+        "billing_address_title": "כתובת חיוב"
       }
     },
     "page_titles": {
@@ -1642,7 +1658,8 @@
       "order_list": {
         "column_headers": {
           "products_accessibility_label": "כל המוצרים",
-          "total": "סה״כ"
+          "total": "סה״כ",
+          "order": "הזמנה"
         },
         "filter_title": "סינון",
         "carousel": {
@@ -1653,12 +1670,19 @@
             "ascending": "סכום הזמנה (מהנמוך לגבוה)",
             "descending": "סכום הזמנה (מהגבוה לנמוך)"
           }
-        }
+        },
+        "orders_title": "אושר",
+        "order_number": "הזמנה  {{name}}"
       },
       "order_status": {
         "confirmed_title": "ההזמנה התקבלה",
         "expected_by": "צפי למסירה עד {{date}}",
-        "was_expected_by": "מועד המסירה המשוער היה {{date}}"
+        "was_expected_by": "מועד המסירה המשוער היה {{date}}",
+        "confirmed_label": "אושר",
+        "confirmed_description_pickup": "תקבלו הודעת דוא״ל כאשר ההזמנה תהיה מוכנה לאיסוף.",
+        "confirmed_description_digital": "תקבלו הודעת דוא״ל כאשר ההזמנה תהיה מוכנה.",
+        "confirmed_description_gift_card_text": "תקבלו הודעת טקסט כאשר ההזמנה תהיה מוכנה.",
+        "preparing_for_shipping_label": "בהכנה למשלוח"
       },
       "buy_again": "הזמן שוב",
       "buy_again_accessibility_label": "הזמן שוב את פריטי הזמנה מספר {{orderId}}"
@@ -1701,7 +1725,24 @@
         "returned_with_quantities": "הוחזרו {{delta}} מתוך {{total}}",
         "removed_with_quantities": "הוסרו {{delta}} מתוך {{total}}"
       },
-      "taxes_included": "כולל {{amount}} מסים"
+      "taxes_included": "כולל מע״מ בסך {{amount}}",
+      "shipping": {
+        "address": "כתובת משלוח",
+        "address_map_marker": "כתובת משלוח",
+        "method": "שיטת משלוח",
+        "summary": "משלוח",
+        "free": "חינם",
+        "free_shipping_discount": "משלוח חינם",
+        "one_time": "משלוח חד-פעמי",
+        "subscription": "משלוח למנוי"
+      },
+      "pickup": {
+        "pickup": "איסוף עצמי",
+        "pickup_location": "מיקום האיסוף",
+        "pickup_point": "מיקום האיסוף"
+      },
+      "billing_address": "כתובת חיוב",
+      "subtitle": "אושר ב־{{date}}"
     },
     "callback": {
       "try_again": "נסה שוב"
@@ -1715,7 +1756,8 @@
           "pending": {
             "description_waiting_for_manual_payment": "הזמנה זו ממתינה להשלמת התשלום. יתרת ההזמנה תתעדכן לאחר קבלת התשלום."
           }
-        }
+        },
+        "draft_order_subtitle": "טיוטת ההזמנה {{draftOrderName}} אושרה ב־{{date}}"
       }
     }
   }
