@@ -895,7 +895,9 @@
       },
       "review": {
         "blocks": {
-          "change_contact_method_link_label": "שינוי פרטי יצירת קשר"
+          "change_contact_method_link_label": "שינוי פרטי יצירת קשר",
+          "payment_method_title": "אמצעי תשלום",
+          "change_payment_method_link_label": "שנה אמצעי תשלום"
         }
       },
       "wallets": {
@@ -1536,6 +1538,11 @@
         "payment_method_not_available_with_review_requirement": "אמצעי התשלום שבחרתם אינו זמין עוד, מכיוון שהתשלום יתבצע לאחר אישור ההזמנה.",
         "individual_violations_title": {
           "PaymentViolations": "כתובת חיוב"
+        },
+        "validation_errors_banner": {
+          "section_label": {
+            "payment": "תשלום"
+          }
         }
       },
       "one": {
@@ -1562,10 +1569,15 @@
       },
       "payment_summary": {
         "billing_address_title": "כתובת חיוב"
+      },
+      "customer_payment_methods": {
+        "page_title": "אמצעי תשלום",
+        "title": "אמצעי תשלום"
       }
     },
     "page_titles": {
-      "products": "כל המוצרים"
+      "products": "כל המוצרים",
+      "order": "הזמנה  {{name}}"
     },
     "email_marketing": {
       "open_tracking": {
@@ -1742,7 +1754,11 @@
         "pickup_point": "מיקום האיסוף"
       },
       "billing_address": "כתובת חיוב",
-      "subtitle": "אושר ב־{{date}}"
+      "subtitle": "אושר ב־{{date}}",
+      "title": "הזמנה  {{name}}",
+      "payment": {
+        "title": "פרטי התשלום"
+      }
     },
     "callback": {
       "try_again": "נסה שוב"
@@ -1757,7 +1773,8 @@
             "description_waiting_for_manual_payment": "הזמנה זו ממתינה להשלמת התשלום. יתרת ההזמנה תתעדכן לאחר קבלת התשלום."
           }
         },
-        "draft_order_subtitle": "טיוטת ההזמנה {{draftOrderName}} אושרה ב־{{date}}"
+        "draft_order_subtitle": "טיוטת ההזמנה {{draftOrderName}} אושרה ב־{{date}}",
+        "title": "הזמנה  {{name}}"
       }
     }
   }
