@@ -359,7 +359,7 @@
       "title": "כותרת עמוד"
     },
     "quick_order_list": {
-      "product_total": "סכום ביניים למוצר",
+      "product_total": "סה״כ למוצר",
       "view_cart": "צפייה בעגלה",
       "each": "{{ money }} ליחידה",
       "product": "מוצר",
@@ -470,7 +470,7 @@
       "tracking_url": "קישור למעקב",
       "tracking_company": "חברת משלוחים",
       "tracking_number": "מספר מעקב",
-      "subtotal": "סכום ביניים",
+      "subtotal": "סה״כ ",
       "total_duties": "מכס"
     },
     "orders": {
@@ -746,7 +746,10 @@
           "due_today": "סה\"כ לתשלום היום",
           "due_today_next": "לתשלום היום",
           "due_later": "סך הכל לתשלום %{due_at}",
-          "due_on_fulfillment": "סה\"כ לתשלום בעת המימוש"
+          "due_on_fulfillment": "סה\"כ לתשלום בעת המימוש",
+          "due_on_receipt": "סה״כ לתשלום עם קבלת ההזמנה",
+          "due_later_checkout_to_draft": "סה״כ לתשלום במועד מאוחר יותר",
+          "total_paid": "סה״כ שולם"
         },
         "title": "סיכום הזמנה",
         "group_title_label": "חלק מ-\"%{group_title}\"",
@@ -813,13 +816,46 @@
         "customer_does_not_meet_discount_requirements_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">%{code}</strong> אינו זמין עבורך כרגע",
         "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> קוד קופון דורש לקוח זכאי",
         "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> קוד הנחה אינו זמין עבור כתובת המשלוח שלך",
-        "customer_already_used_once_per_customer_discount_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">%{code}</strong> כבר נוצל"
+        "customer_already_used_once_per_customer_discount_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">%{code}</strong> כבר נוצל",
+        "total_updated_label_with_price": "סה״כ מעודכן: {{ totalPrice }}",
+        "deferred_total_due_date_label": "סה״כ לתשלום עד {{date}}",
+        "deferred_total_due_date_label_next": "לתשלום עד {{ date }}",
+        "alternative_payment_currency_total": "החיוב יתבצע בסך {{ amount_due }}",
+        "due_on_fulfillment": "לתשלום בעת המימוש"
       },
       "thank_you": {
         "fulfillment": {
           "quantity_label": "כמות"
         },
-        "contact_information_title": "פרטי יצירת קשר"
+        "contact_information_title": "פרטי יצירת קשר",
+        "title": "תודה על הזמנתכם!",
+        "page_title": "תודה, {{ display_name }}!",
+        "page_title_no_name": "תודה!",
+        "thank_you_title": "ההזמנה שלך התקבלה",
+        "thank_you_confirmed_order_with_draft": "נעדכן אתכם אם נזדקק למידע נוסף או כאשר ההזמנה תאושר.",
+        "thank_you_confirmed_order_with_draft_payment": "נעדכן אתכם אם נזדקק למידע נוסף או כאשר ההזמנה תאושר.",
+        "thank_you_confirmed_order_with_draft_pick_up": "נעדכן אתכם אם נזדקק למידע נוסף או כאשר ההזמנה תאושר.",
+        "confirmed_title": "ההזמנה התקבלה",
+        "customer_information_title": "פרטי ההזמנה",
+        "login_title": "התחברו לצפייה בכל פרטי ההזמנה",
+        "confirmed_items_count": "{{ confirmed_count }} פריטים אושרו מתוך {{ total_count }}",
+        "confirmed": "ההזמנה אושרה",
+        "thank_you_title_payment": "ההזמנה התקבלה",
+        "thank_you_confirmed_order_with_email": "תקבלו בקרוב הודעת אישור במייל הכוללת את מספר ההזמנה.",
+        "thank_you_confirmed_order_with_phone": "תקבלו בקרוב הודעת טקסט הכוללת את מספר ההזמנה.",
+        "thank_you_confirmed_order_with_email_and_phone": "תקבלו בקרוב הודעת אישור במייל ובהודעת טקסט הכוללת את מספר ההזמנה.",
+        "thank_you_confirmed_orders_with_email": "תקבלו בקרוב הודעות אישור נפרדות במייל עם מספרי ההזמנות.",
+        "thank_you_confirmed_orders_with_phone": "תקבלו בקרוב הודעות טקסט נפרדות עם מספרי ההזמנות.",
+        "thank_you_confirmed_orders_with_email_and_phone": "תקבלו בקרוב הודעות אישור נפרדות במייל ובהודעות טקסט עם מספרי ההזמנות.",
+        "thank_you_confirmed_order_with_email_payment": "בוצע תשלום עבור ההזמנה בתאריך {{ date }}.",
+        "thank_you_confirmed_order_with_phone_payment": "בוצע תשלום עבור ההזמנה בתאריך {{ date }}.",
+        "thank_you_confirmed_order_with_email_and_phone_payment": "בוצע תשלום עבור ההזמנה בתאריך {{ date }}.",
+        "thank_you_confirmed_order_with_email_pick_up": "תקבלו הודעת מייל כאשר ההזמנה תהיה מוכנה לאיסוף.",
+        "thank_you_confirmed_order_with_phone_pick_up": "תקבלו הודעת טקסט כאשר ההזמנה תהיה מוכנה לאיסוף.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "תקבלו הודעת מייל והודעת טקסט כאשר ההזמנה תהיה מוכנה לאיסוף.",
+        "thank_you_confirmed_order_with_missing": "צרו איתנו קשר במייל או בטלפון לקבלת אישור הזמנה.",
+        "thank_you_payments_app_pending_payment_description_provider_action_required_default": "ההזמנה התקבלה. ניצור עמכם קשר טלפוני להשלמת התשלום לפני הכנת ההזמנה.",
+        "shipping_address_title": "כתובת למשלוח"
       },
       "marketing": {
         "disclaimer": {
@@ -862,7 +898,8 @@
             "contact_info": "פרטי יצירת קשר"
           },
           "subscription_review_required": "ההזמנה שלך כוללת מנוי. עליך לעיין בתנאים שלהלן לפני השלמת ההזמנה."
-        }
+        },
+        "recovery_notice": "יש בעיה בפרטי ההזמנה. אנא עדכנו את המידע כדי להשלים את התשלום."
       },
       "contextual_availability": {
         "unavailable_label": "זמינות",
@@ -1012,6 +1049,9 @@
             "fulfillment_constraints_not_satisfied": "אחד או יותר מתנאי המילוי לא התקיימו.",
             "must_fulfill_from_constraint_not_satisfied": "לא ניתן לעמוד בתנאי המילוי מכיוון שלא ניתן לספק את הפריטים מהמיקומים הנדרשים.",
             "must_fulfill_from_same_location_constraint_not_satisfied": "לא ניתן לעמוד בתנאי המילוי מכיוון שלא ניתן לספק את הפריטים מאותו מיקום."
+          },
+          "payment": {
+            "payment_instrument_not_found": "לא ניתן למצוא את אמצעי התשלום."
           }
         },
         "continue_to_payment_plans_button_label": "המשך לתוכניות תשלום",
@@ -1217,17 +1257,42 @@
         "alipay_label": "אליפיי",
         "vault_for_payment_later": {
           "notice": "לא תחויב כעת. על ידי המשך התשלום, הנך מסכים שאמצעי התשלום שלך יחויב באופן אוטומטי בעת עיבוד הזמנתך."
-        }
+        },
+        "title": "תשלום",
+        "amount_left_to_pay_label": "יתרה לתשלום:",
+        "discount_button_action_label": "החלת קוד הנחה",
+        "gift_card_code_label": "קוד כרטיס מתנה",
+        "apply_gift_card_button_label": "החל",
+        "gift_card_balance_label": "יתרה:",
+        "supported_card_brands_more_label": "ועוד...",
+        "detected_card_brand": "סוג הכרטיס שזוהה: {{brand}}",
+        "credit_card_vaulting_sign_in_banner_title": "שמירת כרטיס האשראי",
+        "credit_card_vaulting_sign_in_banner_info": "התחברו או צרו חשבון כדי לשמור את כרטיס האשראי לרכישות עתידיות.",
+        "credit_card_vaulting_sign_in_banner_button_label": "התחברות",
+        "same_billing_address_label": "כתובת החיוב זהה לכתובת המשלוח",
+        "payment_method_not_available_for_shipping_address_error": "אמצעי התשלום אינו זמין עבור כתובת המשלוח שנבחרה. יש לבחור אמצעי תשלום אחר.",
+        "billing_address_title": "כתובת חיוב",
+        "different_billing_address_label": "השתמש בכתובת חיוב שונה",
+        "billing_address_associated_with_mandate_info": "אם ברצונך לשנות את כתובת החיוב, יש להסיר ולהזין מחדש את פרטי כרטיס האשראי.",
+        "billing_address_rollup_accessibility_label": "אפשרויות כתובת חיוב"
       },
       "field_errors": {
         "address_subdistrict_blank": "הזן נפה",
         "address_subdistrict_too_long": "מחוז משנה ארוך מדי (מקסימום {{count}} תווים)",
         "address_subdistrict_contains_emojis": "תת-מחוז אינו יכול להכיל סמלי אימוג'י",
         "address_subdistrict_contains_html_tags": "מחוז משנה אינו יכול להכיל תגיות HTML.",
-        "address_subdistrict_contains_mathematical_symbols": "תת-מחוז אינו יכול להכיל סימנים מתמטיים"
+        "address_subdistrict_contains_mathematical_symbols": "תת-מחוז אינו יכול להכיל סימנים מתמטיים",
+        "payment_gateway_missing": "בחרו אמצעי תשלום.",
+        "payment_gateway_needs_paid_plan_error": "אמצעי תשלום זה אינו זמין בחנות כרגע.",
+        "payment_gateway_unsupported_for_subscriptions": "אמצעי תשלום זה אינו זמין עבור הזמנות מנוי.",
+        "payment_gateway_unsupported_for_deferred_purchase_options": "אמצעי תשלום זה אינו זמין עבור אפשרויות תשלום נדחה.",
+        "payment_gateway_unsupported_for_country": "אמצעי תשלום זה אינו זמין עבור מדינת המשלוח שנבחרה.",
+        "vaulting_agreement_blank": "יש לשמור את אמצעי התשלום, מכיוון שיתרת התשלום עבור הזמנה זו תשולם במועד מאוחר יותר."
       },
       "payment_errors": {
-        "missing_cvc": "הזן קוד אבטחה"
+        "missing_cvc": "הזן קוד אבטחה",
+        "order_total_changed": "סכום ההזמנה השתנה. אנא בדקו את ההזמנה ונסו שוב.",
+        "paypal_over_capture": "סכום ההזמנה עודכן. שלמו באמצעות {{walletName}} כדי להשלים את ההזמנה."
       },
       "local_pickup": {
         "location_closest_other_items": "המיקום הקרוב ביותר עם הפריטים שלך",
@@ -1394,8 +1459,8 @@
         "shipping_address_rollup_accessibility_label": "אפשרויות כתובת למשלוח",
         "third_party_address_timeout": "לא ניתן לטעון כתובות. נסה שוב או השתמש בכתובת אחרת.",
         "third_party_address_error": "אירעה שגיאה בטעינת בחירת הכתובת. אנא הזן את הכתובת שלך באופן ידני למטה.",
-        "third_party_payment_timeout": ".לא ניתן לטעון אמצעי תשלום. נסה שוב או השתמש באמצעי תשלום אחר",
-        "third_party_payment_error": "אירעה שגיאה בעת טעינת בחירת התשלום. השתמש בשיטת תשלום אחרת.",
+        "third_party_payment_timeout": "אירעה שגיאה בעת עיבוד התשלום. נסו שוב או השתמשו באמצעי תשלום אחר.",
+        "third_party_payment_error": "אירעה שגיאה בעת עיבוד התשלום. נסו שוב או השתמשו באמצעי תשלום אחר.",
         "add_address": "השתמש/י בכתובת אחרת",
         "add_delivery_instructions": "הוסף הוראות למשלוח",
         "edit": "ערוך",
@@ -1444,12 +1509,43 @@
         "split_shipping_multiple_shipment_notice_one_time_purchase": "ההזמנה שלך תגיע ב-%{quantity} משלוחים",
         "split_shipping_more_shipping_options": "אפשרויות שילוח נוספות",
         "split_shipping_shipment_number": "משלוח %{number}",
-        "split_shipping_merchandise_quantity_label_inline_primary": "כמות: %{quantity}"
+        "split_shipping_merchandise_quantity_label_inline_primary": "כמות: %{quantity}",
+        "title": "משלוח",
+        "delivery_title": "משלוח",
+        "shipping_method_notice": "שיטת משלוח",
+        "shipping_method_rollup_accessibility_label": "אפשרויות משלוח",
+        "shipping_method_one_time_purchase_group_title": "רכישה חד-פעמית",
+        "shipping_method_title": "שיטת משלוח"
       },
       "throttle": {
         "merchandise": {
           "sold_out": "אזל"
         }
+      },
+      "tips": {
+        "message": "תודה שבחרתם במעיין היצירה."
+      },
+      "notice_banner": {
+        "payment_method_not_available_with_review_requirement": "אמצעי התשלום שבחרתם אינו זמין עוד, מכיוון שהתשלום יתבצע לאחר אישור ההזמנה."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "subtotal_limit_reached": "לא ניתן להוסיף פריטים נוספים להזמנה זו."
+          }
+        }
+      },
+      "change_currency": {
+        "payment_total_label": "סה״כ תשלום"
+      },
+      "order_payment_collection": {
+        "additional_payment_requested": "נדרש תשלום נוסף בסך {{ total_outstanding }}"
+      },
+      "processing": {
+        "remote_checkout_count": "{{ current }} מתוך {{ total }}"
+      },
+      "billing": {
+        "same_as_shipping": "זהה לכתובת המשלוח"
       }
     },
     "page_titles": {
@@ -1460,6 +1556,9 @@
         "no_longer_track": {
           "privacy_policy": "לאחר שליחת האימייל עודכנה מדיניות הפרטיות שלנו, ואיננו עוקבים עוד אחר פתיחת הודעות."
         }
+      },
+      "subscribed": {
+        "confirmation": "תודה שנרשמתם לרשימת התפוצה שלנו."
       }
     },
     "search": {
@@ -1542,10 +1641,27 @@
     "orders": {
       "order_list": {
         "column_headers": {
-          "products_accessibility_label": "כל המוצרים"
+          "products_accessibility_label": "כל המוצרים",
+          "total": "סה״כ"
         },
-        "filter_title": "סינון"
-      }
+        "filter_title": "סינון",
+        "carousel": {
+          "view_order_details": "צפייה בפרטי ההזמנה"
+        },
+        "sort": {
+          "order_total": {
+            "ascending": "סכום הזמנה (מהנמוך לגבוה)",
+            "descending": "סכום הזמנה (מהגבוה לנמוך)"
+          }
+        }
+      },
+      "order_status": {
+        "confirmed_title": "ההזמנה התקבלה",
+        "expected_by": "צפי למסירה עד {{date}}",
+        "was_expected_by": "מועד המסירה המשוער היה {{date}}"
+      },
+      "buy_again": "הזמן שוב",
+      "buy_again_accessibility_label": "הזמן שוב את פריטי הזמנה מספר {{orderId}}"
     },
     "navigation_and_structure": {
       "contact_link": "פרטי יצירת קשר"
@@ -1554,13 +1670,53 @@
       "contact_information": "פרטי יצירת קשר",
       "returns": {
         "return_and_refund_modal_header": "מדיניות החזרות"
-      }
+      },
+      "payment_confirmation": {
+        "payment_received": "תודה! התקבל תשלום בסך {{amount}}.",
+        "full_payment_received": "תודה! התקבל תשלום בסך {{amount}}, וההזמנה שולמה במלואה.",
+        "payment_authorized": "תודה! ההזמנה התקבלה. ניצור עמכם קשר טלפוני להשלמת התשלום לפני הכנת ההזמנה."
+      },
+      "order_details": "פרטי ההזמנה",
+      "order_details_skeleton_accessibility_label": "התחברו לצפייה בכל פרטי ההזמנה.",
+      "loading_finished_accessibility_message": "פרטי ההזמנה נטענו בהצלחה",
+      "loading": "טוען את פרטי ההזמנה",
+      "login_to_view_all_order_details": "התחברו לצפייה בכל פרטי ההזמנה.",
+      "login_card": {
+        "title": "גישה לפרטי ההזמנה",
+        "resend_link_and_login": "כדי לצפות בפרטי ההזמנה, התחברו או שלחו קישור חדש לכתובת המייל או למספר הטלפון ששימשו בעת ההזמנה.",
+        "resend_link_only": "כדי לצפות בפרטי ההזמנה, שלחו קישור חדש לכתובת המייל או למספר הטלפון ששימשו בעת ההזמנה."
+      },
+      "subtotal": "סיכום ביניים",
+      "subtotal_label_with_quantity": {
+        "one": "סיכום ביניים ({{count}} פריט)",
+        "other": "סיכום ביניים ({{count}} פריטים)"
+      },
+      "total_savings": "חיסכון כולל",
+      "summary_totals_title_accessibility_label": "סיכום ההזמנה",
+      "duties_and_taxes_included": "הסכום כולל מסים ומכסים. לא יחולו חיובים נוספים בעת המסירה.",
+      "ok_duties_tooltip": "הזמנה זו נשלחת ממדינה אחרת ולכן נוספו מכסים לסכום ההזמנה.",
+      "total": "סה״כ",
+      "adjusted_total": "סה״כ לאחר התאמות",
+      "edit_summary": {
+        "returned_with_quantities": "הוחזרו {{delta}} מתוך {{total}}",
+        "removed_with_quantities": "הוסרו {{delta}} מתוך {{total}}"
+      },
+      "taxes_included": "כולל {{amount}} מסים"
     },
     "callback": {
       "try_again": "נסה שוב"
     },
     "date": {
       "range": "{{startDate}}–{{endDate}}"
+    },
+    "B2B": {
+      "draft_order_details": {
+        "payment_status": {
+          "pending": {
+            "description_waiting_for_manual_payment": "הזמנה זו ממתינה להשלמת התשלום. יתרת ההזמנה תתעדכן לאחר קבלת התשלום."
+          }
+        }
+      }
     }
   }
 }
