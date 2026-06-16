@@ -3197,8 +3197,6 @@ details-disclosure > details {
   border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
   color: rgb(var(--color-badge-foreground));
   word-break: break-word;
-  outline: 2px dashed rgb(var(--color-badge-foreground));
-  outline-offset: -0.4rem;
 }
 
 .gradient {
