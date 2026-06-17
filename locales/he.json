@@ -158,7 +158,7 @@
         "note": "קיים מחיר לפי כמות",
         "minimum": "{{ quantity }}+",
         "price_at_each_html": "{{ price }} ליחידה",
-        "price_range": "{{ minimum }} - {{ maximum }}"
+        "price_range": "{{ minimum }}-{{ maximum }}"
       },
       "pickup_availability": {
         "view_store_info": "צפייה בפרטי החנות",
@@ -179,7 +179,7 @@
       "sold_out": "אזל המלאי",
       "unavailable": "המוצר לא זמין",
       "vendor": "יצרן",
-      "value_unavailable": "{{ option_value }} - לא זמין",
+      "value_unavailable": "{{ option_value }}- לא זמין",
       "variant_sold_out_or_unavailable": "האפשרות אינה זמינה או אזלה מהמלאי",
       "video_exit_message": "{{ title }} פותח את הווידאו במסך מלא באותו חלון",
       "view_full_details": "צפה בפרטים מלאים",
@@ -470,7 +470,7 @@
       "tracking_url": "קישור למעקב",
       "tracking_company": "חברת משלוחים",
       "tracking_number": "מספר מעקב",
-      "subtotal": "סה״כ ",
+      "subtotal": "סה״כ",
       "total_duties": "מכס"
     },
     "orders": {
@@ -557,7 +557,7 @@
         "return_to_store_label": "חזור לחנות",
         "continue_cta_label": "המשך תשלום",
         "item_label": {
-          "one": "פריט {{count}}",
+          "one": "פריט {{ count }}",
           "other": "{{ count }} פריטים"
         },
         "empty_cart_label": "העגלה שלך ריקה",
@@ -640,8 +640,8 @@
           "other": "אין חנויות זמינות עם הפריטים שלך"
         },
         "pickup_unavailable_banner_title_with_country": {
-          "one": "אין חנויות זמינות ב - { {country }} עם הפריט שלך",
-          "other": "אין חנויות זמינות ב - {{ country }} עם הפריטים שלך"
+          "one": "אין חנויות זמינות ב -{{country }} עם הפריט שלך",
+          "other": "אין חנויות זמינות ב -{{ country }} עם הפריטים שלך"
         },
         "pickup_unavailable_banner_body": {
           "ship_to_address": "לשלוח לכתובת",
@@ -687,9 +687,9 @@
         "payment_due_label": "תשלום במועד",
         "vat_label_html": "כולל מע״מ בסך {{amount}}",
         "duties_included_label": "המחיר כולל מיסים ומכסים. אין חיובים נוספים בעת המסירה.",
-        "discount_and_gift_card_savings_notice": "לאחר {{ discount_amount }} הנחות ו- {{gift_card_amount }} כרטיסי מתנה",
+        "discount_and_gift_card_savings_notice": "לאחר {{ discount_amount }} הנחות ו-{{ gift_card_amount }} כרטיסי מתנה",
         "discount_savings_notice": "לאחר {{ discount_amount }} הנחה",
-        "gift_card_savings_notice": "לאחר מימוש כרטיסי מתנה בסך {{gift_card_amount}",
+        "gift_card_savings_notice": "לאחר מימוש כרטיסי מתנה בסך {{ gift_card_amount }}",
         "cost_table_title": "סיכום עלויות",
         "cost_table_item_column_header": "פריט",
         "cost_table_value_column_header": "ערך",
@@ -733,39 +733,39 @@
         "deferred_payment_info": {
           "title": "תשלום בסך {{ amount_due }} נדרש עד {{ due_at }}",
           "description_html": "לשאלות בנוגע להזמנה שלך, {{ contact_us }}.",
-          "paid_today": "סה\"ك שולם היום",
+          "paid_today": "סה״כ שולם היום",
           "paid_today_next": "שולם היום",
           "due_on_fulfillment_title": "תשלום בסך {{ amount_due }} ישולם עם מילוי התנאים",
           "due_on_receipt_title": "תשלום בסך {{ amount_due }} נדרש עם קבלת החשבון"
         },
         "deferred_balance_info": {
-          "title": "יתרת החוב בסך {{amount_due}} לתשלום עד לתאריך {{due_at}}",
-          "due_on_fulfillment_title": "יתרת תשלום בסך {{amount_due}} תשולם עם המסירה"
+          "title": "יתרת החוב בסך {{amount_due }} לתשלום עד לתאריך {{due_at }}",
+          "due_on_fulfillment_title": "יתרת תשלום בסך {{amount_due }} תשולם עם המסירה"
         },
         "payment_terms_totals": {
           "due_today": "סה\"כ לתשלום היום",
           "due_today_next": "לתשלום היום",
-          "due_later": "סך הכל לתשלום {{due_at}}",
+          "due_later": "סך הכל לתשלום {{ due_at }}",
           "due_on_fulfillment": "סה\"כ לתשלום בעת המימוש",
           "due_on_receipt": "סה״כ לתשלום עם קבלת ההזמנה",
           "due_later_checkout_to_draft": "סה״כ לתשלום במועד מאוחר יותר",
           "total_paid": "סה״כ שולם"
         },
         "title": "סיכום הזמנה",
-        "group_title_label": "חלק מ-\"{{group_title}}\"",
+        "group_title_label": "חלק מ-\"{{ group_title }}\"",
         "for_add_on": "עבור: {{ group_title }}",
         "from_shop_heading": "מאת {{ shop_name }}",
         "from_other_stores_heading": "מחנויות אחרות",
         "from_multiple_stores_heading": "מחנויות שונות",
         "number_items": {
-          "one": "{{count}} פריט",
-          "other": "פריטים: {{count}}"
+          "one": "{{ count }} פריט",
+          "other": "פריטים: {{ count }}"
         },
         "view_all_items": {
           "one": "הצג פריט אחד",
           "other": "הצג את כל {{ count }} הפריטים"
         },
-        "order_name_label": "הזמנה {{name}}",
+        "order_name_label": "הזמנה {{ name }}",
         "shopping_cart_label": "עגלת קניות",
         "discount_title": "הנחה",
         "discount_title_stacking": {
@@ -780,12 +780,12 @@
         "discount_not_found": "לא ניתן למצוא קוד הנחה תקין התואם את הקוד שהוזן",
         "discount_placeholder": "קוד הנחה",
         "discount_code_applied": "קוד קופון הוחל",
-        "discount_code_applied_with_code": "קוד ההנחה {{code}} הופעל",
-        "discount_code_removed": "קוד ההנחה {{code}} הוסר",
-        "discount_code_replaced": "קוד ההנחה {{old_code}} הוסר ו-{{code}} הופעל",
-        "discount_code_replaced_multiple": "מספר קודי הנחה הוסרו ו-{{code}} הוחל",
-        "discount_code_allocations_mismatch": "קוד ההנחה שלך <strong style=\"text-transform:uppercase\">{{code}}</strong> השתנה. עיין שוב בעגלה ונסה שוב.",
-        "order_discounts_apply_to_local_shop": "הנחות בהזמנה חלות רק על פריטים מ - {{ shop_name }}",
+        "discount_code_applied_with_code": "קוד ההנחה {{ code }} הופעל",
+        "discount_code_removed": "קוד ההנחה {{ code }} הוסר",
+        "discount_code_replaced": "קוד ההנחה {{ old_code }} הוסר ו-{{ code }} הופעל",
+        "discount_code_replaced_multiple": "מספר קודי הנחה הוסרו ו-{{ code }} הוחל",
+        "discount_code_allocations_mismatch": "קוד ההנחה שלך <strong style=\"text-transform:uppercase\">{{ code }}</strong> השתנה. עיין שוב בעגלה ונסה שוב.",
+        "order_discounts_apply_to_local_shop": "הנחות בהזמנה חלות רק על פריטים מ -{{ shop_name }}",
         "gift_card_applied": "כרטיס המתנה יושם",
         "enter_shipping_address": "הכנס כתובת למשלוח",
         "gift_card_title": "גיפט קארד",
@@ -794,7 +794,7 @@
         "gift_card_and_discount_title": "קוד הנחה או כרטיס מתנה",
         "gift_card_and_discount_label": "קוד הנחה או כרטיס מתנה",
         "gift_card_and_discount_placeholder": "קוד הנחה או כרטיס מתנה",
-        "gift_cards_apply_to_local_shop": "כרטיסי מתנה חלים רק על פריטים מ - {{ shop_nam e}}",
+        "gift_cards_apply_to_local_shop": "כרטיסי מתנה חלים רק על פריטים מ -{{ shop_name }}",
         "add_discount_or_gift_card": "הוסף קוד הנחה או כרטיס מתנה",
         "remove_gift_card_label": "נקה כרטיס מתנה",
         "remove_discount_label": "הסר הנחה",
@@ -812,13 +812,13 @@
         "gift_card_subscriptions_notice": "שוברים יחולו רק על התשלום הראשון שלך",
         "discount_already_applied": "הנחה כבר הוחלה על הזמנה זו. אין אפשרות להוסיף הנחה נוספת.",
         "cart_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">{{ code }}</strong> קוד הנחה לא תקף עבור הפריטים בעגלת הקניות שלך",
-        "discount_requires_customer_notice": "הזן את פרטי המשלוח שלך כדי להחיל את קוד ההנחה <strong style=\"text-transform:uppercase\">{{code}}</strong>",
-        "customer_does_not_meet_discount_requirements_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">{{code}}</strong> אינו זמין עבורך כרגע",
-        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">{{code}}</strong> קוד קופון דורש לקוח זכאי",
+        "discount_requires_customer_notice": "הזן את פרטי המשלוח שלך כדי להחיל את קוד ההנחה <strong style=\"text-transform:uppercase\">{{ code }}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">{{ code }}</strong> אינו זמין עבורך כרגע",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">{{ code }}</strong> קוד קופון דורש לקוח זכאי",
         "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">{{ code }}</strong> קוד הנחה אינו זמין עבור כתובת המשלוח שלך",
-        "customer_already_used_once_per_customer_discount_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">{{code}}</strong> כבר נוצל",
+        "customer_already_used_once_per_customer_discount_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">{{ code }}</strong> כבר נוצל",
         "total_updated_label_with_price": "סה״כ מעודכן: {{ totalPrice }}",
-        "deferred_total_due_date_label": "סה״כ לתשלום עד {{date}}",
+        "deferred_total_due_date_label": "סה״כ לתשלום עד {{ date }}",
         "deferred_total_due_date_label_next": "לתשלום עד {{ date }}",
         "alternative_payment_currency_total": "החיוב יתבצע בסך {{ amount_due }}",
         "due_on_fulfillment": "לתשלום בעת המימוש",
@@ -972,7 +972,7 @@
         "finalize_order_accessibility_label": "סיים הזמנה",
         "authenticate_purchase_button_label": "אמת תשלום",
         "edit_link_label": "ערוך",
-        "all_rights_reserved": "כל הזכויות שמורות ל-{{shop_name}}",
+        "all_rights_reserved": "כל הזכויות שמורות ל-{{ shop_name }}",
         "print_policies_link_label": "הדפס",
         "cart": "עגלה",
         "close_modal_label": "סגור",
@@ -991,7 +991,7 @@
         "contact_us_html": "צרו קשר לפרטים נוספים",
         "autocomplete_title": "הצעות",
         "autocomplete_single_item": "פריט 1 זמין",
-        "autocomplete_multi_item": "{{number}} פריטים זמינים",
+        "autocomplete_multi_item": "{{ number }} פריטים זמינים",
         "autocomplete_close": "סגור הצעות",
         "forwarding_indicator": {
           "new_window": "נפתח בחלון חדש.",
@@ -999,7 +999,7 @@
           "external_and_new_window": "פותח אתר חיצוני בחלון חדש."
         },
         "checkout_context": {
-          "step_one": "קופה - {{shop_name}}"
+          "step_one": "קופה -{{ shop_name }}"
         },
         "tooltip_accessibility_label": "מידע נוסף",
         "qr_code": "קוד QR",
@@ -1017,10 +1017,10 @@
             "bundle_products_not_supported_for_b2b": "אין אפשרות להוסיף פריטים בחבילה להזמנות B2B עבור מיקום זה.",
             "gift_card_quantity_mismatch": "כאשר מציינים קודי כרטיס מתנה, כמות פריטי השורה ומספר קודי כרטיסי המתנה חייבים להיות זהים.",
             "gift_card_not_supported": "כרטיסי מתנה אינם נתמכים בקופה זו.",
-            "gift_card_not_unique": "כרטיס מתנה עם הקוד {{code}} מופיע יותר מפעם אחת בתשלום זה. קודים מעוצבים לפני השוואה.",
-            "gift_card_used": "קוד גיפט קארד {{code}} כבר משויך לכרטיס מתנה. קודים מעוצבים לפני השוואה.",
-            "gift_card_invalid": "קוד כרטיס מתנה {{code}} אינו חוקי.",
-            "gift_card_code_changed": "קוד כרטיס המתנה {{proposed_code}} שונה ל-{{formatted_code}} כדי להתאים לכללי העיצוב.",
+            "gift_card_not_unique": "כרטיס מתנה עם הקוד {{ code }} מופיע יותר מפעם אחת בתשלום זה. קודים מעוצבים לפני השוואה.",
+            "gift_card_used": "קוד גיפט קארד {{ code }} כבר משויך לכרטיס מתנה. קודים מעוצבים לפני השוואה.",
+            "gift_card_invalid": "קוד כרטיס מתנה {{ code }} אינו חוקי.",
+            "gift_card_code_changed": "קוד כרטיס המתנה {{ proposed_code }} שונה ל-{{ formatted_code }} כדי להתאים לכללי העיצוב.",
             "gift_card_with_attributes_not_supported": "כרטיסי מתנה עם מאפיינים מותאמים אישית אינם נתמכים בקופה זו.",
             "gift_card_with_components_not_supported": "כרטיסי מתנה עם רכיבים אינם נתמכים בקופה זו.",
             "selling_plan_mismatch": "המינוי עודכן.",
@@ -1086,14 +1086,14 @@
         "back_button_label": "חזרה",
         "choose_delivery_strategy": "בחר/י שיטת משלוח",
         "autocomplete_zero_item": "אין פריטים זמינים",
-        "autocomplete_powered_by_google": "מופעל על ידי {{brandName}}",
+        "autocomplete_powered_by_google": "מופעל על ידי {{ brandName }}",
         "submit": "שלח",
         "processing": "מעבד…",
         "stepper": {
-          "increase": "הגבר {{type}}",
-          "decrease": "הפחתת {{type}}",
-          "minimum_reached": "מינימום של {{value}} הושג",
-          "maximum_reached": "הגעת למקסימום של {{value}}"
+          "increase": "הגבר {{ type }}",
+          "decrease": "הפחתת {{ type }}",
+          "minimum_reached": "מינימום של {{ value }} הושג",
+          "maximum_reached": "הגעת למקסימום של {{ value }}"
         },
         "remove_chip": "הסר פריט",
         "remove_item": "הסר את {{ label }}",
@@ -1133,16 +1133,16 @@
           }
         },
         "datepicker": {
-          "show_previous_month": "הצג חודש קודם, {{month}} {{year}}",
-          "show_next_month": "הצג את החודש הבא, {{month}} {{year}}",
+          "show_previous_month": "הצג חודש קודם, {{ month }} {{ year }}",
+          "show_next_month": "הצג את החודש הבא, {{ month }} {{ year }}",
           "range_start": "תחילת טווח",
           "in_range": "בטווח",
           "range_end": "סוף הטווח"
         },
         "map": {
           "cluster_title": {
-            "one": "אשכול של {{number}} סמנים",
-            "other": "אשכול של {{number}} סמנים"
+            "one": "אשכול של {{ number }} סמנים",
+            "other": "אשכול של {{ number }} סמנים"
           }
         },
         "sheet": {
@@ -1154,11 +1154,11 @@
           "dragged_over": "גרור קובץ להעלאה"
         },
         "full_price": "מחיר מלא:",
-        "title": "תשלום – {{shopName}}",
-        "full_title": "{{pageTitle}} – {{shopName}} – תשלום",
+        "title": "תשלום – {{ shopName }}",
+        "full_title": "{{ pageTitle }} – {{ shopName }} – תשלום",
         "loading": "טוען...",
-        "loading_title": "טוען את {{shopName}}",
-        "display_name": "{{firstName}} {{lastName}}",
+        "loading_title": "טוען את {{ shopName }}",
+        "display_name": "{{ firstName }} {{ lastName }}",
         "google_map_title": "מפת Google",
         "confirm_order_button_label": "אישור ההזמנה",
         "submit_order_button_label": "אישור ההזמנה",
@@ -1203,7 +1203,7 @@
         "optional_company_attention_label": "חברה/לידי (אופציונלי)",
         "optional_company_label": "חברה (אופציונלי)",
         "address1_label": "כתובת",
-        "address2_label": "דירה, סוויטה, וכדומה.",
+        "address2_label": "דירה, יחידה, קומה וכו׳ (לא חובה)",
         "optional_address2_label": "דירה, סוויטה וכו' (אופציונלי)",
         "city_label": "עיר",
         "suburb_label": "פרבר",
@@ -1252,7 +1252,7 @@
         "different_shipping_address_text": "השתמש/י בכתובת חד-פעמית עבור הזמנה זו",
         "change_company_location_link_label": "שנה מיקום חברה",
         "change_location_link_label": "שנה מיקום",
-        "ship_to_company": "שלח אל {{companyName}}"
+        "ship_to_company": "שלח אל {{ companyName }}"
       },
       "delivery_options": {
         "digital_product": "מוצר דיגיטלי",
@@ -1274,7 +1274,7 @@
         "pick_up_in_two_to_four_hours": "מוכן לאיסוף בעוד 4 שעות",
         "pick_up_immediately": "מוכן לאיסוף עכשיו",
         "pick_up_next_day": "מוכן לאיסוף ביום למחרת",
-        "pickup_point_method_definition": "שלח לנקודת איסוף",
+        "pickup_point_method_definition": "משלוח לנקודת איסוף",
         "retail_method_definition": "משלוח קמעונאי",
         "company_location_no_address_banner": "הזמנות הנשלחות למיקומים ללא כתובת יישלחו לבדיקה.",
         "none_method_definition": "אין משלוח",
@@ -1293,7 +1293,7 @@
         "apply_gift_card_button_label": "החל",
         "gift_card_balance_label": "יתרה:",
         "supported_card_brands_more_label": "ועוד...",
-        "detected_card_brand": "סוג הכרטיס שזוהה: {{brand}}",
+        "detected_card_brand": "סוג הכרטיס שזוהה: {{ brand }}",
         "credit_card_vaulting_sign_in_banner_title": "שמירת כרטיס האשראי",
         "credit_card_vaulting_sign_in_banner_info": "התחברו או צרו חשבון כדי לשמור את כרטיס האשראי לרכישות עתידיות.",
         "credit_card_vaulting_sign_in_banner_button_label": "התחברות",
@@ -1307,7 +1307,7 @@
       },
       "field_errors": {
         "address_subdistrict_blank": "הזן נפה",
-        "address_subdistrict_too_long": "מחוז משנה ארוך מדי (מקסימום {{count}} תווים)",
+        "address_subdistrict_too_long": "מחוז משנה ארוך מדי (מקסימום {{ count }} תווים)",
         "address_subdistrict_contains_emojis": "תת-מחוז אינו יכול להכיל סמלי אימוג'י",
         "address_subdistrict_contains_html_tags": "מחוז משנה אינו יכול להכיל תגיות HTML.",
         "address_subdistrict_contains_mathematical_symbols": "תת-מחוז אינו יכול להכיל סימנים מתמטיים",
@@ -1323,7 +1323,7 @@
       "payment_errors": {
         "missing_cvc": "הזן קוד אבטחה",
         "order_total_changed": "סכום ההזמנה השתנה. אנא בדקו את ההזמנה ונסו שוב.",
-        "paypal_over_capture": "סכום ההזמנה עודכן. שלמו באמצעות {{walletName}} כדי להשלים את ההזמנה."
+        "paypal_over_capture": "סכום ההזמנה עודכן. שלמו באמצעות {{ walletName }} כדי להשלים את ההזמנה."
       },
       "local_pickup": {
         "location_closest_other_items": "המיקום הקרוב ביותר עם הפריטים שלך",
@@ -1349,7 +1349,7 @@
         "invalid_shipping_method_summary": "בחר/י כתובת למשלוח כדי לצפות בשיטות המשלוח הזמינות",
         "saved_address_option_description": {
           "one": "יש לך כתובת אחת שמורה.",
-          "other": "יש לך {{count}} כתובות שמורות."
+          "other": "יש לך {{ count }} כתובות שמורות."
         },
         "saved_address_option_link": "השתמש בכתובת שמורה",
         "saved_address_modal_title": "השתמש בכתובת השמורה שלי"
@@ -1359,18 +1359,18 @@
         "remote_only_notice": "פריטים אלה נמכרים ונשלחים על ידי חנויות אחרות. יש להשלים את הרכישה מול כל חנות בנפרד.",
         "return_to_store_label": "חזור לחנות",
         "detail_item_label": {
-          "one": "פריט {{count}}",
+          "one": "פריט {{ count }}",
           "other": "{{ count }} פריטים"
         },
-        "checkout_on_shop_label": "בדוק ב- {{shop_name}}",
-        "single_shop_transition": "מנתבים אותך אל {{advertiser}} להשלמת הרכישה."
+        "checkout_on_shop_label": "בדוק ב-{{ shop_name }}",
+        "single_shop_transition": "מעבירים אותך אל {{ advertiser }} להשלמת הרכישה."
       },
       "merchandise_unavailable_in_buyer_location": {
         "banner_title": {
-          "some_products_one": "מוצר זה אינו זמין למשלוח ל-{{location_name}}.",
-          "some_products_other": "המוצרים האלה אינם זמינים למשלוח ל-{{location_name}}.",
-          "all_products_one": "המוצר בעגלה אינו זמין למשלוח ל-{{location_name}}.",
-          "all_products_other": "המוצרים בעגלת הקניות אינם זמינים למשלוח אל {{location_name}}."
+          "some_products_one": "מוצר זה אינו זמין למשלוח ל-{{ location_name }}.",
+          "some_products_other": "המוצרים האלה אינם זמינים למשלוח ל-{{ location_name }}.",
+          "all_products_one": "המוצר בעגלה אינו זמין למשלוח ל-{{ location_name }}.",
+          "all_products_other": "המוצרים בעגלת הקניות אינם זמינים למשלוח אל {{ location_name }}."
         },
         "missing_country_fallback": "המדינה שלך",
         "indeterminate_location_fallback": "המיקום שלך",
@@ -1399,71 +1399,71 @@
       "shipping": {
         "subscription_delivery_description": {
           "prepaid_free_shipping_with_cycles": {
-            "one": "משלוח חינם עבור {{cycle}} הראשונים, ולאחר מכן {{recurring_order_shipping_price}}",
-            "other": "משלוח חינם עבור {{cycle}} הראשונים, ולאחר מכן {{recurring_order_shipping_price}}"
+            "one": "משלוח חינם עבור {{ cycle }} הראשונים, ולאחר מכן {{ recurring_order_shipping_price }}",
+            "other": "משלוח חינם עבור {{ cycle }} הראשונים, ולאחר מכן {{ recurring_order_shipping_price }}"
           },
           "prepaid_order_one_cycle": {
-            "one": "{{shipping_price}} עבור עוד {{count}} משלוחים",
-            "other": "{{shipping_price}} עבור {{count}} משלוחים נוספים ({{per_delivery_cost}})"
+            "one": "{{ shipping_price }} עבור עוד {{ count }} משלוחים",
+            "other": "{{ shipping_price }} עבור {{ count }} משלוחים נוספים ({{ per_delivery_cost }})"
           },
           "prepaid_order_one_cycle_delivery_not_included": {
-            "one": "{{shipping_price}} עבור {{count}} משלוח",
-            "other": "{{shipping_price}} עבור {{count}} משלוחים ({{per_delivery_cost}})"
+            "one": "{{ shipping_price }} עבור {{ count }} משלוח",
+            "other": "{{ shipping_price }} עבור {{ count }} משלוחים ({{ per_delivery_cost }})"
           },
           "prepaid_order_no_cycle": {
-            "one": "{{shipping_price}} עבור משלוח נוסף אחד, ולאחר מכן {{recurring_order_shipping_price}}",
-            "other": "{{shipping_price}} עבור {{count}} משלוחים נוספים ({{per_delivery_cost}}), לאחר מכן {{recurring_order_shipping_price}}"
+            "one": "{{ shipping_price }} עבור משלוח נוסף אחד, לאחר מכן {{ recurring_order_shipping_price }}",
+            "other": "{{ shipping_price }} עבור {{ count }} משלוחים נוספים ({{ per_delivery_cost }}), לאחר מכן {{ recurring_order_shipping_price }}"
           },
           "prepaid_order_no_cycle_delivery_not_included": {
-            "one": "{{shipping_price}} למשלוח חד פעמי, לאחר מכן {{recurring_order_shipping_price}}",
-            "other": "{{shipping_price}} עבור {{count}} משלוחים ({{per_delivery_cost}} לכל משלוח), לאחר מכן {{recurring_order_shipping_price}}"
+            "one": "{{ shipping_price }} למשלוח חד פעמי, לאחר מכן {{ recurring_order_shipping_price }}",
+            "other": "{{ shipping_price }} עבור {{ count }} משלוחים ({{ per_delivery_cost }} לכל משלוח), לאחר מכן {{ recurring_order_shipping_price }}"
           },
-          "subscription_free_with_frequency_label": "משלוח חינם {{delivery_frequency}}",
+          "subscription_free_with_frequency_label": "משלוח חינם {{ delivery_frequency }}",
           "prepaid_delivery_frequency": {
-            "one": "עבור {{count}} משלוח",
-            "other": "עבור {{count}} משלוחים"
+            "one": "עבור {{ count }} משלוח",
+            "other": "עבור {{ count }} משלוחים"
           },
           "subscription_delivery_frequency": {
             "day": {
               "one": "כל יום",
-              "other": "בכל {{count}} ימים"
+              "other": "בכל {{ count }} ימים"
             },
             "week": {
               "one": "כל שבוע",
-              "other": "בכל {{count}} שבועות"
+              "other": "בכל {{ count }} שבועות"
             },
             "month": {
               "one": "בכל חודש",
-              "other": "בכל {{count}} חודשים"
+              "other": "בכל {{ count }} חודשים"
             },
             "year": {
               "one": "בכל שנה",
-              "other": "בכל {{count}} שנים"
+              "other": "בכל {{ count }} שנים"
             }
           },
-          "multiple_subscriptions_shipping_price_label": "{{shipping_price}} למשלוח",
-          "prepaid_shipping_price_label": "{{shipping_price}} למשלוח X {{delivery_interval_count}}",
-          "initial_order_discounted": "עלות משלוח ראשונה {{discounted_shipping_cost}}, לאחר מכן {{frequency_description}}",
-          "prepaid_initial_order_discounted": "עלות משלוח ראשונה {{discounted_shipping_price}} {{prepaid_delivery_frequency}}",
-          "prepaid_initial_order_discounted_with_per_delivery_price": "עלות משלוח ראשונה {{discounted_shipping_price}} {{prepaid_delivery_frequency}} ({{discounted_cost_per_delivery}})",
-          "prepaid_initial_order_discounted_with_renewal": "עלות משלוח ראשונה {{discounted_shipping_price}} {{prepaid_delivery_frequency}}, לאחר מכן {{shipping_price}} {{billing_cycle}}",
-          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "עלות משלוח ראשונה {{discounted_shipping_price}} {{prepaid_delivery_frequency}} ({{discounted_cost_per_delivery}}), לאחר מכן {{shipping_price}} {{billing_cycle}}",
+          "multiple_subscriptions_shipping_price_label": "{{ shipping_price }} למשלוח",
+          "prepaid_shipping_price_label": "{{ shipping_price }} למשלוח X {{ delivery_interval_count }}",
+          "initial_order_discounted": "עלות משלוח ראשונה {{ discounted_shipping_cost }}, לאחר מכן {{ frequency_description }}",
+          "prepaid_initial_order_discounted": "עלות משלוח ראשונה {{discounted_shipping_price}} {{ prepaid_delivery_frequency }}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "עלות משלוח ראשונה {{ discounted_shipping_price}} {{prepaid_delivery_frequency }} ({{ discounted_cost_per_delivery }})",
+          "prepaid_initial_order_discounted_with_renewal": "עלות משלוח ראשונה {{ discounted_shipping_price}} {{prepaid_delivery_frequency }}, לאחר מכן {{ shipping_price}} {{billing_cycle }}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "עלות משלוח ראשונה {{ discounted_shipping_price }} {{ prepaid_delivery_frequency }} ({{ discounted_cost_per_delivery }}), לאחר מכן {{ shipping_price }} {{ billing_cycle }}",
           "shipping_price_included": "כלול",
-          "recurring_order_shipping_price": "ואחריו {{recurring_order_shipping_price}}",
-          "first_order_shipping_price_included": "הזמנה ראשונה כלולה, בתוספת {{recurring_order_shipping_price}}",
-          "first_order_different_shipping_price": "{{first_order_shipping_price}} ({{per_delivery_price}} למשלוח), לאחר מכן {{recurring_order_shipping_price}}",
+          "recurring_order_shipping_price": "ואחריו {{ recurring_order_shipping_price }}",
+          "first_order_shipping_price_included": "הזמנה ראשונה כלולה, בתוספת {{ recurring_order_shipping_price }}",
+          "first_order_different_shipping_price": "{{ first_order_shipping_price }} ({{ per_delivery_price }} למשלוח), לאחר מכן {{ recurring_order_shipping_price }}",
           "first_n_order_free": {
             "one": "הזמנה ראשונה חינם",
-            "other": "{{count}} הזמנות ראשונות חינם"
+            "other": "{{ count }} הזמנות ראשונות חינם"
           },
           "free_for_first_n_order": {
             "one": "למסדר ראשון",
-            "other": "ל- {{count}} ההזמנות הראשונות"
+            "other": "ל-{{ count }} ההזמנות הראשונות"
           }
         },
         "one_time_purchase_shipping": "משלוח חד פעמי",
         "duties_and_taxes_title": "מכסים ומיסים",
-        "shipping_information_required_notice": "נדרשים פרטי משלוח. {{link}}.",
+        "shipping_information_required_notice": "נדרשים פרטי משלוח. {{ link }}.",
         "shipping_information_redirect_link": "הזן את פרטיך כאן",
         "loading_progressive_rates": "מחפש/ת תעריפים נוספים...",
         "no_other_methods_available": "אין שיטות אחרות זמינות",
@@ -1474,7 +1474,7 @@
           "ddp_caption": "ללא עמלות נוספות על משלוח"
         },
         "shipping_method_combinations": {
-          "combination": "{{rest}} וכן {{current}}"
+          "combination": "{{ rest }} וכן {{ current }}"
         },
         "shipping_used_as_billing_notice": "כתובת זו תשמש גם ככתובת החיוב עבור הזמנה זו.",
         "address_update": "עדכון כתובת",
@@ -1519,20 +1519,20 @@
         "split_shipping_merchandise_quantity_label_standard": "{{ quantity }} פריטים",
         "split_shipping_merchandise_quantity_label_additional": "עוד + {{ quantity }}",
         "split_shipping_merchandise_shipment_number": "משלוח {{ number }} מתוך {{ total }}",
-        "pre_order_ships_now": "ספינות עכשיו",
-        "pre_order_ships_later": "נשלח מאוחר יותר",
-        "pre_order_ships_date": "נשלח ב-{{date}}",
+        "pre_order_ships_now": "נשלח כעת",
+        "pre_order_ships_later": "יישלח במועד מאוחר יותר",
+        "pre_order_ships_date": "נשלח ב-{{ date }}",
         "split_shipping_shipped_by_shop": "נשלח על ידי {{ shop_name }}",
         "split_shipping_multiple_shipment_label": "משלוחים מרובים",
         "split_shipping_shipping_label": "שיטה",
-        "split_shipping_shipment_notice": "ההזמנה שלך תגיע בעוד {{quantity_shipments}}",
-        "split_shipping_first_shipment_notice": "ההזמנה הראשונה שלך תגיע בעוד {{quantity_shipments}}",
-        "split_shipping_multiple_shipment_quantity_label": "{{quantity}} משלוחים",
+        "split_shipping_shipment_notice": "ההזמנה שלך תגיע בעוד {{ quantity_shipments }}",
+        "split_shipping_first_shipment_notice": "ההזמנה הראשונה שלך תגיע בעוד {{ quantity_shipments }}",
+        "split_shipping_multiple_shipment_quantity_label": "{{ quantity }} משלוחים",
         "split_shipping_multiple_shipment_notice": "ההזמנה שלך תגיע במספר משלוחים",
-        "split_shipping_multiple_shipment_notice_one_time_purchase": "ההזמנה שלך תגיע ב-{{quantity}} משלוחים",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "ההזמנה שלך תגיע ב-{{ quantity }} משלוחים",
         "split_shipping_more_shipping_options": "אפשרויות שילוח נוספות",
-        "split_shipping_shipment_number": "משלוח {{number}}}",
-        "split_shipping_merchandise_quantity_label_inline_primary": "כמות: {{quantity}}",
+        "split_shipping_shipment_number": "משלוח {{ number }}",
+        "split_shipping_merchandise_quantity_label_inline_primary": "כמות: {{ quantity }}",
         "title": "משלוח",
         "delivery_title": "משלוח",
         "shipping_method_notice": "שיטת משלוח",
@@ -1595,7 +1595,7 @@
     },
     "page_titles": {
       "products": "כל המוצרים",
-      "order": "הזמנה  {{name}}"
+      "order": "הזמנה {{ name }}"
     },
     "email_marketing": {
       "open_tracking": {
@@ -1702,16 +1702,16 @@
           }
         },
         "orders_title": "אושר",
-        "order_number": "הזמנה  {{name}}",
+        "order_number": "הזמנה {{ name }}",
         "items": {
           "one": "פריט אחד",
-          "other": "{{count}} פריטים"
+          "other": "{{ count }} פריטים"
         }
       },
       "order_status": {
         "confirmed_title": "ההזמנה התקבלה",
-        "expected_by": "צפי למסירה עד {{date}}",
-        "was_expected_by": "מועד המסירה המשוער היה {{date}}",
+        "expected_by": "צפי למסירה עד {{ date }}",
+        "was_expected_by": "מועד המסירה המשוער היה {{ date }}",
         "confirmed_label": "אושר",
         "confirmed_description_pickup": "תקבלו הודעת דוא״ל כאשר ההזמנה תהיה מוכנה לאיסוף.",
         "confirmed_description_digital": "תקבלו הודעת דוא״ל כאשר ההזמנה תהיה מוכנה.",
@@ -1719,7 +1719,7 @@
         "preparing_for_shipping_label": "בהכנה למשלוח"
       },
       "buy_again": "הזמן שוב",
-      "buy_again_accessibility_label": "הזמן שוב את פריטי הזמנה מספר {{orderId}}",
+      "buy_again_accessibility_label": "הזמן שוב את פריטי הזמנה מספר {{ orderId }}",
       "list_title": "הזמנות"
     },
     "navigation_and_structure": {
@@ -1731,8 +1731,8 @@
         "return_and_refund_modal_header": "מדיניות החזרות"
       },
       "payment_confirmation": {
-        "payment_received": "תודה! התקבל תשלום בסך {{amount}}.",
-        "full_payment_received": "תודה! התקבל תשלום בסך {{amount}}, וההזמנה שולמה במלואה.",
+        "payment_received": "תודה! התקבל תשלום בסך {{ amount }}.",
+        "full_payment_received": "תודה! התקבל תשלום בסך {{ amount }}, וההזמנה שולמה במלואה.",
         "payment_authorized": "תודה! ההזמנה התקבלה. ניצור עמכם קשר טלפוני להשלמת התשלום לפני הכנת ההזמנה."
       },
       "order_details": "פרטי ההזמנה",
@@ -1747,8 +1747,8 @@
       },
       "subtotal": "סיכום ביניים",
       "subtotal_label_with_quantity": {
-        "one": "סיכום ביניים ({{count}} פריט)",
-        "other": "סיכום ביניים ({{count}} פריטים)"
+        "one": "סיכום ביניים ({{ count }} פריט)",
+        "other": "סיכום ביניים ({{ count }} פריטים)"
       },
       "total_savings": "חיסכון כולל",
       "summary_totals_title_accessibility_label": "סיכום ההזמנה",
@@ -1760,7 +1760,7 @@
         "returned_with_quantities": "הוחזרו {{delta}} מתוך {{total}}",
         "removed_with_quantities": "הוסרו {{delta}} מתוך {{total}}"
       },
-      "taxes_included": "כולל מע״מ בסך {{amount}}",
+      "taxes_included": "כולל מע״מ בסך {{ amount }}",
       "shipping": {
         "address": "כתובת משלוח",
         "address_map_marker": "כתובת משלוח",
@@ -1777,8 +1777,8 @@
         "pickup_point": "מיקום האיסוף"
       },
       "billing_address": "כתובת חיוב",
-      "subtitle": "אושר ב־{{date}}",
-      "title": "הזמנה  {{name}}",
+      "subtitle": "אושר ב־{{ date }}",
+      "title": "הזמנה {{ name }}",
       "payment": {
         "title": "פרטי התשלום"
       }
@@ -1787,7 +1787,7 @@
       "try_again": "נסה שוב"
     },
     "date": {
-      "range": "{{startDate}}–{{endDate}}"
+      "range": "{{ startDate }}–{{ endDate }}"
     },
     "B2B": {
       "draft_order_details": {
@@ -1796,8 +1796,8 @@
             "description_waiting_for_manual_payment": "הזמנה זו ממתינה להשלמת התשלום. יתרת ההזמנה תתעדכן לאחר קבלת התשלום."
           }
         },
-        "draft_order_subtitle": "טיוטת ההזמנה {{draftOrderName}} אושרה ב־{{date}}",
-        "title": "הזמנה  {{name}}"
+        "draft_order_subtitle": "טיוטת ההזמנה {{ draftOrderName }} אושרה ב־{{ date }}",
+        "title": "הזמנה {{ name }}"
       }
     },
     "account_information": {
