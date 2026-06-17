@@ -882,7 +882,8 @@
           "other": "{{ count }} פריטים"
         },
         "cancelled_title": "הזמנתך בוטלה",
-        "cancelled_page_title": "הזמנתך בוטלה"
+        "cancelled_page_title": "הזמנתך בוטלה",
+        "login": "התחברות"
       },
       "marketing": {
         "disclaimer": {
@@ -894,7 +895,8 @@
             "privacy_policy": "מדיניות פרטיות",
             "terms_of_service": "תקנון האתר"
           }
-        }
+        },
+        "accept_marketing_checkbox_label": "שלחו לי עדכונים והצעות במייל"
       },
       "shop_policies": {
         "privacy_policy": "מדיניות פרטיות",
@@ -925,7 +927,8 @@
         "errors": {
           "missing": {
             "contact_info": "פרטי יצירת קשר",
-            "country": "בחר מדינה/אזור"
+            "country": "בחר מדינה/אזור",
+            "city": "עיר"
           },
           "subscription_review_required": "ההזמנה שלך כוללת מנוי. עליך לעיין בתנאים שלהלן לפני השלמת ההזמנה."
         },
@@ -1320,7 +1323,13 @@
         "payment_gateway_unsupported_for_country": "אמצעי תשלום זה אינו זמין עבור מדינת המשלוח שנבחרה.",
         "vaulting_agreement_blank": "יש לשמור את אמצעי התשלום, מכיוון שיתרת התשלום עבור הזמנה זו תשולם במועד מאוחר יותר.",
         "address_country_blank": "בחר מדינה/אזור",
-        "address_country_invalid": "בחר מדינה/אזור מרשימה"
+        "address_country_invalid": "בחר מדינה/אזור מרשימה",
+        "address_last_name_blank": "הזינו שם משפחה",
+        "address_last_name_too_long": "שם המשפחה ארוך מדי (עד 255 תווים)",
+        "address_last_name_contains_emojis": "שם המשפחה אינו יכול להכיל אימוג'ים",
+        "address_last_name_contains_html_tags": "שם המשפחה אינו יכול להכיל תגיות HTML",
+        "address_last_name_contains_url": "שם המשפחה אינו יכול להכיל כתובת אינטרנט",
+        "address_last_name_contains_mathematical_symbols": "שם המשפחה אינו יכול להכיל סימנים מתמטיים"
       },
       "payment_errors": {
         "missing_cvc": "הזן קוד אבטחה",
@@ -1754,7 +1763,8 @@
       "login_card": {
         "title": "גישה לפרטי ההזמנה",
         "resend_link_and_login": "כדי לצפות בפרטי ההזמנה, התחברו או שלחו קישור חדש לכתובת המייל או למספר הטלפון ששימשו בעת ההזמנה.",
-        "resend_link_only": "כדי לצפות בפרטי ההזמנה, שלחו קישור חדש לכתובת המייל או למספר הטלפון ששימשו בעת ההזמנה."
+        "resend_link_only": "כדי לצפות בפרטי ההזמנה, שלחו קישור חדש לכתובת המייל או למספר הטלפון ששימשו בעת ההזמנה.",
+        "log_in": "התחברות"
       },
       "subtotal": "סיכום ביניים",
       "subtotal_label_with_quantity": {
@@ -1792,7 +1802,9 @@
       "title": "הזמנה  {{name}}",
       "payment": {
         "title": "פרטי התשלום"
-      }
+      },
+      "marketing_checkbox_label": "שלחו לי עדכונים והצעות במייל",
+      "log_in": "התחברות"
     },
     "callback": {
       "try_again": "נסה שוב"
@@ -1870,6 +1882,10 @@
     "account_menu": {
       "signed_out_state": {
         "email_field_label": "דוא\"ל"
+      },
+      "aria_labels": {
+        "sign_in": "התחברות",
+        "sign_in_with_email": "התחברות באמצעות כתובת דוא״ל"
       }
     },
     "sign_in": {
