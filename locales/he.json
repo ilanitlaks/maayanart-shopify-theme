@@ -645,7 +645,7 @@
         },
         "pickup_unavailable_banner_body": {
           "ship_to_address": "לשלוח לכתובת",
-          "ship_to_address_instead_html": "במקום %{link}"
+          "ship_to_address_instead_html": "במקום {{ link }}"
         },
         "tip_label": "טיפ",
         "unconfirmed_label": "לא מאושר",
@@ -753,7 +753,7 @@
         },
         "title": "סיכום הזמנה",
         "group_title_label": "חלק מ-\"%{group_title}\"",
-        "for_add_on": "עבור: %{group_title}",
+        "for_add_on": "עבור: {{ group_title }}",
         "from_shop_heading": "מאת %{shop_name}",
         "from_other_stores_heading": "מחנויות אחרות",
         "from_multiple_stores_heading": "מחנויות שונות",
@@ -815,7 +815,7 @@
         "discount_requires_customer_notice": "הזן את פרטי המשלוח שלך כדי להחיל את קוד ההנחה <strong style=\"text-transform:uppercase\">%{code}</strong>",
         "customer_does_not_meet_discount_requirements_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">%{code}</strong> אינו זמין עבורך כרגע",
         "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> קוד קופון דורש לקוח זכאי",
-        "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> קוד הנחה אינו זמין עבור כתובת המשלוח שלך",
+        "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">{{ code }}</strong> קוד הנחה אינו זמין עבור כתובת המשלוח שלך",
         "customer_already_used_once_per_customer_discount_notice": "קוד ההנחה <strong style=\"text-transform:uppercase\">%{code}</strong> כבר נוצל",
         "total_updated_label_with_price": "סה״כ מעודכן: {{ totalPrice }}",
         "deferred_total_due_date_label": "סה״כ לתשלום עד {{date}}",
@@ -922,7 +922,8 @@
       "wallets": {
         "errors": {
           "missing": {
-            "contact_info": "פרטי יצירת קשר"
+            "contact_info": "פרטי יצירת קשר",
+            "country": "בחר מדינה/אזור"
           },
           "subscription_review_required": "ההזמנה שלך כוללת מנוי. עליך לעיין בתנאים שלהלן לפני השלמת ההזמנה."
         },
@@ -1315,7 +1316,9 @@
         "payment_gateway_unsupported_for_subscriptions": "אמצעי תשלום זה אינו זמין עבור הזמנות מנוי.",
         "payment_gateway_unsupported_for_deferred_purchase_options": "אמצעי תשלום זה אינו זמין עבור אפשרויות תשלום נדחה.",
         "payment_gateway_unsupported_for_country": "אמצעי תשלום זה אינו זמין עבור מדינת המשלוח שנבחרה.",
-        "vaulting_agreement_blank": "יש לשמור את אמצעי התשלום, מכיוון שיתרת התשלום עבור הזמנה זו תשולם במועד מאוחר יותר."
+        "vaulting_agreement_blank": "יש לשמור את אמצעי התשלום, מכיוון שיתרת התשלום עבור הזמנה זו תשולם במועד מאוחר יותר.",
+        "address_country_blank": "בחר מדינה/אזור",
+        "address_country_invalid": "בחר מדינה/אזור מרשימה"
       },
       "payment_errors": {
         "missing_cvc": "הזן קוד אבטחה",
@@ -1339,8 +1342,8 @@
         "sign_in_link_label": "התחבר",
         "sign_out_link_label": "התנתק",
         "save_my_information_label": "שמור מידע זה לפעם הבאה",
-        "invalid_address": "הכתובת שנבחרה אינה חוקית. %{update_address_link} או בחר כתובת אחרת.",
-        "incomplete_address": "הכתובת שנבחרה אינה מלאה. %{update_address_link} או בחר/י כתובת אחרת.",
+        "invalid_address": "הכתובת שנבחרה אינה חוקית. {{ update_address_link }} או בחר כתובת אחרת.",
+        "incomplete_address": "הכתובת שנבחרה אינה מלאה. {{ update_address_link }} או בחר/י כתובת אחרת.",
         "rollup_label": "חשבון",
         "rollup_accessibility_label": "אפשרויות חשבון",
         "invalid_shipping_method_summary": "בחר/י כתובת למשלוח כדי לצפות בשיטות המשלוח הזמינות",
@@ -1373,7 +1376,7 @@
         "indeterminate_location_fallback": "המיקום שלך",
         "cart_updated": "העגלה שלך עודכנה.",
         "change_address_only": "שנה כתובת למשלוח כדי להמשיך.",
-        "change_address_or_remove": "שנה כתובת למשלוח או %{remove_action}.",
+        "change_address_or_remove": "שנה כתובת למשלוח או {{ remove_action }}.",
         "remove_items_action": {
           "one": "הסר פריט שאינו זמין",
           "other": "הסר פריטים לא זמינים"
@@ -1514,7 +1517,7 @@
         },
         "missing_shipping_address": "כתובת המשלוח חסרה",
         "split_shipping_merchandise_quantity_label_standard": "{{ quantity }} פריטים",
-        "split_shipping_merchandise_quantity_label_additional": "עוד +%{quantity}",
+        "split_shipping_merchandise_quantity_label_additional": "עוד + {{ quantity }}",
         "split_shipping_merchandise_shipment_number": "משלוח %{number} מתוך %{total}",
         "pre_order_ships_now": "ספינות עכשיו",
         "pre_order_ships_later": "נשלח מאוחר יותר",
@@ -1573,7 +1576,8 @@
         "remote_checkout_count": "{{ current }} מתוך {{ total }}"
       },
       "billing": {
-        "same_as_shipping": "זהה לכתובת המשלוח"
+        "same_as_shipping": "זהה לכתובת המשלוח",
+        "address_edit": "עריכת כתובת"
       },
       "split_delivery": {
         "items_for_shipping": "הפריטים נמצאים בהכנה למשלוח"
@@ -1815,7 +1819,14 @@
       "add_button_text": "הוסף",
       "add_button_accessibility_label": "הוסף כתובת",
       "back_button": "חזרה",
-      "title": "כתובת"
+      "title": "כתובת",
+      "default_address": {
+        "title": "כתובת ברירת המחדל",
+        "title_accessibility_label": "כתובת ברירת המחדל: {{ address }}"
+      },
+      "edit_modal_title": {
+        "default": "עריכת כתובת"
+      }
     }
   }
 }
