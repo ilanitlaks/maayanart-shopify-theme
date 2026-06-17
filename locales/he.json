@@ -880,7 +880,9 @@
         "thank_you_item_label": {
           "one": "פריט אחד",
           "other": "{{ count }} פריטים"
-        }
+        },
+        "cancelled_title": "הזמנתך בוטלה",
+        "cancelled_page_title": "הזמנתך בוטלה"
       },
       "marketing": {
         "disclaimer": {
@@ -1722,7 +1724,9 @@
         "confirmed_description_pickup": "תקבלו הודעת דוא״ל כאשר ההזמנה תהיה מוכנה לאיסוף.",
         "confirmed_description_digital": "תקבלו הודעת דוא״ל כאשר ההזמנה תהיה מוכנה.",
         "confirmed_description_gift_card_text": "תקבלו הודעת טקסט כאשר ההזמנה תהיה מוכנה.",
-        "preparing_for_shipping_label": "בהכנה למשלוח"
+        "preparing_for_shipping_label": "בהכנה למשלוח",
+        "canceled_title": "הזמנתך בוטלה",
+        "canceled_label": "בוטלה"
       },
       "buy_again": "הזמן שוב",
       "buy_again_accessibility_label": "הזמן שוב את פריטי הזמנה מספר {{orderId}}",
@@ -1801,6 +1805,10 @@
         "payment_status": {
           "pending": {
             "description_waiting_for_manual_payment": "הזמנה זו ממתינה להשלמת התשלום. יתרת ההזמנה תתעדכן לאחר קבלת התשלום."
+          },
+          "canceled": {
+            "title": "התשלום בוטל",
+            "description": "לא חויבת בתשלום."
           }
         },
         "draft_order_subtitle": "טיוטת ההזמנה {{draftOrderName}} אושרה ב־{{date}}",
