@@ -67,7 +67,7 @@
     }
   },
   "newsletter": {
-    "label": "אימייל",
+    "label": "דוא\"ל",
     "success": "תודה שנרשמת",
     "button_label": "להרשמה"
   },
@@ -100,7 +100,7 @@
       "moderated": "שימו לב, התגובות צריכות לעבור אישור לפני הפרסום.",
       "comment_form_title": "השארת תגובה",
       "name": "שם",
-      "email": "אימייל",
+      "email": "דוא\"ל",
       "message": "תגובה",
       "post": "פרסום תגובה",
       "back_to_blog": "חזרה לבלוג",
@@ -262,7 +262,7 @@
       "form": {
         "title": "טופס יצירת קשר",
         "name": "השם המלא שלך",
-        "email": "האימייל שלך (נחזור אליך לכאן)",
+        "email": "הדוא\"ל שלך (נחזור אליך לכאן)",
         "phone": "טלפון לחזרה (לא חובה)",
         "comment": "איך נוכל לעזור לך? נשמח לשמוע ממך…",
         "send": "שלח",
@@ -437,7 +437,7 @@
     "login_page": {
       "cancel": "ביטול",
       "create_account": "יצירת חשבון",
-      "email": "אימייל",
+      "email": "דוא\"ל",
       "forgot_password": "שכחת סיסמה?",
       "guest_continue": "המשך",
       "guest_title": "המשך כאורח",
@@ -492,7 +492,7 @@
       "title": "יצירת חשבון",
       "first_name": "שם פרטי",
       "last_name": "שם משפחה",
-      "email": "אימייל",
+      "email": "דוא\"ל",
       "password": "סיסמה",
       "submit": "יצירה"
     },
@@ -524,9 +524,9 @@
       "checkbox": "אני רוצה לשלוח את זה כמתנה",
       "expanded": "טופס פרטי מקבל המתנה פתוח",
       "collapsed": "טופס פרטי מקבל המתנה סגור",
-      "email_label": "אימייל של מקבל/ת המתנה",
-      "email_label_optional_for_no_js_behavior": "אימייל של מקבל/ת המתנה (לא חובה)",
-      "email": "אימייל",
+      "email_label": "דוא\"ל של מקבל/ת המתנה",
+      "email_label_optional_for_no_js_behavior": "דוא\"ל של מקבל/ת המתנה (לא חובה)",
+      "email": "דוא\"ל",
       "name_label": "שם מקבל/ת המתנה (לא חובה)",
       "name": "שם",
       "message_label": "הודעה (לא חובה)",
@@ -557,7 +557,7 @@
         "return_to_store_label": "חזור לחנות",
         "continue_cta_label": "המשך תשלום",
         "item_label": {
-          "one": "פריט {{ count }}",
+          "one": "פריט {{count}}",
           "other": "{{ count }} פריטים"
         },
         "empty_cart_label": "העגלה שלך ריקה",
@@ -1154,8 +1154,8 @@
           "dragged_over": "גרור קובץ להעלאה"
         },
         "full_price": "מחיר מלא:",
-        "title": "תשלום – {{ shopName }}",
-        "full_title": "{{ pageTitle }} – {{ shopName }} – תשלום",
+        "title": "תשלום –{{ shopName }}",
+        "full_title": "{{ pageTitle }}–{{ shopName }}– תשלום",
         "loading": "טוען...",
         "loading_title": "טוען את {{ shopName }}",
         "display_name": "{{ firstName }} {{ lastName }}",
@@ -1591,6 +1591,10 @@
       },
       "units": {
         "item": "פריט"
+      },
+      "b2b_errors": {
+        "log_out_link_text": "התנתקות",
+        "lost_permissions_subtitle": "אין לך עוד הרשאה לבצע הזמנות B2B. כדי לבצע הזמנה אישית, יש להתנתק."
       }
     },
     "page_titles": {
@@ -1693,7 +1697,9 @@
         },
         "filter_title": "סינון",
         "carousel": {
-          "view_order_details": "צפייה בפרטי ההזמנה"
+          "view_order_details": "צפייה בפרטי ההזמנה",
+          "previous": "הקודם",
+          "next": "הבא"
         },
         "sort": {
           "order_total": {
@@ -1702,16 +1708,16 @@
           }
         },
         "orders_title": "אושר",
-        "order_number": "הזמנה {{ name }}",
+        "order_number": "הזמנה  {{name}}",
         "items": {
           "one": "פריט אחד",
-          "other": "{{ count }} פריטים"
+          "other": "{{count}} פריטים"
         }
       },
       "order_status": {
         "confirmed_title": "ההזמנה התקבלה",
-        "expected_by": "צפי למסירה עד {{ date }}",
-        "was_expected_by": "מועד המסירה המשוער היה {{ date }}",
+        "expected_by": "צפי למסירה עד {{date}}",
+        "was_expected_by": "מועד המסירה המשוער היה {{date}}",
         "confirmed_label": "אושר",
         "confirmed_description_pickup": "תקבלו הודעת דוא״ל כאשר ההזמנה תהיה מוכנה לאיסוף.",
         "confirmed_description_digital": "תקבלו הודעת דוא״ל כאשר ההזמנה תהיה מוכנה.",
@@ -1719,11 +1725,12 @@
         "preparing_for_shipping_label": "בהכנה למשלוח"
       },
       "buy_again": "הזמן שוב",
-      "buy_again_accessibility_label": "הזמן שוב את פריטי הזמנה מספר {{ orderId }}",
+      "buy_again_accessibility_label": "הזמן שוב את פריטי הזמנה מספר {{orderId}}",
       "list_title": "הזמנות"
     },
     "navigation_and_structure": {
-      "contact_link": "פרטי יצירת קשר"
+      "contact_link": "פרטי יצירת קשר",
+      "log_out_link": "התנתקות"
     },
     "order_details": {
       "contact_information": "פרטי יצירת קשר",
@@ -1731,8 +1738,8 @@
         "return_and_refund_modal_header": "מדיניות החזרות"
       },
       "payment_confirmation": {
-        "payment_received": "תודה! התקבל תשלום בסך {{ amount }}.",
-        "full_payment_received": "תודה! התקבל תשלום בסך {{ amount }}, וההזמנה שולמה במלואה.",
+        "payment_received": "תודה! התקבל תשלום בסך {{amount}}.",
+        "full_payment_received": "תודה! התקבל תשלום בסך {{amount}}, וההזמנה שולמה במלואה.",
         "payment_authorized": "תודה! ההזמנה התקבלה. ניצור עמכם קשר טלפוני להשלמת התשלום לפני הכנת ההזמנה."
       },
       "order_details": "פרטי ההזמנה",
@@ -1747,8 +1754,8 @@
       },
       "subtotal": "סיכום ביניים",
       "subtotal_label_with_quantity": {
-        "one": "סיכום ביניים ({{ count }} פריט)",
-        "other": "סיכום ביניים ({{ count }} פריטים)"
+        "one": "סיכום ביניים ({{count}} פריט)",
+        "other": "סיכום ביניים ({{count}} פריטים)"
       },
       "total_savings": "חיסכון כולל",
       "summary_totals_title_accessibility_label": "סיכום ההזמנה",
@@ -1760,7 +1767,7 @@
         "returned_with_quantities": "הוחזרו {{delta}} מתוך {{total}}",
         "removed_with_quantities": "הוסרו {{delta}} מתוך {{total}}"
       },
-      "taxes_included": "כולל מע״מ בסך {{ amount }}",
+      "taxes_included": "כולל מע״מ בסך {{amount}}",
       "shipping": {
         "address": "כתובת משלוח",
         "address_map_marker": "כתובת משלוח",
@@ -1777,8 +1784,8 @@
         "pickup_point": "מיקום האיסוף"
       },
       "billing_address": "כתובת חיוב",
-      "subtitle": "אושר ב־{{ date }}",
-      "title": "הזמנה {{ name }}",
+      "subtitle": "אושר ב־{{date}}",
+      "title": "הזמנה  {{name}}",
       "payment": {
         "title": "פרטי התשלום"
       }
@@ -1787,7 +1794,7 @@
       "try_again": "נסה שוב"
     },
     "date": {
-      "range": "{{ startDate }}–{{ endDate }}"
+      "range": "{{startDate}}–{{endDate}}"
     },
     "B2B": {
       "draft_order_details": {
@@ -1796,8 +1803,11 @@
             "description_waiting_for_manual_payment": "הזמנה זו ממתינה להשלמת התשלום. יתרת ההזמנה תתעדכן לאחר קבלת התשלום."
           }
         },
-        "draft_order_subtitle": "טיוטת ההזמנה {{ draftOrderName }} אושרה ב־{{ date }}",
-        "title": "הזמנה {{ name }}"
+        "draft_order_subtitle": "טיוטת ההזמנה {{draftOrderName}} אושרה ב־{{date}}",
+        "title": "הזמנה  {{name}}"
+      },
+      "locations": {
+        "contact_email": "דוא\"ל"
       }
     },
     "account_information": {
@@ -1812,7 +1822,8 @@
         "save": "שמור",
         "save_accessibility_label": "שמור פרופיל"
       },
-      "title": "פרופיל"
+      "title": "פרופיל",
+      "add_button": "הוסף"
     },
     "addresses": {
       "add_button": "הוסף כתובת",
@@ -1826,6 +1837,36 @@
       },
       "edit_modal_title": {
         "default": "עריכת כתובת"
+      }
+    },
+    "address_form": {
+      "section_title_accessibility_label": "הוסף כתובת",
+      "default_address": "כתובת ברירת מחדל",
+      "loading_add_form_accessibility_message": "טוען טופס הוספת כתובת חדשה",
+      "loading_edit_form_accessibility_message": "טוען טופס עריכת כתובת",
+      "loading_form_accessibility_message": "טוען טופס כתובת",
+      "loading_finished_accessibility_message": "טופס הכתובת נטען בהצלחה"
+    },
+    "errors": {
+      "load_address_form_error": {
+        "title": "לא ניתן לטעון את טופס הכתובת",
+        "description": "אירעה שגיאה בטעינת טופס הכתובת."
+      }
+    },
+    "settings": {
+      "log_out_everywhere": {
+        "title": "התנתקות מכל המכשירים",
+        "button": "התנתק מכל המכשירים"
+      }
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "email_field_label": "דוא\"ל"
+      }
+    },
+    "sign_in": {
+      "step_one": {
+        "input_field_label": "דוא\"ל"
       }
     }
   }
