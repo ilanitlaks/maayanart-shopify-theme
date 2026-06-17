@@ -485,8 +485,8 @@
     },
     "recover_password": {
       "title": "איפוס סיסמה",
-      "subtext": "נשלח לך אימייל לאיפוס הסיסמה",
-      "success": "שלחנו לך אימייל עם קישור לעדכון הסיסמה."
+      "subtext": "נשלח לך  דוא\"ל לאיפוס הסיסמה",
+      "success": "שלחנו לך  דוא\"ל עם קישור לעדכון הסיסמה."
     },
     "register": {
       "title": "יצירת חשבון",
@@ -665,7 +665,7 @@
         "estimated_taxes_label": "מסים משוערים",
         "estimated_taxes_label_short": "משוער",
         "information_estimated_taxes_label": "מיסים (משוער)",
-        "estimated_taxes_finalization_tooltip_content": "המס והסכום הסופיים יאושרו באימייל או בהודעת טקסט לאחר ביצוע ההזמנה.",
+        "estimated_taxes_finalization_tooltip_content": "המס והסכום הסופיים יאושרו בדוא\"ל או בהודעת טקסט לאחר ביצוע ההזמנה.",
         "estimated_taxes_finalization_tooltip_content_short": "המס סופי לאחר תשלום",
         "order_total_label": "סכום הזמנה",
         "price_before_discount_aria_text": "מחיר מקורי",
@@ -1187,10 +1187,10 @@
         "delivery_option_title": "אמצעי משלוח",
         "contact_method_title": "יצירת קשר",
         "email_label": "דוא\"ל",
-        "email_rollup_accessibility_label": "אפשרויות אימייל",
+        "email_rollup_accessibility_label": "אפשרויות דוא\"ל",
         "email_placeholder": "דוא\"ל",
-        "email_or_phone_label": "כתובת אימייל או מספר טלפון נייד",
-        "email_or_phone_placeholder": "כתובת אימייל או מספר טלפון נייד",
+        "email_or_phone_label": "כתובת  דוא\"ל או מספר טלפון נייד",
+        "email_or_phone_placeholder": "כתובת  דוא\"ל או מספר טלפון נייד",
         "stored_addresses_label": "כתובות שמורות",
         "available_addresses_label": "כתובות זמינות",
         "new_address_label": "השתמש בכתובת חדשה",
@@ -1604,7 +1604,7 @@
     "email_marketing": {
       "open_tracking": {
         "no_longer_track": {
-          "privacy_policy": "לאחר שליחת האימייל עודכנה מדיניות הפרטיות שלנו, ואיננו עוקבים עוד אחר פתיחת הודעות."
+          "privacy_policy": "לאחר שליחת הדוא\"ל עודכנה מדיניות הפרטיות שלנו, ואיננו עוקבים עוד אחר פתיחת הודעות."
         }
       },
       "subscribed": {
@@ -1655,14 +1655,14 @@
       "blocked_address": "המיקום הזה אינו נתמך",
       "credit_card_session_expired": "תוקף אישור כרטיס האשראי פג. יש להזין שוב את פרטי התשלום. הכרטיס לא חויב.",
       "empty": "לא יכול להיות ריק",
-      "invalid_email": "יש להזין כתובת אימייל תקינה",
+      "invalid_email": "יש להזין כתובת  דוא\"ל תקינה",
       "discount_disabled": "הנחה הזו בוטלה",
       "discount_expired": "ההנחה הזו כבר אינה בתוקף",
       "discount_limit_reached": "ההנחה הזו הגיעה למגבלת השימוש שלה",
       "discount_not_found": "לא נמצאה הנחה תקפה עבור הקוד שהוזן"
     },
     "attributes": {
-      "email": "אימייל",
+      "email": " דוא\"ל",
       "password": "סיסמה",
       "password_confirmation": "אימות סיסמה",
       "first_name": "שם פרטי",
