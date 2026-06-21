@@ -1881,7 +1881,10 @@
     },
     "account_menu": {
       "signed_out_state": {
-        "email_field_label": "דוא\"ל"
+        "email_field_label": "דוא\"ל",
+        "sheet_title": "התחברות או יצירת חשבון",
+        "section_divider": "אפשרויות התחברות נוספות",
+        "shop_login_button": "התחברות עם Shop"
       },
       "aria_labels": {
         "sign_in": "התחברות",
@@ -1890,7 +1893,14 @@
     },
     "sign_in": {
       "step_one": {
-        "input_field_label": "דוא\"ל"
+        "input_field_label": "דוא\"ל",
+        "page_title": "התחברות - {{ shop_name }}",
+        "heading": "התחברות",
+        "subheading_with_sign_in_options": "התחברות או יצירת חשבון",
+        "consent_agreement": "בהמשך התהליך, הנך מסכים/ה ל-{{ terms }}"
+      },
+      "step_two": {
+        "restart_link": "התחברות באמצעות כתובת דוא״ל אחרת"
       }
     }
   }
