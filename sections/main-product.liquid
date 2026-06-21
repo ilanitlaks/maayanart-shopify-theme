@@ -102,7 +102,16 @@
               {% break %}
             {% endif %}
           {% endfor %}
+{% assign has_available_child = false %}
 
+{% if group_tag != '' and group_collection != nil and product.price == 0 %}
+  {% for p in group_collection.products %}
+    {% if p.tags contains group_tag and p.id != product.id and p.price > 0 and p.available %}
+      {% assign has_available_child = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when '@app' -%}
@@ -238,13 +247,22 @@
                   {{ product.description }}
                 </div>
               {%- endif -%}
-
               {% if group_tag != '' and product.price == 0 %}
-                <a href="#product-siblings" class="card-options-btn">
-                  לכל האפשרויות
-                </a>
-              {% endif %}
-              {%- when 'sku' -%}
+
+                {% if has_available_child %}
+                  <a href="#product-siblings" class="card-options-btn">
+                    לכל האפשרויות
+                  </a>
+                {% else %}
+                  <a
+                    href="https://wa.me/972544726067?text=שלום, אני מעוניינת במוצר {{ product.title | url_encode }}"
+                    class="card-options-btn"
+                  >
+                    המוצר אזל - צרו קשר
+                  </a>
+                {% endif %}
+
+{% endif %}              {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
                   id="Sku-{{ section.id }}"
