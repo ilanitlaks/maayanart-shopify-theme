@@ -288,6 +288,12 @@
                 <button type="button" class="card-qty__btn card-qty__plus">+</button>
               </div>
 
+            {%- elsif card_product.available == false -%}
+
+              <span class="card-qty">
+                אזל המלאי
+              </span>
+
             {%- endif -%}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants_count == 1 and quick_add == 'bulk' %}
