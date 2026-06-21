@@ -144,7 +144,6 @@
   display: grid;
   grid-row-start: 2;
   padding: 1.3rem 1rem;
-  flex-direction: column;
   justify-content: center;
   align-content: space-between;
   gap: 1rem;
