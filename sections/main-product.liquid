@@ -255,7 +255,9 @@
                   </a>
                 {% else %}
                   <a
-                    href="https://wa.me/972544726067?text=שלום, אני מעוניינת במוצר {{ product.title | url_encode }}"
+                    href="https://wa.me/{{ settings.whatsapp_number }}?text={{ 'שלום, אני מתעניין במוצר ' | append: product.title | url_encode }}"
+                    target="_blank"
+                    rel="noopener"
                     class="card-options-btn"
                   >
                     המוצר אזל - צרו קשר

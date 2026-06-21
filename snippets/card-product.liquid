@@ -208,14 +208,35 @@
             {% assign show_deal_badge = false %}
 
             {% assign has_group = false %}
+            {% assign group_tag = '' %}
+            {% assign group_collection = nil %}
+            {% assign has_available_child = false %}
 
             {% for tag in card_product.tags %}
               {% assign t = tag | downcase | strip %}
               {% if t contains 'group' %}
                 {% assign has_group = true %}
+                {% assign group_tag = tag | strip %}
                 {% break %}
               {% endif %}
             {% endfor %}
+
+            {% for collection in card_product.collections %}
+              {% assign collection_title = collection.title | downcase %}
+              {% if collection_title contains 'group:' %}
+                {% assign group_collection = collection %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+
+            {% if has_group and group_collection != nil and card_product.price == 0 %}
+              {% for p in group_collection.products %}
+                {% if p.tags contains group_tag and p.id != card_product.id and p.price > 0 and p.available %}
+                  {% assign has_available_child = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
 
             {% if has_group and card_product.price == 0 %}
               {% assign show_deal_badge = true %}
@@ -238,9 +259,16 @@
               {% endfor %}
             {% endif %}
             {%- if card_product.price == 0 -%}
-              <a href="{{ card_product.url }}" class="card-options-btn">
-                לכל האפשרויות
-              </a>
+
+              {% if has_group and has_available_child == false %}
+                <span class="card-options-btn">
+                  אזל המלאי
+                </span>
+              {% else %}
+                <a href="{{ card_product.url }}" class="card-options-btn">
+                  לכל האפשרויות
+                </a>
+              {% endif %}
 
             {%- elsif card_product.variants_count == 1 and card_product.available -%}
 
