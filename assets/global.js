@@ -1587,18 +1587,28 @@ function flyToCart(fromElement) {
   clone.style.position = "fixed";
   clone.style.left = rectFrom.left + "px";
   clone.style.top = rectFrom.top + "px";
+  clone.style.transform = "scale(1.3)";
+  clone.style.background = "#cdeff6";
+  clone.style.borderRadius = "50%";
+  clone.style.padding = "5px";
+  clone.style.display = "flex";
+  clone.style.alignItems = "center";
+  clone.style.justifyContent = "center";
+  clone.style.boxShadow = "0 4px 12px rgba(0,0,0,.2)";
   clone.style.width = rectFrom.width + "px";
   clone.style.height = rectFrom.height + "px";
+  clone.style.fontSize = "2rem";
+  clone.style.fontWeight = "700";
   clone.style.zIndex = 9999;
-  clone.style.transition = "all 0.7s ease";
+  clone.style.transition = "all 0.8s ease";
 
   document.body.appendChild(clone);
 
   requestAnimationFrame(() => {
     clone.style.left = rectTo.left + "px";
     clone.style.top = rectTo.top + "px";
-    clone.style.width = "20px";
-    clone.style.height = "20px";
+    clone.style.width = "24px";
+    clone.style.height = "24px";
     clone.style.opacity = "0.5";
   });
 
@@ -1631,8 +1641,11 @@ document.addEventListener("click", async function (event) {
 
     number.textContent = currentQty + 1;
     document.dispatchEvent(new CustomEvent("cart:action"));
-    flyToCart(plus);
     updateCartCount();
+
+    setTimeout(() => {
+      flyToCart(plus);
+    }, 150);
   }
 
   if (minus && currentQty > 0) {
