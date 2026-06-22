@@ -162,6 +162,15 @@
       "type": "_blocks",
       "settings": {}
     },
+    "google_reviews_banner_9V7dXJ": {
+      "type": "google-reviews-banner",
+      "name": "ביקורות גוגל",
+      "settings": {
+        "rating": "4.9",
+        "review_count": "236",
+        "review_link": "https://www.google.com/search?num=10&cs=0&hl=iw-BG&sca_esv=cdf20b1e83c759e3&output=search&tbm=lcl&kgmid=%2Fg%2F1tcyznm3&q=%D7%9E%D7%A2%D7%99%D7%99%D7%9F%20%D7%94%D7%99%D7%A6%D7%99%D7%A8%D7%94%20maayanart&shem=epsd1%2Crimspwouoe&shndl=30&source=sh%2Fx%2Fkp%2Flocal%2Fm1%2F1&kgs=a68d9dec6ce759b6"
+      }
+    },
     "ideas_slider_96gJD4": {
       "type": "ideas-slider",
       "blocks": {
@@ -316,6 +325,7 @@
     "shipping_banner_dHLtqM",
     "category_boxes_GApb9K",
     "1777308389614420d9",
+    "google_reviews_banner_9V7dXJ",
     "ideas_slider_96gJD4",
     "featured_collections_tabs_w4nziU",
     "collapsible_content_VrgAAf"

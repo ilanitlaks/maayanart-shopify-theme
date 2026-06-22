@@ -32,24 +32,26 @@
           {% endfor %}
         </div>
 
+        <div class="google-review-banner__rating-wrap">
         <strong class="google-review-banner__rating">
-          {{ section.settings.rating }}
+            {{ section.settings.rating }}
         </strong>
 
         <span class="google-review-banner__out-of">
-          מתוך 5
+            מתוך 5
         </span>
+        </div>
       </div>
 
-      <div class="google-review-banner__text">
-        מבוסס על
+      <div class="google-review-banner__text">       
         <strong>{{ section.settings.review_count }}</strong>
-        ביקורות לקוחות בגוגל
+        ביקורות 
       </div>
     </div>
 
-    <span class="google-review-banner__link">
-      לכל הביקורות ←
+    <span class="google-review-banner__link">    
+    <span class="google-review-banner__text-link">לכל הביקורות</span>
+    <span class="google-review-banner__arrow">←</span>
     </span>
   </a>
 </section>
