@@ -1,0 +1,85 @@
+{{ 'component-google-reviews-banner.css' | asset_url | stylesheet_tag }}
+
+<section class="google-review-banner page-width">
+  <a
+    class="google-review-banner__inner"
+    href="{{ section.settings.review_link }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="ביקורות גוגל של מעיין היצירה"
+  >
+    <div class="google-review-banner__google">
+      <img
+        src="{{ 'google-handdrawn.svg' | asset_url }}"
+        alt="Google"
+        width="56"
+        height="56"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="google-review-banner__content">
+      <div class="google-review-banner__top">
+        <div class="google-review-banner__stars" aria-hidden="true">
+          {% for i in (1..5) %}
+            <img
+              src="{{ 'star.svg' | asset_url }}"
+              alt=""
+              width="32"
+              height="32"
+              loading="lazy"
+            >
+          {% endfor %}
+        </div>
+
+        <strong class="google-review-banner__rating">
+          {{ section.settings.rating }}
+        </strong>
+
+        <span class="google-review-banner__out-of">
+          מתוך 5
+        </span>
+      </div>
+
+      <div class="google-review-banner__text">
+        מבוסס על
+        <strong>{{ section.settings.review_count }}</strong>
+        ביקורות לקוחות בגוגל
+      </div>
+    </div>
+
+    <span class="google-review-banner__link">
+      לכל הביקורות ←
+    </span>
+  </a>
+</section>
+
+{% schema %}
+{
+  "name": "ביקורות גוגל",
+  "settings": [
+    {
+      "type": "text",
+      "id": "rating",
+      "label": "דירוג",
+      "default": "4.9"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "מספר ביקורות",
+      "default": "236"
+    },
+    {
+      "type": "url",
+      "id": "review_link",
+      "label": "קישור לביקורות בגוגל"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ביקורות גוגל"
+    }
+  ]
+}
+{% endschema %}
