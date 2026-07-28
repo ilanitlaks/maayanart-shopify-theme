@@ -645,7 +645,7 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 1rem;
   width: fit-content;
   margin: 0.5rem;
   padding: 0.4rem;
@@ -661,6 +661,7 @@
   font-size: 1.4rem;
   line-height: 1;
   color: inherit;
+  padding: 0 1rem;
   transition:
     transform 0.2s ease,
     color 0.2s ease;
