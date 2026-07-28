@@ -1,4 +1,17 @@
-{% unless template.name == 'index' %}
+{% assign is_group_collection = false %}
+
+{% if collection %}
+  {% assign check_collection_title = collection.title | downcase | strip %}
+  {% assign check_collection_handle = collection.handle | downcase | strip %}
+
+  {% if check_collection_title contains 'group' or check_collection_handle contains 'group' %}
+    {% assign is_group_collection = true %}
+  {% endif %}
+{% endif %}
+
+
+
+{% unless template.name == 'index' or is_group_collection %}
   {% assign current_collection = collection %}
   {% assign parent_product = nil %}
   {% assign group_tag = nil %}
@@ -92,7 +105,7 @@
       {% endif %}
     </nav>
   </div>
-{% endunless %}
+
 
 <script type="application/ld+json">
 {
@@ -153,3 +166,4 @@
   ]
 }
 </script>
+{% endunless %}
