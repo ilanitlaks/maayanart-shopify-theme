@@ -14,7 +14,7 @@
       "name": "Shipping banner",
       "settings": {
         "image": "shopify://shop_images/Untitled_design_22.png",
-        "text": "משלוח חינם בקניה מעל ₪400",
+        "text": "משלוח חינם בקניה מעל ₪499",
         "link": "shopify://pages/משלוחים-ואיסוף-עצמי",
         "alt_text": "משלוחים מעיין היצירה"
       }
@@ -167,7 +167,7 @@
       "name": "ביקורות גוגל",
       "settings": {
         "rating": "4.9",
-        "review_count": "236",
+        "review_count": "235",
         "review_link": "https://www.google.com/search?kgmid=/g/1tcyznm3&hl=iw-BG&q=%D7%9E%D7%A2%D7%99%D7%99%D7%9F+%D7%94%D7%99%D7%A6%D7%99%D7%A8%D7%94+maayanart&shem=epsd1,ltae,rimspwouoe&shndl=30&source=sh/x/loc/osrp/m5/1&kgs=4622369f6ff48673&utm_source=epsd1,ltae,rimspwouoe,sh/x/loc/osrp/m5/1"
       }
     },
