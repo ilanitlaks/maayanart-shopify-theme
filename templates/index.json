@@ -174,6 +174,17 @@
     "ideas_slider_96gJD4": {
       "type": "ideas-slider",
       "blocks": {
+        "idea_BHTmTa": {
+          "type": "idea",
+          "settings": {
+            "image": "shopify://shop_images/80535bd9d016d33964bbd64c53fd02c0.png",
+            "image_url": "",
+            "link": "https://blog.maayanart.com/posts/%D7%9E%D7%95%D7%91%D7%99%D7%99%D7%9C-%D7%A8%D7%99%D7%9E%D7%95%D7%A0%D7%99%D7%9D/",
+            "alt": "מובייל רימונים",
+            "tags": "חגי תשרי, סוכות,",
+            "show_idea": true
+          }
+        },
         "idea_gftYCN": {
           "type": "idea",
           "settings": {
@@ -221,11 +232,12 @@
             "link": "https://blog.maayanart.com/posts/%D7%A4%D7%95%D7%98%D7%95-%D7%98%D7%A8%D7%A0%D7%A1%D7%A4%D7%A8-%D7%95%D7%A2%D7%95%D7%93-%D7%A0%D7%92%D7%99%D7%A2%D7%94-%D7%A7%D7%98%D7%A0%D7%94/",
             "alt": "פוטו טרנספר ועוד נגיעה קטנה",
             "tags": "רעיונות למתנות סוף שנה,  יום האהבה",
-            "show_idea": true
+            "show_idea": false
           }
         }
       },
       "block_order": [
+        "idea_BHTmTa",
         "idea_gftYCN",
         "idea_MnzG94",
         "idea_LhXCqP",

@@ -20,22 +20,6 @@
             "parent_collection": "חומרי-יצירה"
           }
         },
-        "category_FOAM001": {
-          "type": "category",
-          "settings": {
-            "title": "קלקרים ומוקצפים",
-            "collection": "קלקרים-ומוקצפים",
-            "parent_collection": "חומרי-יצירה"
-          }
-        },
-        "category_SOL001": {
-          "type": "category",
-          "settings": {
-            "title": "סול",
-            "collection": "סול",
-            "parent_collection": "חומרי-יצירה"
-          }
-        },
         "category_qPtdw7": {
           "type": "category",
           "settings": {
@@ -153,54 +137,6 @@
           "settings": {
             "title": "דבק פלסטי",
             "collection": "דבק-פלסטי",
-            "parent_collection": "דבקים"
-          }
-        },
-        "category_GLUE_MULTI001": {
-          "type": "category",
-          "settings": {
-            "title": "דבק רב תכליתי",
-            "collection": "דבק-רב-תכליתי",
-            "parent_collection": "דבקים"
-          }
-        },
-        "category_GLUE_TAPE001": {
-          "type": "category",
-          "settings": {
-            "title": "סרטי הדבקה",
-            "collection": "סרטי-הדבקה",
-            "parent_collection": "דבקים"
-          }
-        },
-        "category_GLUE_DECO001": {
-          "type": "category",
-          "settings": {
-            "title": "דבק מפיות ודקופז'",
-            "collection": "דבק-מפיות-ודקופז",
-            "parent_collection": "דבקים"
-          }
-        },
-        "category_GLUE_STICK001": {
-          "type": "category",
-          "settings": {
-            "title": "דבק סטיק",
-            "collection": "דבק-סטיק",
-            "parent_collection": "דבקים"
-          }
-        },
-        "category_GLUE_GOLD001": {
-          "type": "category",
-          "settings": {
-            "title": "דבק לעלי זהב",
-            "collection": "דבק-לעלי-זהב",
-            "parent_collection": "דבקים"
-          }
-        },
-        "category_GLUE_CLEAR001": {
-          "type": "category",
-          "settings": {
-            "title": "דבק שקוף",
-            "collection": "דבק-שקוף",
             "parent_collection": "דבקים"
           }
         },
@@ -492,54 +428,6 @@
             "parent_collection": "ציוד-משרדי"
           }
         },
-        "category_OFFICE_LAM001": {
-          "type": "category",
-          "settings": {
-            "title": "שמרדפים ומארזי למינציה",
-            "collection": "shadkhanim-umaarzei-laminatsia",
-            "parent_collection": "ציוד-משרדי"
-          }
-        },
-        "category_SCISSORS001": {
-          "type": "category",
-          "settings": {
-            "title": "מספריים",
-            "collection": "misparayim",
-            "parent_collection": "ציוד-משרדי"
-          }
-        },
-        "category_STAPLER001": {
-          "type": "category",
-          "settings": {
-            "title": "שדכנים ומנקבים",
-            "collection": "shadkhanim-umenakbim",
-            "parent_collection": "ציוד-משרדי"
-          }
-        },
-        "category_WRITING001": {
-          "type": "category",
-          "settings": {
-            "title": "כלי כתיבה",
-            "collection": "kley-ktiva",
-            "parent_collection": "ציוד-משרדי"
-          }
-        },
-        "category_SHARP001": {
-          "type": "category",
-          "settings": {
-            "title": "מחדדים",
-            "collection": "mechadedim",
-            "parent_collection": "ציוד-משרדי"
-          }
-        },
-        "category_ERASER001": {
-          "type": "category",
-          "settings": {
-            "title": "מחקים",
-            "collection": "mechakim",
-            "parent_collection": "ציוד-משרדי"
-          }
-        },
         "category_BpyPjW": {
           "type": "category",
           "settings": {
@@ -668,6 +556,14 @@
             "parent_collection": "חומרי-יצירה"
           }
         },
+        "category_YNhRJg": {
+          "type": "category",
+          "settings": {
+            "title": "מנקה מקטרות",
+            "collection": "מנקה-מקטרות",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
         "category_FtCnym": {
           "type": "category",
           "settings": {
@@ -705,14 +601,6 @@
           "settings": {
             "title": "מוצרי בד לקישוט",
             "collection": "מוצרי-בד-לקישוט",
-            "parent_collection": "מוצרי-בד"
-          }
-        },
-        "category_HABERDASHERY001": {
-          "type": "category",
-          "settings": {
-            "title": "סדקית",
-            "collection": "סדקית",
             "parent_collection": "מוצרי-בד"
           }
         },
@@ -1076,14 +964,6 @@
             "parent_collection": "תכשיטנות"
           }
         },
-        "category_PENDANTS001": {
-          "type": "category",
-          "settings": {
-            "title": "תליונים",
-            "collection": "תליונים",
-            "parent_collection": "תכשיטנות"
-          }
-        },
         "category_cDtmgP": {
           "type": "category",
           "settings": {
@@ -1097,14 +977,6 @@
           "settings": {
             "title": "foto transfer פוטו טרנספר",
             "collection": "foto-transfer-פוטו-טרנספר",
-            "parent_collection": "טכניקות"
-          }
-        },
-        "category_MEDIUMS001": {
-          "type": "category",
-          "settings": {
-            "title": "מדיומים שונים",
-            "collection": "mediumim-shonim",
             "parent_collection": "טכניקות"
           }
         },
@@ -1137,14 +1009,6 @@
           "settings": {
             "title": "טושים קבועים",
             "collection": "טושים-קבועים",
-            "parent_collection": "צבעים"
-          }
-        },
-        "category_SPRAY001": {
-          "type": "category",
-          "settings": {
-            "title": "ספריי צבע",
-            "collection": "ספריי-צבע",
             "parent_collection": "צבעים"
           }
         },
@@ -1186,6 +1050,150 @@
             "title": "ערכות יצירה - מעל המצופה",
             "collection": "erkot-yetzira-meal-hametzupa",
             "parent_collection": "ערכות-יצירה-ומשחקים"
+          }
+        },
+        "category_GLUE_MULTI001": {
+          "type": "category",
+          "settings": {
+            "title": "דבק רב תכליתי",
+            "collection": "דבק-רב-תכליתי",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_GLUE_TAPE001": {
+          "type": "category",
+          "settings": {
+            "title": "סרטי הדבקה",
+            "collection": "סרטי-הדבקה",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_GLUE_DECO001": {
+          "type": "category",
+          "settings": {
+            "title": "דבק מפיות ודקופז'",
+            "collection": "דבק-מפיות-ודקופז",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_GLUE_STICK001": {
+          "type": "category",
+          "settings": {
+            "title": "דבק סטיק",
+            "collection": "דבק-סטיק",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_GLUE_GOLD001": {
+          "type": "category",
+          "settings": {
+            "title": "דבק לעלי זהב",
+            "collection": "דבק-לעלי-זהב",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_GLUE_CLEAR001": {
+          "type": "category",
+          "settings": {
+            "title": "דבק שקוף",
+            "collection": "דבק-שקוף",
+            "parent_collection": "דבקים"
+          }
+        },
+        "category_FOAM001": {
+          "type": "category",
+          "settings": {
+            "title": "קלקרים ומוקצפים",
+            "collection": "קלקרים-ומוקצפים",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
+        "category_PENDANTS001": {
+          "type": "category",
+          "settings": {
+            "title": "תליונים",
+            "collection": "תליונים",
+            "parent_collection": "תכשיטנות"
+          }
+        },
+        "category_HABERDASHERY001": {
+          "type": "category",
+          "settings": {
+            "title": "סדקית",
+            "collection": "סדקית",
+            "parent_collection": "מוצרי-בד"
+          }
+        },
+        "category_SOL001": {
+          "type": "category",
+          "settings": {
+            "title": "סול",
+            "collection": "סול",
+            "parent_collection": "חומרי-יצירה"
+          }
+        },
+        "category_SPRAY001": {
+          "type": "category",
+          "settings": {
+            "title": "ספריי צבע",
+            "collection": "ספריי-צבע",
+            "parent_collection": "צבעים"
+          }
+        },
+        "category_MEDIUMS001": {
+          "type": "category",
+          "settings": {
+            "title": "מדיומים שונים",
+            "collection": "mediumim-shonim",
+            "parent_collection": "טכניקות"
+          }
+        },
+        "category_OFFICE_LAM001": {
+          "type": "category",
+          "settings": {
+            "title": "שמרדפים ומארזי למינציה",
+            "collection": "shadkhanim-umaarzei-laminatsia",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_SCISSORS001": {
+          "type": "category",
+          "settings": {
+            "title": "מספריים",
+            "collection": "misparayim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_STAPLER001": {
+          "type": "category",
+          "settings": {
+            "title": "שדכנים ומנקבים",
+            "collection": "shadkhanim-umenakbim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_WRITING001": {
+          "type": "category",
+          "settings": {
+            "title": "כלי כתיבה",
+            "collection": "kley-ktiva",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_SHARP001": {
+          "type": "category",
+          "settings": {
+            "title": "מחדדים",
+            "collection": "mechadedim",
+            "parent_collection": "ציוד-משרדי"
+          }
+        },
+        "category_ERASER001": {
+          "type": "category",
+          "settings": {
+            "title": "מחקים",
+            "collection": "mechakim",
+            "parent_collection": "ציוד-משרדי"
           }
         }
       },
@@ -1258,6 +1266,7 @@
         "category_7xFMqU",
         "category_bPDnfJ",
         "category_G7yKcg",
+        "category_YNhRJg",
         "category_FtCnym",
         "category_TC4FTh",
         "category_mpwpa9",
