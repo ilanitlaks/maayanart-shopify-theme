@@ -99,7 +99,7 @@
             >
               <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
               <div id="GalleryViewer-{{ section.id }}">
-            <div class="product__media-list product__media-list--single contains-media grid list-unstyled">
+            <div class="product__media-list product__media-list--single product__media-list--variant-cards contains-media grid list-unstyled">
               <div class="product__media-item product__media-item--single grid__item is-active" data-media-id="{{ section.id }}-{{ cards_media.id }}">
                 {% render 'product-thumbnail',
                   media: cards_media,

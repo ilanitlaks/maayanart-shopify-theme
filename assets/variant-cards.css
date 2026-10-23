@@ -5,3 +5,17 @@ variant-cards { display: block; }
 variant-cards[aria-busy='true'] { opacity: .7; }
 variant-cards > [data-status]:empty { margin: 0; }
 .variant-card [data-error]:empty { display: none; }
+
+/* The fixed image has no slider gutter: do not inherit the mobile carousel's
+   oversized track and negative margin. Keep the original desktop media layout. */
+@media screen and (max-width: 749px) {
+  .product__media-list--variant-cards {
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .product__media-list--variant-cards > .product__media-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
