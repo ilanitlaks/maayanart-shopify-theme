@@ -53,11 +53,12 @@
           "type": "product_trust_box",
           "settings": {
             "show_trust_box": true,
-            "delivery_time": "7 ימים",
+            "delivery_time": "עד 5 ימי עסקים",
             "heading": "חומרי יצירה קונים במעיין היצירה:",
             "benefit_1": "מוצרים מעולים ♥ מחירים הוגנים",
             "benefit_2": "ליווי ויחס אישי בטלפון ובווטצאפ ♥ מוזמנים להתייעץ",
-            "benefit_3": "משלוח מהיר ובחינם בכל קנייה מעל 400 ש\"ח",          
+            "benefit_3": "משלוח מהיר ובחינם בכל קנייה מעל 400 ש\"ח",
+            "whatsapp_number": "97289950131",
             "whatsapp_text": "שאל אותנו על מוצר זה ב-WhatsApp"
           }
         },

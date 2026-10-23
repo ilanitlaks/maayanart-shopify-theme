@@ -174,8 +174,19 @@
     "ideas_slider_96gJD4": {
       "type": "ideas-slider",
       "blocks": {
+        "idea_CNNxKM": {
+          "type": "idea",
+          "settings": {
+            "image_url": "https://blog.maayanart.com/assets/blog-image/%D7%A7%D7%A1%D7%9D-%D7%A9%D7%9C-%D7%A1%D7%91%D7%99%D7%91%D7%95%D7%9F/%D7%A7%D7%A1%D7%9D-%D7%A9%D7%9C-%D7%A1%D7%91%D7%99%D7%91%D7%95%D7%9F-6.webp",
+            "link": "https://blog.maayanart.com/posts/%D7%A7%D7%A1%D7%9D-%D7%A9%D7%9C-%D7%A1%D7%91%D7%99%D7%91%D7%95%D7%9F/",
+            "alt": "רעיון ליצירה",
+            "tags": "חנוכה",
+            "show_idea": true
+          }
+        },
         "idea_BHTmTa": {
           "type": "idea",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/80535bd9d016d33964bbd64c53fd02c0.png",
             "image_url": "",
@@ -237,6 +248,7 @@
         }
       },
       "block_order": [
+        "idea_CNNxKM",
         "idea_BHTmTa",
         "idea_gftYCN",
         "idea_MnzG94",
