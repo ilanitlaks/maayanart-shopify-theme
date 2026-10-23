@@ -1583,6 +1583,9 @@ function flyToCart(fromElement) {
   const rectTo = cart.getBoundingClientRect();
 
   const clone = fromElement.cloneNode(true);
+  clone.setAttribute('aria-hidden', 'true');
+  clone.setAttribute('tabindex', '-1');
+  clone.style.pointerEvents = 'none';
 
   clone.style.position = "fixed";
   clone.style.left = rectFrom.left + "px";
@@ -1616,6 +1619,14 @@ function flyToCart(fromElement) {
     clone.remove();
   }, 700);
 }
+function animateCartAddition(fromElement, cart) {
+  document.dispatchEvent(new CustomEvent('cart:action'));
+  updateCartCount(cart);
+  setTimeout(() => {
+    flyToCart(fromElement);
+  }, 150);
+}
+
 document.addEventListener("click", async function (event) {
   const plus = event.target.closest(".card-qty__plus");
   const minus = event.target.closest(".card-qty__minus");
@@ -1633,19 +1644,16 @@ document.addEventListener("click", async function (event) {
   let currentQty = parseInt(number.textContent, 10) || 0;
 
   if (plus) {
-    await fetch("/cart/add.js", {
+    const response = await fetch("/cart/add.js", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: variantId, quantity: 1 }),
     });
 
-    number.textContent = currentQty + 1;
-    document.dispatchEvent(new CustomEvent("cart:action"));
-    updateCartCount();
+    if (!response.ok) return;
 
-    setTimeout(() => {
-      flyToCart(plus);
-    }, 150);
+    number.textContent = currentQty + 1;
+    animateCartAddition(plus);
   }
 
   if (minus && currentQty > 0) {
@@ -1662,9 +1670,8 @@ document.addEventListener("click", async function (event) {
   }
 });
 
-async function updateCartCount() {
-  const res = await fetch("/cart.js");
-  const cart = await res.json();
+async function updateCartCount(confirmedCart) {
+  const cart = confirmedCart || await fetch("/cart.js").then(res => res.json());
 
   const cartIcon = document.querySelector(".header__icon--cart");
   let bubble = document.querySelector(".cart-count-bubble");

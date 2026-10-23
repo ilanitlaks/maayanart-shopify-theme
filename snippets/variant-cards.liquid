@@ -1,0 +1,57 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'variant-cards.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'variant-cards.js' | asset_url }}" defer="defer"></script>
+<variant-cards class="product-siblings page-width" data-section="{{ section_id }}">
+  <h2 class="product-siblings__title">בחרי אפשרות</h2>
+  <p class="visually-hidden">הכמות המוצגת היא הכמות בסל לכל אפשרות.</p>
+  <ul class="product-siblings__grid grid grid--2-col-tablet-down grid--4-col-desktop" role="list">
+    {% for variant in product.variants %}
+      {% assign image = variant.featured_image | default: product.featured_image %}
+      {% assign quantity = cart | item_count_for_variant: variant.id %}
+      <li class="grid__item">
+        {% comment %}Same card layers and square ratio as group children in card-product; no product link overlay over variant controls.{% endcomment %}
+        <article class="variant-card card-wrapper product-card-wrapper underline-links-hover" data-variant-id="{{ variant.id }}" data-min="{{ variant.quantity_rule.min }}" data-step="{{ variant.quantity_rule.increment }}" data-max="{{ variant.quantity_rule.max }}">
+          <div class="card card--{{ settings.card_style }} card--media{% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}" style="--ratio-percent: 100%;">
+            <div class="card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio" style="--ratio-percent: 100%;">
+              <div class="card__media">
+                <div class="media media--transparent media--hover-effect">
+                  {% if image %}
+                    {{ image | image_url: width: 1066 | image_tag: loading: 'lazy', widths: '165, 360, 533, 720, 940, 1066', sizes: '(min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)', alt: variant.title, class: 'motion-reduce' }}
+                  {% else %}
+                    {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  {% endif %}
+                </div>
+              </div>
+              <div class="card__content">
+                <div class="card__information"><h3 class="card__heading" aria-hidden="true">{{ variant.title | escape }}</h3></div>
+              </div>
+            </div>
+            <div class="card__content">
+              <div class="card__information">
+                <h3 class="card__heading h5">{{ variant.title | escape }}</h3>
+                <div class="card-information">
+                  <span class="caption-large light"></span>
+                  {% render 'price', product: variant, show_compare_at_price: true, variant_cards_price: true %}
+                  {% if variant.unit_price_measurement %}{% render 'unit-price', price: variant.unit_price, measurement: variant.unit_price_measurement %}{% endif %}
+          <div class="card-qty">
+            <button type="button" class="card-qty__btn" data-delta="-1" aria-label="הפחתת כמות {{ variant.title | escape }}" {% if quantity == 0 %}disabled{% endif %}>−</button>
+            <span class="card-qty__number" data-quantity>{{ quantity }}</span>
+            <button type="button" class="card-qty__btn" data-delta="1" aria-label="הוספת {{ variant.title | escape }} לסל" {% unless variant.available %}disabled{% endunless %}>+</button>
+          </div>
+          {% unless variant.available %}<p>אזל המלאי</p>{% endunless %}
+          <span data-available="{{ variant.available }}" hidden></span>
+          <p data-error role="alert"></p>
+                </div>
+              </div>
+              <div class="card__badge {{ settings.badge_position }}">
+                {% unless variant.available %}<span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>{% endunless %}
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="visually-hidden" data-status role="status" aria-live="polite" aria-atomic="true"></p>
+</variant-cards>

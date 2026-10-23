@@ -7,6 +7,7 @@
   - use_variant: {Boolean} Renders selected or first variant price instead of overall product pricing (optional)
   - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
   - price_class: {String} Adds a price class to the price element (optional)
+  - variant_cards_price: {Boolean|String} True for the automatic variant-card flow; a zero price is a price, not a legacy parent product.
   - show_compare_at_price: {Boolean} Renders the compare at price if the product matches the condition (optional)
 
   Usage:
@@ -24,7 +25,7 @@
   assign compare_at_price = target.compare_at_price
   assign price = target.price | default: 1999
   assign is_parent_product = false
-  if price == 0
+  if price == 0 and variant_cards_price != true and variant_cards_price != 'true'
     assign is_parent_product = true
   endif
   assign price_min = product.price_min

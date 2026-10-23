@@ -29,6 +29,7 @@
   {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 {%- endunless -%}
 {%- if card_product and card_product != empty -%}
+  {%- capture variant_cards_enabled -%}{%- render 'variant-cards-enabled', product: card_product -%}{%- endcapture -%}
   {%- liquid
     assign ratio = 1
     if card_product.featured_media and media_aspect_ratio == 'portrait'
@@ -204,7 +205,7 @@
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true, variant_cards_price: variant_cards_enabled %}
             {% assign show_deal_badge = false %}
 
             {% assign has_group = false %}
@@ -258,7 +259,9 @@
                 {% endif %}
               {% endfor %}
             {% endif %}
-            {%- if card_product.price == 0 -%}
+            {%- if variant_cards_enabled == 'true' -%}
+              <a href="{{ card_product.url }}" class="card-options-btn">לכל האפשרויות</a>
+            {%- elsif card_product.price == 0 -%}
 
               {% if has_group and has_available_child == false %}
                 <span class="card-options-btn">

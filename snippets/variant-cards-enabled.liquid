@@ -1,0 +1,25 @@
+{%- liquid
+  assign cards_enabled = false
+  assign cards_image = product.media | where: 'media_type', 'image' | first
+  if product.variants_count > 1 and product.variants_count <= 250 and cards_image != blank
+    assign cards_enabled = true
+    if product.selling_plan_groups.size > 0 or product.gift_card?
+      assign cards_enabled = false
+    endif
+    if product.quantity_price_breaks_configured?
+      assign cards_enabled = false
+    endif
+    if product.price == 0 and product.metafields.custom.child_products.value != blank
+      assign cards_enabled = false
+    endif
+    for tag in product.tags
+      assign normalized_tag = tag | downcase
+      if normalized_tag contains 'group'
+        assign cards_enabled = false
+      endif
+    endfor
+  endif
+  if cards_enabled
+    echo 'true'
+  endif
+-%}

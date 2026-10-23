@@ -1,0 +1,7 @@
+variant-cards { display: block; }
+/* Card geometry, typography and quantity dimensions come from component-card.css. */
+.variant-card .card-qty__btn:disabled { opacity: .45; cursor: default; }
+.variant-card .card-qty__btn:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+variant-cards[aria-busy='true'] { opacity: .7; }
+variant-cards > [data-status]:empty { margin: 0; }
+.variant-card [data-error]:empty { display: none; }

@@ -1,3 +1,4 @@
+{%- capture variant_cards_enabled -%}{%- render 'variant-cards-enabled', product: product -%}{%- endcapture -%}
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -76,7 +77,50 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
-        {% render 'product-media-gallery', variant_images: variant_images %}
+        {% if variant_cards_enabled == 'true' %}
+          {% liquid
+            assign cards_media = product.media | where: 'media_type', 'image' | first
+            assign cards_media_width = 0.45
+            if section.settings.media_size == 'large'
+              assign cards_media_width = 0.65
+            elsif section.settings.media_size == 'medium'
+              assign cards_media_width = 0.55
+            endif
+          %}
+          {% if cards_media %}
+            <media-gallery
+              id="MediaGallery-{{ section.id }}"
+              role="region"
+              {% if section.settings.enable_sticky_info %}
+                class="product__column-sticky"
+              {% endif %}
+              aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
+              data-desktop-layout="{{ section.settings.gallery_layout }}"
+            >
+              <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+              <div id="GalleryViewer-{{ section.id }}">
+            <div class="product__media-list product__media-list--single contains-media grid list-unstyled">
+              <div class="product__media-item product__media-item--single grid__item is-active" data-media-id="{{ section.id }}-{{ cards_media.id }}">
+                {% render 'product-thumbnail',
+                  media: cards_media,
+                  media_count: 1,
+                  position: 1,
+                  desktop_layout: section.settings.gallery_layout,
+                  mobile_layout: section.settings.mobile_thumbnails,
+                  modal_id: section.id,
+                  media_width: cards_media_width,
+                  media_fit: section.settings.media_fit,
+                  constrain_to_viewport: section.settings.constrain_to_viewport,
+                  lazy_load: false
+                %}
+              </div>
+            </div>
+              </div>
+            </media-gallery>
+          {% endif %}
+        {% else %}
+          {% render 'product-media-gallery', variant_images: variant_images %}
+        {% endif %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -137,6 +181,7 @@
                   {%- render 'price',
                     product: product,
                     use_variant: true,
+                    variant_cards_price: variant_cards_enabled,
                     show_badges: true,
                     price_class: 'price--large'
                   -%}
@@ -298,6 +343,7 @@
                   </details>
                 </div>
               {%- when 'quantity_selector' -%}
+{% unless variant_cards_enabled == 'true' %}
                 {% unless group_tag != '' and product.price == 0 %}
                 <div
                   id="Quantity-Form-{{ section.id }}"
@@ -526,7 +572,8 @@
                   {%- endif -%}                 
                 </div>
                {% endunless %}
-              {%- when 'popup' -%}
+              {% endunless %}
+{%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
                   data-modal="#PopupModal-{{ block.id }}"
@@ -548,8 +595,11 @@
                 %}
 
               {%- when 'variant_picker' -%}
-                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% unless variant_cards_enabled == 'true' %}
+                  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% endunless %}
 {%- when 'buy_buttons' -%}
+{% unless variant_cards_enabled == 'true' %}
   {% unless group_tag != '' and product.price == 0 %}
     {%- render 'buy-buttons',
       block: block,
@@ -560,6 +610,7 @@
     -%}
   {% endunless %}
 
+{% endunless %}
 {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -772,6 +823,9 @@
     </div>
 
 
+{% if variant_cards_enabled == 'true' %}
+  {% render 'variant-cards', product: product, section_id: section.id %}
+{% endif %}
 {% if group_tag != '' and group_collection != nil and product.price == 0 %}
   <div id="product-siblings" class="product-siblings page-width">
     <h2 class="product-siblings__title">בחרי אפשרות</h2>
