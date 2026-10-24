@@ -19,6 +19,34 @@
         "alt_text": "משלוחים מעיין היצירה"
       }
     },
+    "home_intro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "מעיין היצירה – חנות לחומרי יצירה, אמנות ותחביבים",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>אצלנו תמצאו מגוון רחב של חומרי יצירה, כלי עבודה, צבעים, מכחולים, חרוזים, מוצרי עץ, חומרי עיצוב וקישוט וערכות יצירה לכל גיל.</p><p>בין אם אתם אוהבים ליצור בבית, מחפשים פעילות יצירה עם הילדים, מלמדים אמנות, מפעילים חוגים או מעבירים סדנאות – אנחנו כאן כדי לעזור לכם למצוא את כל מה שצריך, מרעיון קטן ועד לפרויקט גדול.</p><p>מוזמנים להכיר את המוצרים, להזמין בקלות באתר או להגיע לבקר אותנו בחנות בערד.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "name": "פתיח החנות",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "category_boxes_GApb9K": {
       "type": "category-boxes",
       "blocks": {
@@ -347,6 +375,7 @@
   },
   "order": [
     "shipping_banner_dHLtqM",
+    "home_intro",
     "category_boxes_GApb9K",
     "1777308389614420d9",
     "google_reviews_banner_9V7dXJ",

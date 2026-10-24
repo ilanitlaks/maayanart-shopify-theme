@@ -1,0 +1,110 @@
+/* Loaded only for the dedicated home_intro section on the homepage. */
+.home-intro {
+  --intro-ink: #49343e;
+  --intro-pink: #e4b1cc;
+  max-width: var(--page-width, 120rem);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.home-intro .rich-text__wrapper {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 1.8rem;
+  overflow: hidden;
+  background: linear-gradient(115deg, #fff9f3 10%, #f9edf3 100%);
+  border: 1px solid #ead3dd;
+  border-radius: 1.8rem;
+  color: var(--intro-ink);
+}
+
+/* Small, purely decorative colour dabs, kept inside the panel. */
+.home-intro .rich-text__wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-block-start: -1.8rem;
+  inset-inline-end: -1rem;
+  width: 8rem;
+  height: 8rem;
+  border: 1.1rem solid var(--intro-pink);
+  border-radius: 46% 54% 60% 40%;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.home-intro .rich-text__blocks {
+  min-width: 0;
+  max-width: none;
+  text-align: start;
+}
+
+.home-intro .rich-text__heading {
+  margin: 0;
+  max-width: 24ch;
+  color: var(--intro-ink);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.home-intro .rich-text__blocks > * + * {
+  margin-block-start: 1.2rem;
+}
+
+.home-intro .rich-text__text {
+  min-width: 0;
+  font-size: 1.5rem;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+
+.home-intro .rich-text__text p {
+  margin: 0;
+}
+
+.home-intro .rich-text__text p + p {
+  margin-block-start: 1rem;
+}
+
+.home-intro .rich-text__text p:last-child {
+  margin-block-start: 1.4rem;
+  padding-inline-start: 1.2rem;
+  border-inline-start: 3px solid var(--intro-pink);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 750px) {
+  .home-intro {
+    padding-inline: 5rem;
+  }
+
+  .home-intro .rich-text__wrapper {
+    padding: 3rem;
+    border-radius: 2.4rem;
+  }
+
+  .home-intro .rich-text__blocks {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.65fr);
+    align-items: start;
+    gap: 1.5rem 3rem;
+  }
+
+  .home-intro .rich-text__heading {
+    font-size: clamp(2.6rem, 2.5vw, 3.4rem);
+  }
+
+  .home-intro .rich-text__blocks > * + * {
+    margin-block-start: 0;
+  }
+
+  .home-intro .rich-text__text {
+    font-size: 1.6rem;
+  }
+}
