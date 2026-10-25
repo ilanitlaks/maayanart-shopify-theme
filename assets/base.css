@@ -4221,3 +4221,42 @@ details-disclosure > details {
     text-align: center !important;
   }
 }
+
+/* Product descriptions - Maayanart */
+
+.product__description {
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+}
+
+.product__description p {
+  margin: 0 0 1.2rem;
+}
+
+.product__description h2,
+.product__description h3 {
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.product__description ul {
+  list-style: disc;
+  padding: 0 1.5rem 0 0;
+  margin: 1rem 0 1.5rem;
+}
+
+.product__description li {
+  padding-right: 0.3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.product__description li::marker {
+  color: #d65b91;
+}
+
+.product__description strong {
+  font-weight: 700;
+}
