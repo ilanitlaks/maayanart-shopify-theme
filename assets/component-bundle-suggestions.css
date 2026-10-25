@@ -1,0 +1,12 @@
+bundle-suggestions[hidden] { display: none !important; }
+bundle-suggestions { display: block; margin-block: 3.2rem; }
+.bundle-suggestions__list { display: grid; grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); gap: 1.6rem; padding: 0; list-style: none; }
+.bundle-suggestions__link { display: flex; align-items: center; gap: 1.6rem; height: 100%; padding: 1.6rem; color: rgb(var(--color-foreground)); background: rgb(var(--color-background)); border: 1px solid rgba(var(--color-foreground), .15); border-radius: var(--card-corner-radius, 12px); text-decoration: none; }
+.bundle-suggestions__link:hover { border-color: rgb(var(--color-foreground)); }
+.bundle-suggestions__link:focus-visible { outline: .2rem solid currentColor; outline-offset: .3rem; }
+.bundle-suggestions__image { width: 9rem; height: 9rem; flex-shrink: 0; object-fit: contain; }
+.bundle-suggestions__name { display: block; margin-block-end: .6rem; font-weight: 600; overflow-wrap: anywhere; }
+.bundle-suggestions__price { display: block; }
+@media screen and (max-width: 749px) {
+  .bundle-suggestions__list { grid-template-columns: 1fr; }
+}

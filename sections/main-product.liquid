@@ -128,6 +128,7 @@
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
+          {%- assign bundle_suggestions_rendered = false -%}
           {% assign group_tag = '' %}
           {% assign group_collection = nil %}
 
@@ -323,6 +324,10 @@
                 {{ block.settings.custom_liquid }}
 
               {%- when 'product_trust_box' -%}
+                {% unless bundle_suggestions_rendered %}
+                  {% render 'bundle-suggestions', product: product, section_id: section.id %}
+                  {% assign bundle_suggestions_rendered = true %}
+                {% endunless %}
                 {% render 'product-trust-box', block: block, product: product %}
               {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
@@ -813,6 +818,9 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
+          {% unless bundle_suggestions_rendered %}
+            {% render 'bundle-suggestions', product: product, section_id: section.id %}
+          {% endunless %}
              {% render 'product-trust-box' %}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}

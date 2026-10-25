@@ -1,0 +1,19 @@
+{% comment %}Read-only, tokenless discovery of native fixed bundles. No purchase controls.{% endcomment %}
+{{ 'component-bundle-suggestions.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bundle-suggestions.js' | asset_url }}" defer="defer"></script>
+<bundle-suggestions
+  hidden
+  class="bundle-suggestions"
+  data-section="{{ section_id }}"
+  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+  data-product-id="{{ product.id }}"
+  data-country="{{ localization.country.iso_code }}"
+  data-locale="{{ request.locale.iso_code }}"
+  data-currency="{{ cart.currency.iso_code }}"
+  data-root="{{ routes.root_url }}"
+>
+  <section aria-labelledby="BundleSuggestions-{{ section_id }}" dir="rtl">
+    <h2 id="BundleSuggestions-{{ section_id }}" class="h2">זמין גם במארז חסכוני</h2>
+    <ul class="bundle-suggestions__list" role="list"></ul>
+  </section>
+</bundle-suggestions>
