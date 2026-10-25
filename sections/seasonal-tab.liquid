@@ -1,0 +1,42 @@
+{% comment %}Independent homepage promotion. All campaign content comes from Theme Editor.{% endcomment %}
+{%- if section.settings.show_promotion and section.settings.image != blank and section.settings.link != blank -%}
+  {{ 'component-seasonal-tab.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'seasonal-tab.js' | asset_url }}" defer="defer"></script>
+  <seasonal-tab class="seasonal-tab" hidden dir="rtl" style="--seasonal-tab-position: {{ section.settings.vertical_position }}svh;" data-section="{{ section.id }}">
+    <a class="seasonal-tab__link" href="{{ section.settings.link }}" aria-label="{{ section.settings.heading | default: 'קידום עונתי' | escape }}" aria-expanded="false" aria-controls="SeasonalContent-{{ section.id }}">
+      <div class="seasonal-tab__image">
+        {{ section.settings.image | image_url: width: 240 | image_tag: widths: '80, 160, 240', sizes: '72px', loading: 'lazy', alt: '' }}
+        <span class="seasonal-tab__peek-label">{{ section.settings.peek_label | default: 'גלו עוד' | escape }} <span class="seasonal-tab__peek-arrow" aria-hidden="true">←</span></span>
+      </div>
+      <div class="seasonal-tab__content" id="SeasonalContent-{{ section.id }}" aria-hidden="true" inert>
+        <h2>{{ section.settings.heading | default: 'קידום עונתי' | escape }}</h2>
+        {% if section.settings.text != blank %}<p>{{ section.settings.text | escape | newline_to_br }}</p>{% endif %}
+        <span class="seasonal-tab__cta">{{ section.settings.link_label | default: 'לכל הפרטים' | escape }} <span aria-hidden="true">←</span></span>
+      </div>
+    </a>
+    <button type="button" class="seasonal-tab__close" aria-label="סגירת הקידום" hidden>×</button>
+  </seasonal-tab>
+{%- elsif request.design_mode -%}
+  <p class="page-width">לשונית קידום עונתי: להפעלה יש לבחור תמונה וקישור ולסמן הצגת רכיב.</p>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "לשונית קידום עונתי",
+  "tag": "section",
+  "class": "seasonal-tab-section",
+  "limit": 1,
+  "enabled_on": { "templates": ["index"] },
+  "settings": [
+    { "type": "checkbox", "id": "show_promotion", "label": "הצגת הרכיב", "default": true },
+    { "type": "image_picker", "id": "image", "label": "תמונה" },
+    { "type": "text", "id": "peek_label", "label": "כיתוב הלשונית הסגורה", "default": "גלו עוד" },
+    { "type": "text", "id": "heading", "label": "כותרת קצרה", "default": "משהו חדש ליצור" },
+    { "type": "url", "id": "link", "label": "קישור ליעד" },
+    { "type": "textarea", "id": "text", "label": "טקסט קצר (לא חובה)" },
+    { "type": "text", "id": "link_label", "label": "טקסט הקישור", "default": "לכל הפרטים" },
+    { "type": "range", "id": "vertical_position", "label": "מיקום אנכי מקצה המסך העליון", "min": 30, "max": 60, "step": 5, "unit": "%", "default": 45 }
+  ],
+  "presets": [{ "name": "לשונית קידום עונתי" }]
+}
+{% endschema %}

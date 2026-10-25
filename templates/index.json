@@ -371,6 +371,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "seasonal_promotion": {
+      "type": "seasonal-tab",
+      "settings": {
+        "show_promotion": true,
+        "image": "shopify://shop_images/Colorful_Mosaic_Craft_Set_and_Spinning_Tops__1_-removebg-preview.png",
+        "heading": "חנוכה במעיין היצירה",
+        "link": "shopify://collections/מוצרי-יצירה-לחנוכה",
+        "text": "מבחר חומרי יצירה לחנוכה: סביבונים לקישוט, בסיסים להכנת חנוכיות, עששיות, כדים, אביזרים וחומרים נוספים למגוון רעיונות יצירתיים ומיוחדים לחג.",
+        "link_label": "לחומרי יצירה לחנוכה",
+        "vertical_position": 45
+      }
     }
   },
   "order": [
@@ -381,6 +393,7 @@
     "google_reviews_banner_9V7dXJ",
     "ideas_slider_96gJD4",
     "featured_collections_tabs_w4nziU",
-    "collapsible_content_VrgAAf"
+    "collapsible_content_VrgAAf",
+    "seasonal_promotion"
   ]
 }
