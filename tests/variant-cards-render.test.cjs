@@ -40,10 +40,28 @@ test('actual card rendering preserves single-variant quantity buttons and group 
   const single = render({ variants_count: 1, selected_or_first_available_variant: { id: 42 } });
   assert.match(single, /data-variant-id="42"/);
   assert.match(single, /card-qty__plus/);
+  assert.match(single, /class="card-qty card-qty--product"/);
+  assert.ok(single.indexOf('card-qty__plus') < single.indexOf('card-qty__number'));
+  assert.ok(single.indexOf('card-qty__number') < single.indexOf('card-qty__minus'));
+  assert.doesNotMatch(single, /tabindex="[1-9]/);
   const parent = render({ price: 0, tags: ['group:hair'] });
   assert.match(parent, /card-options-btn/);
   const child = render({ tags: ['group:hair'], variants_count: 1, selected_or_first_available_variant: { id: 99 } });
   assert.match(child, /data-variant-id="99"/);
+  assert.ok(child.indexOf('card-qty__plus') < child.indexOf('card-qty__minus'));
+});
+
+test('ordinary and dynamically rendered cards name both quantity actions and escape the product title', () => {
+  for (const title of ['אלבום יצירה', 'צבע "כחול" & לבן']) {
+    const html = liquid.renderFileSync('card-product', {
+      card_product: product({ title, variants_count: 1, selected_or_first_available_variant: { id: 42 } }),
+      settings: { card_style: 'standard' }, cart: { items: [] },
+    });
+    const escaped = title.replaceAll('&', '&amp;').replaceAll('"', '&#34;');
+    assert.ok(html.includes(`aria-label="הפחתת כמות ${escaped}"`));
+    assert.ok(html.includes(`aria-label="הוספת ${escaped} לסל"`));
+    assert.match(html, /data-card-qty-error role="alert" aria-atomic="true" style="margin: 0;"/);
+  }
 });
 
 test('variant cards render distinct prices, correct IDs, existing cart counts and sold-out controls', () => {
@@ -57,9 +75,19 @@ test('variant cards render distinct prices, correct IDs, existing cart counts an
   assert.match(html, /0\.00 ILS/);
   assert.doesNotMatch(html, /parent-product-children/);
   assert.match(html, /data-quantity>2</);
+  assert.doesNotMatch(html, /card-qty--product/);
+  assert.ok(html.indexOf('data-delta="-1"') < html.indexOf('data-delta="1"'));
   const soldOutCard = html.slice(html.indexOf('data-variant-id="22"'), html.indexOf('data-variant-id="33"'));
   assert.match(soldOutCard, /data-delta="1"[^>]*disabled/);
   assert.match(soldOutCard, /אזל המלאי/);
+});
+
+test('ordinary RTL quantity controls override only their own flex direction at every viewport size', () => {
+  const css = fs.readFileSync('assets/component-card.css', 'utf8');
+  assert.match(css, /\.card-qty\s*\{[^}]*flex-direction:\s*row-reverse;/);
+  assert.match(css, /\.card-qty--product\s*\{\s*flex-direction:\s*row;\s*\}/);
+  assert.ok(css.indexOf('.card-qty--product') > css.indexOf('.card-qty {'));
+  assert.match(fs.readFileSync('layout/theme.liquid', 'utf8'), /<html[^>]*dir="rtl"/);
 });
 
 test('collection and homepage tabs share the same product-card renderer', () => {

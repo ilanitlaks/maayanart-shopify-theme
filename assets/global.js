@@ -1627,6 +1627,9 @@ function animateCartAddition(fromElement, cart) {
   }, 150);
 }
 
+// Share the lock across duplicate/dynamically rendered cards for the same variant.
+const cardQuantityRequests = new Map();
+
 document.addEventListener("click", async function (event) {
   const plus = event.target.closest(".card-qty__plus");
   const minus = event.target.closest(".card-qty__minus");
@@ -1641,32 +1644,60 @@ document.addEventListener("click", async function (event) {
 
   const variantId = qtyBox.dataset.variantId;
   const number = qtyBox.querySelector(".card-qty__number");
-  let currentQty = parseInt(number.textContent, 10) || 0;
+  const errorMessage = qtyBox.parentElement.querySelector('[data-card-qty-error]');
+  const currentQty = parseInt(number.textContent, 10) || 0;
+  const uncertainMessage = 'לא ניתן לאמת את ההוספה לסל. בדקו את הסל לפני ניסיון נוסף.';
 
-  if (plus) {
-    const response = await fetch("/cart/add.js", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: variantId, quantity: 1 }),
-    });
-
-    if (!response.ok) return;
-
-    number.textContent = currentQty + 1;
-    animateCartAddition(plus);
+  if (cardQuantityRequests.get(variantId) === 'busy') return;
+  if (cardQuantityRequests.get(variantId) === 'uncertain') {
+    errorMessage.textContent = uncertainMessage;
+    return;
   }
+  if (minus && currentQty === 0) return;
 
-  if (minus && currentQty > 0) {
-    const newQty = currentQty - 1;
-
-    await fetch("/cart/change.js", {
+  cardQuantityRequests.set(variantId, 'busy');
+  let mutationSucceeded = false;
+  let rejected = false;
+  try {
+    const response = await fetch(plus ? "/cart/add.js" : "/cart/change.js", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: variantId, quantity: newQty }),
+      body: JSON.stringify({ id: variantId, quantity: plus ? 1 : currentQty - 1 }),
     });
 
-    number.textContent = newQty;
-    updateCartCount();
+    if (!response.ok) {
+      // A timeout/server error may arrive after a write; do not offer a blind retry.
+      rejected = response.status >= 400 && response.status < 500 && response.status !== 408;
+      throw new Error('Cart update failed');
+    }
+    mutationSucceeded = true;
+    // Verify with a read only. Never retry a cart mutation automatically.
+    const cartResponse = await fetch('/cart.js', { cache: 'no-store' });
+    if (!cartResponse.ok) throw new Error('Cart verification failed');
+    const cart = await cartResponse.json();
+    if (!Array.isArray(cart.items) || !Number.isInteger(cart.item_count)) throw new Error('Invalid cart');
+
+    document.querySelectorAll('.card-qty[data-variant-id]').forEach(box => {
+      if (box.dataset.variantId !== variantId || !box.querySelector('.card-qty__number')) return;
+      box.querySelector('.card-qty__number').textContent = cart.items
+        .filter(item => String(item.variant_id) === variantId)
+        .reduce((sum, item) => sum + item.quantity, 0);
+      const previousError = box.parentElement.querySelector('[data-card-qty-error]');
+      if (previousError) previousError.textContent = '';
+    });
+    if (plus) animateCartAddition(plus, cart);
+    else updateCartCount(cart);
+  } catch {
+    if (rejected) {
+      errorMessage.textContent = 'לא ניתן לעדכן את הסל. ייתכן שהכמות המבוקשת אינה זמינה. נסו שוב או צרו איתנו קשר.';
+    } else {
+      cardQuantityRequests.set(variantId, 'uncertain');
+      errorMessage.textContent = mutationSucceeded
+        ? 'העדכון בסל הצליח, אך לא ניתן לרענן את התצוגה. בדקו את הסל ורעננו את העמוד; אין צורך להוסיף שוב.'
+        : uncertainMessage;
+    }
+  } finally {
+    if (cardQuantityRequests.get(variantId) === 'busy') cardQuantityRequests.delete(variantId);
   }
 });
 

@@ -283,13 +283,14 @@
               {%- endfor -%}
 
               <div
-                class="card-qty"
+                class="card-qty card-qty--product"
                 data-variant-id="{{ card_product.selected_or_first_available_variant.id }}"
               >
-                <button type="button" class="card-qty__btn card-qty__minus">−</button>
+                <button type="button" class="card-qty__btn card-qty__plus" aria-label="הוספת {{ card_product.title | escape }} לסל">+</button>
                 <span class="card-qty__number">{{ current_qty }}</span>
-                <button type="button" class="card-qty__btn card-qty__plus">+</button>
+                <button type="button" class="card-qty__btn card-qty__minus" aria-label="הפחתת כמות {{ card_product.title | escape }}">−</button>
               </div>
+              <div data-card-qty-error role="alert" aria-atomic="true" style="margin: 0;"></div>
 
             {%- elsif card_product.available == false -%}
 

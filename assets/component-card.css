@@ -654,6 +654,11 @@
   color: #5a2b2b;
 }
 
+/* Match DOM order to the RTL visual order without changing variant cards. */
+.card-qty--product {
+  flex-direction: row;
+}
+
 .card-qty__btn {
   border: 0;
   background: transparent;
